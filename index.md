@@ -3,7 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-
+landing_page:
+  title: "Welcome"
+  nav_order: 0
 ---
 <img src="./Hello_World.gif" alt="Hello World GIF" />
 

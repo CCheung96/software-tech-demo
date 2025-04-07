@@ -1,5 +1,8 @@
 ---
 title: Transition to Processing
+permalink: /comp1000/transition-to-processing
+parent: COMP1000
+nav_order: 1
 ---
 
 <details class="prereq" markdown="1">
@@ -28,12 +31,11 @@ title: Transition to Processing
 
 &nbsp;
 
-<center>
-## QR Code for textbook
-</center>
 
-<div>
-<center><img src="assets/images/learningProcessing.png" style="width: 400px;" alt="QR code for textbook"/></center>
+
+<div style="text-align: center;">
+    <h4>QR Code for textbook</h4>
+    <img src="assets/images/learningProcessing.png" style="width: 400px;" alt="QR code for textbook"/>
 </div>
 
 
