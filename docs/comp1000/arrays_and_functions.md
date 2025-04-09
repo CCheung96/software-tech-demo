@@ -39,13 +39,11 @@ int total(int[] arr) {
 ```
 
 Here, `arr` is a reference copy of `data`.
-
-![](./assets/images/passingArrayToFunction.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/passingArrayToFunction1.png" alt="Passing Array to Function Example 1"/>
 
 
 Another example:
-
-![](./assets/images/passingArrayToFunction.drawio.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/passingArrayToFunction2.png" alt="Passing Array To Function Example 2"/>
 
 
 ## Modifying array contents inside a function
@@ -69,7 +67,7 @@ void negate(int[] arr) {
 }
 ```
 
-![](./assets/images/modifyingArrayContentsInsideFunction.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/modifyingArrayContentsInsideFunction.png" alt="Modifying array Contents"/>
 
 
 ## Modifying an array itself inside a function
@@ -90,15 +88,15 @@ void expand(int[] arr) {
 }
 ```
 
-![](./assets/images/modifyingArrayInsideFunction.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/modifyingArrayInsideFunction.png" alt="Modifying Array Inside Function"/>
 
 ## Returning an array from a function
 
 You can always create an array and return it from a function
 
 ### Example 1 (with memory diagram)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/functionReturningArray.png" alt="Example 1"/>
 
-![](./assets/images/functionReturningArray.drawio.png)
 
 ### Example 2
 

@@ -50,9 +50,8 @@ The distinctive property of *recursive* solutions is that they reduce a problem 
 
 One example (shared by one of the students on MACS Discord) is if you are standing at the back of a very long queue, and you want to know how many people are in that queue.
 
-<p align="center">
-	<img src="./assets/images/queue.png" alt="drawing" style="width:600px;"/>
-</p>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/queue.png" alt="a long ass queue"/>
+
 
 - You ask the person in front of you, *"How many people are in front of you?"*,
 - The person in front of you asks the person in front of them, *"How many people are in front of you?"*,
@@ -219,12 +218,10 @@ and on and on and on ...
 An illustration of memory transactions is given below
 
 ### STEP 1: main calls foo(4)
-
-![](./fig/04-recursion/recursiveCall-figure0.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursiveCall-figure0.png" alt="Call to foo(4)"/>
 
 ### STEP 2: foo(4) calls foo(3)
-
-![](./fig/04-recursion/recursiveCall-figure1.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursiveCall-figure0.png" alt="Call to foo(3) from foo(4)"/>
 
 ... and it repeats forever (ends with `StackOverflowError`)
 

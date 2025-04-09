@@ -52,7 +52,7 @@ Chapter 7 of [Learning Processing](https://learningprocessing.com) by Danel Shif
 
 A function is a *named* piece of code with zero or more inputs that optionally returns a value back to the caller.
 
-<center><img src="functionsFigs/functionMemoryDiagrams-figure0.png" style="width: 300px;"/></center>
+<img src="{{ site.baseurl }}/assets/comp1000/functions/functionMemoryDiagrams-figure0.png" style="width: 300px; margin: 16px"/>
 
 <!--For example, we may have a function that determines the higher of two integers. We can call it by passing it two integers. If we pass the values 2 and 5, it should return 5.
 
@@ -176,7 +176,7 @@ Suppose we have a function that accepts a real number (`float`) and returns its 
 Draw a block diagram for the interaction when a caller calls the function with the value 2.5. Assume the name of the formal parameter is `val`, and the value returned by the function is copied into a variable `sqr`.
 
 <details markdown="1"><summary>Solution</summary>
-  ![](./block_ans.png)
+  <img src="{{ site.baseurl }}/assets/comp1000/functions/block_ans.png" alt="Block Diagram Answer" />
 </details>
 </div>
 
