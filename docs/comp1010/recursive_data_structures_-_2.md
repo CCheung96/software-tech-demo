@@ -1,8 +1,8 @@
 ---
-title: COMP1000 Revision
-permalink: /comp1010/comp1010-revision
-parent: COMP1010
-nav_order: 1
+title: Part 2
+permalink: /comp1010/recursive-data-structures/part2
+parent: Recursive Data Structures
+nav_order: 2
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>

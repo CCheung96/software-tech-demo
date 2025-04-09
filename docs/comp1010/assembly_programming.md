@@ -2,7 +2,7 @@
 title: Assembly Programming
 permalink: /comp1010/assembly_programming
 parent: COMP1010
-nav_order: 15
+nav_order: 14
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
