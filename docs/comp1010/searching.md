@@ -2,7 +2,7 @@
 title: Searching Algorithms
 permalink: /comp1010/searching
 parent: COMP1010
-nav_order: 14
+nav_order: 13
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>

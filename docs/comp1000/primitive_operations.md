@@ -1,5 +1,6 @@
 ---
-title: Primitive Operations of Processing
+title: Primitive Operations
+custom-title: Primitive Operations of Processing
 permalink: /comp1000/primitive-operations
 parent: COMP1000
 nav_order: 2
@@ -17,9 +18,9 @@ nav_order: 2
   * Understand the categories into which values might fit and the consequences of these categories.
 </details>
 
-# Drawing Primitives
+## Drawing Primitives
 
-## Reading
+### Reading
 
 Chapters 1 and 2 of [Learning Processing](http://learningprocessing.com/) by Daniel Shiffman.  Macquarie University students have access to an electronic copy [via the library](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/7h5qs5/alma99244413575302171).
 
@@ -27,7 +28,7 @@ Chapters 1 and 2 of [Learning Processing](http://learningprocessing.com/) by Dan
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5N31KNgOO0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n2oHuKG_BQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Reading
+### Reading
 
 [Coordinate System tutorial at processing.org](https://processing.org/tutorials/coordinatesystemandshapes).
 
@@ -47,7 +48,7 @@ Processing has a whole pile of built in expressions you can use, most of which c
 
 Warning!: Division and remainder might now work the way you expect.  We will explain why in a later topic.
 
-# Values and Types
+## Values and Types
 
 So far, we have seen many _values_:
 
@@ -184,7 +185,7 @@ For example,
 	- `-20%5 = 0`
 	- `0%8 = 0`
 
-## Order of operations
+## Order of Operations
 
 The arithmetic operators we discussed earlier have the following order of precedence or priority:
 
@@ -223,7 +224,7 @@ Examples:
   - = `18 / 10.0` 
   - = `1.8`
 
-# Shorthand operators
+## Shorthand operators
 
 When you want to update the value of a variable, you can use a *shorthand operator*.
 
@@ -248,7 +249,7 @@ c++; //increases c by 1
 e--; //decreases e by 1
 ```
 
-# Furthering your Understanding
+## Furthering your Understanding
 
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/7FM0zvbHKnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

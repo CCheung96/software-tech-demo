@@ -1,8 +1,8 @@
 ---
-title: Recursive Data Structures Part 1
-permalink: /comp1010/recursive-data-structures-1
-parent: COMP1010
-nav_order: 12
+title: Part 1
+permalink: /comp1010/recursive-data-structures/part1
+parent: Recursive Data Structures
+nav_order: 1
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
