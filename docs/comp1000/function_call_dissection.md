@@ -75,67 +75,46 @@ int square(int num) {
 ```
 
 ### STEP 1: setup function is invoked by JVM
-
-![](./fig/callStackProcessing/callStack1Processing.png)
-
-function call is placed on the stack. Note that parameter is `null` because we typically do not pass any arguments to setup, at least in this unit.
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack1Processing.png" alt="Step 1"/>
+Function call is placed on the stack. Note that parameter is `null` because we typically do not pass any arguments to setup, at least in this unit.
 
 ### STEP 2: setup function calls `distance` with parameters 1, 3, 6 and 5.
-
-![](./fig/callStackProcessing/callStack2Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack2Processing.png" alt="Step 2"/>
 Another entry is made for the call to `distance` and placed on the call stack.
 
 ### STEP 3: `distance` calls `square` with parameter `5`
-
-![](./fig/callStackProcessing/callStack3Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack3Processing.png" alt="Step 3"/>
 A third entry is made for the call to `square` and placed on the stack.
 
 ### STEP 4: `square` returns 25 to `distance`
-
-![](./fig/callStackProcessing/callStack4Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack4Processing.png" alt="Step 4"/>
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 5: `distance` calls `square` with parameter `2`
-
-![](./fig/callStackProcessing/callStack5Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack5Processing.png" alt="Step 5"/>
 A third entry is made for the call to `square` and placed on the stack.
 
 ### STEP 6: `square` returns 4 to `distance`
-
-![](./fig/callStackProcessing/callStack6Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack6Processing.png" alt="Step 6"/>
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 7: `distance` calls `sqrt` with parameter `29`
-
-![](./fig/callStackProcessing/callStack7Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack7Processing.png" alt="Step 7"/>
 A third entry is made for the call to `sqrt` and placed on the stack.
 
 ### STEP 8: `sqrt` returns 5.38516 to `distance`
-
-![](./fig/callStackProcessing/callStack8Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack8Processing.png" alt="Step 8"/>
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 9: `distance` returns 5.38516 to `setup`
-
-![](./fig/callStackProcessing/callStack9Processing.png)
-
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/callStack9Processing.png" alt="Step 9"/>
 Entry for `distance` is taken off the stack. `setup` becomes the active function.
 
 ### STEP 10: `setup` terminates
-
 Entry for `setup` is taken off the stack. Call stack is now empty. Program has now finished execution.
 
 ## Summary of control flow
-
-![](./fig/callStackProcessing/controlFlowProcessing.png)
-<!--<iframe src="https://giphy.com/embed/Az1CJ2MEjmsp2" width="480" height="221" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bare-barren-Az1CJ2MEjmsp2">via GIPHY</a></p>-->
+<img src="{{ site.baseurl }}/assets/comp1000/call-stack/controlFlowProcessing.png" alt="Control Flow Summary"/>
 
 # Another example
 

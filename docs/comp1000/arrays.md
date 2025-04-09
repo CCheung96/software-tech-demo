@@ -147,11 +147,11 @@ So you can have,
 
 ## <s>Perhaps</s> The most important concept to understand in arrays is the difference between a *reference* and an *instance*.
 
-<br>
 
-![](https://media.giphy.com/media/WV2tRAlb4Qc741GHVn/giphy.gif)
 
-<br>
+<img src="https://media.giphy.com/media/WV2tRAlb4Qc741GHVn/giphy.gif" alt="This is a critical moment" style="width: 50%; margin: 16px"/>
+
+
 
 ### ***Reference*** - the variable name by which you know the array
 
@@ -177,7 +177,7 @@ type[] arrayName = new type[size];
 int[] arr = new int[5]; //an array that holds 5 integers
 ```
 
-![](./assets/images/intArray.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/intArray.png" alt= "Int Array">
 
 **Reference**: `arr`
 
@@ -191,7 +191,7 @@ int[] arr = new int[5]; //an array that holds 5 integers
 boolean[] flags = new boolean[4]; //an array that holds 4 booleans
 ```
 
-![](./assets/images/booleanArray.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/booleanArray.png" alt= "Boolean Array">
 
 **reference**: `flags` 
 
@@ -213,7 +213,7 @@ type[] arrayName = {item1, item2, ....};
 int[] taxicab = {10, 70, 20, 90};
 ```
 
-![](./assets/images/intArrayPopulated.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/intArrayPopulated.png" alt= "Populated Int Array">
 
 **reference**: `taxicab`
 
@@ -339,7 +339,7 @@ int[] src = {10, 70, 20, 90};
 int[] dest = src;
 ```
 
-![](./assets/images/arrayRefCopy.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/arrayRefCopy.png" alt= "Array Reference Copy">
 
 We call this a ***reference copy***.
 
@@ -361,19 +361,19 @@ a = b;
 
 - After the first line, there is one reference and one instance.
 
-![](./assets/images/refCopyStep1.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyStep1.png" alt= "Reference Copy Step 1">
 
 - After the second line, there are two references and two instances.
 
-![](./assets/images/refCopyStep2.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyStep2.png" alt= "Reference Copy Step 2">
 
 - After the third line, there are three references but still, only two instances. Currently, `a` and `c` refer to the same instance.
 
-![](./assets/images/refCopyStep3.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyStep3.png" alt= "Reference Copy Step 3">
 
 - After the fourth line, there are three references but still, only two instances. Now, `a` and `b` refer to the same instance.
 
-![](./assets/images/refCopyStep4.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyStep4.png" alt= "Reference Copy Step 4">
 
 # Instance copy of an array
 
@@ -390,7 +390,7 @@ for(int i=0; i < source.length; i++) {
 }
 ```
 
-![](./assets/images/instanceCopyOfArray.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/instanceCopyOfArray.png" alt= "Instance Copy of Array">
 
 # Exercises
 
@@ -462,13 +462,13 @@ b[2] = a;
 
 Write a piece of code that creates the arrays represented in the following diagram.
 
-![](./assets/images/refCopyProblem1.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyProblem1.png" alt= "Reference Copy Problem 1">
 
 ## Exercise 9
 
 Write a piece of code that creates the arrays represented in the following diagram.
 
-![](./assets/images/refCopyProblem2.png)
+<img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyProblem2.png" alt= "Reference Copy Problem 2">
 
 ## Exercise 10
 

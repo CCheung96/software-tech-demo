@@ -26,7 +26,7 @@ nav_order: 7
 
 George Boole was an early 19th century English mathematician who worked in the field of differential equations and Boolean alegbra. Here's a link to his book, [The Laws of Thought](https://www.gutenberg.org/files/15114/15114-pdf.pdf) 
 
-![](./assets/images/georgeBoole.jpg)
+<img src="{{ site.baseurl }}/assets/comp1000/boolean-expressions/georgeBoole.jpg" alt= "George Boole">
 
 **Trivia time**: George Boole's house is at 5, Grenville Place, Cork.
 

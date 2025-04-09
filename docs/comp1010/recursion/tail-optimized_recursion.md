@@ -48,7 +48,8 @@ Let's say the origin call is `factorial(4)` (which calls `factorial(3)`,  which 
 
 At the time `factorial(1)` executes, the call stack looks like the following:
 
-<!-- ![](./fig/04-recursion/callStackWithoutTail.png) -->
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/callStackWithoutTail.png" alt="Call Stack Without Tail"/>
+
 
 ## Eureka!
 
@@ -81,7 +82,7 @@ Now, only the current stack frame needs to be kept in the memory and the previou
 
 At the time `factorial(1, 24)` executes, the call stack looks like the following:
 
-<!-- ![](./fig/04-recursion/callStackWithTail.png) -->
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/callStackWithTail.png" alt="Call Stack With Tail"/>
 
 You can also create a second *proxy* function so that you don't have to pass the second parameter during the initial call, like,
 
