@@ -7,12 +7,12 @@ nav_order: 22
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * [Primitive Operations](./primitive_operations)
-  * [Variables](./variables)
-  * [Conditions](./conditions)
-  * [Loops](./loops)
-  * [Functions](./functions)
-  * [Arrays](./compound_data)
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

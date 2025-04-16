@@ -7,8 +7,8 @@ nav_order: 7
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Primitive Operations](./primitive_operations)
-  * [Variables](./variables.html)
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
 
 </details>
 

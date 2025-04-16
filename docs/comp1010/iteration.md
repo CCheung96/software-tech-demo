@@ -191,7 +191,7 @@ ListIterator<Integer> iter = list.listIterator();
 
 Assuming the list is [10, 70, 20, 90, 30, 80], the initial state of `iter` is represented by the red block.
 
-![](./fig/06-lists/listIterator/listIterator-figure1.png)
+<img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure1.png" />
 
 
 You can check if there is an item in front of the current position of the iterator as:
@@ -221,31 +221,31 @@ while(iter.hasNext()) {
 
 > ### Initial state
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure1.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure1.png" />
 
 > ### After first iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure2.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure2.png" />
 
 > ### After second iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure3.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure3.png" />
 
 > ### After third iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure4.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure4.png" />
 
 > ### After fourth iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure5.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure5.png" />
 
 > ### After fifth iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure6.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure6.png" />
 
 > ### After sixth iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure7.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure7.png" />
 
 ### Starting from a specific index
 
@@ -262,15 +262,15 @@ while(iter.hasNext()) {
 
 > ### Initial state
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure5.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure5.png" />
 
 > ### After first iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure6.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure6.png" />
 
 > ### After second iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure7.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure7.png" />
 
 ### Back to front iteration
 
@@ -289,31 +289,30 @@ Assuming ArrayList `list` holds the values [10, 70, 20, 90, 30, 80], the followi
 
 > ### Initial state
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure7.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure7.png" />
 
 > ### After first iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure6.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure6.png" />
 
 > ### After second iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure5.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure5.png" />
 
 > ### After third iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure4.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure4.png" />
 
 > ### After fourth iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure3.png)
-
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure3.png" />
 > ### After fifth iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure2.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure2.png" />
 
 > ### After sixth iteration
 >
-> ![](./fig/06-lists/listIterator/listIterator-figure1.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/iteration/listIterator-figure1.png" />
 
 ```java
 ListIterator<Integer> iter = list.listIterator(list.size());

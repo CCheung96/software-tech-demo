@@ -44,20 +44,20 @@ Every Node object holds a reference to another Node object.
 > Node a = new Node(10, null);
 > ```
 >
-> ![](./fig/06-lists/node/node-figure0.png)
+><img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure0.png" alt=""/>
 
 
 > ```java
 > Node b = new Node(20, a);
 > ```
 >
-> ![](./fig/06-lists/node/node-figure1.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure1.png" alt=""/>
 
 > ```java
 > Node head = new Node(20, new Node(10, null));
 > ```
 >
-> ![](./fig/06-lists/node/node-figure2.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure2.png" alt=""/>
 
 Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passed it as a parameter to the constructor of `head`.
 
@@ -66,7 +66,7 @@ Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passe
 > head.next.next = new Node(-50, null);
 > ```
 >
-> ![](./fig/06-lists/node/node-figure3.png)
+> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure3.png" alt=""/>
 
 
 ## Linking nodes
@@ -87,11 +87,11 @@ Node n2 = new Node(90, n3);
 Node n1 = new Node(30, n2);
 ```
 
-![](./fig/06-lists/linkedlists/linkedlists-figure4.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure4.png" alt=""/>
 
 Simplified representation:
 
-![](./fig/06-lists/linkedlists/linkedlists-figure5.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure5.png" alt=""/>
 
 We can get all the values using the "first" node, in this case, `n1` :)
 
@@ -126,8 +126,7 @@ while(temp != null) {
   temp = temp.next;
 }
 ```
-
-![](./fig/06-lists/linkedlists/linkedlists-figure12.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure12.png" alt=""/>
 
 ## Careful to not lose the reference to the starting node
 
@@ -462,7 +461,7 @@ RNode q = new RNode(r2, null);
 RNode p = new RNode(r1, q);
 ```
 
-![](./fig/06-lists/linkedlists/linkedlists-figure2.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure2.png" alt=""/>
 
 We can create anonymous objects to reduce variable count.
 
@@ -471,7 +470,7 @@ RNode q = new RNode(new Rectangle(4.2, 3.6), null);
 RNode p = new RNode(new Rectangle(2.5, 1.5), q);
 ```
 
-![](./fig/06-lists/linkedlists/linkedlists-figure3.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure3.png" alt=""/>
 
 # Be careful while comparing objects!!!
 
@@ -540,7 +539,7 @@ The above version is called *out-of-place* algorithm and will create a second li
 
 Thanks to Xingyu (Ara) Cai for providing the following three elegant solutions! Well done, Ara :)
 
-![](./assets/images/morganFreemanClapping.gif)
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/morganFreemanClapping.gif)" alt="Morgan Freeman Approves"/>
 
 ```java
 public static Node reverseOutPlaceRecursive(Node start) {

@@ -7,8 +7,8 @@ has_children: true
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="./compound_data">Composite Data</a>
-  * <a href="./recursion">Recursion</a>
+  * Compound Data???
+  * [Recursion]({{ site.baseurl }}/comp1010/recursion)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
@@ -484,4 +484,4 @@ At the end of the execution of the above code, the output will be:
 
 The memory diagram is provided below:
 
-![](./fig/06-lists/builtInLists/userDefinedObjectArrayList.png)
+<img src="{{ site.baseurl }}/assets/comp1010/lists/userDefinedObjectArrayList.png" alt=""/>

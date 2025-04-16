@@ -8,7 +8,7 @@ nav_order: 16
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="compound_data">Compound Data</a>
+  * Compound Data???
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
@@ -35,7 +35,7 @@ Let us go through basic arrays and build up to 2-dimensional arrays.
 	int[] dest = src;
 	```
 
-	![](./assets/images/arrayRefCopy.png)  
+<img src="{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/arrayRefCopy.png" alt="arrayRefCopy" />  
 	
 	In the following code, there are three references, each referring to its own instance.
 
@@ -63,7 +63,7 @@ Let us go through basic arrays and build up to 2-dimensional arrays.
 	int[][] data = {a, b, c}; //since a, b, c are each int[]
 	```
 
-	![](./assets/images/2darray.png)  
+<img src="{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/2darray.png" alt="2D Array" />    
 
 
 *   `data` has 3 items, each of type `int[]` inside it.
@@ -180,7 +180,7 @@ int total(int[][] data) {
 }
 ```
 
-![](./assets/images/two_dimensional_array_to_function.png)
+<img src="{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/two_dimensional_array_to_function.png" alt="2D Array to Function" />  
 
 
 ## Example of modiying contents of a multi-dimensional array in a function
@@ -205,7 +205,7 @@ void negateAll(int[][] data) {
 }
 ```
 
-![](./assets/images/two_dimensional_array_to_function_modifying.png)
+<img src="{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/two_dimensional_array_to_function_modifying.png" alt="2D Array to Function Modifying" />  
 
 
 ## Advanced question 1

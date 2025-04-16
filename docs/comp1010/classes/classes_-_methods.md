@@ -1,13 +1,15 @@
 ---
-title: Functions inside Objects
-permalink: /comp1010/classes/functions-inside-objects
+title: Methods
+custom-title: "Class Methods: Functions Inside Objects"
+permalink: /comp1010/classes/methods
 parent: Classes
+grand_parent: COMP1010
 nav_order: 3
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Classes as Types](./classes_types)
-  * [Copying objects](./classes_copies)
+  * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
+  * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
 
 </details>
 

@@ -7,10 +7,10 @@ nav_order: 14
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="variables">Variables</a>
-  * <a href="conditions">Conditions</a>
-  * <a href="loops">Loops</a>
-  * <a href="arrays">Arrays</a>
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 
 </details>
 

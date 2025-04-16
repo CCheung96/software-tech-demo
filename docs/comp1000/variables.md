@@ -7,8 +7,8 @@ nav_order: 4
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * [Primitive Operations](./primitive_operations)
-  * [Algorithms](./algorithms)
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+  * [Algorithms]({{ site.baseurl }}/comp1000/algorithms)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
@@ -203,7 +203,7 @@ Note that different variables need different number of bytes in the memory.
 
 Memory assigned to variables does not need to be in the same order as the variable assignment operation. Where will a variable be stored depends on Operating System.
 
-![](./assets/images/variables.png)
+<img src="{{ site.baseurl }}/assets/comp1000/variables/variables.png" alt="Variables" />
 
 ## Grid structure
 
@@ -858,7 +858,7 @@ float ySpeed = xSpeed * (height - y) / (width - x);
 &nbsp;
 
 <div>
-<center><img src="assets/images/comments.png" style="width: 400px;"/></center>
+<img src="{{ site.baseurl }}/assets/comp1000/variables/comments.png" style="width: 400px; display: flex; justify-content: center;"/>
 </div>
 
 # Furthering your understanding

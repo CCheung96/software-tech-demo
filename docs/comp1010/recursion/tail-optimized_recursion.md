@@ -2,6 +2,7 @@
 title: Tail-Optimised Recursion
 permalink: /comp1010/recursion/tail
 parent: Recursion
+grand_parent: COMP1010
 nav_order: 3
 ---
 

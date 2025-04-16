@@ -7,8 +7,8 @@ has_children: true
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Functions](./functions)
-  * [Recursion - What goes on during a function call](./recursion_function_call)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Recursion: Function Calls]({{ site.baseurl }}/comp1010/recursion/function-calls)
 
 </details>
 

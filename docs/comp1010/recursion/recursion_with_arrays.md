@@ -2,14 +2,15 @@
 title: Recursion with Arrays
 permalink: /comp1010/recursion/arrays
 parent: Recursion
+grand_parent: COMP1010
 nav_order: 4
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Functions](./functions)
-  * [Classes as Types](./classes_types)
-  * [Recursion](./recursion)
-
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
+  * [Recursion]({{ site.baseurl }}/comp1010/recursion)
+  
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>

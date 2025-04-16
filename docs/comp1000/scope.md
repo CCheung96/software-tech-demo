@@ -8,11 +8,11 @@ nav_order: 12
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * [Variables](./variables)
-  * [Conditions](./conditions)
-  * [Loops](./loops)
-  * [Functions](./functions)
-
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

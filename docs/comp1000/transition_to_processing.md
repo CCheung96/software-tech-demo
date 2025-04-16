@@ -9,7 +9,7 @@ nav_order: 1
 <summary>Assumed Knowledge:</summary>
 
   * Basic Computer Literacy
-  * Understands Files and Folders.
+  * Basic Understanding of Files and Folders.
 </details>
 
 <details class="outcomes" markdown="1">

@@ -2,6 +2,7 @@
 title: List of Lists
 permalink: /comp1010/lists/list-of-lists
 parent: Lists
+grand_parent: COMP1010
 nav_order: 1
 ---
 
@@ -56,7 +57,7 @@ System.out.println(matrix.get(0)); //[-100, 700, 200, 900]
 System.out.println(b == matrix.get(1)); //reference copy check: true
 ```
 
-![](./fig/06-lists/builtInLists/listOfListsSimple.png)
+<img src="{{ site.baseurl }}/assets/comp1010/listOfLists/listOfListsSimple.png" />
 ## Traversing a list of lists
 
 You can see that we can display each sub-list, one at a time, using,
@@ -185,7 +186,7 @@ ArrayList<ArrayList<Integer>> varying =
 //varying = [[1000, 700, 200, 900], [500, 300], null, [600, null, 300]]
 ```
 
-![](./fig/06-lists/builtInLists/listOfListsComprehensive.png)
+<img src="{{ site.baseurl }}/assets/comp1010/listOfLists/listOfListsComprehensive.png" alt=""/>
 
 This is because some sub-lists are of different size, and one is even null.
 

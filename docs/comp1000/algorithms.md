@@ -7,7 +7,7 @@ nav_order: 3
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="/primitive_operations">Primitive Operations</a>
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

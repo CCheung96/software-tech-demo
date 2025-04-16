@@ -7,9 +7,10 @@ nav_order: 5
 
 <details class="prereq" markdown="1">
 <summary>Assumed Knowledge</summary>
-  * [Transition to Processing](./transition_to_processing)
+  * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
 </details>
-  * [Variables](./variables)
+
 
 <details class="outcomes" markdown="1">
 <summary>Learning Outcomes</summary>

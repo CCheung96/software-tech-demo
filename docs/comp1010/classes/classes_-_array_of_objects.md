@@ -2,13 +2,14 @@
 title: Array of Objects
 permalink: /comp1010/classes/array-of-objects
 parent: Classes
+grand_parent: COMP1010
 nav_order: 5
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Classes as Types](./classes_types)
-  * [Copying objects](./classes_copies)
-  * [Instance methods](./classes_methods)
+  * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
+  * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
+  * [Instance methods]({{ site.baseurl }}/comp1010/classes/methods)
 
 </details>
 

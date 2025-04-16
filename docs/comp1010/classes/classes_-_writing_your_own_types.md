@@ -1,13 +1,15 @@
 ---
-title: Writing your own Types
+title: Types
+custom-title: Writing your own Types
 permalink: /comp1010/classes/types
 parent: Classes
+grand_parent: COMP1010
 nav_order: 1
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Transition to Java](./transition_to_java)
-  * [Compound Data](./compound_data)
+  * [Transition to Java]({{ site.baseurl }}/comp1000/transition-to-processing)
+  * [Compound Data???](./compound_data)
 
 </details>
 
