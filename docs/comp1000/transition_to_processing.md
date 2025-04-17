@@ -21,6 +21,8 @@ nav_order: 1
   * Be able to do arithmetic the way computers do.
  </details>
 
+<div id="my-d3-target"></div>
+
 ## Textbook
  The textbook for this unit is "Learning Processing: A Beginner's Guide to Programming Images, Animation, and Interaction" by Daniel Shiffman. Scan the following QR Code or click on [this link](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/467l3g/cdi_skillsoft_books24x7_bks00089202) to download it via Macquarie University. 
 
