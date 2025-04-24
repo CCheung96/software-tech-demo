@@ -6,14 +6,14 @@ nav_order: 5
 ---
 
 <details class="prereq" markdown="1">
-<summary>Assumed Knowledge</summary>
+<summary>Assumed Knowledge:</summary>
   * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
 </details>
 
 
 <details class="outcomes" markdown="1">
-<summary>Learning Outcomes</summary>
+<summary>Learning Outcomes:</summary>
   * Be able to move a complex shape (or change some other attributes)
 </details>
 

@@ -7,12 +7,12 @@ nav_order: 2
 ---
 
 <details class="prereq" markdown="1">
-<summary>Assumed Knowledge</summary>
+<summary>Assumed Knowledge:</summary>
   * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
 </details>
 
 <details class="outcomes" markdown="1">
-<summary>Learning Outcomes</summary>
+<summary>Learning Outcomes:</summary>
   * Be able to create static processing sketches and understand how they came to be.
   * Have the tools to create sketches based on your own imagination.
   * Understand the categories into which values might fit and the consequences of these categories.

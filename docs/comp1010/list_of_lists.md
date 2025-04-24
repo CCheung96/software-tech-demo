@@ -6,13 +6,13 @@ grand_parent: COMP1010
 nav_order: 1
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-* <a href="./lists">Lists</a>
-* <a href="./iteration">Iterators</a>
+  * [Lists]({{ site.baseurl }}/comp1010/lists)
+  * [Iteration]({{ site.baseurl }}/comp1000/iteration)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand creation and operations on a list of lists.
 </details>

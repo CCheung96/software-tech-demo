@@ -37,7 +37,7 @@ nav_order: 1
 
 <div style="text-align: center;">
     <h4>QR Code for textbook</h4>
-    <img src="assets/images/learningProcessing.png" style="width: 400px;" alt="QR code for textbook"/>
+    <img src="{{ site.baseurl }}/assets/comp1000/learningProcessingQR.png" style="width: 400px;" alt="QR code for textbook"/>
 </div>
 
 

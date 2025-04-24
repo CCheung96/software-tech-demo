@@ -7,8 +7,8 @@ nav_order: 4
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Transition to Java](./transition_to_java)
-  * [Debugging in Java](./debugging)
+  * [Transition to Java]({{ site.baseurl }}/comp1010/transition-to-java)
+  * [Debugging in Java]({{ site.baseurl }}/comp1010/debugging)
 
 </details>
 

@@ -5,12 +5,12 @@ parent: Recursive Data Structures
 nav_order: 1
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
-  * <a href="./classes_composition">Class composition</a>
-  * <a href="./lists">Lists</a>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+  * [Classes- Composition]({{ site.baseurl }}/comp1010/classes/composition)
+  * [Lists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Be able to create and operate on a class holding one or more references of the same type
 

@@ -5,12 +5,12 @@ parent: COMP1000
 nav_order: 3
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand what an algorithm is
   * Be able to relate an algorithm to a function

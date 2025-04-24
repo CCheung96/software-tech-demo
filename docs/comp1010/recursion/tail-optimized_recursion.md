@@ -8,9 +8,9 @@ nav_order: 3
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-* [Functions](./functions)
-* [Recursion](./recursion)
-* [Recursion with String data](./recursion-strings)
+* [Functions]({{ site.baseurl }}/comp1000/functions)
+* [Functions]({{ site.baseurl }}/comp1010/recursion)
+* [Recursion with String data]({{ site.baseurl }}/comp1010/recursion/string-data)
 
 </details>
 

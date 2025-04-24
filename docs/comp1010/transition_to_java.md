@@ -5,20 +5,24 @@ parent: COMP1010
 nav_order: 2
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Primitive Operations](./primitive_operations)
-  * [Variables](./variables)
-  * [Conditions](./conditions)
-  * [Loops](./loops)
-  * [Functions](./functions)
-  * [Scope](./scope)
-  * [Arrays](./arrays)
-  * [Arrays and Functions](./arrays_and_functions)
-  * [Reference Semantics](./reference_semantics)
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Scope]({{ site.baseurl }}/comp1000/scope)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
+  * [Arrays and Functions]({{ site.baseurl }}/comp1000/arrays-and-functions)
+  * [Reference Semantics]({{ site.baseurl }}/comp1000/reference-semantics)
+
+
+
+  * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Be able to compile and run basic Java programs
   * Understand the correspondance between Processing and Java

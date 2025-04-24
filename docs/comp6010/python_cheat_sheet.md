@@ -4,12 +4,12 @@ permalink: /comp6010/pyhon-cheat-sheet
 parent: COMP6010
 nav_order: 4
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Algorithms]({{ site.baseurl }}/comp1000/algorithms)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
   * Everything about basic Python
 </details>
 

@@ -6,13 +6,13 @@ nav_order: 17
 ---
 
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * Compound Data???
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Multi-Dimensional Arrays]({{ site.baseurl }}/comp1000/multi-dimensional-arrays)
 </details>
   z
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand why and how to perform `null` checks on arrays.
 </details>
@@ -21,9 +21,9 @@ nav_order: 17
 
 The first thing one must understand is that the "contents" of an array is a reference to the memory location where the items are stored. The *name* of the array is the *reference* while the actual collection of items is the *instance*.
 
-This has been emphasized under Compound Data???.
+This has been emphasized under [Arrays]({{ site.baseurl }}/comp1000/arrays).
 
-Second - things will be much much easier if you draw memory diagrams (as shown in Compound Data???).
+Second - things will be much much easier if you draw memory diagrams (as shown in [Arrays]({{ site.baseurl }}/comp1000/arrays)).
 
 Let's dig in!
 

@@ -6,12 +6,12 @@ nav_order: 16
 ---
 
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * Compound Data???
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand how to create, and operate on, multi-dimensional arrays.
 </details>

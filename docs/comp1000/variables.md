@@ -5,13 +5,13 @@ parent: COMP1000
 nav_order: 4
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Algorithms]({{ site.baseurl }}/comp1000/algorithms)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand what a variable is
   * Understand how variables are written in processing

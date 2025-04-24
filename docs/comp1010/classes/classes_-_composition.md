@@ -1,5 +1,5 @@
 ---
-title: Compositions
+title: Composition
 permalink: /comp1010/classes/composition
 parent: Classes
 grand_parent: COMP1010

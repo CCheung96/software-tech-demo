@@ -5,9 +5,9 @@ parent: COMP1000
 nav_order: 19
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
-  * [Compound Data???](compound_data)
-	
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Loops]({{ site.baseurl }}/comp1000/loops)
@@ -15,7 +15,7 @@ nav_order: 19
   * [Scope]({{ site.baseurl }}/comp1000/scope)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
   * Be able to identify why one program snippet is preferrable over another.
   * Be able to convert programs from a poorer version to a better version.
 </details>

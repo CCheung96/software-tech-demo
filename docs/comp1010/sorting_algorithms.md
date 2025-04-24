@@ -5,18 +5,16 @@ parent: COMP1010
 nav_order: 9
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
 
-  * <a href="compositedata">Composite Data??? (Arrays)</a>
-
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Functions]({{ site.baseurl }}/comp1000/functions)
-  * [Composite Data??? (Arrays)]
   * [Classes- Array of Objects]({{ site.baseurl }}/comp1010/classes/array-of-objects)
   * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand why data needs to be sorted
   * Understand how data can be sorted

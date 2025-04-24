@@ -5,12 +5,12 @@ parent: COMP1010
 nav_order: 3
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Transition to Java](transition_to_java)
+  * [Transition to Java]({{ site.baseurl }}/comp1010/transition-to-java)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Be able to identify input/output pairs that are good for debugging.
   * Be able to debug Java programs with appropriate tools.
