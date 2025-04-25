@@ -71,4 +71,4 @@ Also, programming languages, and the computer we run them on, are very complex. 
 
 If you are searching from a position of ignorance, you are not helping yourself.  If you are searching to remind yourself of, or to double-check, something you already partly know, you are doing it right.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H0YNIJh8bmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="H0YNIJh8bmw" %}

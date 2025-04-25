@@ -32,11 +32,11 @@ The new and interesting thing is _what gets copied when the value stored in the 
 
 The underlying concept is simple enough, now lets see some consequences that flow from it.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iOSm0gQ-z1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="iOSm0gQ-z1s" %}
 
 # Arrays and functions
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M_wqSKvOsXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="M_wqSKvOsXs" %}
 
 It's very common to pass an array to a function. Generally, we operate on an array passed to a function, but sometimes it's also useful to,
 
@@ -113,7 +113,7 @@ int[] getDiceOutcomes(int n) {
 
 # Multi-Dimensional Arrays
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nGyy4kcsglg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="nGyy4kcsglg" %}
 
 
 All this also means it is possible to have an array of arrays.  These are called multi-dimensional arrays.  For two dimensions, they are declared as

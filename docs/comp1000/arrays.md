@@ -121,7 +121,7 @@ Note:  objects are often taught with a related concept - classes - however, we w
 
 Note that the two different versions of compound data come with two different syntaxes for dereferences - for objects is it `.name` and for arrays it is `[number]`.  See below for details.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XavYru3jotQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="XavYru3jotQ" %}
 -->
 
 # Arrays
@@ -129,9 +129,9 @@ Note that the two different versions of compound data come with two different sy
 <!--
 To understand how to use compound data, we will look at the most common compound data type, arrays.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NptnmWvkbTw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="NptnmWvkbTw" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/47JBVxCWXJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="47JBVxCWXJA" %}
 -->
 
 An array is a fixed-sized collection of items, each item of the same type.
@@ -503,7 +503,7 @@ What are the contents of the array `items`?
 
 # Furthering your understanding
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/liw7__I2kCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="liw7__I2kCs" %}
 
 # Coding in the real life
 

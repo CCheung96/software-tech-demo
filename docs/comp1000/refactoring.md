@@ -23,7 +23,7 @@ nav_order: 19
 {: .keypoint}
 We refactor code to _takeaway duplicate or similar code_, _to make our program easier to understand_, and _to improve code maintenance_.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vcydPCZJMBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="vcydPCZJMBc" %}
 
 # Variables
 
@@ -312,7 +312,7 @@ for (int i = 0; i < 100; i = i + 10) {
 
 # Functions
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GmWFXwyVW_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="GmWFXwyVW_E" %}
 
 ### Common Code
 Note that the following examples show cases where new functions could be created but in practical cases, we would be more likely to create a new function if:

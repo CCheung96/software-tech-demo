@@ -273,4 +273,4 @@ For the same code as task 2, write down statements that store the following valu
 
 # Relevant MQ Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bky3A1GGXx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="bky3A1GGXx0" %}

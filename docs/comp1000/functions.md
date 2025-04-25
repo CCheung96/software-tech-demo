@@ -34,19 +34,19 @@ Chapter 7 of [Learning Processing](https://learningprocessing.com) by Danel Shif
 
 ### Function Design
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1taENRdghmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="1taENRdghmQ" %}
 
 ### Function Defintion and Call
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CowX0cMCg1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="CowX0cMCg1s" %}
 
 ## Videos by Daniel Shiffman
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zBo2D3Myo6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="zBo2D3Myo6Q" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j_XyeWg_3EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="j_XyeWg_3EE" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b9AYvekwKIg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="b9AYvekwKIg" %}
 
 # Discussion
 
@@ -313,7 +313,7 @@ The fact that a function call in processing can _do_ something and also _evaluat
 
 # Furthering your Understanding
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VU284tKC_HY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="VU284tKC_HY" %}
 
 #### Number of digits in an integer
 

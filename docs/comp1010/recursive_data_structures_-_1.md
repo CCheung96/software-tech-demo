@@ -72,7 +72,7 @@ Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passe
 ## Linking nodes
 
 <!--
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Jqu9IpulHvU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="Jqu9IpulHvU" %}
 
 <p>&nbsp;</p>
 -->

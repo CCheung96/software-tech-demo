@@ -35,7 +35,7 @@ Before explaining things descriptively, how about a video to illustrate binary s
 
 The implementation discussed is recursive. We haven't covered recursion yet so only the first 2 minutes 40 seconds of the video are relevant.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P3YID7liBug" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="P3YID7liBug" %}
 
 ## The game is on!
 

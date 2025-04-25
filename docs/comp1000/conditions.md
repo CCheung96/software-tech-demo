@@ -26,15 +26,15 @@ Conditions allow different code to run in different frames of the animation
 {: .readings}
 Chapter 5 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wsI6N9hfW7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="wsI6N9hfW7E" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mVq7Ms01RjA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="mVq7Ms01RjA" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9857701OsDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="9857701OsDE" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_NJqfZUQ3i4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="_NJqfZUQ3i4" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YIKRXl3wH8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="YIKRXl3wH8Y" %}
 
 ## Statement or Expression
 
@@ -124,7 +124,7 @@ flowchart TD
 
 The above code executes the conditional code, increasing `result` by 1 and displaying the value 6.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1oVo6mYYeTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="1oVo6mYYeTs" %}
 
 ## An `if-else` condition
 An `if-else` condition executes the `if` block if the `boolean expression` is evaluated to `true` and the `else` block if the `boolean expression` is evaluated to `false`. The `rest of the code` is executes afterwards irrespectively.
@@ -176,13 +176,13 @@ flowchart TD
 
 The else-block is executed in the above code, `isEven` becomes `false`, and is displayed on the console.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jgmZ2T8mWl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="jgmZ2T8mWl0" %}
 
 ## Statements, not Expressions
 
 An `if` is a _statement_ not an _expression_. Therefore, you are free to put any valid conditional code inside the scope of another condition.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jgmZ2T8mWl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="jgmZ2T8mWl0" %}
 
 
 <!--That means it has no intrinsic value, it exists only for what it can _do_.  For example, variables are _expressions_ because if  you put one in your code, it is the same as putting some value in that spot (the value stored in the variable).  However, an `if` may effect variables, or draw things on the screen, but the statement itself has no value, i.e. `if (1 < 2) {line(1,1,,1,);}` is not the same as putting some value in that spot.-->
@@ -588,4 +588,4 @@ if (dayOfWeek < 5) { //NOT the weekend
 </div>
 
 <h3>Furthering Your Understanding</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wUPc__xuCc0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="wUPc__xuCc0" %}

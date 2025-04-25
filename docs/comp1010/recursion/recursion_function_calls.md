@@ -170,4 +170,4 @@ Entry for `main` is taken off the stack. Call stack is now empty. Program has no
 
 # Relevant MQ Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8ob2ha_sFXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="8ob2ha_sFXM" %}

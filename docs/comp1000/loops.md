@@ -28,11 +28,11 @@ Loops are similar to conditions except that after every iteration of the loop, t
 {: .readings}
 Chapter 6 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RtAPBvz6k0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="RtAPBvz6k0Y" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/esKLU3dJo70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="esKLU3dJo70" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h4ApLHe8tbk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="h4ApLHe8tbk" %}
 
 ## Statement or Expression
 
@@ -218,9 +218,9 @@ There is an even better way of tracing loops known as logic table construction. 
 | 1 	| true  	| 720\*1 = 720 	|
 | 0 	| false 	|             	|
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VbGDp1FaDzc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="VbGDp1FaDzc" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cBRE7XEYz_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="cBRE7XEYz_A" %}
 
 ## Guidelines for constructing a logic table
 
@@ -356,7 +356,7 @@ void draw(){
 
 # Looking at loops _without_ the draw loop
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z8s-7beNP1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="Z8s-7beNP1c" %}
 
 As discussed in the above video, the fact that processing is always in a "draw loop" can confuse things somewhat.  It is possible to see all the operation of loops free of this constraint if we work only on _the console_.  [The console is the black area below your program]({{ site.baseurl }}/comp1000/debugging-in-processing) and it is available even when you do a "static" processing program (one that has no `setup` or `draw`).
 
@@ -520,9 +520,9 @@ Here are some exercises, hopefully in increasing order of difficulty, to help yo
 
 Control structures are literally like lego blocks, you can arrange them as you want, depending on the situation. So you can put loops/conditions inside other loops/conditions (and then more loops/conditions inside that and so on).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H7frvcAHXps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="H7frvcAHXps" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hk0nYHGma8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="hk0nYHGma8M" %}
 
 Let's take some examples of a situation where such nesting is required.
 
