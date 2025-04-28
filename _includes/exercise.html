@@ -1,0 +1,13 @@
+<!-- The basic structure for Exercise/Example/Scenario blocks -->
+<div class="exercise-container">
+    <h2>{{ include.title }}</h2>
+    <div class="exercise-description">
+        {{ include.problem | markdownify }}
+    </div>
+    <div class="exercise-solution">
+        <details>
+            <summary>Solution</summary>
+            {{ include.solution | markdownify }}
+        </details>
+    </div>
+</div>

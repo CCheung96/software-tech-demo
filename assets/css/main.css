@@ -1,0 +1,36 @@
+.exercise-container {
+    border-left: 5px solid #8ad6af;
+    background-color: #f2fcf7;
+    padding: 20px 20px 40px 20px;/*1.5em; */
+    margin: 2em 0;
+    border-radius: 0.5em;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+  
+.exercise-container h2 {
+margin-top: 0;
+text-align: center;
+}
+  
+.exercise-description {
+margin-bottom: 1em;
+}
+
+.exercise-solution{
+background-color: #c8fce1;
+}
+
+.exercise-solution summary{
+font-weight: bold;
+}
+  
+/* pre code {
+background: #272822;
+color: #f8f8f2;
+padding: 1em;
+border-radius: 5px;
+display: block;
+overflow-x: auto;
+} */

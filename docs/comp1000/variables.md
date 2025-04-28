@@ -205,6 +205,7 @@ Memory assigned to variables does not need to be in the same order as the variab
 
 <img src="{{ site.baseurl }}/assets/comp1000/variables/variables.png" alt="Variables" />
 
+
 ## Grid structure
 
 We visualise this memory bank as a grid of buckets (we will also call a bucket a "slot in memory").  Each bucket may hold a value.  A program with no variables, will have a memory that looks like a grid of empty holes

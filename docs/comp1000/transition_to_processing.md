@@ -64,8 +64,8 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 
 {% include youtube.html id="7Kxqu26Yqpg" %}
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 1-->
+{% capture problem %}
 - What is the location of a pixel that is `a` pixels to the **right** of `(x, y)`?
 - What is the location of a pixel that is `a` pixels to the **left** of `(x, y)`?
 - What is the location of a pixel that is `a` pixels **above** `(x, y)`?
@@ -82,11 +82,11 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 - a pixels below (x, y): (x, y+a)
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 1" problem=problem solution=solution %}
 
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 2-->
+{% capture problem %}
 - What is the location of a pixel that is 10 pixels to the right and 30 pixels above (50, 70)?
 {% endcapture %}
 
@@ -94,10 +94,10 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 (60, 40)
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 2" problem=problem solution=solution %}
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 3-->
+{% capture problem %}
 - What is the location of a pixel that is 10 pixels to the left and 30 pixels above (80, 40)?
 {% endcapture %}
 
@@ -105,10 +105,10 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 (70, 10)
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 3" problem=problem solution=solution %}
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 4-->
+{% capture problem %}
 - What is the location of a pixel that is 40 pixels to the right and 50 pixels below (10, 40)?
 {% endcapture %}
 
@@ -116,10 +116,10 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 (50, 90)
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 4" problem=problem solution=solution %}
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 5-->
+{% capture problem %}
 - What is the location of a pixel that is 40 pixels to the right and 50 pixels above (70, 50)?
 {% endcapture %}
 
@@ -127,10 +127,11 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 (110, 0)
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 5" problem=problem solution=solution %}
 
 ## Sample processing programs
 
+<!-- Example 1 -->
 ### Example 1
 
 Once you have done this, copy-and-paste the following code into the processing IDE and hit the run button.
@@ -232,8 +233,8 @@ I'm displaying the results
 {: .chat.user.left}
 I'm shutting this thing down.
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 6-->
+{% capture problem %}
 Given the following things have occurred during the execution of a processing program, what do you expect to happen next
 
   * compiler has checked the program
@@ -246,10 +247,10 @@ Given the following things have occurred during the execution of a processing pr
 The next step is for the result of the `draw` function to be put on the screen by the operating system/computer
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 6" problem=problem solution=solution %}
 
-<!--Exercise-->
-{% capture question %}
+<!--Exercise 7-->
+{% capture problem %}
 Which component is responsible for each of the following tasks:
 
 - Convert text to a runnable program
@@ -265,7 +266,7 @@ _The computer (or the operating system)_ will put actual pictures on the screen.
 _Processing_ will work out what occurs in `setup`.
 {% endcapture %}
 
-{% include exercise.md question=question solution=solution %}
+{% include exercise.html title="Exercise 7" problem=problem solution=solution %}
 
 
 {% include youtube.html id="sUbcZkot8-A" %}
