@@ -1,3 +1,6 @@
+// For creating D3 images. 
+
+//This example generates a blue circle wherever you add the HTML id "my-d3-target".
 document.addEventListener("DOMContentLoaded", function () {
     const el = document.getElementById("my-d3-target");
     if (!el) return;

@@ -7,8 +7,6 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-
-  
 .exercise-container h2 {
 margin-top: 0;
 text-align: center;
@@ -21,6 +19,7 @@ margin-bottom: 1em;
 .exercise-solution{
 background-color: #c8fce1;
 padding: 20px;
+margin-bottom: 2px;
 }
 
 .exercise-solution summary{
@@ -35,3 +34,75 @@ border-radius: 5px;
 display: block;
 overflow-x: auto;
 } */
+
+.chat {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 60%;
+  }
+  
+.chat.left {
+text-align: left;
+background-color: #f1f1f1;
+}
+
+.chat.right {
+text-align: right;
+background-color: #dbeafe;
+margin-left: auto;
+}
+
+.chat.user {
+font-weight: bold;
+color: #1e3a8a;
+}
+
+.chat.compiler {
+font-style: italic;
+color: #6b7280;
+}
+
+.chat.processing {
+color: #07966d;
+}
+
+.chat.computer {
+color: #7c3aed;
+}
+  
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    font-size: 1.25rem;
+    border: none;
+    outline: none;
+    background-color: #2d2d2d;
+    color: white;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+  }
+  
+  #backToTop:hover {
+    background-color: #555;
+  }
+
+.prereq-outcomes-container{
+    background: #eeebee;
+    padding: 5px;
+    margin-bottom: 9px;
+    border-radius: 0.5em;
+}
+
+.task {
+    border-left: 5px solid #8ad6af;
+    background-color: #f2fcf7;
+    padding: 20px;
+    margin: 2em 0;
+    border-radius: 0.5em;
+    font-family: 'Segoe UI', sans-serif;
+}

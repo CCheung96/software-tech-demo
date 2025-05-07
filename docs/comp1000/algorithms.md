@@ -4,20 +4,22 @@ permalink: /comp1000/algorithms
 parent: COMP1000
 nav_order: 3
 ---
-
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand what an algorithm is
   * Be able to relate an algorithm to a function
   * Be able to pass values into a function
   * Be able to get values back from a function
   * Be able to write your own functions
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 {% include youtube.html id="e_WfC8HwVB8" %}
 
@@ -34,7 +36,7 @@ The easiest way to learn this is to think about real-life tasks such as:
 
 A task should have a simple purpose, it might need some resources and carrying out the task might effect other things.  
 
-#### Basic elements of an algorithm
+## Basic elements of an algorithm
 
 We will define every task according to its:
 
@@ -88,16 +90,16 @@ Mathematical tasks are a particular type, they generally don't have effects, the
 
 So, we have four axis on which to think about any task/algorithm/function.  We can give each combination a nickname, making it easier to remember
 
-  * the purpose of a task is its _name_
-  * if a task has inputs it is _informed_.
-  * if a task has effects is a _changer_
-  * if a task has outputs it is a _producer_
+  * the **purpose** of a task is its _name_
+  * if a task has **inputs** it is _informed_.
+  * if a task has **effects** is a _changer_
+  * if a task has **outputs** it is a _producer_
 
 We can give out tasks nicknames now.  "create toast" is an _informed producer_.  "make a sandwich" is an _informed producer_.  "make the grass short" is an _informed changer_ and most mathematical tasks are _informed producer_ s.  You will find some nicknames come up much more often than others.
 
 
 {% include youtube.html id="cDA3_5982h8" %}
-# Algorithms in Processing
+## Algorithms in Processing
 
 Programming itself is the creation of algorithms, of creating _recipies_ for the computer to follow.
 
@@ -105,28 +107,34 @@ But, we never write our programs from scratch, we always write them with help fr
 
 As you use these build-in functions, you should think about what type of algorithm they are, i.e. which nickname should you give them.
 
-<div class="task" markdown="1">
+<!-- Example -->
+{% capture my_problem %}
 What is the most appropriate nickname for each of the following processing built-in functions?  You may like to consult the [processing reference](https://processing.org/reference/) to help you work out the answer:
 
   * `arc`
   * `hue`
   * `%`
   * `floor`
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
   * `arc` is an "informed changer"
   * `hue` is an "informed producer"
   * `%` is an "informed producer"
   * `floor` is an "informed producer"
-</details>
-</div>
+{% endcapture %}
 
-# Basic Functions
+{% include exercise.html
+  title="Example"
+  problem=my_problem
+  solution=my_solution
+%}
+
+## Basic Functions
 
 Let’s start by reviewing some functions we have seen in Primitive Operations.
 
-Draw line:
+### Draw line
 
   * inputs: `float`, `float`, `float`, `float`
       * first two give x, y location for first point
@@ -138,10 +146,10 @@ Draw-line is an informed changer. The draw-line task is implemented in Processin
 
 ~~~~~
 line(30, 50, 80, 70); 	// draw line from (30, 50) to (80, 70)
-						// remember, you CAN pass integers as float
+			// remember, you CAN pass integers as float
 ~~~~~
 
-#### Draw rectangle
+### Draw rectangle
 
   * inputs: `float`, `float`, `float`, `float`
       * first two give x, y location of the top-left corner
@@ -154,10 +162,10 @@ implemented in Processing as function `rect`
 
 ~~~~~~
 rect(40, 30, 10, 15); 	// draw rectangle with top left corner
-						// at (40, 30) with width 10 and height 15
+			// at (40, 30) with width 10 and height 15
 ~~~~~~
 
-#### Set interior colour
+### Set interior colour
 
   * input: red, green, blue
   * effects: affects subsequent shapes that are drawn
@@ -282,29 +290,31 @@ Now add(3, 4) produces a value (7) which we can use as the input for println:
 ~~~~~
     println(add(3, 4));      // instead of just add(3, 4);
 ~~~~~
-
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 Write an algorithm to describe [putting an animation on a computer screen](https://www.youtube.com/watch?v=X1TAdd9Vm7s).
-<details class="solution" markdown="1">
-  <summary>solution</summary>
+{% endcapture %}
+
+{% capture my_solution %}
 
   * input: nothing
   * effects: images appear on screen
   * output: none
 
   24 times a second, update the picture a little bit, put it on the screen, then go back and do it all again.
+{% endcapture %}
 
-</details>
-</div>
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+%}
 
-<div class="task" markdown="1">
-Create another variant of drawBox that allows you to change some other aspect of the rectangle
-</div>
-
-<div class="task" markdown="1">
-Write an algorithm that always returns the number 7
-</div>
 
 <div class="task" markdown="1">
-Write an algorithm that returns the square of the number you give as input. For example, if the value passed is 6, it returns 36. If the value passed is 2.5, it returns 6.25.
+* Create another variant of drawBox that allows you to change some other aspect of the rectangle
+
+* Write an algorithm that always returns the number 7
+
+* Write an algorithm that returns the square of the number you give as input. For example, if the value passed is 6, it returns 36. If the value passed is 2.5, it returns 6.25.
 </div>

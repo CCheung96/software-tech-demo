@@ -4,24 +4,20 @@ permalink: /comp1000/transition-to-processing
 parent: COMP1000
 nav_order: 1
 ---
-
-<details class="prereq" markdown="1">
-<summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * Basic Computer Literacy
   * Basic Understanding of Files and Folders.
-</details>
-
-<details class="outcomes" markdown="1">
-<summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Become familiar with the Processing Programming Environment
   * Create your first Processing Programs on your Own Computer
   * Become familiar with the steps that occur when a processing program is run.
   * Be able to do arithmetic the way computers do.
- </details>
+{% endcapture %}
 
-<div id="my-d3-target"></div>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 ## Textbook
  The textbook for this unit is "Learning Processing: A Beginner's Guide to Programming Images, Animation, and Interaction" by Daniel Shiffman. Scan the following QR Code or click on [this link](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/467l3g/cdi_skillsoft_books24x7_bks00089202) to download it via Macquarie University. 
@@ -36,8 +32,8 @@ nav_order: 1
 
 
 <div style="text-align: center;">
-    <h4>QR Code for textbook</h4>
-    <img src="{{ site.baseurl }}/assets/comp1000/learningProcessingQR.png" style="width: 400px;" alt="QR code for textbook"/>
+  <h4>QR Code for textbook</h4>
+  <img src="{{ site.baseurl }}/assets/comp1000/learningProcessingQR.png" style="width: 400px;" alt="QR code for textbook"/>
 </div>
 
 
@@ -45,7 +41,6 @@ nav_order: 1
 
 [Processing is available for most desktop operating systems](https://processing.org/download/). You can't run it on an iPad or a Chromebook however.
 
-<div class="task" markdown="1">
 [Download and install](https://processing.org/download/) the processing environment on your own computer. Install the latest stable version (ask on forums if unsure).
 
 {% include youtube.html id="YZnnzmkWXD8" %}
@@ -82,7 +77,11 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 - a pixels below (x, y): (x, y+a)
 {% endcapture %}
 
-{% include exercise.html title="Exercise 1" problem=problem solution=solution %}
+{% include exercise.html 
+  title="Exercise 1" 
+  problem=problem 
+  solution=solution 
+%}
 
 
 <!--Exercise 2-->
@@ -94,7 +93,11 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 (60, 40)
 {% endcapture %}
 
-{% include exercise.html title="Exercise 2" problem=problem solution=solution %}
+{% include exercise.html 
+  title="Exercise 2" 
+  problem=problem 
+  solution=solution 
+%}
 
 <!--Exercise 3-->
 {% capture problem %}
@@ -132,22 +135,28 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 ## Sample processing programs
 
 <!-- Example 1 -->
-### Example 1
-
-Once you have done this, copy-and-paste the following code into the processing IDE and hit the run button.
+{% capture my_problem %}
+Copy-and-paste the following code into the processing IDE and hit the run button.
 
 ```processing
 line(0, 0, 100, 100);
 line(0, 100, 100, 0);
 ```
 Do you see any output window and if so, what is the end result? If not, what is the error message, and what do you think needs to be done to fix it?
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
+{% capture my_solution %}
 You should see an X drawn across a small window.  That window is a processing "sketch" that is being drawn in a small window according to your instructions.  In this course we will learn how to give processing very complex instructions to make very complex sketches.  These sketches are really just computer programs like any other but they are started by the processing IDE and you can inspect what is going on inside them with the debugger.
-</details>
+{% endcapture %}
 
-### Example 2
- 
+{% include exercise.html
+  title="Example 1"
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Example 2 -->
+{% capture my_problem %}
 Now, copy-and-paste the following code into the processing IDE and hit the run button.
 
 ```processing
@@ -156,16 +165,23 @@ line(50, 100, 100, 50);
 ```
 
 Do you see any output window and if so, what is the end result? If not, what is the error message, and what do you think needs to be done to fix it?
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
+{% capture my_solution %}
 Error message "Syntax error - Missing ";". To fix it, a semi-colon must be placed at the end of the first instruction.
-</details>
+{% endcapture %}
+
+{% include exercise.html
+  title="Example 2"
+  problem=my_problem
+  solution=my_solution
+%}
 
 ### Videos
 
 Here is a short video we recorded to demonstrate downloading and installing Processing, and creating a simple program with a handul of functions.
 
-{% include youtube.html id="FAPel-Dds9k" title="YouTube video player" %}
+{% include youtube.html id="FAPel-Dds9k" %}
 
 Here are some more video about basic processing shapes and colors.
 

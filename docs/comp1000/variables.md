@@ -4,22 +4,21 @@ permalink: /comp1000/variables
 parent: COMP1000
 nav_order: 4
 ---
-
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Algorithms]({{ site.baseurl }}/comp1000/algorithms)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand what a variable is
   * Understand how variables are written in processing
   * Write code that requires variables
   * Understand how variables support animation
   * Understand how variables correspond to named memory slots
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 {: .keypoint}
 Variables are a slot of memory in the computer with a name.
