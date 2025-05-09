@@ -60,9 +60,13 @@ void draw() {
 
 <script src="assets/js/variables-in-memory.js"></script>
 
-<div class="9x9grid"></div>
+<div class="grid" id="empty" rows=5 cols=5 ></div>
 
-<div class="9x9grid" id="9x9-grid-1"></div>
+<div class="grid" id="1-15-rand" rows=9 cols=9 ></div>
 
-<div class="9x9grid" id="matrix-grid"></div>
+<div class="grid" id="1-15-rand" rows=9 cols=9 ></div>
+
+<div class="grid" id="matrix-diag" rows=9 cols=9 ></div>
+
+<div class="grid" id="x-5" rows=9 cols=9 ></div>
 
