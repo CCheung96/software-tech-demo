@@ -5,15 +5,21 @@ parent: COMP1000
 nav_order: 15
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
-</details>
+- TOC
+{:toc}
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand the difference between the value semantics of atomic data and the reference semantics of compound data
   * Understand the consequences for programming of reference semantics.
   * Understand how passing arrays to functions is a case of reference semantics
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 We discussed in [arrays]({{ site.baseurl }}/comp1000/arrays) how compound data can't be stored directly in its memory slot.  Instead, that slot holds a _reference_ to some larger chunk of memory where the data is stored.
 

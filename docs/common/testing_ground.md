@@ -4,11 +4,16 @@ permalink: /common/testing
 parent: Common
 nav_order: 4
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-</details>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
+    * Something you have learnt about
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
+    * Something you will learn
+{% endcapture %}
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 ## Adding SVG files, cleanly
 

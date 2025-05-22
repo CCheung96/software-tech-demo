@@ -5,19 +5,22 @@ parent: COMP1000
 nav_order: 17
 ---
 
+- TOC
+{:toc}
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Multi-Dimensional Arrays]({{ site.baseurl }}/comp1000/multi-dimensional-arrays)
-</details>
-  z
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand why and how to perform `null` checks on arrays.
-</details>
+{% endcapture %}
 
-# Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 The first thing one must understand is that the "contents" of an array is a reference to the memory location where the items are stored. The *name* of the array is the *reference* while the actual collection of items is the *instance*.
 

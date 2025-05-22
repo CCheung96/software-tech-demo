@@ -5,15 +5,22 @@ parent: COMP1000
 nav_order: 21
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
+
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Functions]({{ site.baseurl }}/comp1000/functions)
 
-</details>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
+  * ???
+{% endcapture %}
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 ## Author: 
 

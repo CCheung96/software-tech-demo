@@ -7,23 +7,24 @@ grand_parent: COMP1010
 nav_order: 2
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Reference Semantics]({{ site.baseurl }}/comp1000/reference-semantics)
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Define reference and instance copy.
   * Identify a reference copy.
   * Differentiate an instance copy from a reference copy.
   * Be able to execute both types of object copying.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # Copying primitive variables
 

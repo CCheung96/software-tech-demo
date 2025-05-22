@@ -5,21 +5,26 @@ parent: COMP1000
 nav_order: 9
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Know the two types of loops
   * Understand how to use loops to draw multiple things in one frame
   * Understand syntax and semantics of loops
   * Be able to trace loops with tables
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 # Loops
 

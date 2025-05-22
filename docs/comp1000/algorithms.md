@@ -4,6 +4,10 @@ permalink: /comp1000/algorithms
 parent: COMP1000
 nav_order: 3
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)

@@ -5,21 +5,22 @@ parent: COMP1010
 nav_order: 13
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Recursion]({{ site.baseurl }}/comp1010/recursion)
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Recognise the reasons binary search works
   * Be able to trace a binary search on a sorted array
   * Be able to write a binary search algorithm
   * Be able to compare binary vs. sequential search performances.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 # Binary search
 

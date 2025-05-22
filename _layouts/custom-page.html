@@ -1,11 +1,21 @@
 ---
 layout: default
 ---
-<!-- To display a title at the top of the page -->
+<!-- 
+To display a title at the top of the page. 
+This can be customised to be different from the title that appears in the sidebar. 
+-->
 {% assign display_title = page.custom-title | default: page.title %}
 <h1>{{ display_title }}</h1>
 
+<!-- 
+To display an author name. 
+Unless specified, this defaults to "by Gaurav Gupta".
+-->
+{% assign author = page.author | default: "Gaurav Gupta" %}
+<h6>by {{ author }}</h6>
 
+<!-- To display the page content -->
 {{ content }}
 
 

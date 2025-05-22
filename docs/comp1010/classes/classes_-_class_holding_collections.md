@@ -5,23 +5,25 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 6
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
   * [Instance methods]({{ site.baseurl }}/comp1010/classes/methods)
   * [Composition]({{ site.baseurl }}/comp1010/classes/composition)
   * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Defining a class holding collections (arrays/arraylists/...).
   * Creating and populating objects of such classes.
 
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # Class holding ArrayList(s)
 

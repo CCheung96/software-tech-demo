@@ -6,22 +6,23 @@ grand_parent: COMP1010
 nav_order: 3
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 * [Functions]({{ site.baseurl }}/comp1000/functions)
 * [Functions]({{ site.baseurl }}/comp1010/recursion)
 * [Recursion with String data]({{ site.baseurl }}/comp1010/recursion/string-data)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
 * Have an understanding of *tail* recursion.
 * Be able to *tail-optimize* a recursive function.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # The problem with recursion
 

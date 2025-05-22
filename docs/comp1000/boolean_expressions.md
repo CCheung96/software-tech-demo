@@ -5,24 +5,24 @@ parent: COMP1000
 nav_order: 7
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
 
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
-
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand basic boolean operators: AND, OR, NOT
   * Determine outcome of boolean expressions.
   * Simplify boolean expressions.
-  
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-# History behind "Boolean"
+## History behind "Boolean"
 
 George Boole was an early 19th century English mathematician who worked in the field of differential equations and Boolean alegbra. Here's a link to his book, [The Laws of Thought](https://www.gutenberg.org/files/15114/15114-pdf.pdf) 
 
@@ -30,7 +30,7 @@ George Boole was an early 19th century English mathematician who worked in the f
 
 **Trivia time**: George Boole's house is at 5, Grenville Place, Cork.
 
-# What is Boolean logic
+## What is Boolean logic
 
 Quite simply, boolean logic is the use of "and", "or", and "not" conditions. 
 
@@ -40,19 +40,19 @@ For example, "if it's raining OR if it's over 50 degrees celsius, take an umbrel
 
 "You are NOT NOT clever" means you are definitely clever!
 
-# Why learn Boolean logic
+## Why learn Boolean logic
 
 Because of the complexity in data relationships leading to various outputs.
 
 As a simple example, if I want to display all positive even numbers in red colour, all negative even numbers in green colour, and all (and only one) other even number in blue colour, I need to use Boolean logic.
 
-# Boolean expressions
+## Boolean expressions
 
 Any expression or operation that evaluates to a Boolean value is called a Boolean expression.
 
 The simplest Boolean expressions involve comparing two values, for which we need *relational operators*.
 
-## Relational operators
+### Relational operators
 
 The following are the six relational operators we will use:
 
@@ -67,11 +67,11 @@ The following are the six relational operators we will use:
 
 {% include youtube.html id="FCM54REaY58" %}
 
-# Boolean operators
+## Boolean operators
 
 For this section, we will assume that `a` and `b` are `boolean` values (`true` or `false`)
 
-## `&&` (and) operator
+### `&&` (and) operator
 
 `a && b` is `true` when **both** boolean operands, `a` and `b`, are `true`
 
@@ -90,7 +90,7 @@ Examples:
 - `10/2 == 4 && 12/2 == 4` = `false` (because BOTH sub-expressions are `false`)
 
 
-## `||` (or) operator
+### `||` (or) operator
 `a || b` is `true` when **either** of the boolean operands, `a` **or** `b`, is `true`.
 
 <!-- &#124; is pipe -->
@@ -138,7 +138,7 @@ Examples:
 - `10/2 == 4 || 12/2 == 4` = `false` (because BOTH sub-expressions are `false`)
 
 
-## `!` (not) operator
+### `!` (not) operator
 
 The `!` (not) operator negates the boolean value to which it is applied.
 
@@ -155,7 +155,7 @@ Examples:
 
 {% include youtube.html id="vsgYPNpvj-A" %}
 
-# Order of operations
+## Order of operations
 
 Order of operations is,
 
@@ -165,9 +165,9 @@ Order of operations is,
 3. Then, `&&`
 4. Then, `||`
 
-# Short-circuit logic
+## Short-circuit logic
 
-## Short-circuiting `&&`
+### Short-circuiting `&&`
 
 If the first of the two values separated by `&&` is `false`, the expression is evaluated to `false` without evaluating the second value. That is,
 
@@ -196,7 +196,7 @@ false && a<=20
 But, both `false && false` and `false && true` are `false`.
 So, no need to evaluate the second sub-expression.
 
-## Short-circuiting `||`
+### Short-circuiting `||`
 
 If the first of the two values separated by `||` is `true`, the expression is evaluated to `true` without evaluating the second value. That is,
 
@@ -234,9 +234,8 @@ Examples:
 	
 	= `true`
 
-
-# Questions
-
+<!-- Questions -->
+{% capture my_problem %}
 What are the following Boolean expressions evaluated to?
 
 1. `6 > 4`
@@ -260,30 +259,9 @@ What are the following Boolean expressions evaluated to?
 1. `20 == 4 && 12*31 >= 41*9 && 1973%127 > 50 && 1000==1000`
 1. `2+8 == 10 || 1729*9271 != 16029559 || 1000==2000`
 
-For what values of `x` (and `y` if applicable) will the following Boolean expressions be `true`? Where convenient, you can give your answer in form of a sentence.
+{% endcapture %}
 
-1. `x > 10`
-2. `x >= 10`
-3. `x % 5 == 0`
-4. `x / 5 == 0`
-5. `x % y == 0`
-6. `x >= 10 && x <= 20`
-7. `x > 1 && x < 6`
-8. `x > 1 || x < 6`
-9. `!(x >= 10 && x <= 20)`
-10. `x % y == 0 && y % x == 0`
-
-Fix the following expressions based on their stated intent:
-
-1. Expression should evaluate to `true` if `x` is an even integer over 100. Current version: `x / 2 == 0 && x > 100`.
-2. Expression should evaluate to `true` if `x` is a multiple of both 7 and 11. Current version: `x % 7 == 0 || x % 11 == 0`.
-3. Expression should evaluate to `true` if either `x` or `y` is a positive integer. Current version: `x >= 0 || y >= 0`.
-4. Expression should evaluate to `true` if both `x` and `y` are outside the range [1, 6]. Current version: `x < 1 || x > 6 && y < 1 || y > 6`.
-
-# Solutions
-
-Outcomes of Boolean expressions:
-
+{% capture my_solution %}
 1. `6 > 4` = `true`
 2. `6 > 4 == true` = `true` 
 3. `6 < 4` = `false`
@@ -307,9 +285,31 @@ Outcomes of Boolean expressions:
 19. `20 == 4 && 12*31 >= 41*9 && 1973%127 > 50 && 1000==1000` = `false` (short-circuit `&&`)
 20. `2+8 == 10 || 1729*9271 != 16029559 || 1000==2000` = `true` (short circuit `||`)
 
+{% endcapture %}
 
-Values of variables for which expressions are `true`:
+{% include exercise.html
+    title="Questions: Evaluating Boolean Expressions"
+    problem=my_problem
+    solution=my_solution
+%}
 
+<!-- Exercise -->
+{% capture my_problem %}
+For what values of `x` (and `y` if applicable) will the following Boolean expressions be `true`? Where convenient, you can give your answer in form of a sentence.
+
+1. `x > 10`
+2. `x >= 10`
+3. `x % 5 == 0`
+4. `x / 5 == 0`
+5. `x % y == 0`
+6. `x >= 10 && x <= 20`
+7. `x > 1 && x < 6`
+8. `x > 1 || x < 6`
+9. `!(x >= 10 && x <= 20)`
+10. `x % y == 0 && y % x == 0`
+{% endcapture %}
+
+{% capture my_solution %}
 1. `x > 10`: when x is more than 10. If x is an integer, then 11, 12 ..., if x is a float, then 10.00001, 10.00002, ...
 2. `x >= 10`: for any x that is 10 or more.
 3. `x % 5 == 0`: for any x that is a multiple of 5, or in other words, any x that is divisible by 5.
@@ -320,10 +320,34 @@ Values of variables for which expressions are `true`:
 8. `x > 1 || x < 6`: for any value of x (think :D)
 9. `!(x >= 10 && x <= 20)`: for any value of x OUTSIDE the range [10, 20]
 10. `x % y == 0 && y % x == 0`: for an x, y pair such that they are the same or negative of each other (x = 12, y = 12 or x = 12, y = -12), but NOT zero, because `0 % 0` will give a "divide by zero" error.
+{% endcapture %}
 
-Fixed expressions:
+{% include exercise.html
+    title="Questions: When Will It Be True?"
+    problem=my_problem
+    solution=my_solution
+%}
 
-1. Expression should evaluate to `true` if `x` is an even integer over 100. Current version: `x / 2 == 0 && x > 100`. Fixed version: `x % 2 == 0 && x > 100`.
-2. Expression should evaluate to `true` if `x` is a multiple of both 7 and 11. Current version: `x % 7 == 0 || x % 11 == 0`. Fixed version: `x % 7 == 0 && x % 11 == 0`.
-3. Expression should evaluate to `true` if either `x` or `y` is a positive integer. Current version: `x >= 0 || y >= 0`. Fixed version: `x > 0 || y > 0` (0 is a non-negative, non-positive number).
-4. Expression should evaluate to `true` if both `x` and `y` are outside the range [1, 6]. Current version: `x < 1 || x > 6 && y < 1 || y > 6`. Fixed version: `(x < 1 || x > 6) && (y < 1 || y > 6)`. Because, in the absence of brackets, `&&` takes precedence over `||`.
+<!-- Exercise -->
+{% capture my_problem %}
+Fix the following expressions based on their stated intent:
+
+1. Expression should evaluate to `true` if `x` is an even integer over 100. Current version: `x / 2 == 0 && x > 100`.
+2. Expression should evaluate to `true` if `x` is a multiple of both 7 and 11. Current version: `x % 7 == 0 || x % 11 == 0`.
+3. Expression should evaluate to `true` if either `x` or `y` is a positive integer. Current version: `x >= 0 || y >= 0`.
+4. Expression should evaluate to `true` if both `x` and `y` are outside the range [1, 6]. Current version: `x < 1 || x > 6 && y < 1 || y > 6`.
+{% endcapture %}
+
+{% capture my_solution %}
+1. Fixed version: `x % 2 == 0 && x > 100`.
+2. Fixed version: `x % 7 == 0 && x % 11 == 0`.
+3. Fixed version: `x > 0 || y > 0` (0 is a non-negative, non-positive number).
+4. Fixed version: `(x < 1 || x > 6) && (y < 1 || y > 6)`. Because, in the absence of brackets, `&&` takes precedence over `||`.
+{% endcapture %}
+
+{% include exercise.html
+    title="Questions: Fix the Expression"
+    problem=my_problem
+    solution=my_solution
+%}
+

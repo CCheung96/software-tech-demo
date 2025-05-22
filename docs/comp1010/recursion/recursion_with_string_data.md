@@ -6,22 +6,23 @@ grand_parent: COMP1010
 nav_order: 2
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Classes- Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Recursion]({{ site.baseurl }}/comp1010/recursion)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Be able to trace recursive functions in the context of String data.
   * Be able to write recursive functions in the context of String data.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # Useful String methods
 

@@ -8,27 +8,26 @@ nav_order: 8
 - TOC
 {:toc}
 
-
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand what a boolean expression is
   * Understand how boolean expressions can effect the flow of control in a program
   * Write code that requires `if-then-else` statements
   * Understand simple logical operations.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
-Conditions allow different code to run in different frames of the animation
+<p class="keynote" markdown="1">
+Conditions allow different code to run in different frames of the animation.
+</p>
 
-{: .readings}
-Chapter 5 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
+**Recommended Reading(s)**: Chapter 5 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
 
 {% include youtube.html id="wsI6N9hfW7E" %}
 
@@ -675,9 +674,6 @@ if (dayOfWeek < 5) { //NOT the weekend
   solution=my_solution
 %}
 
+## Furthering Your Understanding
 
-
-
-
-<h3>Furthering Your Understanding</h3>
 {% include youtube.html id="wUPc__xuCc0" %}

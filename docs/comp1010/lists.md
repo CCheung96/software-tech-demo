@@ -5,21 +5,23 @@ parent: COMP1010
 nav_order: 5
 has_children: true
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Recursion]({{ site.baseurl }}/comp1010/recursion)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand the underlying features of lists and how they differ from arrays.
   * Be able to use built-in Java lists
   * Be able to build a custom list class
   * Understand the time costs of various list operations
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # What are lists?
 

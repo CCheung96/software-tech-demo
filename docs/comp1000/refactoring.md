@@ -5,7 +5,11 @@ parent: COMP1000
 nav_order: 19
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
@@ -13,19 +17,21 @@ nav_order: 19
   * [Loops]({{ site.baseurl }}/comp1000/loops)
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Scope]({{ site.baseurl }}/comp1000/scope)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Be able to identify why one program snippet is preferrable over another.
   * Be able to convert programs from a poorer version to a better version.
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 {: .keypoint}
 We refactor code to _takeaway duplicate or similar code_, _to make our program easier to understand_, and _to improve code maintenance_.
 
 {% include youtube.html id="vcydPCZJMBc" %}
 
-# Variables
+## Variables
 
 ### Renaming Variables
 

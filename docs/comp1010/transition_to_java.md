@@ -5,8 +5,8 @@ parent: COMP1010
 nav_order: 2
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
@@ -20,22 +20,23 @@ nav_order: 2
 
 
   * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Be able to compile and run basic Java programs
   * Understand the correspondance between Processing and Java
   * Know the phases of compiling and running Java code.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 {: .keypoint}
 Coding, like cooking or swimming or soccer, is all about practice.
 
 ![](./assets/images/practice.jpg)
 
-## Author: Gaurav Gupta
+
 
 # Graduation
 

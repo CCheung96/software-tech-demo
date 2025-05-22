@@ -5,18 +5,19 @@ parent: COMP6010
 nav_order: 9
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-- [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}- [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Be able to traverse a directory
   * Do basic operations like creating, renaming, removing files
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-# Author: Gaurav Gupta
+
 
 # File System
 

@@ -5,20 +5,21 @@ parent: COMP1010
 nav_order: 4
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Transition to Java]({{ site.baseurl }}/comp1010/transition-to-java)
   * [Debugging in Java]({{ site.baseurl }}/comp1010/debugging)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand the roll of Unit Testing in the programming process
   * Understand when tests are sufficient
   * Be able to write simple tests using JUnit.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 Unit testing allows us to check - by running other code - that each method of our code, individually, works correctly. Of course, it doesn't guarantee that the the methods interact correctly or not.
 

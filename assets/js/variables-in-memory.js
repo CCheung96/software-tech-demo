@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const svg = d3.select('#variables-in-memory').append('svg')
+    const svg = d3.select('#variables-in-memory-animation').append('svg')
     .attr('width', 700)
     .attr('height', 510);
   
@@ -184,16 +184,16 @@ document.addEventListener("DOMContentLoaded", function () {
         .style("opacity", 1);
     }
   
-    // Function to animate the replacement of a value with another
-    function animateReplacement(group, oldVal, newVal, fromIndex, toIndex, i){
+    // Function to animate the overwrite of an existing value with another existing value
+    function animateReplacement(group, sourceIndex, destIndex, i){
       const delay = i * delayStep;
-      const source = segmentsData[fromIndex];
-      const target = segmentsData[toIndex];
+      const source = segmentsData[sourceIndex];
+      const target = segmentsData[destIndex];
   
       const sourceY = y + source.yStart * segmentHeight + (source.span * segmentHeight) / 2;
       const targetY = y + target.yStart * segmentHeight + (target.span * segmentHeight) / 2;
   
-      // Ddd line of text
+      // Add line of code
       group.append("text")
         .attr("x", text_x)
         .attr("y", y + i * text_h)
@@ -217,13 +217,13 @@ document.addEventListener("DOMContentLoaded", function () {
         .duration(700)
         .style("opacity", 0);
   
-      // Slide new value down
+      // Slide replacement value to target
       group.append("text")
         .attr("x", x + width / 2)
         .attr("y", sourceY)
         .attr("text-anchor", "middle")
         .attr("font-size", "14px")
-        .text(newVal)
+        .text(source.value)
         .style("opacity", 0)
         .transition()
         .delay(delay + 800)
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (i < segmentsData.length - 1) {
           addSegmentAnimation(group, d, i);
         } else {
-          animateReplacement(group, "4", "10", 1, 6, i);
+          animateReplacement(group, 1, 6, i);
         }
       });
     }

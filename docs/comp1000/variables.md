@@ -4,6 +4,10 @@ permalink: /comp1000/variables
 parent: COMP1000
 nav_order: 4
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
@@ -194,17 +198,18 @@ From here on in, we will tend to leave out the conversation because it is the sa
 
 ## Variables in memory
 
-The following diagrams illustrates how each variable is stored in the memory and also what happens when you copy a variable (source) into another (destination). It's the value the source variable holds is copied into the destination variable, so that now both variables hold the value held by the source.
+The following animation illustrates how each variable is stored in the memory and also what happens when you copy a variable (source) into another (destination). It's the value the source variable holds is copied into the destination variable, so that now both variables hold the value held by the source.
 
 Note that different variables need different number of bytes in the memory.
 
 Memory assigned to variables does not need to be in the same order as the variable assignment operation. Where will a variable be stored depends on Operating System.
 
-<div id="variables-in-memory"></div>
 
-<script src="assets/js/variables-in-memory.js"></script>
+<div id="variables-in-memory-animation"></div>
 
-<img src="{{ site.baseurl }}/assets/comp1000/variables/variables.png" alt="Variables" />
+<script src="{{ site.baseurl }}/assets/js/variables-in-memory.js"></script>
+
+<!-- <img src="{{ site.baseurl }}/assets/comp1000/variables/variables.png" alt="Variables" /> -->
 
 
 ## Grid structure
@@ -611,7 +616,11 @@ void draw(){
 
 Experiment with this program by changing what is in line 5 and checking the animation still takes the same amount of time.
 
-**Hold-on!** It's not working????  This solution is actually wrong thanks to a subtlety of how `int`s and `float`s are divided.  See what happens when the height of the window goes below 200 (say 100)?  The circle does not move.  If we "think backwards from the problem to what must be happening" we see that `yspeed` must be getting set to `0`, but how?  Well `100/200` is 0.5 in `float` arithmetic, but it is `0` in `int` arithmetic.  So processing must be using `int` arithmetic. But why?  `height` is an `int`, and, because procesing uses the _left-most_ number to decide which type of arithmetic to use, `int`/`float` is done in `int` arithmetic, so we have to convert `height` to a `float` _first_. <aside>"Tricky" rules like `int`/`float` being different from `float`/`int` are called _edge cases_ and are frequent sources of bugs.  You can't remember all the edge cases, so you often need to work backwards and think what "must be" true to find them</aside>
+**Hold-on!** It's not working????  This solution is actually wrong thanks to a subtlety of how `int`s and `float`s are divided.  See what happens when the height of the window goes below 200 (say 100)?  The circle does not move.  If we "think backwards from the problem to what must be happening" we see that `yspeed` must be getting set to `0`, but how?  Well `100/200` is 0.5 in `float` arithmetic, but it is `0` in `int` arithmetic.  So processing must be using `int` arithmetic. But why?  `height` is an `int`, and, because procesing uses the _left-most_ number to decide which type of arithmetic to use, `int`/`float` is done in `int` arithmetic, so we have to convert `height` to a `float` _first_. 
+
+<aside markdown="1">
+"Tricky" rules like `int`/`float` being different from `float`/`int` are called _edge cases_ and are frequent sources of bugs.  You can't remember all the edge cases, so you often need to work backwards and think what "must be" true to find them.
+</aside>
 
 ~~~~~
 float yPos;

@@ -5,18 +5,23 @@ parent: COMP1000
 nav_order: 18
 ---
 
+- TOC
+{:toc}
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand how to operate on String data type
-</details>
+{% endcapture %}
 
-# Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # Strings
 

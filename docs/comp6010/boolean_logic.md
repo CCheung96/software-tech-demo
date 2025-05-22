@@ -4,14 +4,12 @@ permalink: /comp6010/boolean-logic
 parent: COMP6010
 nav_order: 3
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 * [Functions]({{ site.baseurl }}/comp1000/functions)
-
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand basic boolean operators: AND, OR, NOT
   * Determine outcome of boolean expressions.
   * Simplify boolean expressions.
@@ -19,10 +17,11 @@ nav_order: 3
   * Understand universal gates.
   * Understand basic gates with multiple inputs.
   * Understand relationship between digital circuits and boolean algebra
-  
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # History behind "Boolean"
 

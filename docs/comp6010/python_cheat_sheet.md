@@ -4,14 +4,16 @@ permalink: /comp6010/pyhon-cheat-sheet
 parent: COMP6010
 nav_order: 4
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Algorithms]({{ site.baseurl }}/comp1000/algorithms)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Everything about basic Python
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 MIT License
 

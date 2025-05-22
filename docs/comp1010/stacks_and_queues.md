@@ -4,22 +4,24 @@ permalink: /comp1010/stacks-and-queues
 parent: COMP1010
 nav_order: 10
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Classes- Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Classes- Methods]({{ site.baseurl }}/comp1010/classes/methods)
   * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand the scenarios in which stacks and queues are useful
   * Able to implement stacks and queues
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 ## Entire code from this page is available in [stacksQueues.zip](./assets/codes/stacksQueues.zip).
 

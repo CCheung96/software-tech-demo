@@ -1,7 +1,14 @@
+aside {
+  background-color: #fcf8f2;
+  padding: 20px;
+  margin: 2em 0;
+  border-radius: 0.5em;
+}
+
 .exercise-container {
     border-left: 5px solid #8ad6af;
     background-color: #f2fcf7;
-    padding: 20px 20px 40px 20px;/*1.5em; */
+    padding: 20px 20px 30px 20px;/*1.5em; */
     margin: 2em 0;
     border-radius: 0.5em;
     font-family: 'Segoe UI', sans-serif;
@@ -25,15 +32,6 @@ margin-bottom: 2px;
 .exercise-solution summary{
 font-weight: bold;
 }
-  
-/* pre code {
-background: #272822;
-color: #f8f8f2;
-padding: 1em;
-border-radius: 5px;
-display: block;
-overflow-x: auto;
-} */
 
 .chat {
     margin: 0.5rem 0;
@@ -87,9 +85,9 @@ color: #7c3aed;
     border-radius: 0.5rem;
   }
   
-  #backToTop:hover {
-    background-color: #555;
-  }
+#backToTop:hover {
+  background-color: #555;
+}
 
 .prereq-outcomes-container{
     background: #eeebee;
@@ -105,4 +103,8 @@ color: #7c3aed;
     margin: 2em 0;
     border-radius: 0.5em;
     font-family: 'Segoe UI', sans-serif;
+}
+
+.keynote{
+  font-size: 1.5rem;
 }

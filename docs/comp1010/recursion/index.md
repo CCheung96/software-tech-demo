@@ -5,22 +5,23 @@ parent: COMP1010
 nav_order: 8
 has_children: true
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Recursion: Function Calls]({{ site.baseurl }}/comp1010/recursion/function-calls)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Recognise difference between iterative and recursive code.
   * Be able to trace recursive functions.
   * Be able to write recursive functions.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # What is recursion?
 
