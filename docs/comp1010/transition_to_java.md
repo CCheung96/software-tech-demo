@@ -1,5 +1,5 @@
 ---
-title: COMP1000 Revision
+title: Transition to Java
 permalink: /comp1010/transition-to-java
 parent: COMP1010
 nav_order: 2
@@ -16,14 +16,10 @@ nav_order: 2
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Arrays and Functions]({{ site.baseurl }}/comp1000/arrays-and-functions)
   * [Reference Semantics]({{ site.baseurl }}/comp1000/reference-semantics)
-
-
-
   * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Be able to compile and run basic Java programs
   * Understand the correspondance between Processing and Java
   * Know the phases of compiling and running Java code.
@@ -34,7 +30,7 @@ nav_order: 2
 {: .keypoint}
 Coding, like cooking or swimming or soccer, is all about practice.
 
-![](./assets/images/practice.jpg)
+<img src="{{ site.baseurl }}/assets/comp1010/transition_to_java/practice.jpg">
 
 
 
@@ -52,14 +48,14 @@ We have cut our teeth with Processing, but now it is time to graduate to the sam
 
 # How do programs run in Java (compared to Processing)
 
-[Remind yourself how processing ran](./transition_to_processing) programs if you need to refresh your memory.
+[Remind yourself how processing ran](../comp1000/transition-to-processing) programs if you need to refresh your memory.
 
 In Java, you must perform _two_ steps yourself to get your program to run:
 
   1. `javac`: Compiles the source code (.java) into bytecode (.class).
   2. `java`: Execute the bytecode.
 
-![](./transition_to_javaFigs/javaCompileExecute.png)
+<img src="{{ site.baseurl }}/assets/comp1010/transition_to_java/javaCompileExecute.png" alt=""/>
 
 # What does a Java Program look like?
 

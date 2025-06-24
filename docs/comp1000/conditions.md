@@ -23,9 +23,9 @@ nav_order: 8
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-<p class="keynote" markdown="1">
+{: .keypoint}
 Conditions allow different code to run in different frames of the animation.
-</p>
+
 
 **Recommended Reading(s)**: Chapter 5 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
 
@@ -80,7 +80,6 @@ void draw(){
 ~~~~~
 {% endcapture %}
 
-<a id="exercise-one-way-animated-blue-circle"></a>
 {% include exercise.html
   title="Exercise: One-Way Animated Blue Circle"
   problem=my_problem
@@ -383,14 +382,12 @@ void draw(){
 Interestingly, this has saved us from one conditional!  It is perhaps a little harder to see at first, but the code is shorter.  The "variability" of the variable is doing the work of the condition.  Note also how we now have many more options, we can speed up the animation quite easily which we could not in solution 1.
 {% endcapture %}
 
-<a id="exercise-two-way-animated-blue-circle"></a>
 {% include exercise.html
   title="Exercise: Two-Way Animated Blue Circle"
   problem=my_problem
   solution=my_solution
   solution2=my_solution_2
 %}
-
 
 ## Tracing "flow" (or control flow)
 

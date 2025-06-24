@@ -10,12 +10,10 @@ nav_order: 16
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Understand how to create, and operate on, multi-dimensional arrays.
 {% endcapture %}
 
@@ -23,11 +21,11 @@ nav_order: 16
 
 
 
-### The biggest mistake people make while studying 2-dimensional arrays is visualizing them as rows and columns. 
+**The biggest mistake people make while studying 2-dimensional arrays is visualizing them as rows and columns.** 
 
-<p align="center">
-<img width = 400 src = "./assets/images/nonono.gif" alt="Nope">
-</p>
+<div class="centred-img">
+<img width = 400 src = "{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/nonono.gif" alt="Nope">
+</div>
 
 Stay with me for a bit and see why should you let go of the *rows* and *columns* approach and instead use the *sets* approach.
 

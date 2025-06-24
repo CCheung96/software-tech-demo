@@ -160,8 +160,7 @@ public class GoodClient {
   }
 }
 ```
-![](fig/03-classes-and-objects/classHoldingArrayReferenceCopy.png)
-
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayReferenceCopy.png" alt=""/>
 The above client would give the expected outcome:
 
 ```
@@ -212,7 +211,7 @@ public TVData(int[] source) {
 }
 ```
 
-![](fig/03-classes-and-objects/classHoldingArrayInstanceCopy.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayInstanceCopy.png" alt=""/>
 
 Now, both `GoodClient` and `BadClient` will give the same, logically correct, output:
 
@@ -275,7 +274,7 @@ public class ConnectTheDots {
 }
 ```
 
-Still one issue :(
+Still one issue :
 
 <details>
   <summary>Click to reveal!</summary>
@@ -315,7 +314,7 @@ public class ConnectTheDots {
 }
 ```
 
-![](fig/03-classes-and-objects/classHoldingArrayOfObjects.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayOfObjects.png" alt=""/>
 
 
 Let's just write a client to finish this off!

@@ -142,7 +142,7 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 {% capture my_problem %}
 Copy-and-paste the following code into the processing IDE and hit the run button.
 
-```processing
+```
 line(0, 0, 100, 100);
 line(0, 100, 100, 0);
 ```
@@ -163,7 +163,7 @@ You should see an X drawn across a small window.  That window is a processing "s
 {% capture my_problem %}
 Now, copy-and-paste the following code into the processing IDE and hit the run button.
 
-```processing
+```
 line(0, 50, 50, 0)
 line(50, 100, 100, 50);
 ```
@@ -201,7 +201,7 @@ Programmers need to know how the machine they are programming actually work.  Th
 
 So, what exactly occurs when a processing program is run?  The syntax of a Processing program is:
 
-```processing
+```
 void setup() {
  //code that executes once, at the beginning of the program
 }

@@ -130,7 +130,7 @@ Note that the two different versions of compound data come with two different sy
 {% include youtube.html id="XavYru3jotQ" %}
 -->
 
-# Arrays
+
 
 <!--
 To understand how to use compound data, we will look at the most common compound data type, arrays.
@@ -138,6 +138,7 @@ To understand how to use compound data, we will look at the most common compound
 {% include youtube.html id="NptnmWvkbTw" %}
 
 {% include youtube.html id="47JBVxCWXJA" %}
+
 -->
 
 An array is a fixed-sized collection of items, each item of the same type.
@@ -151,17 +152,19 @@ So you can have,
 - an array of 400 arrays
 - and so on...
 
-## <s>Perhaps</s> The most important concept to understand in arrays is the difference between a *reference* and an *instance*.
 
 
+
+<div class="keypoint" markdown="1">
+~~Perhaps~~ The most important concept to understand in arrays is the difference between a *reference* and an *instance*.
 
 <img src="https://media.giphy.com/media/WV2tRAlb4Qc741GHVn/giphy.gif" alt="This is a critical moment" style="width: 50%; margin: 16px"/>
 
+* **Reference** - the variable name by which you know the array
 
+* ***Instance*** - the actual collection of items to which a reference refers.
 
-### ***Reference*** - the variable name by which you know the array
-
-### ***Instance*** - the actual collection of items to which a reference refers.
+</div>
 
 ## Syntax to create an array
 
@@ -234,7 +237,7 @@ double[] significantNumbers = {3.141, 1.618, 2.718, 57.295, 1.202, 1.414};
 boolean[] twentyTwo = {true, false, true, true, false};
 ```
 
-# Size of an array
+## Size of an array
 
 The number of items in an array `arr` is given by `arr.length`.
 
@@ -249,7 +252,7 @@ int[] data = new int[20];
 println(data.length); //displays 20
 ```
 
-# Accessing items of an array
+## Accessing items of an array
 
 - The first item of an array `arr` is at index 0.
 - The second item of an array `arr` is at index 1.
@@ -288,7 +291,7 @@ double average = (total * 1.0)/outcomes.length;
 //multiplication with 1.0 to convert int to double
 ```
 
-# Re-referencing an array
+## Re-referencing an array
 
 Remember how we noted that the following only works when the array is FIRST created?
 	
@@ -335,7 +338,7 @@ switches = new boolean[]{true, false, true}; 	//CORRECT
 
 You can also re-reference an array to another instance already created (and referenced by some other array). Here's how...
 
-# Copying an array into another array
+## Copying an array into another array
 
 When an array, say `src`, is copied into another array, say `dest`, both references - `src` and `dest` - refer to the instance to which `src` was originally referring.
 
@@ -381,7 +384,7 @@ a = b;
 
 <img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyStep4.png" alt= "Reference Copy Step 4">
 
-# Instance copy of an array
+## Instance copy of an array
 
 When you want to *duplicate* or *clone* an array, you can create an array of the same size as the original array, and copy all items over. This is known as *instance copy*.
 
@@ -398,9 +401,9 @@ for(int i=0; i < source.length; i++) {
 
 <img src="{{ site.baseurl }}/assets/comp1000/arrays/instanceCopyOfArray.png" alt= "Instance Copy of Array">
 
-# Exercises
+## Exercises
 
-## Exercise 1
+### Exercise 1
 
 Create the following arrays:
 
@@ -413,12 +416,12 @@ Create the following arrays:
 7. An array `g` containing the values `'M', 'e', 's', 's', 'i'`.
 8. An array `h` containing the values `1.414, 7.2, -2.5, 9.81`.
 
-## Exercise 2
+### Exercise 2
 
 1. Assume the existence of integer array `tom` and make a reference copy of `tom` into `jerry`.
 1. Assume the existence of boolean array `aang` and make a reference copy of `aang` into `katara` as well as `toph`.
 
-## Exercise 3
+### Exercise 3
 
 Draw the memory diagram for the following code,
 
@@ -426,7 +429,7 @@ Draw the memory diagram for the following code,
 int[] data = new int[]{50, 90, 30, 20, 60};
 ```
 
-## Exercise 4
+### Exercise 4
 
 Draw the memory diagram for the following code,
 
@@ -442,7 +445,7 @@ for(int i=0; i < data.length; i++) {
 }
 ```
 
-## Exercise 6
+### Exercise 6
 
 List the references and instance created in the following code.
 
@@ -454,7 +457,7 @@ char[] d = c;
 boolean b = new boolean[10];
 ```
 
-## Exercise 7
+### Exercise 7
 
 Explain why the following code will not compile.
 
@@ -464,19 +467,19 @@ int[] b = new int[10];
 b[2] = a;
 ```
 
-## Exercise 8
+### Exercise 8
 
 Write a piece of code that creates the arrays represented in the following diagram.
 
 <img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyProblem1.png" alt= "Reference Copy Problem 1">
 
-## Exercise 9
+### Exercise 9
 
 Write a piece of code that creates the arrays represented in the following diagram.
 
 <img src="{{ site.baseurl }}/assets/comp1000/arrays/refCopyProblem2.png" alt= "Reference Copy Problem 2">
 
-## Exercise 10
+### Exercise 10
 
 Draw the memory diagram for the following code,
 
@@ -487,13 +490,13 @@ b[2] = 100;
 b = new int[]{104,101,108,108,111};
 ```
 
-## Exercise 11
+### Exercise 11
 
 Write a piece of code that creates an array with 100 integers, each between 1 and 20. Count the number of items that are divisible by the item after them.
 
 For example, if the first few items of the array are `{20, 5, 8, 4, 4, ...}`, 20 is divisible by 5, 8 is divisible by 4, and 4 is divisible by 4, so we have 3 such items so far.
 
-## Exercise 12
+### Exercise 12
 
 Consider the following piece of code.
 
@@ -507,16 +510,18 @@ for(int i=1; i < items.length; i++) {
 
 What are the contents of the array `items`?
 
-# Furthering your understanding
+## Furthering your understanding
 
 {% include youtube.html id="liw7__I2kCs" %}
 
-# Coding in the real life
+## Coding in the real life
 
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 The ages of 20 people is stored in an array `ageList`. Write a piece of code that determines the range of the distribution. That is, the age difference between the oldest and the youngest person.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
+{% capture my_solution %}
 ```java
 //assuming ageList is a boolean array containing 20 items
 
@@ -536,13 +541,20 @@ for(int i=1; i < ageList.length; i++) {
 
 int range = max - min;
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 The state of 25 electrical switches is held in an array `smartSwitches`. The states can be "On" (true) or "Off" (false). Write a piece of code that toggles all switches. That is, all switches that are currently "On" should turn "Off", and all switches that are currently "Off" should turn "On".
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
+{% capture my_solution %}
 ```java
 //assuming smartSwitches is a boolean array containing 25 items
 
@@ -550,11 +562,17 @@ for(int i=0; i < smartSwitches.length; i++) {
 	smartSwitches[i] = !smartSwitches[i];
 }
 ```
-</details>
-</div>
+{% endcapture %}
+
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
 
 
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 Assume that we are encoding birthdays as integers where:
 
 - 1st january is 0,
@@ -565,8 +583,9 @@ Assume that we are encoding birthdays as integers where:
 (remember that 29th february will also be given an integer mapping).
 
 The birthdays of 1000 people is stored in an array `bdays`. Write a piece of code that displays the most frequent date of birth. For the basic version, you may display an integer between 0 and 365. For the advanced version, display the actual data in `DD/MM` format.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
+{% capture my_solution %}
 ```java
 //assuming bdays is an array containing 1000 items
 //such that each item is in range [0...365]
@@ -581,7 +600,6 @@ if a birthday falls on 32st dec (coded as 365), frequencies[365] increases by 1
 int[] frequencies = new int[366];
 
 for(int i=0; i < bdays.length; i++) {
-	/*
 	int idx = bdays[i];
 	frequencies[idx]++; //another birthday on that day
 }
@@ -603,15 +621,22 @@ while(mostFreqBday < daysInMonths[currentMonth]) {
 int dayInMonth = mostFreqBday+1;
 println(dayInMonth+"/"+currentMonth);
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 I keep track of the time taken (in minutes) to run each kilometer over a 100km race (let me dream!). These times are stored in an array `lapTimes`. For example, if `lapTimes[0]` is 6.23, it means I ran the first kilometer in 6 minutes 13.8 seconds.
 
 Write a piece of code that determines my fastest lap (for example, display "Kilometer 0-1" if the first kilometer was the fastest, and "Kilometer 63-64" if the 64th kilometer was the fastest.)
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
+{% capture my_solution %}
 ```java
 //assuming lapTimes is a float array containing 100 items
 int fastestLap = 0;
@@ -622,8 +647,13 @@ for(int i=1; i < lapTimes.length; i++) {
 }
 print("Kilometer "+fastestLap+"-"+(fastestLap+1));
 ```
-</details>
-</div>
+{% endcapture %}
+
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
 
 
 <!--

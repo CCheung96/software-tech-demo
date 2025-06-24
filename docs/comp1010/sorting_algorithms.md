@@ -137,21 +137,21 @@ Now that we've had an intuitive idea of what needs to be done, let's formalize o
 
 ## Insertion Sort
 
-<img src = "./assets/images/insertionSortAscendingLeft.png" alt="Insertion Sort Ascending Left" width = 500>
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/insertionSortAscendingLeft.png" alt="Insertion Sort Ascending Left" width = 500>
 
 Note that we can have variations of the same algorithm. For instance, the following version of insertion sort sorts in ascending order, starting the sorting process from right to left.
 
-<img src = "./assets/images/insertionSortAscendingRight.png" alt="Insertion Sort Ascending Right"width = 500>
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/insertionSortAscendingRight.png" alt="Insertion Sort Ascending Right"width = 500>
 
 ## Selection Sort
 
-<img src = "./assets/images/selectionSort.png" alt="Selection Sort" width = 500>
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/selectionSort.png" alt="Selection Sort" width = 500>
 
 Note that we can have variations of the same algorithm. For instance, the following version of selection sort sorts in ascending order, starting the sorting process from right to left.
 
-<img src = "./assets/images/selectionSortAscendingRight.png" alt="Selection Sort Ascending Right" width = 500>
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/selectionSortAscendingRight.png" alt="Selection Sort Ascending Right" width = 500>
 
 Yes another version of selection sort sorts in descending order, starting the sorting process from right to left.
 
-<img src = "./assets/images/selectionSortDescendingRight.png" alt="Selection Sort Ascending Left" width = 500>
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/selectionSortDescendingRight.png" alt="Selection Sort Ascending Left" width = 500>
 

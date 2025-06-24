@@ -10,14 +10,12 @@ nav_order: 9
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Know the two types of loops
   * Understand how to use loops to draw multiple things in one frame
   * Understand syntax and semantics of loops
@@ -26,12 +24,11 @@ nav_order: 9
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-# Loops
-
+{: .keypoint}
 Loops are similar to conditions except that after every iteration of the loop, the expression is checked again.
 
 {: .readings}
-Chapter 6 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
+**Reading(s)**: Chapter 6 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
 
 {% include youtube.html id="RtAPBvz6k0Y" %}
 
@@ -51,7 +48,7 @@ First of all, are we really missing out on anything given what we already know (
 
 We know that `draw()` executes repeatedly so the following program will display a row of circles ... but, ONE AT A TIME.
 
-```processing
+```java
 float x = 25;
 
 void setup() {
@@ -70,7 +67,7 @@ If we want all the circles to be displayed, at the same time, they all need to b
 
 Note, we don't need `x` at all... well, right now.
 
-```processing
+```java
 void setup() {
 	size(400, 200);
 	background(255);
@@ -105,7 +102,7 @@ If we decide to change the diameter, we have to change each of the 8 statements.
 
 We will tweak the code so that the changing values (25, 75, ...) have a pattern.
 
-```processing
+```java
 void setup() {
 	size(400, 200);
 	background(255);
@@ -146,7 +143,7 @@ void draw() {
 
 Now, after initializing the value of `x`, we have the following two statements executing repeatedly:
 
-```processing
+```java
 	circle(x, height/2, dia);
 	x=x+dia;
 ```
@@ -157,7 +154,7 @@ It's just the number of times the two statements should execute that we have to 
 
 So, our pseudo-code is:
 
-```processing
+```java
 NOTE THAT THIS IS A PSEUDO-CODE, NOT COMPILABLE CODE
 
 void setup() {
@@ -182,7 +179,7 @@ void draw() {
 
 ## A `while` loop
 
-```processing
+```java
 while(boolean expression) {
 	statement 1
 	statement 2
@@ -206,7 +203,7 @@ flowchart TD
 
 Example:
 
-```processing
+```java
 int a = 6;
 int result = 1;
 while(a > 0) {
@@ -257,7 +254,7 @@ While constructing a logic table, one is strongly encouraged to follow the follo
 
 ### Example for constructing a logic table
 
-```processing
+```java
 int a = 10, b = 2, c = 100;
 int result = 0;
 while(a > b && c > a) {
@@ -308,7 +305,7 @@ Such a table is not a formal document, it is _an aid to understanding_ and this 
 
 A for-loop is more compact than the while loop and more common in real-life applications, especially once we cover arrays, that, in turn, form basis for lists and maps. 
 
-```processing
+```java
 for(initializations; boolean expression; post-iteration update(s)) {
   code inside loop;
 }
@@ -330,7 +327,7 @@ D --> F
 
 Example:
 
-```processing
+```java
 int result = 0;
 for(int i=1; i <= 16; i*=2) {
   result = result + i;
@@ -350,11 +347,12 @@ Trace (logic table):
 | 16 	| true  	| 15+16 = 31 	|
 | 32 	| false 	|            	|
 
+<!-- Exercise -->
+{% capture my_problem %}
+[Modify your animated blue circle]({{ site.baseurl }}/comp1000/conditions#exercise-two-way-animated-blue-circle) so that it is an animated blue [bullseye](https://www.google.com/search?q=bullseye) instead. Hint:  You can get a thin circle using `noFill` and a larger `strokeWeight` value;
+{% endcapture %}
 
-<div class="task" markdown="1">
-[Modify your animated blue circle](./conditions.html#two_way_animated_blue_circle) so that it is an animated blue [bullseye](https://www.google.com/search?q=bullseye) instead. Hint:  You can get a thin circle using `noFill` and a larger `strokeWeight` value;
-
-<details class="solution" markdown="1"><summary>solution</summary>
+{% capture my_solution %}
 Instead of drawing a simple circle, we draw three circles, each 10 pixels larger than the last.  Each has a 2 pixel border, making a bulleye shape.  Nothing else needs to change, the center of the bullsye animates in exactly the same way as the circle did.
 
 ~~~~~
@@ -385,9 +383,13 @@ void draw(){
 
 }
 ~~~~~
+{% endcapture %}
 
-</details>
-</div>
+{% include exercise.html
+	title="Exercise"
+	problem=my_problem
+	solution=my_solution
+%}
 
 # Looking at loops _without_ the draw loop
 
@@ -395,9 +397,13 @@ void draw(){
 
 As discussed in the above video, the fact that processing is always in a "draw loop" can confuse things somewhat.  It is possible to see all the operation of loops free of this constraint if we work only on _the console_.  [The console is the black area below your program]({{ site.baseurl }}/comp1000/debugging-in-processing) and it is available even when you do a "static" processing program (one that has no `setup` or `draw`).
 
-<div class="task" markdown="1">
+
+<!-- Exercise -->
+{% capture my_problem %}
 Using loops, draw five `^` (hat) characters to the console
-<details class="solution" markdown="1"><summary>solution</summary>
+{% endcapture %}
+
+{% capture my_solution %}
 ~~~~~
 for(int i = 0; i < 5; i++){
 	print('^');
@@ -405,20 +411,25 @@ for(int i = 0; i < 5; i++){
 ~~~~~
 
 Notice that this program has no `setup` and no `draw` functions, it is a special type of non-animated Processing program.
-</details>
-</div>
+{% endcapture %}
 
-# break and continue statements
+{% include exercise.html
+	title="Exercise"
+	problem=my_problem
+	solution=my_solution
+%}
+
+## break and continue statements
 
 IMPORTANT: Anything you can do with `break` and `continue`, you can do without them (typically using boolean variables and expressions)
 
-## break
+### break
 
 The `break` statements exits the **innermost** loop (to the statement immediately after it). It is useful when you don't explicitly know the terminating value (as in example 1 below).
 
-### Example 1
+#### Example 1
 
-```processing
+```java
 for(int i=40; i<=100; i++) {
 	int r = (int)sqrt(i);
 	int back = r*r;
@@ -437,7 +448,7 @@ The above code computes the integer part of the square root, and multiplies it b
 
 Without using `break`:
 
-```processing
+```java
 boolean foundPerfectSquare = false;
 for(int i=40; i<=100 && !foundPerfectSquare; i++) {
 	int r = (int)sqrt(i);
@@ -451,9 +462,9 @@ for(int i=40; i<=100 && !foundPerfectSquare; i++) {
 }
 ```
 
-### Example 2
+#### Example 2
 
-```processing
+```java
 for(int i=1; i<=4; i++) {
 	for(int k=1; k<=4; k++) {
 		if(k > i) {
@@ -482,7 +493,7 @@ The output would be:
 
 Without using `break`:
 
-```processing
+```java
 for(int i=1; i<=4; i++) {
 	for(int k=1; k<=i; k++) {
 		print(k+" ");
@@ -491,13 +502,13 @@ for(int i=1; i<=4; i++) {
 }
 ```
 
-## continue
+### continue
 
 The `continue` statement skips the rest of the iteration of the innermost loop and goes back to the loop header.
 
-### Example
+#### Example
 
-```processing
+```java
 for(int i=10; i<=30; i++) {
 	if(i%3!=0 && i%8!=0) {
 		continue;
@@ -514,7 +525,7 @@ Whenever you reach the continue statement in the above code, it skips the rest o
 
 Without using `continue`:
 
-```processing
+```java
 for(int i=10; i<=30; i++) {
 	if(i%3==0 || i%8==0) {
 		print(i+" ");
@@ -524,32 +535,28 @@ for(int i=10; i<=30; i++) {
 
 ## Exercises based on loops
 
+<div class="task" markdown="1">
 Here are some exercises, hopefully in increasing order of difficulty, to help you progress through your understanding of loops.
 
 1. Write a loop that displays the following pattern: 
 	```
 	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 	```
-	
 2. Write a loop that displays the following pattern: 
 	```
 	12 11 10 9 8 7 6 5 4 3 2 1 0 -1 -2
 	```
-
 3. Write a loop that displays the following pattern: 
 	```
 	300 150 75 37 18 9 4 2 1
 	```
-
 4. Write a loop that displays the following pattern: 
 	```
 	1 10 100 1000 10000 100000 1000000
 	```
-
 5. Write a loop that adds the first 10000 positive integers (1 to 10000) and stores the result in a variable `total`.
-
 6. Write a loop that multiplies the first 12 positive integers (1 to 12) and stores the result in a variable `total`.
-
+</div>
 
 ## Nesting of control structures
 
@@ -585,7 +592,7 @@ The inner loop handles horizontal change (change within a line).
 
 We can start with a blank nested loop.
 
-```processing
+```java
 for (int i = ...; expression; post-execution update) {
 	for(int k = ...; expression; post-execution update) {
 		print(k+" "); //display the value but don't change line
@@ -596,7 +603,7 @@ for (int i = ...; expression; post-execution update) {
 
 We know that our vertical change is 1 and we would like to go from 1 to 5 inclusive. Therefore, 
 
-```processing
+```java
 for (int i = 1; i <= 5; i++) { //i++ is the same as i=i+1 or i+=1 
 	for(int k = ...; expression; post-execution update) {
 		print(k+" ");
@@ -636,7 +643,7 @@ Let's say this is the pattern we want to display in the console.
 
 We know that our vertical change is 5 and we would like to go from 5 to 20 (inclusive on both sides). Therefore, 
 
-```processing
+```java
 for (int i = 5; i <= 20; i+=5) {
 	for(int k = ...; expression; post-execution update) {
 		print(k+" ");
@@ -655,7 +662,7 @@ The inner loop runs 7 times and we start from 0 to make our calculations easier.
 
 Now plug it into the template,
 
-```processing
+```java
 for (int i = 5, dec=1; i <= 20; i+=5, dec++) {
 	for(int k = 0; k < 7; k++) {
 		print((i - k*dec)+" ");
@@ -695,7 +702,7 @@ We would like to generate a pattern based on the input integer `N > 0`
 
 Outer loop -
 
-```processing
+```java
 for(int i=1; i<=N; i++) {
 	display current line
 	change line using println();
@@ -708,7 +715,7 @@ for(int i=1; i<=N; i++) {
 
 Inner loop -
 
-```processing
+```java
 for(int k=1; k<=i; k++) {
 	print("^");
 }
@@ -716,7 +723,7 @@ for(int k=1; k<=i; k++) {
 
 **COMPLETE SOLUTION**
 
-```processing
+```java
 for(int i=1; i<=N; i++) {
 	for(int k=1; k<=i; k++) {
 		print("^");
@@ -724,8 +731,8 @@ for(int i=1; i<=N; i++) {
 	println();
 }
 ```
-
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 Change the code so that the symbols alternate between a cap (^) and a dash (-) between lines.
 
 `N=6`
@@ -758,9 +765,10 @@ else { //even counter: dash
 }
 ```
 
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
 
-```processing
+{% capture my_solution %}
+```java
 for(int i=1; i<=N; i++) {
 	for(int k=1; k<=i; k++) {
 		if(i%2 == 1) { //odd counter: cap
@@ -773,11 +781,16 @@ for(int i=1; i<=N; i++) {
 	println();
 }
 ```
-</details>
-</div>
+{% endcapture %}
 
+{% include exercise.html
+	title="Exercise"
+	problem=my_problem
+	solution=my_solution
+%}
 
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 Change the code so that the symbols alternate between ^ and - within a line.
 
 `N=6`
@@ -790,7 +803,9 @@ Change the code so that the symbols alternate between ^ and - within a line.
 ^ - ^ - ^
 ^ - ^ - ^ -
 ```
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
+
+{% capture my_solution %}
 The only change required is to use `k` instead of `i` to decide what symbol to print
 
 ```
@@ -806,11 +821,16 @@ for(int i=1; i<=N; i++) {
   println();
 }
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+	title="Exercise"
+	problem=my_problem
+	solution=my_solution
+%}
 
+<!-- Exercise -->
+{% capture my_problem %}
 Change the code so that the symbols alternate between ^ and - within a line and also the first symbol on each line is different from the first symbol on the previous line
 
 `N=6`
@@ -823,7 +843,9 @@ Change the code so that the symbols alternate between ^ and - within a line and 
 ^ - ^ - ^
 - ^ - ^ - ^
 ```
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
+
+{% capture my_solution %}
 This seems like a curly problem until we realise that _adding_ `k` and `i` will give the pattern required because `i` goes up by one each line, swapping the "oddness" of each slot in that row.
 
 ```
@@ -838,12 +860,19 @@ for(int i=1; i<=N; i++) {
   }
   println();
 }
-```
-</details>
-</div>
+```n
+{% endcapture %}
+
+{% include exercise.html
+	title="Exercise"
+	problem=my_problem
+	solution=my_solution
+%}
 
 
 ## Exercises based on loops
+
+<div class="task" markdown="1">
 
 Here are some exercises, hopefully in increasing order of difficulty, to help you progress through your understanding of nested loops.
 
@@ -871,7 +900,7 @@ Here are some exercises, hopefully in increasing order of difficulty, to help yo
 	```
 
 
-2. Display the following pattern in the console using nested loops.
+3. Display the following pattern in the console using nested loops.
 
 	```
 	1 2 4
@@ -883,8 +912,9 @@ Here are some exercises, hopefully in increasing order of difficulty, to help yo
 	1 2 4 8 16 32 64 128 256
 	512 256 128 64 32 16 8 4 2 1
 	```
-	
-# Coding in the real world
+
+</div>
+## Coding in the real world
 
 Just like in conditions, lets see some real-world scenarios where we need to use loops.
 
@@ -897,18 +927,17 @@ So, instead we'll iterate over numbers generated via a random-number generator.
 
 For scenarios 1 to 3, you may assume that `n` is generated using the following statement:
 
-```processing
+```java
 int x = 1 + (int)random(100); //x can be any integer from 1 to 100
 int n = 10*x; //n can be one of the values from [10, 20, ..., 1000]
 ```
 
-<div class="task" markdown="1">
-
-## Scenario 1
-
+<!-- Solution 1 -->
+{% capture my_problem %}
 Write a piece of code that determines the number of times we get a 6 when a normal 6-faced die is rolled `n` times.
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
 
+{% capture my_solution %}
 ```
 int x = 1 + (int)random(100); //x can be any integer from 1 to 100
 int n = 10*x; //n can be one of the values from [10, 20, ..., 1000]
@@ -922,15 +951,20 @@ for(int i = 0; i < n; i++){
 }
 println(total);
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+	title="Scenario 1"
+	problem=my_problem
+	solution=my_solution
+%}
 
-## Scenario 2
-
+<!-- Solution 2 -->
+{% capture my_problem %}
 Write a piece of code that determines the average outcome when a normal 6-faced dice is rolled `n` times.
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
+
+{% capture my_solution %}
 You should expect to get 3 just about every time right?
 
 ```
@@ -944,16 +978,19 @@ for(int i = 0; i < n; i++){
 }
 println(total/n);
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+	title="Scenario 2"
+	problem=my_problem
+	solution=my_solution
+%}
 
-## Scenario 3
-
+<!-- Solution 3 -->
+{% capture my_problem %}
 For this scenario, you should assume that `n` is generated using the following statement:
 
-```processing
+```java
 int n = (int)random(101); //n can be any integer from 0 to 100
 ```
 
@@ -990,9 +1027,9 @@ A table summarizing this pattern is given below,
 | n                	| (n-1) + (n-2) + .... + 2 + 1 	|
 
 There is actually a very elegant formula to get this value, but for the purpose of our exercise, we'd like you to compute the number of handshakes in a party of `n` people using a loop.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```
 int n = (int)random(101); //x can be any integer from 1 to 100
 
@@ -1006,5 +1043,10 @@ for(int i = n-1; i > 0; i--){
 println(n + " people means");
 println(handshakes + " handshakes");
 ```
-</details>
-</div >
+{% endcapture %}
+
+{% include exercise.html
+	title="Scenario 3"
+	problem=my_problem
+	solution=my_solution
+%}

@@ -540,7 +540,7 @@ The above version is called *out-of-place* algorithm and will create a second li
 
 Thanks to Xingyu (Ara) Cai for providing the following three elegant solutions! Well done, Ara :)
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/morganFreemanClapping.gif)" alt="Morgan Freeman Approves"/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/morganFreemanClapping.gif" alt="Morgan Freeman Approves"/>
 
 ```java
 public static Node reverseOutPlaceRecursive(Node start) {

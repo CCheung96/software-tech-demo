@@ -24,6 +24,7 @@ nav_order: 4
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
+{: .keypoint}
 Variables are a slot of memory in the computer with a name.
 
 Chapters 3 and 4 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
@@ -484,9 +485,8 @@ void draw() {
 
 This time the first output (inside setup) will be 1729, while the draw, in the absence of `exit()` and the increment statement will product outputs of 1730, 1731, 1732, ...
 
-<div id="task" markdown="1">
+{: .task}
 *Advanced: Do you think the values will increase indefinitely?*
-</div>
 
 ## So, declare globally or locally?
 
@@ -587,7 +587,7 @@ void draw() {
 <!-- Exercise -->
 {% capture my_problem %}
 <a id="timed-animated-blue-circle"></a>
-_Advanced:_ Write a processing program that moves a blue circle from the top of the window to the bottom of the window in exactly 200 frames of time, no matter what the size of the window is.  If you have forgotten how to put animate blue circle on the screen, you should review this [previous exercise](#animated-blue-circle).
+Write a processing program that moves a blue circle from the top of the window to the bottom of the window in exactly 200 frames of time, no matter what the size of the window is.  If you have forgotten how to put animate blue circle on the screen, you should review this [previous exercise](#animated-blue-circle).
 {% endcapture %}
 
 {% capture my_solution %}

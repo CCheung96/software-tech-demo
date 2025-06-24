@@ -80,7 +80,7 @@ Instances (and types):
 
 <p>&nbsp;</p>
 
-![](./fig/03-classes-and-objects/composition/composition-figure0.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_composition/composition-figure0.png" alt=""/>
 
 <p>&nbsp;</p>
 
@@ -92,7 +92,7 @@ Line line = new Line(new Point(10, 40), new Point(70, 60));
 
 <p>&nbsp;</p>
 
-![](./fig/03-classes-and-objects/composition/composition-figure1.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_composition/composition-figure1.png" alt=""/>
 
 <p>&nbsp;</p>
 
