@@ -11,9 +11,7 @@ nav_order: 21
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Functions]({{ site.baseurl }}/comp1000/functions)
-
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
@@ -22,6 +20,4 @@ nav_order: 21
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: 
-
-# TO BE POPULATED SOON
+<span style="color:red">**TO BE POPULATED SOON!**</span>

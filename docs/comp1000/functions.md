@@ -30,7 +30,7 @@ nav_order: 10
 A function is a named piece of code that can be supplied with some inputs (known as parameters) and may return a value back to the caller.
 
 {: .readings}
-Chapter 7 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
+Chapter 7 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
 
 ## Macquarie University Videos
 

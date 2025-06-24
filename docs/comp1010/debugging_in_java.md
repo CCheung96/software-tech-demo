@@ -11,7 +11,6 @@ nav_order: 3
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Be able to identify input/output pairs that are good for debugging.
   * Be able to debug Java programs with appropriate tools.
   * Be able to do paper traces of Java code.

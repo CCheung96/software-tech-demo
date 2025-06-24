@@ -5,25 +5,22 @@ parent: Recursive Data Structures
 nav_order: 1
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
-{% capture topic_prereq %}  * [Classes- Composition]({{ site.baseurl }}/comp1010/classes/composition)
+{% capture topic_prereq %}  
+  * [**Classes- Composition**]({{ site.baseurl }}/comp1010/classes/composition)
   * [Lists]({{ site.baseurl }}/comp1010/lists)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Be able to create and operate on a class holding one or more references of the same type
 {% endcapture %}
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-
-
-# Pre-requisite knowledge
-
-Make sure you read the lecture notes on [class composition](https://softwaretechnologymq.github.io/classes_composition) before you begin studying these notes.
-
-# The Node class
+## The Node class
 
 Consider the following class:
 
@@ -70,7 +67,7 @@ Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passe
 > <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure3.png" alt=""/>
 
 
-## Linking nodes
+### Linking nodes
 
 <!--
 {% include youtube.html id="Jqu9IpulHvU" %}
@@ -129,7 +126,7 @@ while(temp != null) {
 ```
 <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure12.png" alt=""/>
 
-## Careful to not lose the reference to the starting node
+**Careful to not lose the reference to the starting node**
 
 What would happen if we write the following code?
 
@@ -149,11 +146,11 @@ So, if you try to do anything using `n1` again, well ... good luck!
 
 Hence, we should always make a reference copy of the starting node before operating on it.
 
-## Some examples of traversing a recursive data structure
+### Some examples of traversing a recursive data structure
 
 We will assume the reference to the first node in the chain is in `head`.
 
-### 1. Count the number of items in the list
+#### 1. Count the number of items in the list
 
 ```java
 Node temp = head;
@@ -164,7 +161,7 @@ while(temp != null) {
 }
 ```
 
-### 2. Add up all odd numbers in the list
+#### 2. Add up all odd numbers in the list
 
 ```java
 Node temp = head;
@@ -188,7 +185,7 @@ for(Node temp = head; temp != null; temp = temp.next) {
 }
 ```
 
-### 3. Checking if all items in the list are positive
+#### 3. Checking if all items in the list are positive
 
 ```java
 boolean allPositives = true;
@@ -201,7 +198,7 @@ for(Node temp = head; temp != null && allPositives; temp = temp.next) {
 
 Note how we updated the loop expression to `temp != null && allPositives` so as soon as the first non-positive item is found, we can exit the loop (without break, because ... *Ew!*)
 
-### 4. Remove the last item in the list
+#### 4. Remove the last item in the list
 
 ```java
 if(head != null) { //there is at least one node in the list
@@ -219,7 +216,7 @@ if(head != null) { //there is at least one node in the list
 }
 ```
 
-### 5. Remove the first zero in the list, if any,
+#### 5. Remove the first zero in the list, if any,
 
 ```java
 if(head!=null) {
@@ -238,7 +235,7 @@ if(head!=null) {
 }
 ```
 
-### 6. Removing ALL even numbers from the list
+#### 6. Removing ALL even numbers from the list
 
 ```java
 //first remove all even nodes at the front
@@ -257,7 +254,7 @@ while(cur != null) { //cur, if not null, definitely contains an odd number
 }
 ```
 
-## Passing a node to a function
+### Passing a node to a function
 
 Thankfully, that is exactly how objects are passed to functions - as reference copies of the actual parameter.
 
@@ -276,7 +273,7 @@ public static int sum(Node start) {
 
 I can call it as `sum(n1)`, thereby `start ` being a reference copy of `n1` and updated. But not `n1`. Life is good again :)
 
-## Recursion is a beautiful thing
+### Recursion is a beautiful thing
 
 To calculate the sum of all nodes starting at a node `start`, 
 
@@ -296,7 +293,7 @@ public static int sum(Node start) {
 
 YESSS!!!
 
-## Keep moving
+### Keep moving
 
 What is the bug in the following code?
 
@@ -396,7 +393,7 @@ public static boolean contains(Node start, int target) {
 }
 ```  
 
-### You should be careful about your loop expression
+**You should be careful about your loop expression**
 
 Consider an example where you want to check if a list contains the same item twice in a row (at reference x as well as x.next). Note: I am modifying the reference `start` here. This does not modify the *actual parameter* in the client.
 
@@ -444,14 +441,14 @@ public static boolean twoInARow(Node start) {
 }
 ```
 
-## Nodes can hold other objects too
+### Nodes can hold other objects too
 
 In the previous example, we saw a node holding integer data, but it can hold any kind of data. For starters, take a look at `RNode` holding `Rectangle` object.
 
 For the classes defined in,
 
-- [Rectangle.java](./Rectangle.java),
-- [RNode.java](./RNode.java),
+- [Rectangle.java]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Rectangle.java),
+- [RNode.java]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/RNode.java),
 
 Consider the following code,
 
@@ -473,7 +470,7 @@ RNode p = new RNode(new Rectangle(2.5, 1.5), q);
 
 <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure3.png" alt=""/>
 
-# Be careful while comparing objects!!!
+**Be careful while comparing objects!!!**
 
 Consider the following function that attempts to check if a specific rectangle exists in a list or not:
 
@@ -518,7 +515,7 @@ public static boolean contains(RNode start, Rectangle target) {
 }
 ```
 
-## With a little help from my friends
+### With a little help from my friends
 
 Anything you can do with loops, you can do recursively... sometimes, with the use of helper functions.
 
@@ -608,11 +605,11 @@ public static Node reverse(Node node) {
 ```
 -->
 
-# Activities
+## Activities
 
 ### Task 1
 
-For the class [Node](./Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
 
 ```java
 Node a = new Node(20, null);
@@ -623,7 +620,7 @@ Node d = new Node(90, c);
 
 ### Task 2
 
-For the class [Node](./Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
 
 ```java
 Node a = new Node(20, null);
@@ -635,7 +632,7 @@ a.next = d;
 
 ### Task 3
 
-For the class [Node](./Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
 
 ```java
 Node a = new Node(20, null);
@@ -647,7 +644,7 @@ a.next = d.next;
 
 ### Task 4
 
-For the class [Node](./Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), draw the memory diagram to illustrate objects after the last statement of the following code executes.
 
 ```java
 Node a = new Node(20, null);
@@ -659,7 +656,7 @@ a.next = d.next.next;
 
 ### Task 5
 
-For the class [Node](./Node.java), the following code attempts to store the sum of all items in the chain of nodes into a variable `total`. However, it has a bug. Briefly explain what is the problem with the code, and correct it.
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), the following code attempts to store the sum of all items in the chain of nodes into a variable `total`. However, it has a bug. Briefly explain what is the problem with the code, and correct it.
 
 ```java
 Node a = new Node(20, null);
@@ -676,7 +673,7 @@ while(current != null) {
 
 ### Task 6
 
-For the class [Node](./Node.java), the following code attempts to store the number of nodes in the chain into a variable `size`. However, it has a bug. Briefly explain what is the problem with the code, and correct it.
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), the following code attempts to store the number of nodes in the chain into a variable `size`. However, it has a bug. Briefly explain what is the problem with the code, and correct it.
 
 ```java
 Node a = new Node(20, null);
@@ -692,7 +689,7 @@ while(current != null) {
 
 ### Task 7
 
-For the class [Node](./Node.java), what is the value of `result` after the following code is executed?
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), what is the value of `result` after the following code is executed?
 
 ```java
 Node a = new Node(20, null);
@@ -714,7 +711,7 @@ while(current != null) {
 
 ### Task 8
 
-For the class [Node](./Node.java), what is the value of `result` after the following code executes?
+For the class [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java), what is the value of `result` after the following code executes?
 
 ```java
 Node a = new Node(9, null);

@@ -22,7 +22,7 @@ nav_order: 2
 
 
 
-# What do you need to know to begin COMP1010?
+## What do you need to know to begin COMP1010?
 
 <img src="{{ site.baseurl }}/assets/comp1010/foundation_for_comp1010/important.gif" />
 
@@ -34,9 +34,9 @@ To begin COMP1010, the three most important skills are:
 2. Be able to [define a basic to intermediate function](#2-define-functions). We assume that if you can define a function, you also know how to call it, which in some cases might not be true, but easily fixable.
 3. Be able to [perform basic operations on an array](#3-operating-on-arrays) (Examples below).
 
-# 1. Tracing control flow
+## 1. Tracing control flow
 
-## Example 1
+### Example 1
 
 See the following example where we trace the flow of control of the following Processing program.
 
@@ -70,7 +70,7 @@ Note that function headers, lines with JUST curly brackets (opening or closing),
 
 Also, note our program doesn't have a `draw()` function, which is also fine.
 
-## Activity 1.1
+#### Activity 1.1
 
 Based on our walkthrough, trace the flow of the following program and summarize with the sequence of lines that are executed.
 
@@ -92,13 +92,13 @@ void setup() {
 }
 ```
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 ```
 Lines 2 -> 3 -> 7 -> 11 -> 14
 ```
 </details>
 
-## Example 2
+### Example 2
 
 See the following example where we trace the flow of control of the following Processing program.
 
@@ -138,7 +138,7 @@ If we summarize the above trace, the lines executed are:
 
 Wow! That's a very few lines actually being executed for a relatively large piece of code. And that is absolutely true of any code that has lots of conditions.
 
-## Activity 1.2
+#### Activity 1.2
 
 Based on our walkthrough, trace the flow of the following program and summarize with the sequence of lines that are executed.
 
@@ -161,11 +161,11 @@ void setup() {
 }
 ```
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 Lines 12 -> 13 -> 7 -> 8 -> 13 -> 14 -> 2 -> 3 -> 14 -> 15
 </details>
 
-## Example 3
+### Example 3
 
 ```java
 void setup() {
@@ -197,7 +197,7 @@ void setup() {
 
 A code that has a lot of loops will **often** have many more statements executed than lines in the program.
 
-## Activity 1.3
+#### Activity 1.3
 
 Based on our walkthrough, trace the flow of the following program and summarize with the sequence of lines that are executed.
 
@@ -214,7 +214,7 @@ void setup() {
 }
 ```
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 Lines 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 4 -> 5 -> 6 -> 7 -> 4 -> 9 (loop executes twice)
 </details>
 
@@ -254,24 +254,24 @@ void setup() {
 }
 ```
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 Lines 20 -> 21 -> 22 -> 26 -> 11 -> 12 -> 13 > 14 -> 12 -> 13 > 14 -> 12 -> 13 > 14 -> 12 -> 13 > 14 -> 12 -> 16 -> 26 -> 28
 </details>
 
-# 2. Define functions
+## 2. Define functions
 
 A function is a contract. If it receives the type of values it expects, it promises to give you an answer (return value). There are two things to identify in a function:
 
 1. Parameters (type of values a function expects)
 2. Return type (type of the answer it will give)
 
-## Example 2.1
+### Example 2.1
 
 Define a function that when passed an integer, returns its last digit.
 
 The key skill you need to have to solve this problem is to know the `%` operator. It gives you the remainder. So `a%10` gives remainder when `a` is divided by 10, which is the last digit.
 
-### Attempt 2.1.1
+#### Attempt 2.1.1
 
 ```java
 int lastDigit(int n) {
@@ -282,7 +282,7 @@ int lastDigit(int n) {
 
 Here, the function will return the correct value if `n = 1729` but if `n = -1729`, it will return `-9` which is not really the last digit. This is because `negative % 10` is `negative`.
 
-### Attempt 2.1.2
+#### Attempt 2.1.2
 
 ```java
 int lastDigit(int n) {
@@ -295,7 +295,7 @@ int lastDigit(int n) {
 
 We just made sure `n` is non-negative before applying the `%` operator.
 
-### Variation of attempt 2.1.2
+#### Variation of Attempt 2.1.2
 
 Following is an equivalent version - just different style. We are performing the "moderation" on the result, rather than the input.
 
@@ -311,11 +311,11 @@ int lastDigit(int n) {
 }
 ```
 
-## Activity 2.1
+### Activity 2.1
 
 Based on the above example, define a function which when passed an integer, returns `true` if it is positive (think about whether you really know what defines a positive number), `false` otherwise.
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 ```java
 boolean isPositive(int n) {
 	if(n > 0) { //not n >= 0
@@ -329,7 +329,7 @@ boolean isPositive(int n) {
 ```
 </details>
 
-## Example 2.2
+### Example 2.2
 
 Consider you putting mangoes (or whatever fruit you like) in trays. There are some variables here:
 
@@ -342,7 +342,7 @@ The slight twist is that it's possible that not all trays will be full. For exam
 
 Given this scenario, define a function which when given the required information (think about what that is), returns the number of trays required.
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 ```java
 int nTrays(int nFruits, int traySize) {
 	int fullTrays = nFruits/traySize;
@@ -374,7 +374,7 @@ Yes, it will work, and is clever, but explaining it to someone or debugging it i
 
 Sometimes, the simplest solution is the best solution.
 
-## Example 2.3
+### Example 2.3
 
 Define a function that when passed two integers, returns,
 
@@ -382,7 +382,7 @@ Define a function that when passed two integers, returns,
 - 2, if neither of them is positive,
 - 3, if exactly one of them is positive
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 ```java
 int positivity(int a, int b) {
 	if(a > 0 && b > 0) {
@@ -398,11 +398,11 @@ int positivity(int a, int b) {
 </details> 
 
 
-## Activity 2.3
+### Activity 2.3
 
 Based on the above example, define a function that when passed three integers, returns the smallest of the three.
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 ```java
 int smallest(int a, int b, int c) {
 	if(a <= b && a <= c) {
@@ -434,7 +434,7 @@ int smallestBuggy(int a, int b, int c) {
 ```
 </details> 
 
-# 3. Operating on arrays
+## 3. Operating on arrays
 
 When we create an array, the array name is a *reference* (an indicator of where the items are stored). The memory location where the items are actually stored is called the *instance*.
 
@@ -446,7 +446,7 @@ The [arrays lecture]({{ site.baseurl }}/comp1000/arrays) has much more informati
 
 Performing simple operations such as finding the sum of all even numbers in an array, or the highest value in an array is something you should be able to do by the time you start COMP1010.
 
-## Example 3.1
+### Example 3.1
 
 Our first example requires us to find the sum of all ODD numbers in an array. You may assume the array, say `data` has already been populated.
 
@@ -482,11 +482,11 @@ int sumOdds(int[] data) {
 }
 ```
 
-## Activity 3.1 
+### Activity 3.1 
 
 Based on the above example, write inline, and function versions of finding the number of negative items in an array.
 
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 ```java
 int count = 0;
 for(int i=0; i < data.length; i++) {
@@ -511,7 +511,7 @@ int countNegatives(int[] data) {
 ```
 </details> 
 
-## Example 3.2
+### Example 3.2
 
 Our second example is to check the highest item in an array. Return 0 if array is empty.
 
@@ -560,11 +560,11 @@ int highest(int[] data) {
 }
 ```
 
-## Activity 3.2
+### Activity 3.2
 
 Define a function that when passed an array, returns `true` if all items are positive, `false` otherwise. Return `true` if the array is empty (a concept known as *vacuous truth*)
 		
-<details class="prereq" markdown="1"><summary>Solution</summary>
+<details class="answer" markdown="1"><summary>Solution</summary>
 The logic is to find a single violation (an item that is NOT positive), and return `false` immediately. If no violations (that is, AFTER the loop), return `true`.
 
 ```java

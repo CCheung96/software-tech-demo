@@ -5,6 +5,9 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 4
 ---
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
@@ -22,7 +25,7 @@ nav_order: 4
 
 
 
-# Composition
+## Composition
 
 Consider the following class `Point`:
 
@@ -96,7 +99,7 @@ Line line = new Line(new Point(10, 40), new Point(70, 60));
 
 <p>&nbsp;</p>
 
-## Adding methods to the mix
+### Adding methods to the mix
 
 Consider a slightly modified class definition of `Point`.
 
@@ -147,7 +150,7 @@ public class Line {
 ```
 
 
-# Homework - 1
+## Homework - 1
 
 ### Task 1
 
@@ -272,6 +275,6 @@ For the same code as task 2, write down statements that store the following valu
 	}
 	```
 
-# Relevant MQ Video
+## Relevant MQ Video
 
 {% include youtube.html id="bky3A1GGXx0" %}

@@ -5,6 +5,9 @@ parent: COMP1010
 nav_order: 2
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
@@ -34,11 +37,11 @@ Coding, like cooking or swimming or soccer, is all about practice.
 
 
 
-# Graduation
+## Graduation
 
 We have cut our teeth with Processing, but now it is time to graduate to the same tools that professional developers use.  Processing was a simplified version of two tools we are going to embrace:
 
-  * [Java](https://www.oracle.com/au/java/): One of the [most popular programming language on the planet](https://www.tiobe.com/tiobe-index/).  Processing is a simplified subset of Java that simplified our first steps.
+  * [Java](https://www.oracle.com/au/java/): One of the [most popular programming languages on the planet](https://www.tiobe.com/tiobe-index/).  Processing is a simplified subset of Java that simplified our first steps.
   * IDE
   	* [Visual Studio Code](https://code.visualstudio.com/), or,
   	* [Eclipse](https://www.eclipse.org/), or,
@@ -46,9 +49,9 @@ We have cut our teeth with Processing, but now it is time to graduate to the sam
 
 {% include youtube.html id="VAd5qs46z8c" %}
 
-# How do programs run in Java (compared to Processing)
+## How Do Programs Run in Java?
 
-[Remind yourself how processing ran](../comp1000/transition-to-processing) programs if you need to refresh your memory.
+[Remind yourself how processing ran]({{ site.baseurl }}/comp1000/transition-to-processing) programs if you need to refresh your memory.
 
 In Java, you must perform _two_ steps yourself to get your program to run:
 
@@ -57,7 +60,7 @@ In Java, you must perform _two_ steps yourself to get your program to run:
 
 <img src="{{ site.baseurl }}/assets/comp1010/transition_to_java/javaCompileExecute.png" alt=""/>
 
-# What does a Java Program look like?
+## What does a Java Program look like?
 
 All Java programs have the following structure,
 
@@ -76,19 +79,19 @@ The golden rule is: The name of the file must be exactly the same as the name of
 This is an important rule relevant to all assignment submissions. Unless the file is named correctly, it will NOT be marked by automarker, given it will not compile!
 
 
-# Software to install and first program
+## Software to install and first program
 
 Install Java SE/ JDK and Visual Studio Code. Go to the Computing Drop-in Centre (4RPD G02) with any technical issues and one of the staff will troubleshoot for you.
 
-## Installing Java and Visual Studio Code on Windows
+### Installing Java and Visual Studio Code on Windows
 
 {% include youtube.html id="XhshWGx-Rp8?si=_nmNO0qCdd8nPmos" %}
 
-## Installing Java and Visual Studio Code on Mac
+### Installing Java and Visual Studio Code on Mac
 
 {% include youtube.html id="i3oxlGHWKaQ?si=99qr9YjNYxPAWifI" %}
 
-# Behind the scenes: Compiling and running java programs from command prompt or terminal
+## Behind the scenes: Compiling and running java programs from command prompt or terminal
 
 After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.
 
@@ -146,7 +149,7 @@ public class HelloWorld {
 }
 ```
 
-## First java program
+### First java program
 
 Once you have installed Java SE, you are ready to write and run Java programs. First we'll learn how to write and run a java program from command prompt.
 
@@ -278,11 +281,11 @@ public class Worker {
 </div>
 
 
-## First java program in Eclipse
+### First java program in Eclipse
 
 {% include youtube.html id="8DcIQcmwuSE" %}
 
-## Adding more functions to a java program
+### Adding more functions to a java program
 
 In Processing, you added extra functions at the bottom of the file, or in other tabs.  Where should they go in Java?  Everything in Java needs to be inside a class, so you have to put it inbetween the first and last curly-braces, but keep them separate from the `main` function:
 
@@ -310,12 +313,12 @@ The `public` keyword is for consistency and will be used for all functions unles
 
 {% include youtube.html id="XS48hrWdm4Y" %}
 
-# Warm Up
+## Warm Up
 
-Warning: make sure you are comfortable using functions before you move on to these examples.  [Refresh your memory](./functions.html) if you need to.
+Warning: make sure you are comfortable using functions before you move on to these examples.  [Refresh your memory]({{ site.baseurl }}/comp1000/functions) if you need to.
 
 
-## Problem 1: Calculating the total of all items of an integer array
+### Problem 1: Calculating the total of all items of an integer array
 
 This is an `accumulation` algorithm. We go through each item of the array, and add it to a variable that stores the total.
 
@@ -336,7 +339,7 @@ Define a method that when passed an integer array, returns the sum of all negati
 </details>
 </div>	
 
-## Problem 2: Write code that determines if a given number is prime.
+### Problem 2: Write code that determines if a given number is prime.
 
 What is a prime number?_A number more than 1 that is divisible only by 1 and itself._
 
@@ -390,13 +393,13 @@ The way we can call this function from another function (say `main`) is as follo
 
 <script src="https://gist.github.com/gaurav1780/2f84e7676a8fc2009b9c7df8b3bad1a6.js"></script>
 
-## Problem 3: Determining if a String contains any space
+### Problem 3: Determining if a String contains any space
 
 As opposed to the prime checking example, this is a `validation` algorithm, where we look for a validation, and as soon as one is found, we can return `true`. If there is no validation found, then, at the end, we can return `false`.
 
 <script src="https://gist.github.com/gaurav1780/a70018542384418de6724f5c5b9acd45.js"></script>
 
 
-# Some practice functions
+## Some Practice Functions
 
 {% include youtube.html id="_Yw65zyjRnw" %}

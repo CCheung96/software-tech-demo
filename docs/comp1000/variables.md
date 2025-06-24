@@ -27,7 +27,7 @@ nav_order: 4
 {: .keypoint}
 Variables are a slot of memory in the computer with a name.
 
-Chapters 3 and 4 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
+Chapters 3 and 4 of [Learning Processing](http://learningprocessing.com/) by Danel Shiffman.
 
 {% include youtube.html id="ibW4oA7-n8I" %}
 
@@ -193,7 +193,7 @@ boolean alive = 10; //type mismatch
 
 ## How memory works
 
-Before we can fully grasp this, we need to update our understanding of how a Processing program runs.  In [an earlier topic](./transition-to-processing) we saw program execution as a conversation between user, compiler, processing and computer.  This model still holds but we need to add to it.  When _processing_ is doing its thing, it has access to a bank of memory and it might put things in there or read things out of there.
+Before we can fully grasp this, we need to update our understanding of how a Processing program runs.  In [an earlier topic]({{ site.baseurl }}/comp1000/transition-to-processing) we saw program execution as a conversation between user, compiler, processing and computer.  This model still holds but we need to add to it.  When _processing_ is doing its thing, it has access to a bank of memory and it might put things in there or read things out of there.
 
 From here on in, we will tend to leave out the conversation because it is the same every time, but we will often look to the memory bank to see what is going on in our program.
 
@@ -321,8 +321,7 @@ The answer is `4`.  Some people will think the answer is `7` reasoning that afte
 
 <!-- Exercise -->
 {% capture my_problem %}
-<a id="animated-blue-circle"></a>
-Write a processing program that moves a blue circle from the top of the screen to the bottom of the screen over time.  If you have forgotten how to put a blue circle on the screen, you should review this [previous exercise](./primitive-operations#blue-circle). <!--(Non-existent) -->
+Write a processing program that moves a blue circle from the top of the screen to the bottom of the screen over time.  If you have forgotten how to put a blue circle on the screen, you should review this [previous exercise]({{ site.baseurl }}/comp1000/primitive-operations#blue-circle). (What blue circle exercise?) <!--(Non-existent) -->
 {% endcapture %}
 
 {% capture my_solution %}
@@ -587,13 +586,13 @@ void draw() {
 <!-- Exercise -->
 {% capture my_problem %}
 <a id="timed-animated-blue-circle"></a>
-Write a processing program that moves a blue circle from the top of the window to the bottom of the window in exactly 200 frames of time, no matter what the size of the window is.  If you have forgotten how to put animate blue circle on the screen, you should review this [previous exercise](#animated-blue-circle).
+Write a processing program that moves a blue circle from the top of the window to the bottom of the window in exactly 200 frames of time, no matter what the size of the window is.  If you have forgotten how to put animate blue circle on the screen, you should review this [previous exercise](#exercise-animated-blue-circle).
 {% endcapture %}
 
 {% capture my_solution %}
 Here we need to use one variable (the `height` variable) to determine the value in another variable.  Another way to consider the problem statement (as a Processing programmer) is "write a program where a blue circle is drawn on the screen and every time it is drawn it moves downwards a little.  The amount it moves downward each time is 1/200th of the height of the window."
 
-Compared to the solution to the [previous exercise](#animated-blue-circle), we need to start using a variable to control the speed of the circle.  That variable must be a `float` because we will be dividing the size of the screen by 200 and we have no idea what the size of the screen might be.  This means we also need to move to a `float` for the position on the screen.  NB: `circle` will happily accept an `int` or a `float`, so we have no further changes to make there.
+Compared to the solution to the [previous exercise](#exercise-animated-blue-circle), we need to start using a variable to control the speed of the circle.  That variable must be a `float` because we will be dividing the size of the screen by 200 and we have no idea what the size of the screen might be.  This means we also need to move to a `float` for the position on the screen.  NB: `circle` will happily accept an `int` or a `float`, so we have no further changes to make there.
 
 ~~~~~
 float yPos;

@@ -5,6 +5,9 @@ parent: Recursive Data Structures
 nav_order: 2
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Recursion]({{ site.baseurl }}/comp1010/recursion/)
@@ -24,7 +27,7 @@ nav_order: 2
 
 # Custom built linkedlist
 
-Now that we have taken a look at the [Node](./Node.java) class, we can construct a class that has a single `Node` object as instance variable.
+Now that we have taken a look at the [Node]({{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/Node.java) class, we can construct a class that has a single `Node` object as instance variable.
 
 ```java
 public class MyLinkedList {

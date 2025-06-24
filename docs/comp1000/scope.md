@@ -10,7 +10,6 @@ nav_order: 12
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
   * [Loops]({{ site.baseurl }}/comp1000/loops)

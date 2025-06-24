@@ -5,6 +5,10 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 5
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
@@ -190,8 +194,8 @@ blocks[0].width = 5; // change the width of the first item to 5
 int h = blocks[3].height; // store height of fourth item into h
 ```
 
-The complete code for `Rectangle` and `ArrayOfObjects` is provided in [`ArrayOfObjects.java`](./codes/ArrayOfObjects.java).
+The complete code for `Rectangle` and `ArrayOfObjects` is provided in [ArrayOfObjects.java]({{ site.baseurl }}/assets/comp1010/classes/classes_array_of_objects/ArrayOfObjects.java).
 
-# Relevant MQ Video
+## Relevant MQ Video
 
 {% include youtube.html id="cRt5ra62MuI" %}

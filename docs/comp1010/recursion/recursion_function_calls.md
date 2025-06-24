@@ -7,14 +7,15 @@ grand_parent: COMP1010
 nav_order: 1
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)
-
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Better understand the concept of parameter passing.
   * Familiarize yourself with standard terminology - *formal paramters* vs. *actual parameters*.
   * Understand the control flow and memory transactions during a function call.

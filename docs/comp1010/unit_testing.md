@@ -5,6 +5,9 @@ parent: COMP1010
 nav_order: 4
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Transition to Java]({{ site.baseurl }}/comp1010/transition-to-java)
@@ -105,7 +108,7 @@ Write a set of input-output mappings for a function that when passed an integer 
 </details>
 </div>
 
-# JUnit test cases
+## JUnit test cases
 
 JUnit is a unit testing framework for Java. It operates using assertions to determine if a particular test passes or not.
 
@@ -168,7 +171,7 @@ A list of important assertions are given below:
 	assertArrayEquals(a,b): fail
 	~~~
 
-## How to write a JUnit test
+### How to write a JUnit test
 
 First you need a method that you need to test.
 

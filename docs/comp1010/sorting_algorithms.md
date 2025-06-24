@@ -5,9 +5,11 @@ parent: COMP1010
 nav_order: 9
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Classes- Array of Objects]({{ site.baseurl }}/comp1010/classes/array-of-objects)
@@ -15,7 +17,6 @@ nav_order: 9
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Understand why data needs to be sorted
   * Understand how data can be sorted
 {% endcapture %}

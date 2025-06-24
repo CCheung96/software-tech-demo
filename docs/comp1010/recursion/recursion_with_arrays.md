@@ -5,6 +5,10 @@ parent: Recursion
 grand_parent: COMP1010
 nav_order: 4
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)

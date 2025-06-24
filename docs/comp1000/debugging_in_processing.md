@@ -7,13 +7,16 @@ nav_order: 6
 
 - TOC
 {:toc}
-
-<iframe src="https://player.vimeo.com/video/140134398" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/140134398">Processing 3 Debugger</a> from <a href="https://vimeo.com/processingfoundation">Processing Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<div id="processing-3-debugger">
+  <iframe src="https://player.vimeo.com/video/140134398" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>
+    <a href="https://vimeo.com/140134398">Processing 3 Debugger</a> from <a href="https://vimeo.com/processingfoundation">Processing Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.
+  </p>
+</div>
 
 <!-- Exercise -->
 {% capture my_problem %}
-Consider the program you wrote in to [animate a blue circle](./variables.html#animated_blue_circle).  At the start of the program, it will have the value `0` and after one animation frame it will get a new value, what is that value?  After another frame, it gets another new value, what is that value?  Using the debugger, write down the first 40 values that are given to the variable `ypos`.
+Consider the program you wrote in to [animate a blue circle]({{ site.baseurl }}/comp1000/variables#exercise-animated-blue-circle).  At the start of the program, it will have the value `0` and after one animation frame it will get a new value, what is that value?  After another frame, it gets another new value, what is that value?  Using the debugger, write down the first 40 values that are given to the variable `ypos`.
 {% endcapture %}
 
 {% capture my_solution %}

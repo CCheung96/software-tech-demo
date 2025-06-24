@@ -334,13 +334,13 @@ Compute the following expressions according to rules of Processing:
 
 These are programs to help you start with simple sketches are work your way up to more complex animation (over the course of the session). Very helpful for incremental learning and assignments.
 
-[COMP1000PracticePrograms.zip](./assets/COMP1000PracticePrograms.zip)
+[COMP1000PracticePrograms.zip]({{ site.baseurl }}/assets/comp1000/transition-to-processing/COMP1000PracticePrograms.zip)
 
 <!--## ADVANCED (HD-level for now) Test-driven development programs 
 
 These are programs to help you get acquainted with test-driven development and help you with module exams (and also major work). Instructions file inside the package explains what needs to be done.
 
-[COMP1000TestDrivenDevelopment.zip](./assets/COMP1000TestDrivenDevelopment.zip)
+[COMP1000TestDrivenDevelopment.zip]({{ site.baseurl }}/assets/comp1000/transition-to-processing/COMP1000TestDrivenDevelopment.zip)
 --->
 
 

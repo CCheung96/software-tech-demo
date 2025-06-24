@@ -7,15 +7,16 @@ grand_parent: COMP1010
 nav_order: 2
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Reference Semantics]({{ site.baseurl }}/comp1000/reference-semantics)
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
-
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Define reference and instance copy.
   * Identify a reference copy.
   * Differentiate an instance copy from a reference copy.
@@ -26,7 +27,7 @@ nav_order: 2
 
 
 
-# Copying primitive variables
+## Copying primitive variables
 
 When we copy a variable of a primitive data type, into another variable, the **contents** of the variable on the right hand side of the assignment operator are copied over into the contents of the variable on the left hand side of the assignment operator.
 
@@ -36,13 +37,21 @@ int y;
 y = x; //contents of x copied into y
 ```
 
-### Before:
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVt4PTE3MjldXG4gIEJbeT0wXVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVt4PTE3MjldXG4gIEJbeT0wXVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+**Before:**
+```mermaid
+graph TD
+  A[x=1729]
+  B[y=0]
+```
 
-### After:
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVt4PTE3MjldXG4gIEJbeT0xNzI5XVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVt4PTE3MjldXG4gIEJbeT0xNzI5XVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+**After:**
+```mermaid
+graph TD
+  A[x=1729]
+  B[y=1729]
+```
 
-# Class to be used
+## Class to be used
 
 We will use the following class for the rest of this page,
 
@@ -57,7 +66,7 @@ public class Rectangle {
 }
 ```
 
-# Reference copy
+## Reference copy
 
 Recall the interaction when we copy a variable into another variable. The exact same thing happens when we copy an object into another object, the only difference being that objects hold an address to the location where the instance variables are kept. Hence, it's this address that's copied.
 In a separate client code, we call this method on an instance of class `Rectangle` as,
@@ -118,7 +127,7 @@ public class Client {
 <img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy2.png" alt=""/>
 
 
-# Instance copy
+## Instance copy
 
 Instead of creating reference copies, which creates dependencies, we can create a *duplicate* of an instance and refer to that instead. This is called an *instance copy*.
 
@@ -141,7 +150,7 @@ In the above example, we passed `r1.width` and `r1.height` (which are variables 
 
 But one can see that the method above is inefficient, especially if there are numerous instance variables.
 
-## Copy constructor
+### Copy constructor
 
 We can add a special kind of constructor, known as the *copy constructor* which is used to create instance copies from a source (passed as parameter).
 
@@ -175,7 +184,7 @@ public class Client {
 }
 ```
 
-# Relevant MQ Videos
+## Relevant MQ Videos
 
 {% include youtube.html id="YVjUtgDHMjQ" %}
 

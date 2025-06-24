@@ -6,16 +6,17 @@ grand_parent: COMP1010
 nav_order: 3
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
 * [Functions]({{ site.baseurl }}/comp1000/functions)
-* [Functions]({{ site.baseurl }}/comp1010/recursion)
+* [Recursion]({{ site.baseurl }}/comp1010/recursion)
 * [Recursion with String data]({{ site.baseurl }}/comp1010/recursion/string-data)
-
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
 * Have an understanding of *tail* recursion.
 * Be able to *tail-optimize* a recursive function.
 {% endcapture %}
@@ -24,7 +25,7 @@ nav_order: 3
 
 
 
-# The problem with recursion
+## The Problem with Recursion
 
 Every call to a function requires keeping the formal parameters and other variables in the memory for as long as the function doesn't return control back to the caller.
 
@@ -53,13 +54,13 @@ At the time `factorial(1)` executes, the call stack looks like the following:
 <img src="{{ site.baseurl }}/assets/comp1010/recursion/callStackWithoutTail.png" alt="Call Stack Without Tail"/>
 
 
-## Eureka!
+### Eureka!
 
 Instead of creating all these variables inside the function, if we can (and pay attention to the statement carefully), *pass the state of the stack so far as parameters*, we wouldn't need to maintain the previous stack frames. Oh my several Gods - that would be amazing!
 
 **P.S.** Java still doesn't support tail optimization... 😞
 
-### (Definition) Tail-optimized design is when every last possible statement (typically a return statement) in a function is a just the recursive call (or the end case value).
+**Tail-optimized design is when every last possible statement (typically a return statement) in a function is a just the recursive call (or the end case value).**
 
 ```java
 public static int factorial(int n, int currentState) {
@@ -96,12 +97,12 @@ public static int factorial(int n) {
 
 As long as the number (or order) of parameters is different, two functions can have the same name.
 
-## Benefits
+### Benefits
 
 1. As already mentioned, stack frames of previous calls need not be kept on the stack.
 2. Achieves natural speedup (see example 6 at the bottom of the page).
 
-# Some more examples
+## Some more examples
 
 ### Example 1
 

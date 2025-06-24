@@ -22,9 +22,9 @@ nav_order: 5
 
 
 
-All the codes in this page are provided at [movingCompositeShapesCode.zip](./assets/codes/movingCompositeShapesCode.zip). 
+All the codes in this page are provided at [movingCompositeShapesCode.zip]({{ site.baseurl }}/assets/comp1000/moving-composite-shapes/movingCompositeShapesCode.zip). 
 
-A second version is also available at at [movingCompositeShapesCodeTrigonometryVersion.zip](./assets/codes/movingCompositeShapesCodeTrigonometryVersion.zip).
+A second version is also available at at [movingCompositeShapesCodeTrigonometryVersion.zip]({{ site.baseurl }}/assets/comp1000/moving-composite-shapes/movingCompositeShapesCodeTrigonometryVersion.zip).
 
 # Moving composite shapes
 
