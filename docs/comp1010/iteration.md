@@ -370,7 +370,8 @@ while(iter.hasPrevious()) {
 
 The `remove` method removes from the list, the item most recently accessed using `next()` or `previous()`. Cursor remains unchanged after calling `remove`.
 
-Note: a call to `remove` can only be made once per call to `next` or `previous`. It can be made only if `add` has not been called after the last call to `next` or `previous`.
+{: .note}
+A call to `remove` can only be made once per call to `next` or `previous`. It can be made only if `add` has not been called after the last call to `next` or `previous`.
 
 ### Front to back example
 

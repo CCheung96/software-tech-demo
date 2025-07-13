@@ -7,6 +7,45 @@ nav_exclude: true
 
 This is a hidden test page.
 
+## Callouts
+
+{: .warning }
+> This is a warning.
+>
+> second paragraph
+
+{: .highlight}
+This is a highlight, but it has no specific purpose
+
+another paragraph
+
+{: .note }
+note
+
+{: .keypoint }
+KEYPOINT
+
+{: .keynote}
+keynote
+
+{: .readings}
+Chapter 7 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
+
+<!-- Exercise -->
+{% capture my_problem %}
+problem
+{% endcapture %}
+
+{% capture my_solution %}
+solution
+{% endcapture %}
+
+{% include exercise.html
+    title=""
+    problem=my_problem
+    solution=my_solution
+%}
+
 # Title
 ## Heading 1
 ### Heading 2

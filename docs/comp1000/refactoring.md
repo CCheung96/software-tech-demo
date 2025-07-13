@@ -26,7 +26,7 @@ nav_order: 19
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
+{: .keynote}
 We refactor code to _takeaway duplicate or similar code_, _to make our program easier to understand_, and _to improve code maintenance_.
 
 {% include youtube.html id="vcydPCZJMBc" %}

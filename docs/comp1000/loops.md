@@ -24,11 +24,11 @@ nav_order: 9
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
+{: .keynote}
 Loops are similar to conditions except that after every iteration of the loop, the expression is checked again.
 
 {: .readings}
-**Reading(s)**: Chapter 6 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
+* Chapter 6 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
 
 {% include youtube.html id="RtAPBvz6k0Y" %}
 
@@ -155,7 +155,7 @@ It's just the number of times the two statements should execute that we have to 
 So, our pseudo-code is:
 
 ```java
-NOTE THAT THIS IS A PSEUDO-CODE, NOT COMPILABLE CODE
+// NOTE THAT THIS IS PSEUDO-CODE, NOT COMPILABLE CODE
 
 void setup() {
 	size(CAN BE ANY VALID VALUE, 200);

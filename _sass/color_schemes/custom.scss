@@ -35,22 +35,59 @@
     }
 }
 
+@media (max-width: 50rem) {
+    // .side-bar {
+        // position: fixed;
+        // top: 0;
+        // width: 100%;        
+    // }
+    
+    // .site-footer {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     padding-top: 1rem;
+    //     padding-bottom: 1rem;
+    //     color: #959396;
+    //     padding-right: 1rem;
+    //     padding-left: 1rem;
+    // }
 
-aside {
-    background-color: #fcf8f2;
-    padding: 20px;
-    margin: 2em 0;
-    border-radius: 0.5em;
+    //   .site-nav {
+    //     position: fixed;
+    //     top: 0;
+    //     width: 100%;
+    //     z-index: 999;
+    //     background-color: var(--color-background); // adjust if needed
+    //     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // optional shadow
+    //   }
+
+    //   .main-content-wrap {
+    //     padding-top: 3.5rem; // give space for fixed nav
+    //   }
 }
+
+// .main-content-wrap * {
+//   max-width: 100%;
+//   box-sizing: border-box;
+// }
+
+// .main-content-wrap img,
+// .main-content-wrap svg,
+// .main-content-wrap video,
+// .main-content-wrap iframe {
+//   max-width: 100%;
+//   height: auto;
+//   display: block;
+// }
 
 .exercise-container {
     border-left: 5px solid #8ad6af;
     background-color: #f2fcf7;
-    padding: 20px 20px 30px 20px;
-    /*1.5em; */
+    padding: 1.5em 1.5em 2em 1.5em;
     margin: 2em 0;
     border-radius: 0.5em;
-    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .exercise-container h3 {
@@ -110,7 +147,6 @@ aside {
 
 #backToTop {
     display: none;
-    /* Hidden by default */
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -151,8 +187,8 @@ aside {
 
 .keypoint {
     background-color: #97e6a4;
-    padding: 20px;
-    margin: 2em 0;
+    padding: 1.5em;
+    margin: 2em;
     border-radius: 0.5em;
     font-size: 1.25rem;
 }
@@ -161,3 +197,39 @@ aside {
     display: flex;
     justify-content: center;
 }
+
+// .youtube-container {
+//     position: relative;
+//     max-width: 100%;
+//     aspect-ratio: 16 / 9; /* modern, preferred */
+//     height: auto;
+//     margin-bottom: 1rem;
+// }
+
+// .youtube-container iframe {
+//     max-width: 100%;
+//     height: 100%;
+//     border: 0;
+//     display: block;
+// }
+
+// .d3js {
+//     width: 100%;
+//     max-width: 100%;
+//     height: auto;
+// }
+
+// .responsive-svg {
+//   width: 100%;
+//   height: auto;
+//   display: block;
+// }
+
+// .youtube-container iframe {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   border: 0;
+// }

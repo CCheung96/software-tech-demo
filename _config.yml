@@ -90,6 +90,26 @@ mermaid:
 # enable copy button for code blocks
 enable_copy_code_button: true
 
+callouts:
+  # callouts_opacity: 0.3 # Optional: The global opaciity for all callouts. By default, it is 0.2.
+  # A callout is defined like so:
+  warning: # Requied: The name used to generate the callout. In the page, use {: .warning}
+    title: Warning  # Optional: A title that is displayed inside the callout
+    color: red      # Required: The primary colour scheme of the callout
+    opacity: 0.5    # Optional: An override of the default opacity
+  highlight:
+    color: yellow
+  note:
+    title: Note
+    color: purple
+  keynote:
+    title: Key Note
+    color: green
+  readings:
+    title: "Reading(s):"
+    color: blue
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

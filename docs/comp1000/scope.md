@@ -25,7 +25,7 @@ nav_order: 12
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
+{: .keynote}
 Scope rules tell us what variable we are talking about when two variables have the same name.
 
 ## Why scope?

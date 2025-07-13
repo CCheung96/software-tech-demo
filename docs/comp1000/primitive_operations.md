@@ -24,17 +24,13 @@ nav_order: 2
 
 ## Drawing Primitives
 
-### Reading
-
-Chapters 1 and 2 of [Learning Processing](http://learningprocessing.com/) by Daniel Shiffman.  Macquarie University students have access to an electronic copy [via the library](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/7h5qs5/alma99244413575302171).
+{: .readings}
+> * Chapters 1 and 2 of [Learning Processing](http://learningprocessing.com/) by Daniel Shiffman.  Macquarie University students have access to an electronic copy [via the library](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/7h5qs5/alma99244413575302171).
+> * [Coordinate System tutorial at processing.org](https://processing.org/tutorials/coordinatesystemandshapes).
 
 {% include youtube.html id="a562vsSI2Po" %}
 {% include youtube.html id="5N31KNgOO0g" %}
 {% include youtube.html id="n2oHuKG_BQc" %}
-
-### Reading
-
-[Coordinate System tutorial at processing.org](https://processing.org/tutorials/coordinatesystemandshapes).
 
 ## More Details
 

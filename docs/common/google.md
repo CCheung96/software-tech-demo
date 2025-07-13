@@ -59,7 +59,10 @@ Were you to learn a new spoken language, I am sure you would not imagine buildin
 	<img src="https://imgs.xkcd.com/comics/wisdom_of_the_ancients.png"/>
 </div>
 
-The question you are answering today is just a stepping stone on  your path to becoming a programmer.  The future holds ever-more complex questions and ever-more complex knowledge.  It won't be long before Google _can't_ answer your question and you _won't_ be able to understand the answer unless you have the base knowledge required.  Note, I say "you have the base knowledge", not "you can access the base knowledge".  This is because you need to put together more than one thing at a time when moving to these higher levels of knowledge.
+The question you are answering today is just a stepping stone on  your path to becoming a programmer.  The future holds ever-more complex questions and ever-more complex knowledge.  It won't be long before Google _can't_ answer your question and you _won't_ be able to understand the answer unless you have the base knowledge required.  
+
+{: .note}
+I say "you have the base knowledge", not "you can access the base knowledge".  This is because you need to put together more than one thing at a time when moving to these higher levels of knowledge.
 
 # But programmers use Google more than anyone!
 
@@ -67,7 +70,8 @@ Yes this is true. However, the knowledge of an experienced programmer is much mo
 
 Also, programming languages, and the computer we run them on, are very complex.  There are dozens of arguments for any program or function you might want to run and you will run many dozens of these each day.  You can't remember all the details, sometimes you have to look them up.
 
-<div class="keypoint">Programmers use the internet as a memory-aid and as a reference tool.</div>
+{: .keynote}
+Programmers use the internet as a memory-aid and as a reference tool.
 
 If you are searching from a position of ignorance, you are not helping yourself.  If you are searching to remind yourself of, or to double-check, something you already partly know, you are doing it right.
 

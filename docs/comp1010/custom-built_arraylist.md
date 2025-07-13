@@ -24,6 +24,7 @@ nav_order: 11
 
 In this chapter, we'll see how an arraylist holds items and how to implement it.
 
+{: .highlight}
 <span style="color:red">**NOTE!**</span> The built-in class for ArrayList in Java holds a collection of objects, not primitive data type, but in our example, we'll create a collection of `double` items, for simplicity.
 
 ## What an ArrayList class looks like
