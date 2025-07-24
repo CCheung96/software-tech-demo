@@ -10,7 +10,7 @@ If adding content is your only focus, all you need to do is write the content us
 JTD provides a number of layouts, but aside from the Home Page, all the pages in this project are a customised version of the JTD page layout which was configured in _layouts/custom-page.html. 
 
 ### Front Matter
-The YAML configuration content at the beginning of each page, separated from the actual content by `---`. This configures page variable to determine how it will display in the website. Th important variable include:
+The YAML configuration content at the beginning of each page, separated from the actual content by `---`. This configures page variable to determine how it will display in the website. The variables set in this front matter include:
 * `title`: The page name that will appear on the sidebar. This will also be the appear as the title in page, unless specified by `custom-title`. **This is mandatory.**
 * `custom-title`: A title that you want to use for the page itself. Unless specified, it defaults to the value set by `title`.
 * `permalink`: By default, the link is based on the file's path, but since we don't want '/docs/' to appear as part of the link, each link has to be hard-coded (sorry).
@@ -67,43 +67,9 @@ Structure: youtube.html
 
 In Page: Use include liquid syntax only, specify id (ie. the string of characters after https://www.youtube.com/watch?v=) 
 
-## Page Hierarchy and Navigation
+### Page Hierarchy 
 
-```mermaid
-flowchart TB
- subgraph s3["subfolder_1"]
-        n3["index.md"]
-        D["D.md"]
-        E["E.md"]
-  end
- subgraph s1["./docs/comp1000"]
-        n1["index.md"]
-        A["A.md"]
-        B["B.md"]
-        C["C.md"]
-        s3
-  end
- subgraph s4["subfolder 2"]
-        n4["index.md"]
-        I["I.md"]
-        J["J.md"]
-  end
- subgraph s2["./docs/comp1010"]
-        n2["index.md"]
-        F["F.md"]
-        G["G.md"]
-        H["H.md"]
-        s4
-  end
- subgraph s5["./docs/..."]
-        n5["index.md"]
-  end
-    n0["./index.md, ie. home page"] --> n1 & n2 & n5
-    n1 --> A & B & C & n3
-    n3 --> D & E
-    n2 --> F & G & H & n4
-    n4 --> I & J
-```
+### Sidebar Hierarchy
 
 
 ## Snippets
