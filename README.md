@@ -10,16 +10,62 @@ If adding content is your only focus, all you need to do is write the content us
 JTD provides a number of layouts, but aside from the Home Page, all the pages in this project are a customised version of the JTD page layout which was configured in _layouts/custom-page.html. 
 
 ### Front Matter
-The content at the beginning of the page, separated from the actual content by `---`, configures the page and its layout
+The YAML configuration content at the beginning of each page, separated from the actual content by `---`. This configures page variable to determine how it will display in the website. Th important variable include:
 * `title`: The page name that will appear on the sidebar. This will also be the appear as the title in page, unless specified by `custom-title`. **This is mandatory.**
 * `custom-title`: A title that you want to use for the page itself. Unless specified, it defaults to the value set by `title`.
 * `permalink`: By default, the link is based on the file's path, but since we don't want '/docs/' to appear as part of the link, each link has to be hard-coded (sorry).
 * `parent`: If the page is a child of another page, specify the `title` of that parent page.
 * `nav_order`: This determines the order of a page as it will apear on the sidebar in relation to its "siblings", ie. pages with the same parent. Start from 1.
-* `grandparent`: If the page is a grandchild of another page, specify the `title` of that grandparent page. 
-* `has_children`: If the page is expected to have one or more child pages, this is how it is declared. The children are not specified, however. 
-* `has_toc`: Defines whether the page has a Table of Contents (TOC). By default this is set to true. For some pages, however, the placement of the TOC still needs to be hard-coded.
+* `grandparent`: If the page is a grandchild of another page, specify the `title` of that grandparent page. This is a precaution that becomes  relevant **if pages have parents with the same name, but different grandparent pages**.
+* `has_children`: If the page is expected to have one or more child pages, this is how it is declared. Note: Do not also list the children in the parent page.
+* `has_toc`: Defines whether the page has a Table of Contents (TOC). By default this is set to true. For some pages, however, the placement of the TOC still needs to be hard-coded within the page contents.
 * `layout`: The default layout has been set to `custom-page`, which is defined in and inherits from Just the Doc's `page` layout. `_config.yml`. Currently, `custom-page` includes a title and author at the top of a page, before the rest of the page content. The Table of Contents (TOC) cannot be included here, since its ability to generate is dependent on the page contents. 
+* `nav_exclude`: Set this to `true` to hide the page from the sidebar, as with the example of [test.md](https://ccheung96.github.io/software-tech-demo/test) 
+
+### Page Contents
+Below the [front matter](#front-matter) is where the actual content for the page is written. For the sake of ease-of-implementation, the content **can be written almost entirely in [Markdown](https://www.markdownguide.org/)**. Occasionally, this may need to be supplemented with HTML, Includes, Mermaid Diagrams and/or D3js.
+
+#### Includes
+Includes are pieces of reusable content. The following Includes have been made to attempt to separate HTML template structures from Markdown content, thus allowing for consistency and removing the editor's need to write the HTML themselves:
+
+* prereq_outcomes.html - HTML that generates dropdowns revealing two lists, namely Assumed Knowledge (ie. prerequisites) and Learning Outcomes (ie. outcomes).
+* exercise.html - HTML that generates blocks containing examples, questions and scenarios with 1-2 hidden dropdown solutions.
+* youtube.html - HTML that allows a youtube video to be embedded into the page.
+
+While the HTML structure is provided, often custom content still needs to be provided. Within the page, liquid syntax is used to **capture** Markdown content in a variable name, and then used to **include** an instance of the Include supplied with those variable names. 
+
+```
+{% capture content_1 %}
+    Markdown Content
+{% endcapture %}
+
+{% capture content_2 %}
+    Markdown Content
+{% endcapture %}
+
+<!-- The actual instance of the Include -->
+{% include prereq_outcomes.html variable_1=content_1 variable_1=content_2 %}
+```
+
+The style of the HTML elements is handled in [./sass/color_schemes/custom.scss](https://github.com/CCheung96/software-tech-demo/blob/main/_sass/color_schemes/custom.scss), see [CSS and SCSS](#css-and-scss) for more details. 
+
+If there is a need for specific HTML that differs from these templates, it can be written directly into the page itself.
+
+##### Assumed Knowledge and Learning Outcomes 
+
+Structure: prereq_outcomes.html 
+
+In Page: use markdown in capture and include liquid syntax, specify prereq and outcomes 
+
+##### Exercises/Examples/Scenarios with Solution(s) 
+Structure: exercise.html 
+
+In Page: Use markdown in capture and include liquid syntax, specify title, problem and at least one solution (ie. “solution”). The option for a second solution (“solution2”) has already been added, the option for more will require an update of exercise.html. 
+
+##### Youtube Embeds 
+Structure: youtube.html 
+
+In Page: Use include liquid syntax only, specify id (ie. the string of characters after https://www.youtube.com/watch?v=) 
 
 ## Page Hierarchy and Navigation
 
