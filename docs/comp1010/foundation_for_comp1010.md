@@ -447,7 +447,7 @@ When two references refer to the same instance, they are called *reference copie
 
 When two references refer to two different instances, but the instances are identical, they are called *instance copies*. 
 
-The [arrays lecture]({{ site.baseurl }}/comp1000/arrays) has much more information on this.
+The [arrays lecture notes]({{ site.baseurl }}/comp1000/arrays) have more information on this.
 
 Performing simple operations such as finding the sum of all even numbers in an array, or the highest value in an array is something you should be able to do by the time you start COMP1010.
 
