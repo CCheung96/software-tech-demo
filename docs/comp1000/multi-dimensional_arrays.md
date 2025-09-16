@@ -33,38 +33,38 @@ Let us go through basic arrays and build up to 2-dimensional arrays.
 
 1.  It’s critical to understand the concept of `reference` and `instance`. In the following code, `src` and `dest` are two references that refer to the same instance which is the collection of values 10, 70, 20, and 90 (and the length attribute is also tucked away somewhere).
 
-	```java
-	int[] src = {10, 70, 20, 90};
-	int[] dest = src;
-	```
+```java
+int[] src = {10, 70, 20, 90};
+int[] dest = src;
+```
 
 <img src="{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/arrayRefCopy.png" alt="arrayRefCopy" />  
 	
-	In the following code, there are three references, each referring to its own instance.
+In the following code, there are three references, each referring to its own instance.
 
-	```java
-	int[] a = {10, 70};
-	int[] b = {20, 90, 30};
-	int[] c = {80};
-	```
+```java
+int[] a = {10, 70};
+int[] b = {20, 90, 30};
+int[] c = {80};
+```
 
 2.  An array can have ANY VALID type. So, the most generic syntax of an array is:
 
-	```java
-	Type[] arrayName = new Type[size];
+```java
+Type[] arrayName = new Type[size];
 
- 	//or
+//or
 
- 	Type[] arrayName = {item1, item2, ...}; //where each item is of type Type
-	```
+Type[] arrayName = {item1, item2, ...}; //where each item is of type Type
+```
 
 2.  An array is itself a data type.    
 3.  So if `Type` is `int[]`, we have:
     
 	
-	```java
-	int[][] data = {a, b, c}; //since a, b, c are each int[]
-	```
+```java
+int[][] data = {a, b, c}; //since a, b, c are each int[]
+```
 
 <img src="{{ site.baseurl }}/assets/comp1000/multi-dimensional-arrays/2darray.png" alt="2D Array" />    
 

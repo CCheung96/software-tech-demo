@@ -170,6 +170,7 @@ The above client would give the expected outcome:
 ```
 390 minutes viewed
 ```
+{: .nolineno}
 
 ### However ...
 
@@ -196,6 +197,7 @@ The above client would give the following outcome, which is, let's say, logicall
 ```
 -130 minutes viewed
 ```
+{: .nolineno}
 
 We don't want the array held inside an object to be a reference copy of the source, but an instance copy.
 
@@ -222,6 +224,7 @@ Now, both `GoodClient` and `BadClient` will give the same, logically correct, ou
 ```
 390 minutes viewed
 ```
+{: .nolineno}
 
 ## Class holding an array of objects
 
@@ -345,6 +348,7 @@ We will get the following output (notice that the `null` object was dropped succ
 ```
 [(30,10), (50,30), (30,50), (10,30)]
 ```
+{: .nolineno}
 
 Complete code is provided in [ArtGallery.java]({{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/ArtGallery.java)
 

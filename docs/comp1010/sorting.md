@@ -81,7 +81,7 @@ But we learned how to sort when we created tree structures!
 Tree sort inserts every element into a binary search tree and then reads the
 values back by traversing the tree in order.
 
-```
+```text
         40
        /  \
      20    70
@@ -178,6 +178,7 @@ Sorted part and unsorted part put in their own *compartments*.
 > 
 
 ## Bring It In!
+
 {: .highlight}
 >Now that we've had an intuitive idea of what needs to be done, let's formalize our understanding.
 >

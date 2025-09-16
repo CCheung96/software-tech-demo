@@ -5,6 +5,9 @@ parent: COMP1010
 nav_order: 6
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Lists]({{ site.baseurl }}/comp1010/lists)
@@ -20,7 +23,7 @@ nav_order: 6
 
 
 
-# User-defined class used
+## User-defined class used
 
 ```java
 class Rectangle {
@@ -36,7 +39,7 @@ class Rectangle {
 }
 ```
 
-# Enhanced for loop
+## Enhanced for loop
 
 Until now, we've use the classic counter-based loop to traverse through arrays and lists (`for int i=0; ...`).
 
@@ -142,7 +145,7 @@ for(Rectangle r: rectangles) {
 }
 ```
 
-#### Trying to remove items:
+### Trying to remove items:
 
 ```java
 //throws ConcurrentModificationException
@@ -155,7 +158,7 @@ for(Rectangle r: rectangles) {
 
 Hence, we look at iterators.
 
-# Iterator
+## Iterator
 
 There is a powerful and consistent way to traverse almost all data structures in Java - [Iterator](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Iterator.html), and the class that implements the `Iterator` interface for lists is [ListIterator](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/ListIterator.html).
 
@@ -164,17 +167,17 @@ A class that implements `Iterator` interface can add other methods too. [ListIte
 
 Following are the instance methods in `ListIterator` class:
 
-| Type    | Method          | Description                                                                                                 |   |   |
-|---------|-----------------|-------------------------------------------------------------------------------------------------------------|---|---|
-| boolean | hasNext()       | Returns true if this list iterator has more elements when traversing the list in the forward direction.     |   |   |
-| E       | next()          | Returns the next element in the list and advances the cursor position.                                      |   |   |
-| boolean | hasPrevious()   | Returns true if this list iterator has more elements when traversing the list in the reverse direction.     |   |   |
-| E       | previous()      | Returns the previous element in the list and moves the cursor position backwards.                           |   |   |
-| int     | nextIndex()     | Returns the index of the element that would be returned by a subsequent call to next().                     |   |   |
-| int     | previousIndex() | Returns the index of the element that would be returned by a subsequent call to previous().                 |   |   |
-| void    | add(E e)        | Inserts the specified element into the list (optional operation).                                           |   |   |
-| void    | remove()        | Removes from the list the last element that was returned by next() or previous() (optional operation).      |   |   |
-| void    | set(E e)        | Replaces the last element returned by next() or previous() with the specified element (optional operation). |   |   |
+| Type    | Method          | Description                                                                                                 |
+|---------|-----------------|-------------------------------------------------------------------------------------------------------------|
+| boolean | hasNext()       | Returns true if this list iterator has more elements when traversing the list in the forward direction.     |
+| E       | next()          | Returns the next element in the list and advances the cursor position.                                      |
+| boolean | hasPrevious()   | Returns true if this list iterator has more elements when traversing the list in the reverse direction.     |
+| E       | previous()      | Returns the previous element in the list and moves the cursor position backwards.                           | 
+| int     | nextIndex()     | Returns the index of the element that would be returned by a subsequent call to next().                     | 
+| int     | previousIndex() | Returns the index of the element that would be returned by a subsequent call to previous().                 | 
+| void    | add(E e)        | Inserts the specified element into the list (optional operation).                                           | 
+| void    | remove()        | Removes from the list the last element that was returned by next() or previous() (optional operation).      | 
+| void    | set(E e)        | Replaces the last element returned by next() or previous() with the specified element (optional operation). | 
 
 The advantages of using an iterator are,
 
@@ -190,6 +193,7 @@ A ListIterator `iter` is created on a List object `list` as:
 ```java
 ListIterator<Integer> iter = list.listIterator();
 ```
+{: .nolineno}
 
 Assuming the list is [10, 70, 20, 90, 30, 80], the initial state of `iter` is represented by the red block.
 
@@ -201,12 +205,14 @@ You can check if there is an item in front of the current position of the iterat
 ```java
 boolean itemExists = iter.hasNext();
 ```
+{: .nolineno}
 
 Once you check an item exists, you can access it as:
 
 ```java
 Object item = iter.next();
 ```
+{: .nolineno}
 
 This (accessing an item) results in the iterator moving forward by one.
 

@@ -146,10 +146,10 @@ A _statement_ is a section of code that _does something_.  For example, it might
 
 An _expression_ is a section of code that _has a value_.  For example `2` has the value 2 (obviously) while `3+5` evaluates to 8.  A more complex example is,
 
-~~~~~
+```
 int x;
 x = 5;
-~~~~~
+```
 
 `x` is also an expression, it's value is 5.
 
@@ -230,10 +230,10 @@ Or those same values might end up in other memory slots (buckets)
 
 But memory slots don't just fill themselves, they only get a value if we put one in there.  The way to put values in memory slots is to name a slot, then fill it, and that is what we do with variables.
 
-~~~~~
+```
 int x;
 x = 5;
-~~~~~
+```
 
 is processing code to _pick a new slot and name it "x"_ (`int x`) and _put 5 in that slot_ (`x = 5`).  The end result is memory that looks like this
 
@@ -249,13 +249,13 @@ Alternately, the same code might make the following situation - we don't know th
 {% capture my_problem %}
 Draw what the computer memory will look like after the following code has run
 
-~~~~~
+```
 int y;
 int x;
 
 y = 10;
 x = y + 5;
-~~~~~
+```
 {% endcapture %}
 
 {% capture my_solution %}
@@ -273,7 +273,7 @@ solution
 {% capture my_problem %}
 Draw what the computer memory will loop like after the following code has run
 
-~~~~~
+```
 int x;
 x = 5;
 int y;
@@ -281,7 +281,7 @@ y = 25;
 
 x = y;
 y = x;
-~~~~~
+```
 
 Was the result what you expected?
 {% endcapture %}
@@ -337,7 +337,7 @@ Compared to the solution to the [previous exercise](./primitive-operations#blue-
   * Clear the background everytime the sketch is drawn so that old circles go away.
   * Change the value of the variable each time the sketch is drawn so it is set to a new value ready for the next screen drawing.
 
-~~~~~
+```
 int yPos;
 
 void setup(){
@@ -351,7 +351,7 @@ void draw(){
   circle(width/2, yPos, 20);
   yPos++;
 }
-~~~~~
+```
 {% endcapture %}
 
 {% include exercise.html
@@ -595,7 +595,7 @@ Here we need to use one variable (the `height` variable) to determine the value 
 
 Compared to the solution to the [previous exercise](#exercise-animated-blue-circle), we need to start using a variable to control the speed of the circle.  That variable must be a `float` because we will be dividing the size of the screen by 200 and we have no idea what the size of the screen might be.  This means we also need to move to a `float` for the position on the screen.  NB: `circle` will happily accept an `int` or a `float`, so we have no further changes to make there.
 
-~~~~~
+```
 float yPos;
 float yspeed;
 
@@ -612,7 +612,7 @@ void draw(){
   circle(width/2, yPos, 20);
   yPos = yPos + speed;
 }
-~~~~~
+```
 
 Experiment with this program by changing what is in line 5 and checking the animation still takes the same amount of time.
 
@@ -622,7 +622,7 @@ Experiment with this program by changing what is in line 5 and checking the anim
 "Tricky" rules like `int`/`float` being different from `float`/`int` are called _edge cases_ and are frequent sources of bugs.  You can't remember all the edge cases, so you often need to work backwards and think what "must be" true to find them.
 
 
-~~~~~
+```
 float yPos;
 float yspeed;
 
@@ -640,7 +640,7 @@ void draw(){
   circle(width/2, yPos, 20);
   yPos = yPos + yspeed;
 }
-~~~~~
+```
 
 Experiment with _this_ program.  It works this time!
 {% endcapture %}

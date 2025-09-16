@@ -172,7 +172,12 @@ Do you see any output window and if so, what is the end result? If not, what is 
 {% endcapture %}
 
 {% capture my_solution %}
-Error message "Syntax error - Missing ";". To fix it, a semi-colon must be placed at the end of the first instruction.
+```console
+Syntax error - Missing ";".
+```
+{: .nolineno}
+
+To fix it, a semi-colon must be placed at the end of the first instruction.
 {% endcapture %}
 
 {% include exercise.html

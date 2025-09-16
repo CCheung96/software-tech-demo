@@ -21,11 +21,11 @@ nav_order: 18
 
 
 
-# Strings
+## Strings
 
 Strings are nothing but a character array (`char[]`) inside a parcel known as *class*. It has built-in functions operating **on** *variables* (actually *objects*) of the String type (actually *class*).
 
-# Practice problems
+## Practice problems
 
 The problems at codingbat are very helpful in understanding and applying the concepts as you go!
 

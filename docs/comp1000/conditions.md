@@ -51,7 +51,7 @@ Write a program that draws a blue cirle that moves from the top to the bottom of
 {% capture my_solution %}
 The problem description does not directly relate to conditions, so we need to "re-interpret" it to put it into "code-speak".  Another way to consider the problem statement (as a Processing programmer) is "write a program where a blue circle is drawn on the screen and every time it is drawn it moves a little.  IF it has hit the bottom previously, it should move up, otherwiser it should move down".  This leads us more directly to some code.  We need a condition so that we can choose which code path will run on any individual frame (`if (hitBottom)`) and to make it work we need a boolean _recording_ if we have hit the bottom before.  Finally, we need an condition that checks everytime we draw the sketch if we just hit the bottom.
 
-~~~~~
+```
 int yPos;
 boolean hitBottom;
 
@@ -77,7 +77,7 @@ void draw(){
   }
 
 }
-~~~~~
+```
 {% endcapture %}
 
 {% include exercise.html
@@ -276,7 +276,7 @@ D -->|false| F
 
 Corrected code:
 
-~~~~~
+```
 int a = (int)random(6);
 int b = (int)random(6);
 int max;
@@ -287,7 +287,7 @@ else {
 	max = b;
 }
 println(max);
-~~~~~
+```
 
 ```mermaid
 flowchart TD
@@ -315,7 +315,7 @@ Adjust [your animated blue circle](#exercise-one-way-animated-blue-circle) so it
 {% capture my_solution %}
 We can simply use the `hitBottom` boolean in a smarter way.  What if we think of is as "moving up" instead?  Then it will be `false` at the start, and change to `true` when we hit the bottom, then `false` again when we hit the top.
 
-~~~~~
+```
 int yPos;
 boolean movingUp;
 
@@ -342,7 +342,7 @@ void draw(){
     yPos++;
   }
 }
-~~~~~
+```
 
 Notice that we _can't_ use an `else` on the `yPos` check.  Many new programmers will try this.  Why won't that work?
 {% endcapture %}
@@ -354,7 +354,7 @@ In this solution we rephrase the task into the following "draw a blue circle tha
 
 Instead of keeping a boolean telling us what phase of the animation we are in, we are keeping a number telling us what speed the circle is moving, using the trick that a negative speed means we are moving up the screen instead of down.
 
-~~~~~
+```
 int yPos;
 int speed;
 
@@ -377,7 +377,7 @@ void draw(){
   circle(width/2, yPos, 20);
   yPos = yPos + speed;
 }
-~~~~~
+```
 
 Interestingly, this has saved us from one conditional!  It is perhaps a little harder to see at first, but the code is shorter.  The "variability" of the variable is doing the work of the condition.  Note also how we now have many more options, we can speed up the animation quite easily which we could not in solution 1.
 {% endcapture %}

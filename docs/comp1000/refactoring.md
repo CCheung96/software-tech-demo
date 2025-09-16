@@ -506,6 +506,8 @@ if(x){
 	</div>
 </div> -->
 
+<!-- TODO: Consider replacing with svg animation -->
+
 ```java
 if (x) {
 	return 1;
@@ -514,6 +516,8 @@ if (x) {
 }
 return 3;
 ```
+
+Since both the if and else conditions end with return statements, **line 6 will never be reached**, and so it is redundant.
 
 ```java
 if (x) {

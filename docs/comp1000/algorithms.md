@@ -148,10 +148,10 @@ Let’s start by reviewing some functions we have seen in Primitive Operations.
 
 Draw-line is an informed changer. The draw-line task is implemented in Processing by the `line` function.
 
-~~~~~
+```
 line(30, 50, 80, 70); 	// draw line from (30, 50) to (80, 70)
 			// remember, you CAN pass integers as float
-~~~~~
+```
 
 ### Draw rectangle
 
@@ -164,10 +164,10 @@ line(30, 50, 80, 70); 	// draw line from (30, 50) to (80, 70)
 
 implemented in Processing as function `rect`
 
-~~~~~~
+```
 rect(40, 30, 10, 15); 	// draw rectangle with top left corner
 			// at (40, 30) with width 10 and height 15
-~~~~~~
+```
 
 ### Set interior colour
 
@@ -177,10 +177,10 @@ rect(40, 30, 10, 15); 	// draw rectangle with top left corner
 
 implemented in Processing as function `fill`and it is an informed changer.
 
-~~~~~
+```
 fill(0, 200, 0);             // set interior colour to a shade of green
 rect(40, 30, 10, 15);  // rectangle drawn as before but now with a green interior
-~~~~~
+```
 
 We can create our own function that creates such a green rectangle.
 
@@ -193,22 +193,22 @@ Draw box:
 
 In Processing we can implement this as:
 
-~~~~~
+```
 void drawBox() {
     fill(0, 200, 0);      // set interior colour to a shade of green
     rect(40, 30, 10, 15); // draw rectangle
 }
-~~~~~
+```
 
 This is a simple function that doesn’t take any input.
 
 Now we can draw that green rectangle by doing:
 
-~~~~~
+```
 void draw() {
     drawBox();
 }
-~~~~~
+```
 
 Function `draw` will be explained shortly.
 
@@ -228,17 +228,17 @@ Draw-box has progressed from an uninformed changer to an informer changer.
 
 We can implement it in Processing as:
 
-~~~~~
+```
 void drawBox2(int x, int y) {
     fill(0, 200, 0);      // set interior colour to a shade of green
     rect(x, y, 10, 15);   // draw rectangle
 }
-~~~~~
+```
 
 Now we can see that the first line of the function has two input parameters `x` and `y`. In Processing we need to say what sort of thing they are; we are supplying a and b as integer coordinates so they are integers and we tell Processing this by putting int before each parameter.
 Now we can create a complete program that will draw three of our rectangles:
 
-~~~~~
+```
 void setup() {
     drawBox2(10, 20);
     drawBox2(70, 40);
@@ -250,7 +250,7 @@ void drawBox2(int a, int b) {
     rect(a, b, 10, 15);   // draw rectangle
 }
 
-~~~~~
+```
 
 The function `setup` is needed because it is the function that Processing runs. Anything that you want run needs to be invoked directly or indirectly from setup.
 
@@ -263,7 +263,7 @@ Inside `drawBox2` we can see that the function gets two parameters as input and 
 
 Although Processing already has `+` built into it, we can write our own `add` function:
 
-~~~~~
+```
 void setup() {
     add(3, 4);
 }
@@ -271,7 +271,7 @@ void setup() {
 int add(int p, int q) {
     return p + q;
 }
-~~~~~
+```
 
 
 We note:
@@ -291,9 +291,9 @@ implemented in Processing as function `println`
 
 Now add(3, 4) produces a value (7) which we can use as the input for println:
 
-~~~~~
+```
     println(add(3, 4));      // instead of just add(3, 4);
-~~~~~
+```
 <!-- Exercise -->
 {% capture my_problem %}
 Write an algorithm to describe [putting an animation on a computer screen](https://www.youtube.com/watch?v=X1TAdd9Vm7s).
@@ -314,11 +314,18 @@ Write an algorithm to describe [putting an animation on a computer screen](https
   solution=my_solution
 %}
 
-
-<div class="task" markdown="1">
+<!-- Further Exercises -->
+{% capture my_problem %}
 * Create another variant of drawBox that allows you to change some other aspect of the rectangle
 
 * Write an algorithm that always returns the number 7
 
 * Write an algorithm that returns the square of the number you give as input. For example, if the value passed is 6, it returns 36. If the value passed is 2.5, it returns 6.25.
-</div>
+{% endcapture %}
+
+{% include exercise.html
+  title="Further Exercises"
+  problem=my_problem
+%}
+
+

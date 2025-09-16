@@ -489,6 +489,7 @@ At the end of the execution of the above code, the output will be:
 ```
 [1 by 1, 1 by 2, 1 by 3, null, 2 by 2]
 ```
+{: .nolineno}
 
 The memory diagram is provided below:
 

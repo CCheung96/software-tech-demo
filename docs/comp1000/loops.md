@@ -355,7 +355,7 @@ Trace (logic table):
 {% capture my_solution %}
 Instead of drawing a simple circle, we draw three circles, each 10 pixels larger than the last.  Each has a 2 pixel border, making a bulleye shape.  Nothing else needs to change, the center of the bullsye animates in exactly the same way as the circle did.
 
-~~~~~
+```
 int yPos;
 int speed;
 
@@ -382,7 +382,7 @@ void draw(){
   yPos = yPos + speed;
 
 }
-~~~~~
+```
 {% endcapture %}
 
 {% include exercise.html
@@ -391,7 +391,7 @@ void draw(){
 	solution=my_solution
 %}
 
-# Looking at loops _without_ the draw loop
+## Looking at loops _without_ the draw loop
 
 {% include youtube.html id="Z8s-7beNP1c" %}
 
@@ -404,11 +404,11 @@ Using loops, draw five `^` (hat) characters to the console
 {% endcapture %}
 
 {% capture my_solution %}
-~~~~~
+```
 for(int i = 0; i < 5; i++){
 	print('^');
 }
-~~~~~
+```
 
 Notice that this program has no `setup` and no `draw` functions, it is a special type of non-animated Processing program.
 {% endcapture %}
@@ -419,11 +419,11 @@ Notice that this program has no `setup` and no `draw` functions, it is a special
 	solution=my_solution
 %}
 
-## break and continue statements
+## `break` and `continue` statements
 
 IMPORTANT: Anything you can do with `break` and `continue`, you can do without them (typically using boolean variables and expressions)
 
-### break
+### `break`
 
 The `break` statements exits the **innermost** loop (to the statement immediately after it). It is useful when you don't explicitly know the terminating value (as in example 1 below).
 
@@ -442,9 +442,10 @@ for(int i=40; i<=100; i++) {
 
 The above code computes the integer part of the square root, and multiplies it by itself to see if the original number is reached or not (which it does for perfect squares). Thus, the output would be:
 
-```
+```console
 40 41 42 43 44 45 46 47 48
 ```
+{: .nolineno}
 
 Without using `break`:
 
@@ -484,12 +485,13 @@ The above code would exit the inner loop for,
 
 The output would be:
 
-```
+```console
 1
 1 2
 1 2 3
 1 2 3 4
 ```
+{: .nolineno}
 
 Without using `break`:
 
@@ -542,18 +544,26 @@ Here are some exercises, hopefully in increasing order of difficulty, to help yo
 	```
 	1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 	```
+	{: nolineno}
+
 2. Write a loop that displays the following pattern: 
 	```
 	12 11 10 9 8 7 6 5 4 3 2 1 0 -1 -2
 	```
+	{: .nolineno}
+
 3. Write a loop that displays the following pattern: 
 	```
 	300 150 75 37 18 9 4 2 1
 	```
+	{: .nolineno}
+
 4. Write a loop that displays the following pattern: 
 	```
 	1 10 100 1000 10000 100000 1000000
 	```
+	{: .nolineno}
+
 5. Write a loop that adds the first 10000 positive integers (1 to 10000) and stores the result in a variable `total`.
 6. Write a loop that multiplies the first 12 positive integers (1 to 12) and stores the result in a variable `total`.
 </div>
@@ -634,7 +644,7 @@ for (int i = 1; i <= 5; i++) { //i++ is the same as i=i+1 or i+=1
 
 Let's say this is the pattern we want to display in the console.
 
-```
+```text
 5 4 3 2 1 0 -1
 10 8 6 4 2 0 -2
 15 12 9 6 3 0 -3
@@ -678,7 +688,7 @@ We would like to generate a pattern based on the input integer `N > 0`
 
 `N=4`
 
-```
+```text
 ^
 ^ ^
 ^ ^ ^
@@ -689,7 +699,7 @@ We would like to generate a pattern based on the input integer `N > 0`
 
 `N=6`
 
-```
+```text
 ^
 ^ ^
 ^ ^ ^
@@ -737,7 +747,7 @@ Change the code so that the symbols alternate between a cap (^) and a dash (-) b
 
 `N=6`
 
-```
+```text
 ^
 - -
 ^ ^ ^
@@ -795,7 +805,7 @@ Change the code so that the symbols alternate between ^ and - within a line.
 
 `N=6`
 
-```
+```text
 ^
 ^ -
 ^ - ^
@@ -835,7 +845,7 @@ Change the code so that the symbols alternate between ^ and - within a line and 
 
 `N=6`
 
-```
+```text
 ^
 - ^
 ^ - ^
@@ -848,7 +858,7 @@ Change the code so that the symbols alternate between ^ and - within a line and 
 {% capture my_solution %}
 This seems like a curly problem until we realise that _adding_ `k` and `i` will give the pattern required because `i` goes up by one each line, swapping the "oddness" of each slot in that row.
 
-```
+```java
 int N = 6;
 
 for(int i=1; i<=N; i++) {
@@ -860,7 +870,7 @@ for(int i=1; i<=N; i++) {
   }
   println();
 }
-```n
+```
 {% endcapture %}
 
 {% include exercise.html
@@ -914,6 +924,7 @@ Here are some exercises, hopefully in increasing order of difficulty, to help yo
 	```
 
 </div>
+
 ## Coding in the real world
 
 Just like in conditions, lets see some real-world scenarios where we need to use loops.

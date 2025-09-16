@@ -64,13 +64,13 @@ In Java, you must perform _two_ steps yourself to get your program to run:
 
 All Java programs have the following structure,
 
-~~~~~java
+```java
 public class HelloWorld { 
   public static void main(String[] args){
     // CODE GOES HERE
   }
 }
-~~~~~
+```
 
 The name of the file containing this code MUST be `HelloWorld.java` (not `helloWorld.java` or `Hello.java` or `MarcoPolo.java`).
 
@@ -97,15 +97,17 @@ After installing Java SDK, you can write a code in a basic text editor (like not
 
 A java source file `HelloWorld.java` is compiled as
 
-~~~bash
+```bash
 javac HelloWorld.java
-~~~
+```
+{: .nolineno}
 
 Once it is compiled, there will be java class file generated with name `HelloWorld.class`. What you execute is this class file, as,
 
-~~~bash
+```bash
 java HelloWorld
-~~~
+```
+{: .nolineno}
 
 This is a good skill and the benefits of doing this over using an IDE like Eclipse include,
 
@@ -129,15 +131,14 @@ public class HelloWorld {
 
 When you compile the program, you'll get the following message,
 
-~~~
+```console
 I-2:intro gauravgupta$ javac HelloWorld.java
 HelloWorld.java:3: error: illegal start of expression
 System.out.println(5+);
 ^
 1 error
 I-2:intro gauravgupta$
-~~~
-{: .bash}
+```
 
 You can see that it points to the line number \(3\) with syntactical errors so you can correct them. In this case, we change the `5+` to `5+3`, and our program compiles, and executes, successfully.
 
@@ -167,10 +168,10 @@ Save the file as `MyFirstProgram.java` \(remember, it's case sensitive!\).
 
 Open command prompt \(or terminal on Mac\), go to the folder in which `MyFirstProgram.java` exists, and type the following:
 
-~~~
+```bash
 javac MyFirstProgram.java
-~~~
-{: .bash}
+```
+{: .nolineno}
 
 > This is the *compilation* step.
 
@@ -178,18 +179,19 @@ If everything went ok, it would execute this command and generate a new file nam
 
 You run the classfile using the `java` command.
 
-~~~
+```bash
 java MyFirstProgram
-~~~
-{: .bash}
+```
+{: .nolineno}
 
 > This is the *execution* step.
 
 If there are no run-time errors, you will get the following output on the console.
 
-~~~output
+```text
 Hello world!
-~~~
+```
+{: .nolineno}
 
 {% include youtube.html id="VAd5qs46z8c" %}
 
@@ -203,7 +205,17 @@ them values of your choice. Calculate the speed and display on the console.
 Compile and run the java program.
 
 <details class="solution" markdown="1"><summary>solution</summary>
-<script src="https://gist.github.com/gaurav1780/905f1681f5c75e60a7a4f3715355e14f.js"></script>
+```java
+public class NeedForSpeed {
+	public static void main(String[] args) {
+		double distance = 34;
+		double time = 21;
+		double speed = distance/time;
+		System.out.println(speed);
+	}
+}
+```
+<!-- <script src="https://gist.github.com/gaurav1780/905f1681f5c75e60a7a4f3715355e14f.js"></script> -->
 </details>
 </div>
 
@@ -321,52 +333,108 @@ Warning: make sure you are comfortable using functions before you move on to the
 ### Problem 1: Calculating the total of all items of an integer array
 
 This is an `accumulation` algorithm. We go through each item of the array, and add it to a variable that stores the total.
+```java
+public static int total(int[] a) {
+	int result = 0;
+	for(int i=0; i < a.length; i++) {
+		result+=a[i];
+	}
+	return result;
+}
 
-<script src="https://gist.github.com/gaurav1780/990f005dee2573083528b3d0e6283a3f.js"></script>
+public static void main(String[] args) {
+	int[] taxicab = {1, 7, 2, 9};
+	int myTotal = total(taxicab);
+	System.out.println(myTotal);
+}
+```
 
-Once we know how to do this, we can apply this to other problems such as,
+<!-- <script src="https://gist.github.com/gaurav1780/990f005dee2573083528b3d0e6283a3f.js"></script> -->
 
-<div class="task" markdown="1">
+Once we know how to do this, we can apply this to other problems such as the following:
+
+<!-- Exercise -->
+{% capture my_problem %}
 Define a method that when passed an array, returns the sum of all even numbers in the array
-<details class="solution" markdown="1"><summary>solution</summary> <script src="https://gist.github.com/gaurav1780/b1abbb1a3bab1ef55c1c0cf4815482b9.js"></script>
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% capture my_solution %}
+```java
+public static int totalEven(int[] a) {
+	int result = 0;
+	for(int i=0; i < a.length; i++) {
+		if(a[i] % 2 == 0) { //curent number IS even
+			result+=a[i]; //add it to the total
+		}
+	}
+	return result;
+}
+```
+<!-- <script src="https://gist.github.com/gaurav1780/b1abbb1a3bab1ef55c1c0cf4815482b9.js"></script> -->
+{% endcapture %}
+
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 Define a method that when passed an integer array, returns the sum of all negative numbers in the first half of the array. For example, if array is `{-6, -8, -1, -2, 9}`, return `-14`, and if array is `{-6, -5, -8, -12, -1, 9}`, return `-19`.
-<details class="solution" markdown="1"><summary>solution</summary>
-<script src="https://gist.github.com/gaurav1780/671b713a16b53872f45a36c1659464ea.js"></script>
-</details>
-</div>	
+{% endcapture %}
+
+{% capture my_solution %}
+```java
+public static int totalEven(int[] a) {
+	int result = 0;
+	for(int i=0; i < a.length; i++) {
+		if(a[i] % 2 == 0) { //curent number IS even
+			result+=a[i]; //add it to the total
+		}
+	}
+	return result;
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/671b713a16b53872f45a36c1659464ea.js"></script> -->
+{% endcapture %}
+
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
 
 ### Problem 2: Write code that determines if a given number is prime.
 
-What is a prime number?_A number more than 1 that is divisible only by 1 and itself._
+What is a prime number? _A number more than 1 that is divisible only by 1 and itself._
 
-~~~
-Is 37 a prime number?
-Is 37 divisible by 2? No. So we carry on
-...
-Is 37 divisible by 36? No. This means 37 is not divisible by
-any integer besides 1 and 37.
+**Is 37 a prime number?**
+
+```text
+Is 37 divisible by 2? No. So we carry on 
+Is 37 divisible by 3? No. So we carry on  
+...  
+Is 37 divisible by 36? No. This means 37 is not divisible by any integer besides 1 and 37.  
 Thus, 37 is a prime number.
-~~~
-{: .output}
+```
+{: .nolineno}
 
-~~~
-Is 77 a prime number?
+**Is 77 a prime number?**
+```text
 Is 77 divisible by 2? No. So we carry on
-...
-Is 77 divisible by 7? Yes. This means 77 is divisible by
-another integer besides 1 and 77.
+Is 77 divisible by 3? No. So we carry on   
+...  
+Is 77 divisible by 7? Yes. This means 77 is divisible by another integer besides 1 and 77.  
 Therefore, it's not a prime number.
-~~~
-{: .output}
+```
+{: .nolineno}
 
-{: .note}
 You can see that this is a kind of `violation` algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with `failure (false)` status. Only if **no** violations are found, can the algorithm exit with `success (true)`status. The algorithm is,
 
-~~~
+```text
 INPUT: Integer n
 PROCESS:
 if n is less than 2
@@ -381,24 +449,60 @@ begin loop
     OUTPUT false (as a non-trivial divisor was found)
   end condition
 end loop
-~~~
-{: .output}
+```
 
 The equivalent Java code would be,
 
-<script src="https://gist.github.com/gaurav1780/dfe61c931d2b637931ffcd4a4d25f765.js"></script>
+```java
+public static boolean isPrime(int n) {
+	if(n < 2) {
+		return false;
+	}
+	for(int i=2; i < n; i++) {
+		if(n % i == 0) { // violation, CANNOT be prime, no need to check further
+			return false;
+		}
+	}
+	//end of loop, no non-trivial divisor found
+	return true;
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/dfe61c931d2b637931ffcd4a4d25f765.js"></script> -->
 
 Note: we really need to check only until square root of `n` instead of `n-1`.
 
 The way we can call this function from another function (say `main`) is as follows,
 
-<script src="https://gist.github.com/gaurav1780/2f84e7676a8fc2009b9c7df8b3bad1a6.js"></script>
+```java
+
+public static void main(String[] args) {
+	int num = 56;
+	boolean np = isPrime(num);
+	System.out.println(np);
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/2f84e7676a8fc2009b9c7df8b3bad1a6.js"></script> -->
 
 ### Problem 3: Determining if a String contains any space
 
 As opposed to the prime checking example, this is a `validation` algorithm, where we look for a validation, and as soon as one is found, we can return `true`. If there is no validation found, then, at the end, we can return `false`.
 
-<script src="https://gist.github.com/gaurav1780/a70018542384418de6724f5c5b9acd45.js"></script>
+```java
+
+public static boolean containsSpace(String s) {
+	for(int i=0; i < s.length(); i++) {
+		if(s.charAt(i) == ' ') { //validation, no need to check further
+			return true;
+		}
+	}
+	//end of loop, no character is a space
+	return false;
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/a70018542384418de6724f5c5b9acd45.js"></script> -->
 
 
 ## Some Practice Functions

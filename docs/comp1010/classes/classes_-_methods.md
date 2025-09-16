@@ -36,6 +36,8 @@ A function attached to an object is called an *instance method* and it has two d
 ```java
 <object>.<instanceMethod>(<optional parameters>);
 ```
+{: .nolineno}
+
 
   * it can access the instance members (instance variables  and other instance methods) of the object it is attached to.
 
