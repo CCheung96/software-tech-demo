@@ -2,7 +2,9 @@ Live [here](https://ccheung96.github.io/software-tech-demo/)
 
 The theme used is [Just the Docs](https://just-the-docs.com/) (JTD).
 
-This project is intended to make it easy for 
+To deploy in a development environment, run `jekyll serve`.
+
+This project was designed for ease-of-use, so that most editors would not have to worry about compnents and can focus on editing markdown pages.
 
 If adding content is your only focus, all you need to do is write the content using Markdown, Mermaid, and JTD features. Occasiaonally you might need to add HTML or some pre-made HTML structures
 
