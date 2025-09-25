@@ -4,6 +4,10 @@ permalink: /comp6010/python-classes
 parent: COMP6010
 nav_order: 7
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Variables and Operators in Python]({{ site.baseurl }}/comp6010/python-introduction)
@@ -19,7 +23,7 @@ nav_order: 7
 
 
 
-# Introduction
+## Introduction
 
 A class is a user-defined data type. It's used when something cannot be represented with primitive types (such as `int` or `bool`), and/or, has properties that require specific implementation.
 
@@ -28,7 +32,7 @@ For example, to represent a point in a 2-d coordinate system, you need x and y v
 1. For the entire program, you need to remember to handle `x` and `y` together.
 2. Functions that operate on these values should have both parameters passed, in the correct order.
 
-Instead we *package* both values in one data type - `Point`. Each `Point` *object* has two attributes inside it - `x` and `y`. 
+Instead we *package* both values in one data type - `Point`. Each `Point` *object* has two attributes inside it - `x` and `y`.
 
 
 - For `Point a`, the attributes are accessed using `a.x`, `a.y`.
@@ -160,7 +164,7 @@ Note that if you pass the wrong parameters (insufficient/ excessive), you will g
 Example of errors:
 
 ```python
-p = Point(17) # too few 
+p = Point(17) # too few
 q = Point(17, 29, 31) # too many
 ```
 
@@ -235,12 +239,12 @@ q = Point(8, 3)
 print(p.distance_from_origin())
 print(q.distance_from(p))
 ```
-        
+
 #### Exercise:
 
 Repeat the same process for classes `Rectangle` and `Person`, calling the functions created in the previous section.
 
-# A complete working example
+## A complete working example
 
 ```python
 class Point:
@@ -260,7 +264,7 @@ class Point:
         if (isinstance(other, Point)):
             return self.x == other.x and self.y == other.y
         return False
-    
+
     def __str__(self): #called when you display str(object)
         return "("+str(self.x)+", "+str(self.y)+")"
 

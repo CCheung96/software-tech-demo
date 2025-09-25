@@ -9,7 +9,7 @@ This project was designed for ease-of-use, so that most editors would not have t
 If adding content is your only focus, all you need to do is write the content using Markdown, Mermaid, and JTD features. Occasiaonally you might need to add HTML or some pre-made HTML structures
 
 ## Just the Docs
-JTD provides a number of layouts, but aside from the Home Page, all the pages in this project are a customised version of the JTD page layout which was configured in _layouts/custom-page.html. 
+JTD provides a number of layouts, but aside from the Home Page, all the pages in this project are a customised version of the JTD page layout which was configured in _layouts/custom-page.html.
 
 ### Front Matter
 The YAML configuration content at the beginning of each page, separated from the actual content by `---`. This configures page variable to determine how it will display in the website. The variables set in this front matter include:
@@ -21,27 +21,29 @@ The YAML configuration content at the beginning of each page, separated from the
 * `grandparent`: If the page is a grandchild of another page, specify the `title` of that grandparent page. This is a precaution that becomes  relevant **if pages have parents with the same name, but different grandparent pages**. See [Sidebar Hierarchy](#sidebar-hierarchy).
 * `has_children`: If the page is expected to have one or more child pages, this is how it is declared. Note: Do not also list the children in the parent page. See [Sidebar Hierarchy](#sidebar-hierarchy).
 * `has_toc`: Defines whether the page has a Table of Contents (TOC). By default this is set to true. For some pages, however, the placement of the TOC still needs to be hard-coded within the page contents.
-* `layout`: The default layout has been set to `custom-page`, which is defined in and inherits from Just the Doc's `page` layout. `_config.yml`. Currently, `custom-page` includes a title and author at the top of a page, before the rest of the page content. The Table of Contents (TOC) cannot be included here, since its ability to generate is dependent on the page contents. 
-* `nav_exclude`: Set this to `true` to hide the page from the sidebar, as with the example of [test.md](https://ccheung96.github.io/software-tech-demo/test) 
+* `layout`: The default layout has been set to `custom-page`, which is defined in and inherits from Just the Doc's `page` layout. `_config.yml`. Currently, `custom-page` includes a title and author at the top of a page, before the rest of the page content. The Table of Contents (TOC) cannot be included here, since its ability to generate is dependent on the page contents.
+* `nav_exclude`: Set this to `true` to hide the page from the sidebar, as with the example of [test.md](https://ccheung96.github.io/software-tech-demo/test)
 
 ### Page Contents
 Below the [front matter](#front-matter) is where the actual content for the page is written. For the sake of ease-of-implementation, the content **can be written almost entirely in [Markdown](https://www.markdownguide.org/)**. Occasionally, this may need to be supplemented with HTML, Includes, Mermaid Diagrams and/or D3js.
 
 
-### Page Hierarchy 
-Links are generated 
+### Page Hierarchy
+Links are generated
 
 ### Sidebar Hierarchy
 
 
 ### Includes
+https://jekyllrb.com/docs/includes/
+
 Includes are pieces of reusable content. The following Includes have been made to attempt to separate HTML template structures from Markdown content, thus allowing for consistency and removing the editor's need to write the HTML themselves:
 
 * prereq_outcomes.html - HTML that generates dropdowns revealing two lists, namely Assumed Knowledge (ie. prerequisites) and Learning Outcomes (ie. outcomes).
 * exercise.html - HTML that generates blocks containing examples, questions and scenarios with 1-2 hidden dropdown solutions.
 * youtube.html - HTML that allows a youtube video to be embedded into the page.
 
-While the HTML structure is provided, often custom content still needs to be provided. Within the page, liquid syntax is used to **capture** Markdown content in a variable name, and then used to **include** an instance of the Include supplied with those variable names. 
+While the HTML structure is provided, often custom content still needs to be provided. Within the page, liquid syntax is used to **capture** Markdown content in a variable name, and then used to **include** an instance of the Include supplied with those variable names.
 
 ```
 {% capture content_1 %}
@@ -56,41 +58,47 @@ While the HTML structure is provided, often custom content still needs to be pro
 {% include prereq_outcomes.html variable_1=content_1 variable_1=content_2 %}
 ```
 
-The style of the HTML elements is handled in [./sass/color_schemes/custom.scss](https://github.com/CCheung96/software-tech-demo/blob/main/_sass/color_schemes/custom.scss), see [CSS and SCSS](#css-and-scss) for more details. 
+The style of the HTML elements is handled in [./sass/color_schemes/custom.scss](https://github.com/CCheung96/software-tech-demo/blob/main/_sass/color_schemes/custom.scss), see [CSS and SCSS](#css-and-scss) for more details.
 
 If there is a need for specific HTML that differs from these templates, it can be written directly into the page itself.
 
-#### Assumed Knowledge and Learning Outcomes 
+#### Assumed Knowledge and Learning Outcomes
 
-Structure: prereq_outcomes.html 
+Structure: prereq_outcomes.html
 
-In Page: use markdown in capture and include liquid syntax, specify prereq and outcomes 
+In Page: use markdown in capture and include liquid syntax, specify prereq and outcomes
 
-#### Exercises/Examples/Scenarios with Solution(s) 
-Structure: exercise.html 
+#### Exercises/Examples/Scenarios with Solution(s)
+Structure: exercise.html
 
-In Page: Use markdown in capture and include liquid syntax, specify title, problem and at least one solution (ie. “solution”). The option for a second solution (“solution2”) has already been added, the option for more will require an update of exercise.html. 
+In Page: Use markdown in capture and include liquid syntax, specify title, problem and at least one solution (ie. “solution”). The option for a second solution (“solution2”) has already been added, the option for more will require an update of exercise.html.
 
-##### Youtube Embeds 
-Structure: youtube.html 
+##### Youtube Embeds
+Structure: youtube.html
 
-In Page: Use include liquid syntax only, specify id (ie. the string of characters after https://www.youtube.com/watch?v=) 
+In Page: Use include liquid syntax only, specify id (ie. the string of characters after https://www.youtube.com/watch?v=)
 
 ## Snippets
 
 In VS code, snippets are customised autocomplete templates help to reduce the time spent writing repetitive code. [Here were some that have come in handy so far.](#appendix-snippets)
 
+* Snippets reduce the time spent writing repetitive code
+* Snippets also ensures consistency in the code
+
 ### Configuration
 
  Snippets can be made to be used globally, or only for a specific project. To make a snippet, first create a new snippet JSON file (Ctrl-P -> Snippets: Configure snippets -> New Snippets file for [project_name] / New Global Snippets file).
 
-In the snippet file, define each snippet with: 
-* a name (outside the snippet), 
-* a prefix, which will be used to autocomplete, and 
+In the snippet file, define each snippet with:
+* a name (outside the snippet),
+* a prefix, which will be used to autocomplete, and
 * a body, which is the template code for the snippet itself.
 * a desciption, describing the snippet, is optional.
 
-Afterwards, save the file and reload the window to enable the changes. Snippet files can be modified at any time. (Ctrl-P -> Snippets: Configure snippets -> [snippet_file].code_snippets).
+Afterwards, save the file and reload the window to enable the changes. Snippet files can be modified at any time. (Ctrl-Shift-P -> Snippets: Configure snippets -> [snippet_file].code_snippets).
+(Ctrl-Shift-P -> Reload Window)
+
+
 
 ### Usage
 In the page, type in the snippet's prefix, example `html-img`, and then press `tab` to autocomplete.
@@ -109,11 +117,9 @@ pandoc sorting.md --slide-level=4 -o sorting.pptx
 An example GitHub Actions workflow for `sorting.md` lives in `.github/workflows/sorting-slides.yml`. Duplicate this file and replace `sorting.md` with another lesson file to generate slides for other topics.
 
 ## TO DO
-* Reintroduce all pages in COMP1260, COMP6010, Common, Research Skills, and Regular Expressions 
+* Reintroduce all pages in COMP1260, COMP6010, Common, Research Skills, and Regular Expressions
 * Mermaid Diagrams, SVGs and D3js
-    * Replace all diagrams with mermaid diagrams/svgs/D3js
-    * make svgs responsive
-* Highlight Hint segemnts with [Callouts](#callouts)
+  * Replace all diagrams with mermaid diagrams/svgs/D3js
 
 ## Appendix: Snippets
 
@@ -155,13 +161,19 @@ These are [snippets](#snippets) that have been used in creating the project so f
 	"D3js Grid HTML": {
 		"prefix": "d3js-grid",
 		"body": "<div class=\"grid\" id=\"$1\" rows=9 cols=9></div>",
-		"description": "HTML for svg grids"
+		"description": "HTML for svg grids. Defaults to a 9x9 grid, id is used to customise the grid content."
 	},
 
 	"Centred Image HTML": {
 		"prefix": "centre",
-		"body": "<div class=\"centred-img\"> $1 </div>",
-		"description": "HTML for a div to centre images inside"
+		"body": "<div class=\"centred-img\">\n\t<img src=\"{{ site.baseurl }}/$1\" alt=\"$2\"/>\n</div>",
+		"description": "HTML for a div container to centre images within it."
+	},
+
+	"Table Of Contents": {
+		"prefix": "toc",
+		"body": "- TOC\n{:toc}",
+		"description": "For autogenerated in-page Table of Contents"
 	}
 
 ```
@@ -190,7 +202,7 @@ These are [snippets](#snippets) that have been used in creating the project so f
 	"Stadium Node":{
 		"prefix": "stad",
 		"body": "$1@{ shape: stadium, label: \"$2\"}",
-		"description": "pill-shaped node"		
+		"description": "pill-shaped node"
 	},
 
 	"Junction Node":{

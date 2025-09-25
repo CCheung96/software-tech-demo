@@ -5,12 +5,15 @@ parent: COMP6010
 nav_order: 8
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
-{% capture topic_prereq %}- [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
+{% capture topic_prereq %}
+  * [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Be able to open a file for reading
   * Be able to write to a file
   * Be able to navigate a file structure
@@ -36,7 +39,7 @@ f = open(<file to open>, "r")
 Example:
 
 ```python
-f = open("input.xml, "r")
+f = open("input.xml", "r")
 <do something with f>
 
 g = open("C:\Documents\index.html", "r")
@@ -63,7 +66,7 @@ with open("input.xml", "r") as f:
 
 with open("index.html", "r") as g:
 	<do something with g>
-	
+
 with open("usr/gauravgupta/grades.csv", "r") as h:
 	<do something with h>
 ```
@@ -244,7 +247,7 @@ We don't need to explicitly call the `close()` method. It is handled behind the 
 
 Contents of `file.txt` after the code is executed:
 
-```
+```text
 Hi!
 Nice to meet you :)
 Bye!
@@ -259,7 +262,7 @@ with open("file.txt", "a") as f:
 
 Contents of `file.txt` after the code is executed:
 
-```
+```text
 Hi!
 Nice to meet you :)
 Bye!
@@ -268,7 +271,7 @@ DONE.
 
 ## A practical example
 
-Say, we have a csv file that holds student grades. We can read the file, store the data in a collection, perform analysis, and then output filtered information to a file. 
+Say, we have a csv file that holds student grades. We can read the file, store the data in a collection, perform analysis, and then output filtered information to a file.
 
-## Complete example: 
+## Complete example:
 [example\_python\_file\_io.zip](./assets/codes/COMP6010/example_python_file_io.zip)

@@ -6,11 +6,11 @@ nav_order: 9
 ---
 
 <!-- Assumed Knowledge -->
-{% capture topic_prereq %}- [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
+{% capture topic_prereq %}
+  * [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Be able to traverse a directory
   * Do basic operations like creating, renaming, removing files
 {% endcapture %}
@@ -19,6 +19,6 @@ nav_order: 9
 
 
 
-# File System
+## File System
 
 TODO

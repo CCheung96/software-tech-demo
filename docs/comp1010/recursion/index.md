@@ -5,6 +5,8 @@ parent: COMP1010
 nav_order: 8
 has_children: true
 ---
+<!-- This is the top-level page of the Recursion subsection. -->
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)

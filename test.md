@@ -11,11 +11,13 @@ See the test.md file for implementation.
 
 {% include youtube.html id="Yw6u6YkTgQ4" %}
 
+```java
+int x = 3;
+```
 
 
-
-
-<div id="variables-in-memory-animation"></div>
+<!--
+<div id="variables-in-memory-animation"></div> -->
 
 <div id="my-d3-target"></div>
 
@@ -30,6 +32,9 @@ See the test.md file for implementation.
 <div class="grid" id="matrix-diag" rows=9 cols=9 ></div>
 
 <div class="grid" id="x-5" rows=9 cols=9 ></div>
+
+<div id="variables-in-memory-animation"></div>
+
 
 
 ```mermaid

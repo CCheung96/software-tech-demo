@@ -2,7 +2,7 @@
 <div class="youtube-container">
   <iframe
     class="youtube-embed"
-    src="https:www.youtube.com/embed/{{ include.id }}"
+    src="https://www.youtube.com/embed/{{ include.id }}"
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -15,7 +15,7 @@
 <style>
 .youtube-container {
   position: relative;
-  width: 100%;         /* Take up the full width of its parent */
+  width: 560;         /* Take up the full width of its parent */
   max-width: 100%;     /* Prevent overflow */
   aspect-ratio: 16 / 9; /* Preferred in modern browsers */
   margin-bottom: 1rem;
@@ -25,8 +25,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* width 560 x height 325 */
   height: 100%;
   border: 0;
 }
 </style>
+

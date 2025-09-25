@@ -4,4 +4,4 @@ permalink: /comp6010
 nav_order: 3
 has_children: true
 ---
-<!-- This is the parent page -->
+<!-- This is the top-level page of the COMP6010 subsection -->
