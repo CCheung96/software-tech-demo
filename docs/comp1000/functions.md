@@ -152,11 +152,11 @@ void setup() {
 }
 ```
 
-During the call `foo(12, 5)`, 
+During the call `foo(12, 5)`,
 
 - Function `foo` expects two integers
 - The values passed are 12 and 5 (2 integers). So it's all good
-- 12 is copied into the local variable `a` 
+- 12 is copied into the local variable `a`
 - 5 is copied into the local variable `b`
 - Control is transferred to the function
 - `result` becomes 17.
@@ -272,14 +272,14 @@ For example,
 ```java
 void drawShip() {
 	//IMPORTANT: should draw the ship ONLY if mouse is in the right half
-	
+
 	if(mouseX < width/2) { //no need to draw
 		return; //transfer control back to the caller
 	}
-	
+
 	line(mouseX+50, mouseY-20, mouseX+50, mouseY+10);
 	triangle(mouseX, mouseY, mouseX+100, mouseY, mouseX+50, mouseY+20);
-	
+
 	//control automatically transferred once you reach the end
 	///so no need to have return statement
 }
@@ -324,7 +324,7 @@ boolean isEven(int n) {
 		return false;
 	}
 }
-``` 
+```
 
 Now, in terms of programming, either the `if` block, or the `else` block are guaranteed to execute, thereby returning a value unconditionally.
 
@@ -380,7 +380,7 @@ Given two integers (store in formal parameters `a, b`), define a function that d
 {% capture my_solution %}
 ```java
 /*
-	We need to check if divisible both ways. That is, a % b and b % a. 
+	We need to check if divisible both ways. That is, a % b and b % a.
 	Notice, that taking modulus 0 of a number will crash our program with a "ArithmeticException: / by zero" error.
 	We need to only apply the modulus after ensuring the number is not 0 to circumvent that.
 */

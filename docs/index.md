@@ -6,6 +6,7 @@ layout: home
 landing_page:
   title: "Welcome"
   nav_order: 0
+permalink: /
 has_toc: false
 ---
 <img src="./assets/Hello_World.gif" alt="Hello World GIF" />

@@ -188,7 +188,7 @@ ArrayList<ArrayList<Integer>> varying =
 //varying = [[1000, 700, 200, 900], [500, 300], null, [600, null, 300]]
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/list-of-lists/listOfListsComprehensive.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/list-of-lists/listOfListsComprehensive.png" alt="image"/>
 
 This is because some sub-lists are of different size, and one is even null.
 

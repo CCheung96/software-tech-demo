@@ -83,7 +83,7 @@ All custom types are reference types and follow the same rules as other referenc
 In the case of our custom type, the "necessary parameters" are the `String` and three `int`s
 
 {: .highlight}
->**Why `public`?**  
+>**Why `public`?**
 >Classes can also act to "encapsulate" things, which is dealt with later.  So you have to be explicit in saying that the instance variables of a class are available to everyone else by declaring them `public`.  We won't concern ourselves with the alternatives yet.
 
 ## Jargon: Instance Variables
@@ -137,7 +137,7 @@ using this class has yet been written, and no object (instance) of this
 class has yet been created.
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure1.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure1.png" alt="image"/>
 
 
 <div class="task" markdown="1">
@@ -174,7 +174,7 @@ In the following example, `r` is an object of class `Rectangle1`.
 Rectangle r; //example
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure2.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure2.png" alt="image"/>
 
 ### Instantiation
 
@@ -192,7 +192,7 @@ r = new Rectangle(); //example
 
 Here's (a somewhat) acurate memory diagram and the simplified representation we will use from this point onwards.
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/memoryDiagramBasic.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/memoryDiagramBasic.png" alt="image"/>
 
 
 <!--![]({{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure3.png)

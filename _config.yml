@@ -35,12 +35,12 @@ github_username:  CCheung96
 # Build settings
 remote_theme: just-the-docs/just-the-docs
 # theme: minima (original theme)
-color_scheme: custom # This is specifically for customising theme-wide styles with Just The Docs. You can configure these customisations in _sass/color_schemes/custom.scss
+color_scheme: custom # Referring to _sass/color_schemes/custom.scss
 
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge # Stylises code snippets, aside from processing
+  syntax_highlighter: rouge # Stylises code blocks
   syntax_highlighter_opts:
     default_lang: text
     block:
@@ -65,12 +65,14 @@ nav_external_links:
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 
+
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: ""    # all files
     values:
       layout: "custom-page"
+
 
 back_to_top: true
 back_to_top_text: "Back to top"
@@ -91,8 +93,9 @@ mermaid:
 enable_copy_code_button: true
 
 callouts:
-  # callouts_opacity: 0.3 # Optional: The global opaciity for all callouts. By default, it is 0.2.
   # A callout is defined like so:
+
+  # callouts_opacity: 0.3 # Optional: The global opaciity for all callouts. By default, it is 0.2.
   warning: # Requied: The name used to generate the callout. In the page, use {: .warning}
     title: Warning  # Optional: A title that is displayed inside the callout
     color: red      # Required: The primary colour scheme of the callout

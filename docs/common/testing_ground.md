@@ -27,9 +27,11 @@ nav_order: 4
 
 ## Using markdown_helper
 
+<!-- Idk -->
+
 @[:markdown](assets/svgs/sampleSVG.md)
 
-@[:code_block](assets/codes/HelloWorld.java)  
+@[:code_block](assets/codes/HelloWorld.java)
 
 {% endcomment %}
 

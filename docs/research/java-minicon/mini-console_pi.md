@@ -4,8 +4,12 @@ custom-title: Setting up the Macquarie Mini Console on a Raspberry Pi
 parent: For Java/Mini-Console
 grandparent: Research Skills
 permalink: /research/java-minicon/mini-console-pi
-nav_order: 2
+nav_order: 1
 ---
+
+- TOC
+{:toc}
+
 The "macquarie mini console" is a Raspberry Pi image setup for loading directly into a mini-console application. The application showcases games made by Macquarie University Students in CS1/computing 101. The Java application can be run on any computer for easy experimentation.
 
 # Background to Raspberry Pi
@@ -63,25 +67,25 @@ Try doing other things with the Rasperry Pi as well, such as going on the intern
 If you want to restart the mini console again, we will use an application called Terminal. Terminal allows us to access Command Line, which will process commands for us. Don't worry about what Terminal is or how to use it, we will learn more about it in the next lesson. Open a new terminal window by pressing the terminal button in the top left corner of the screen.
 
 <div style="width:75%; margin:auto">
-	<img src="figs/raspberry_pi_run_mini_console1.png"/>
+	<img src="{{ site.baseurl  }}/assets/imgs/research-mini-console/pi/raspberry_pi_run_mini_console1.png"/>
 </div>
 <br>
 
 Click anywhere in the terminal window and type `ls` exactly as it is written here, then press enter. This will give you a list of files and directories that the Raspberry Pi holds. In this list, you will find a directory that is named 'mq_mini_console'.
 <div style="width:75%; margin:auto">
-	<img src="figs/raspberry_pi_run_mini_console2.png"/>
+	<img src="{{ site.baseurl  }}/assets/imgs/research-mini-console/pi/raspberry_pi_run_mini_console2.png"/>
 </div>
 <br>
 
 Now we want to navigate to this file. Type `cd mq_mini_console` and press enter.
 <div style="width:75%; margin:auto">
-	<img src="figs/raspberry_pi_run_mini_console3.png"/>
+	<img src="{{ site.baseurl  }}/assets/imgs/research-mini-console/pi/raspberry_pi_run_mini_console3.png"/>
 </div>
 <br>
 
 The only way we have to run the console is via the console and from within this directory. There is a "script" in this directory that we can execute on the terminal.  Type `./run` and wait for the mini console to appear on the screen again.
 <div style="width:75%; margin:auto">
-	<img src="figs/raspberry_pi_run_mini_console4.png"/>
+	<img src="{{ site.baseurl  }}/assets/imgs/research-mini-console/pi/raspberry_pi_run_mini_console4.png"/>
 </div>
 <br>
 

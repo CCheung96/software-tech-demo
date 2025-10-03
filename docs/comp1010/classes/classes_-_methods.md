@@ -218,7 +218,7 @@ public class Client {
 }
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_methods/compareTo-figure4.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_methods/compareTo-figure4.png" alt="image"/>
 
 1. A reference copy of the calling object (`r1` in this case) is made into `this`.
 2. A reference copy of the passed object (`r2` in this case) is made into the formal parameter (`other` in this case).
@@ -237,7 +237,7 @@ sequenceDiagram
 
 ## Special methods all objects have
 
-Thanks to a feature of Java [we will learn later](/404) there are some methods that "come for free" in every class (and thus are attached to every object).  A few of these are interesting to us:
+Thanks to a feature of Java we will learn later <!-- What link did you want?--> there are some methods that "come for free" in every class (and thus are attached to every object).  A few of these are interesting to us:
 
   * `toString(): String`
   * `equals(Object): boolean`

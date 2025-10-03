@@ -452,6 +452,6 @@ if __name__ == "__main__":
 
 ## PRACTICE PACKAGE!!!
 
-Find the entire practice package at [COMP6010PracticePackage.zip](https://softwaretechnologymq.github.io/assets/codes/COMP6010PracticePackage.zip)
+Find the entire practice package at [COMP6010PracticePackage.zip]({{ site.baseurl }}/assets/codes/comp6010/COMP6010PracticePackage.zip)
 
 

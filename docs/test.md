@@ -1,6 +1,7 @@
 ---
 title: Test Page
 description: A minimal page for testing new features
+permalink: /test
 author: Crystal Cheung
 nav_exclude: true
 ---
@@ -16,8 +17,13 @@ int x = 3;
 ```
 
 
-<!--
-<div id="variables-in-memory-animation"></div> -->
+<div style="width:75%; margin:auto">
+  <img src="{{ site.baseurl }}/assets/imgs/research-mini-console/terminal/CLI_cd.png"/>
+</div>
+
+<div class="centred-img" style="width:75%;">
+  <img src="{{ site.baseurl }}/assets/imgs/research-mini-console/terminal/CLI_cd.png"/>
+</div>
 
 <div id="my-d3-target"></div>
 

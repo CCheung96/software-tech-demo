@@ -59,7 +59,7 @@ public static boolean occursExactlyOnce(int[] data, int key) {
          if(found) { //if found before
             return false; //this is the second time
          }
-         else { //if not found before 
+         else { //if not found before
             found = true; //now it's found
          }
       }
@@ -68,7 +68,7 @@ public static boolean occursExactlyOnce(int[] data, int key) {
 }
 ```
 
-## With ArrayLists 
+## With ArrayLists
 
 IMPORTANT - Right now, you don't need to understand the following code, just appreciate how much easier, compared to arrays, it is
 
@@ -212,7 +212,7 @@ ArrayList<E> name = new ArrayList<E>();
 ArrayList<E> name = new ArrayList<>();
 ```
 
-Here, `E` refers to the type of items it can store. Just one thing (until we cover Classes and Objects), this (`E`) cannot be a primitive data type, and needs to be a *class* (more on that when we cover `Classes and Objects`). 
+Here, `E` refers to the type of items it can store. Just one thing (until we cover Classes and Objects), this (`E`) cannot be a primitive data type, and needs to be a *class* (more on that when we cover `Classes and Objects`).
 
 - Instead of `int`, we use `Integer`.
 - Instead of `double`, we use `Double`.
@@ -325,7 +325,7 @@ data.remove(2); 		//data = [10, 70, 90]
 ```java
 //assumption: data = [60, 10, 70, 20, 90, 60] already
 data.remove(10);
-//IndexOutOfBoundsException since 10 is treated as int, 
+//IndexOutOfBoundsException since 10 is treated as int,
 //and hence remove(int) is called
 ```
 
@@ -340,8 +340,8 @@ data.remove((Integer)60); //data = [70, 20, 90]
 //removing all occurrences of a specific item -
 //assumption: data = [70, 20, 90, 80, 80, 80, 80, 80]
 while(data.contains(80)) {
-	data.remove((Integer)80); 
-	//remember, data.remove(80) will 
+	data.remove((Integer)80);
+	//remember, data.remove(80) will
 	//try to remove item at index 80
 }
 //data = [70, 20, 90]
@@ -493,4 +493,4 @@ At the end of the execution of the above code, the output will be:
 
 The memory diagram is provided below:
 
-<img src="{{ site.baseurl }}/assets/comp1010/lists/userDefinedObjectArrayList.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/lists/userDefinedObjectArrayList.png" alt="image"/>

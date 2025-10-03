@@ -46,7 +46,7 @@ public class TVData {
     minutes = new ArrayList<Integer>();
     for(int item: source) {
       minutes.add(item);
-     } 
+     }
   }
 
   public void add(int min) { //say we forget to add an item during the construction
@@ -164,7 +164,7 @@ public class GoodClient {
   }
 }
 ```
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayReferenceCopy.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayReferenceCopy.png" alt="image"/>
 The above client would give the expected outcome:
 
 ```
@@ -217,7 +217,7 @@ public TVData(int[] source) {
 }
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayInstanceCopy.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayInstanceCopy.png" alt="image"/>
 
 Now, both `GoodClient` and `BadClient` will give the same, logically correct, output:
 
@@ -321,7 +321,7 @@ public class ConnectTheDots {
 }
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayOfObjects.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/classHoldingArrayOfObjects.png" alt="image"/>
 
 
 Let's just write a client to finish this off!

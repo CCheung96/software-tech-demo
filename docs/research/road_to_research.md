@@ -1,10 +1,12 @@
 ---
 title: Road to Research
-parent: For Java/Mini-Console
-grandparent: Research Skills
-permalink: /research/java-minicon/road-to-research
+parent: Research Skills
+permalink: /research/road-to-research
 nav_order: 1
 ---
+
+- TOC
+{:toc}
 
 We are going to cover (in a fun way) some skills needed to become an independent software researcher.  We do it by hacking away at a games console, but the skills are the main thing:
 

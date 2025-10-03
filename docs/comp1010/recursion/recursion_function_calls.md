@@ -47,7 +47,7 @@ public class Client {
 ```
 
 <details class="solution" markdown="1"><summary>Explanation</summary>
-Congratulations if your answer is 17. 
+Congratulations if your answer is 17.
 
 If your answer was 29, read on. Note the `n` inside the `main` method and the `n` inside the `update` method are physically different variables in memory. The value returned by the `update` method is ignored by the `main` method, and the `n` inside `main` remains unchanged.
 </details>
@@ -109,55 +109,55 @@ public static int square(int num) {
 
 ### STEP 1: main function is invoked by JVM
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack1.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack1.png" alt="image"/>
 
 function call is placed on the stack. Note that parameter is `null` because we typically do not pass any arguments to main, at least in this unit.
 
 ### STEP 2: main function calls `distance` with parameters 1, 3, 6 and 5.
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack2.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack2.png" alt="image"/>
 
 Another entry is made for the call to `distance` and placed on the call stack.
 
 ### STEP 3: `distance` calls `square` with parameter `5`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack3.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack3.png" alt="image"/>
 
 A third entry is made for the call to `square` and placed on the stack.
 
 ### STEP 4: `square` returns 25 to `distance`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack4.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack4.png" alt="image"/>
 
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 5: `distance` calls `square` with parameter `2`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack5.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack5.png" alt="image"/>
 
 A third entry is made for the call to `square` and placed on the stack.
 
 ### STEP 6: `square` returns 4 to `distance`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack6.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack6.png" alt="image"/>
 
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 7: `distance` calls `Math.sqrt` with parameter `29`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack7.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack7.png" alt="image"/>
 
 A third entry is made for the call to `Math.sqrt` and placed on the stack.
 
 ### STEP 8: `Math.sqrt` returns 5.38516 to `distance`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack8.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack8.png" alt="image"/>
 
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 9: `distance` returns 5.38516 to `main`
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack9.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack9.png" alt="image"/>
 
 Entry for `distance` is taken off the stack. `main` becomes the active function.
 
@@ -167,7 +167,7 @@ Entry for `main` is taken off the stack. Call stack is now empty. Program has no
 
 ## Summary of control flow
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/controlFlow.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/controlFlow.png" alt="image"/>
 <!--<iframe src="https://giphy.com/embed/Az1CJ2MEjmsp2" width="480" height="221" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bare-barren-Az1CJ2MEjmsp2">via GIPHY</a></p>-->
 
 # Relevant MQ Video

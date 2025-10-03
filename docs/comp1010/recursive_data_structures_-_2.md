@@ -318,15 +318,15 @@ for(int i=0; i < idx - 1; i++) { //moved forward idx-1 times
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure24.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure24.png" alt="image"/>
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure25.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure25.png" alt="image"/>
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure26.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure26.png" alt="image"/>
 
 
 
@@ -345,10 +345,10 @@ current.next = nodeToRemove.next;
 return itemRemoved;
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure27.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure27.png" alt="image"/>
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure28.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure28.png" alt="image"/>
 
 
 ### Putting it together, remove(int) is defined as:
@@ -432,19 +432,19 @@ In the diagrams, we illustrate the process when inserting value 50 between 10 an
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure17.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure17.png" alt="image"/>
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure18.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure18.png" alt="image"/>
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure19.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure19.png" alt="image"/>
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure20.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure20.png" alt="image"/>
 
 
 
@@ -461,11 +461,11 @@ return true;
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure22.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure22.png" alt="image"/>
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure23.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_2/linkedlists-figure23.png" alt="image"/>
 
 
 
