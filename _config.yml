@@ -40,6 +40,7 @@ color_scheme: custom # Referring to _sass/color_schemes/custom.scss
 markdown: kramdown
 kramdown:
   input: GFM
+  math_engine: null
   syntax_highlighter: rouge # Stylises code blocks
   syntax_highlighter_opts:
     default_lang: text
