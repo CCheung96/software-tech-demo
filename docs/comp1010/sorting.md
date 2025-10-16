@@ -4,6 +4,7 @@ permalink: /comp1010/sorting
 parent: COMP1010
 nav_order: 9
 author: Gaurav Gupta and Greg Baker
+use_katex: true
 ---
 
 - TOC
