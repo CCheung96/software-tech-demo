@@ -8,7 +8,8 @@ A complete explanation of the project is to be added.
 ### Top Priorities
 
 * Reorganise the asset folder, reconfigure source links to match these changes
-  * Some assets are categorised first by unit instead of type. I changed this halfway, but assets in the comp1000 and comp1010 folders have not been reorganised yet.  
+  * Some assets are categorised first by unit instead of type. I changed this halfway, but assets in the comp1000 and comp1010 folders have not been reorganised yet.
+* Get Katex to adjust according to screen width
 * Establish consistent linting practices
 * Perform site-wide checks for:
   * functioning pages (ie. Page content working as intended)
