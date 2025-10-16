@@ -73,6 +73,8 @@ solution
   * Point 2
 {% endcapture %}
 
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
 ## Youtube Videos
 
 {% include youtube.html id="Yw6u6YkTgQ4" %}
