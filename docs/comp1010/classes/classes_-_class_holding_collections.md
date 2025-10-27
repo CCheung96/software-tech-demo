@@ -2,15 +2,16 @@
 title: Class-Holding Collections
 permalink: /comp1010/classes/class-holding-collections
 parent: Classes
+grand_parent: COMP1010
 nav_order: 6
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Classes as Types](./classes_types)
-  * [Copying objects](./classes_copies)
-  * [Instance methods](./classes_methods)
-  * [Composition](./classes_composition)
-  * [ArrayLists](./lists)
+  * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
+  * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
+  * [Instance methods]({{ site.baseurl }}/comp1010/classes/methods)
+  * [Composition]({{ site.baseurl }}/comp1010/classes/composition)
+  * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>

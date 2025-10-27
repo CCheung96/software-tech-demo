@@ -8,7 +8,7 @@ nav_order: 11
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Functions](./functions)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
 
 </details>
 

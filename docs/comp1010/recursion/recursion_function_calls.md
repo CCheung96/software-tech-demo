@@ -1,13 +1,15 @@
 ---
-title: What Happens During a Function Call
-permalink: /comp1010/recursion/function-call
+title: Function Calls
+custom-title: What Happens During a Function Call
+permalink: /comp1010/recursion/function-calls
 parent: Recursion
+grand_parent: COMP1010
 nav_order: 1
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Functions](./functions)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
 
 </details>
 

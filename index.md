@@ -7,7 +7,7 @@ landing_page:
   title: "Welcome"
   nav_order: 0
 ---
-<img src="./Hello_World.gif" alt="Hello World GIF" />
+<img src="./assets/Hello_World.gif" alt="Hello World GIF" />
 
 Welcome to the one-stop lecture notes for Software Technology stream, School of Computing, Macquarie University.
 

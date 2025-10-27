@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: some kind of demo
-logo: "assets/images/lorem_ipsum.avif"  # for putting a logo in place of the website title
-favicon_ico: "assets/images/lorem_ipsum.avif" # for adding a favicon
+title: Software Tech Demo
+logo: "assets/lorem_ipsum.avif"  # for putting a logo in place of the website title
+favicon_ico: "assets/lorem_ipsum.avif" # for adding a favicon
 # email: crystal.yuen.ki.chueng@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -34,10 +34,10 @@ github_username:  CCheung96
 
 # Build settings
 remote_theme: just-the-docs/just-the-docs
-# theme: minima
+# theme: minima (original theme)
 plugins:
-  - jekyll-feed
-  - jekyll-remote-theme
+  - jekyll-feed   # if a feed for posts is needed
+  - jekyll-remote-theme   # to run Just the Docs as a remote theme
 
 # Enable or disable the site search
 # Supports true (default) or false

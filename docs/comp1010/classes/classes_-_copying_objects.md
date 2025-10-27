@@ -1,14 +1,16 @@
 ---
-title: Copying Objects
+title: Copies
+custom-title: Copying Objects
 permalink: /comp1010/classes/copies
 parent: Classes
+grand_parent: COMP1010
 nav_order: 2
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Reference Semantics](./reference_semantics)
-  * [Classes as Types](./classes_types)
+  * [Reference Semantics]({{ site.baseurl }}/comp1000/reference-semantics)
+  * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
 
 </details>
 

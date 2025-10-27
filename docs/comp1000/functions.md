@@ -8,9 +8,9 @@ nav_order: 10
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * [Primitive Operations](primitive_operations)
-  * [Variables](variables)
-  * [Conditions](conditions)
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

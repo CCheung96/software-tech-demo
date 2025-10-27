@@ -7,10 +7,13 @@ nav_order: 9
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="functions">Functions</a>
-  * <a href="compositedata">Composite Data (Arrays)</a>
-  * <a href="classesarrayofobjects">Classes</a>
-  * <a href="lists">ArrayLists</a>
+
+  * <a href="compositedata">Composite Data??? (Arrays)</a>
+
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Composite Data??? (Arrays)]
+  * [Classes- Array of Objects]({{ site.baseurl }}/comp1010/classes/array-of-objects)
+  * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
@@ -21,7 +24,7 @@ nav_order: 9
 
 ## Author: Gaurav Gupta
 
-<!-- ![](./assets/images/margeSort.jpeg) -->
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/margeSort.jpeg" alt=""/>
 
 ## Why perform sorting?
 

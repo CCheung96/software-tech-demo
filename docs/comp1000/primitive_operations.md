@@ -8,7 +8,7 @@ nav_order: 2
 
 <details class="prereq" markdown="1">
 <summary>Assumed Knowledge</summary>
-  * [Transition to Processing](./transition_to_processing)
+  * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
 </details>
 
 <details class="outcomes" markdown="1">

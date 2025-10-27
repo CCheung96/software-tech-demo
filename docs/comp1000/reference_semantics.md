@@ -6,7 +6,7 @@ nav_order: 15
 ---
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
-  * [Compound Data](compound_data)
+  * [Compound Data???](compound_data)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

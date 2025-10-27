@@ -169,7 +169,8 @@ Say, the list contains items [12.5, 6.4, 8.5, 9.6, -3.4] and we want to add an i
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/customBuiltArraylist/customBuiltArraylist-figure3.png)
+
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/customBuiltArrayList-figure3.png" />
 
 <p></p>
 &nbsp;
@@ -204,7 +205,7 @@ Say, the list contains items [12.5, 6.4, 8.5, 9.6, -3.4] and we want to remove t
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/customBuiltArraylist/customBuiltArraylist-figure5.png)
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/customBuiltArrayList-figure5.png" />
 
 <p></p>
 &nbsp;
@@ -236,8 +237,8 @@ public Double remove(int idx) {
 
 # Complete class and client (including homework)
 
-- [MyArrayList.java](./MyArrayList.java) (contains several incomplete methods for practice)
-- [MyArrayListClient.java](./MyArrayListClient.java)
+- [MyArrayList.java](../../assets/comp1010/custom-built-arraylist/MyArrayList.java) (contains several incomplete methods for practice)
+- [MyArrayListClient.java](../../assets/comp1010/custom-built-arraylist/MyArrayListClient.java)
 
 # Homework tasks
 
@@ -338,7 +339,7 @@ int[] data = {20, 50, 10, 90, 70, 30};
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/lists-figure0.png)
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/lists-figure0.png" />
 
 <p></p>
 &nbsp;
@@ -436,7 +437,7 @@ There are four cases for inserting an item:
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/lists-figure2.png)
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/lists-figure2.png" />
 
 <p></p>
 &nbsp;
@@ -448,7 +449,7 @@ These shifts are illustrated in the following diagram:
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/lists-figure3.png)
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/lists-figure3.png" />
 
 <p></p>
 &nbsp;
@@ -469,7 +470,7 @@ There are two relevant cases for removing an item:
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/lists-figure4.png)
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/lists-figure4.png" />
 
 <p></p>
 &nbsp;
@@ -481,7 +482,7 @@ These shifts are illustrated in the following diagram:
 &nbsp;
 <p></p>
 
-![](./fig/06-lists/lists-figure5.png)
+<img src="{{ site.baseurl }}/assets/comp1010/custom-built-arraylist/lists-figure5.png" />
 
 <p></p>
 &nbsp;

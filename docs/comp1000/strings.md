@@ -8,7 +8,7 @@ nav_order: 18
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="compound_data">Compound Data</a>
+  * Compound Data???
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

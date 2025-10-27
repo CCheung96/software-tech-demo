@@ -1,7 +1,8 @@
 ---
 title: Recursion with String Data
 permalink: /comp1010/recursion/string-data
-parent: COMP1010
+parent: Recursion
+grand_parent: COMP1010
 nav_order: 2
 ---
 

@@ -7,9 +7,9 @@ nav_order: 13
 
 <details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
 
-  * <a href="variables">Variables</a>
-  * <a href="conditions">Conditions</a>
-  * <a href="loops">Loops</a>
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
 </details>
 
 <details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>

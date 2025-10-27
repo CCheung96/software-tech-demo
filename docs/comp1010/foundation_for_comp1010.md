@@ -23,7 +23,7 @@ nav_order: 2
 
 # What do you need to know to begin COMP1010?
 
-![](./assets/images/important.gif)
+<img src="{{ site.baseurl }}/assets/comp1010/foundation_for_comp1010/important.gif" />
 
 First of all, **study** this chapter instead of *skimming over*. I promise you, the hour or so it takes for you to go through it will be worth it by the end of the session.
 
