@@ -88,9 +88,16 @@ if(boolean expression) {
 }
 rest of the code
 ```
-<div>
-<center><img src="conditionsFigs/ifCondition.png" style="width: 200px;"/></center>
-</div>
+
+```mermaid
+flowchart TD
+  A@{ shape: diamond, label: "boolean<br/> expression"}
+  B[conditional code]
+  C@{ shape: stadium, label: "rest of the code"}
+  A -- true --> B
+  A -- false --> C
+  B --> C
+```
 
 Example:
 
@@ -103,7 +110,16 @@ if(x > 8) {
 print(result);
 ```
 
-<center><img src="conditionsFigs/ifExample.png" style="width: 300px;"/></center>
+```mermaid
+flowchart TD
+    A[x = 10; result = 5]
+    B@{ shape: diamond, label: "x > 8"}
+    D@{ shape: stadium, label: "println(result)"}
+    A --> B
+    B -- true --> C[result = result + 1]
+    B -- false --> D
+    C --> D
+```
 
 
 The above code executes the conditional code, increasing `result` by 1 and displaying the value 6.

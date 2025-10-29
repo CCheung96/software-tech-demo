@@ -61,6 +61,13 @@ defaults:
     values:
       layout: "custom-page"
 
+# library to add diagrams
+mermaid:
+  version: "11.6.0"
+
+# enable copy button for code blocks
+enable_copy_code_button: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
