@@ -5,13 +5,13 @@ parent: COMP1010
 nav_order: 5
 has_children: true
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * Compound Data???
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Recursion]({{ site.baseurl }}/comp1010/recursion)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand the underlying features of lists and how they differ from arrays.
   * Be able to use built-in Java lists

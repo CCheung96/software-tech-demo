@@ -5,14 +5,14 @@ parent: COMP1010
 nav_order: 13
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Recursion](./recursion)
-  * [Arrays](./compound_data)
+  * [Recursion]({{ site.baseurl }}/comp1010/recursion)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Recognise the reasons binary search works
   * Be able to trace a binary search on a sorted array

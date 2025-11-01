@@ -6,14 +6,14 @@ nav_order: 10
 ---
 
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Know the syntax of functions
   * Understand how functions relate to algorithms

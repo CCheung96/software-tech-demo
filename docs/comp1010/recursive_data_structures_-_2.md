@@ -5,13 +5,13 @@ parent: Recursive Data Structures
 nav_order: 2
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * <a href="./recursion">Recursion</a>
-  * <a href="./lists">Lists</a>
+  * [Recursion]({{ site.baseurl }}/comp1010/recursion/)
+  * [Lists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand the internal operation of recursively defined lists
   * Be able to create standard list operations for a recursivly defined list

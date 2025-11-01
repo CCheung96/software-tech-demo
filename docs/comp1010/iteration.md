@@ -5,13 +5,13 @@ parent: COMP1010
 nav_order: 6
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * <a href="./lists">Lists</a>
-  * <a href="./loops">Loops</a>
+  * [Lists]({{ site.baseurl }}/comp1010/lists)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Be able to iterate over built in lists
 </details>

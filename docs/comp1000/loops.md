@@ -5,14 +5,14 @@ parent: COMP1000
 nav_order: 9
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Know the two types of loops
   * Understand how to use loops to draw multiple things in one frame

@@ -4,10 +4,10 @@ permalink: /common/testing
 parent: Common
 nav_order: 4
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 </details>
 
 ## Adding SVG files, cleanly

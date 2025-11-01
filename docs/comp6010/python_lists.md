@@ -6,14 +6,14 @@ nav_order: 6
 ---
 
 <details class="prereq" markdown="1">
-<summary>Assumed Knowledge</summary>
+<summary>Assumed Knowledge:</summary>
   * [Variables and Operators in Python]({{ site.baseurl }}/comp6010/python-introduction)
   * Control Structures ([Conditions]({{ site.baseurl }}/comp1000/conditions) and [Loops]({{ site.baseurl }}/comp1000/loops))
   * [Functions]({{ site.baseurl }}/comp1000/functions)
 </details>
 
 <details class="outcomes" markdown="1">
-<summary>Learning Outcomes</summary>
+<summary>Learning Outcomes:</summary>
   * Be able to program with python lists.
 </details>
 

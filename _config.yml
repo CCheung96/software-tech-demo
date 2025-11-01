@@ -36,7 +36,7 @@ github_username:  CCheung96
 remote_theme: just-the-docs/just-the-docs
 # theme: minima (original theme)
 plugins:
-  - jekyll-feed   # if a feed for posts is needed
+  # - jekyll-feed   # if a feed for posts is needed
   - jekyll-remote-theme   # to run Just the Docs as a remote theme
 
 # Enable or disable the site search

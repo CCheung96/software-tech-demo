@@ -5,7 +5,7 @@ parent: COMP1000
 nav_order: 22
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
@@ -15,7 +15,7 @@ nav_order: 22
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Name your variables suitably
   * Lay out your code well

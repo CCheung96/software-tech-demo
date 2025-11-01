@@ -6,7 +6,7 @@ nav_order: 12
 ---
 
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
@@ -15,7 +15,7 @@ nav_order: 12
   
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Identify different scopes in a program
   * Identify which variable _declarations_ correspond to each variable _use_.

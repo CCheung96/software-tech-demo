@@ -5,11 +5,11 @@ parent: COMP6010
 nav_order: 8
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 - [Python Basics]({{ site.baseurl}}/comp6010/python-cheat-sheet)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Be able to open a file for reading
   * Be able to write to a file

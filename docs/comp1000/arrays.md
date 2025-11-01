@@ -5,14 +5,14 @@ parent: COMP1000
 nav_order: 13
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
   * [Loops]({{ site.baseurl }}/comp1000/loops)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand how to create, populate and operate on arrays
   <!--* how larger chunks of data are stored in a program

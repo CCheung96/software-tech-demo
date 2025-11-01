@@ -4,16 +4,16 @@ permalink: /comp1010/foundation-for-comp1010
 parent: COMP1010
 nav_order: 2
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * Variables
-  * Conditions
-  * Loops
-  * Functions
-  * Arrays
+  * [Variables]({{ site.baseurl }}/comp1000/variables)
+  * [Conditions]({{ site.baseurl }}/comp1000/conditions)
+  * [Loops]({{ site.baseurl }}/comp1000/loops)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand any gaps in knowledge required to begin COMP1010 satisfactorily.
 
@@ -441,7 +441,7 @@ When two references refer to the same instance, they are called *reference copie
 
 When two references refer to two different instances, but the instances are identical, they are called *instance copies*. 
 
-The [compound data lecture](https://softwaretechnologymq.github.io/compound_data) has much more information on this.
+The [arrays lecture]({{ site.baseurl }}/comp1000/arrays) has much more information on this.
 
 Performing simple operations such as finding the sum of all even numbers in an array, or the highest value in an array is something you should be able to do by the time you start COMP1010.
 

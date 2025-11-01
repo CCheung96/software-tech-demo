@@ -8,8 +8,8 @@ nav_order: 1
 ---
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * [Transition to Java]({{ site.baseurl }}/comp1000/transition-to-processing)
-  * [Compound Data???](./compound_data)
+  * [Transition to Java]({{ site.baseurl }}/comp1010/transition-to-java)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 
 </details>
 

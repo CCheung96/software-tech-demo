@@ -4,16 +4,16 @@ permalink: /comp1010/stacks-and-queues
 parent: COMP1010
 nav_order: 10
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge</summary>
+<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
-  * <a href="functions">Functions</a>
-  * <a href="compound_data">Compound Data (Arrays)</a>
-  * <a href="classes_types">Classes as Data Type</a>
-  * <a href="classes_methods">Classes (Methods)</a>
-  * <a href="lists">ArrayLists</a>
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Arrays]({{ site.baseurl }}/comp1000/arrays)
+  * [Classes- Types]({{ site.baseurl }}/comp1010/classes/types)
+  * [Classes- Methods]({{ site.baseurl }}/comp1010/classes/methods)
+  * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
 </details>
 
-<details class="outcomes" markdown="1"><summary>Learning Outcomes</summary>
+<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
 
   * Understand the scenarios in which stacks and queues are useful
   * Able to implement stacks and queues

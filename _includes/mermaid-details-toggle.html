@@ -1,0 +1,12 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("details").forEach((details) => {
+        details.addEventListener("toggle", function () {
+          if (details.open) {
+            // Initialize Mermaid when the details are toggled open
+            mermaid.init(undefined, details.querySelectorAll(".mermaid"));
+          }
+        });
+      });
+    });
+  </script>
