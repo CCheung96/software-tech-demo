@@ -55,7 +55,7 @@ public class Client {
 
 The idea is that if we start at `head`, we can visit every node in the chain until we hit `null`.
 
-<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/pYyZ__roUZk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!--{% include youtube.html id="pYyZ__roUZk" %}
 -->
 <br>
 &nbsp;
@@ -386,7 +386,7 @@ public Integer remove(int idx) {
 public boolean insert(int idx, int value)
 ```
 
-<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/pYyZ__roUZk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--{% include youtube.html id="pYyZ__roUZk" %}-->
 
 In the same manner as `get(int)` and `remove(int)`, we will first check if the item can be inserted at the given index.
 

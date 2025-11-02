@@ -19,7 +19,7 @@ nav_order: 3
   * Be able to write your own functions
 </details>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e_WfC8HwVB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="e_WfC8HwVB8" %}
 
 So, "computer programming is all about writing _algorithms_" is it?  Lets now think more about these algorithms.  Let's think about the different forms they might take, pulling our inspiration from "real life".
 
@@ -96,7 +96,7 @@ So, we have four axis on which to think about any task/algorithm/function.  We c
 We can give out tasks nicknames now.  "create toast" is an _informed producer_.  "make a sandwich" is an _informed producer_.  "make the grass short" is an _informed changer_ and most mathematical tasks are _informed producer_ s.  You will find some nicknames come up much more often than others.
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cDA3_5982h8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="cDA3_5982h8" %}
 # Algorithms in Processing
 
 Programming itself is the creation of algorithms, of creating _recipies_ for the computer to follow.

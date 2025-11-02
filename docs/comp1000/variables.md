@@ -27,15 +27,15 @@ Variables are a slot of memory in the computer with a name.
 {: .readings}
 Chapters 3 and 4 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ibW4oA7-n8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="ibW4oA7-n8I" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UvSjtiW-RH8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="UvSjtiW-RH8" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B-ycSR3ntik?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="B-ycSR3ntik?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rZ36BzXFT6Q?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="rZ36BzXFT6Q?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/50Rzvxvi8D0?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="50Rzvxvi8D0?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" %}
 
 ## Data types
 
@@ -63,7 +63,7 @@ The most common data types in Processing are:
 
 When it comes to numerical values, we suggest you store in `float` unless absolutely sure that the value will definitely be a whole number. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S7KirMglymE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="S7KirMglymE" %}
 
 ## Declaring a variable
 
@@ -84,7 +84,7 @@ char ch;
 
 Before you use a variable, you need to assign it a value. You can do it during declaration (also called *initialization*), or later. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R6cy1onKjGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="R6cy1onKjGE" %}
 
 Examples,
 
@@ -100,7 +100,7 @@ val = 6174; //remember, dont declare again
 
 ## Variable assignment is a 2-step process!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hUtgqIMKnLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="hUtgqIMKnLo" %}
 
 ## int, float and char relationship
 
@@ -382,7 +382,7 @@ Alternately, the same code might make the following situation - we don't know th
  </g>
 </svg>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5FSPd60GttU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="5FSPd60GttU" %}
 
 <div class="task" markdown="1">
 Draw what the computer memory will look like after the following code has run
@@ -817,7 +817,7 @@ void draw(){
 Experiment with _this_ program.  It works this time!
 </details></div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/57M73QzpPpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="57M73QzpPpQ" %}
 
 ## Commenting
 
@@ -863,4 +863,4 @@ float ySpeed = xSpeed * (height - y) / (width - x);
 
 # Furthering your understanding
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uEbiuMOu2TM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="uEbiuMOu2TM" %}

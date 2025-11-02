@@ -48,7 +48,7 @@ nav_order: 1
 <div class="task" markdown="1">
 [Download and install](https://processing.org/download/) the processing environment on your own computer. Install the latest stable version (ask on forums if unsure).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YZnnzmkWXD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="YZnnzmkWXD8" %}
 
 ## Processing Coordinates
 
@@ -62,7 +62,7 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 - The pixel below the origin is at (0, 1).
 - The pixel below (0, 1) is at (0, 2).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7Kxqu26Yqpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="7Kxqu26Yqpg" %}
 
 <!--Exercise-->
 {% capture question %}
@@ -164,15 +164,15 @@ Error message "Syntax error - Missing ";". To fix it, a semi-colon must be place
 
 Here is a short video we recorded to demonstrate downloading and installing Processing, and creating a simple program with a handul of functions.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FAPel-Dds9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="FAPel-Dds9k" title="YouTube video player" %}
 
 Here are some more video about basic processing shapes and colors.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DHnGGtm-fgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="DHnGGtm-fgM" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oCLBaGrvhTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="oCLBaGrvhTo" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g5ZSpzo7RzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="g5ZSpzo7RzI" %}
 
 ## How Processing Works
 
@@ -268,7 +268,7 @@ _Processing_ will work out what occurs in `setup`.
 {% include exercise.md question=question solution=solution %}
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sUbcZkot8-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="sUbcZkot8-A" %}
 
 <!--# Integer Division
 

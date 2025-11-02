@@ -19,7 +19,7 @@ We've created a complex game so you can practice working with complexity.  You a
 
 UniGame is the start of an RPG about Uni life.  You need to know that directions are "wasd" and "z" is for taking an action.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Isw7J6ylXSA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="Isw7J6ylXSA" %}
 
 # The high-level map
 

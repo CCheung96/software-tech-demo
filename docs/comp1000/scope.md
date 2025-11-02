@@ -61,7 +61,7 @@ The question that is answered by scope rules is _when I **use** the variable nam
 
 Since the declaration and creation of these memory slots is dynamic, lets take a look at the running program to understand better.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/56eW-Ti88Nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="56eW-Ti88Nc" %}
 
 ## The scoping rules
 
@@ -75,4 +75,4 @@ As a side note, these rules mean you can't have two variables with the same name
 
 For loop, conditions, and functions, the curly brace indicates a new scope, but the scope really starts before the curly brace, at the start of the expression.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pC7RUmHL2KY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="pC7RUmHL2KY" %}

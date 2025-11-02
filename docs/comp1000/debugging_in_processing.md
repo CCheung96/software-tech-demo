@@ -16,7 +16,7 @@ Consider the program you wrote in to [animate a blue circle](./variables.html#an
 </details>
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G9uDQBoHp08?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="G9uDQBoHp08?list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf" %}
 
 <div class="task" markdown="1">
 Use the console to _print out_ the value of `ypos` as the code from your animated blue circle is executing.  What happens to the values when the blue circle is off the screen?

@@ -280,8 +280,8 @@ public class Foo {
 
 # Relevant MQ Videos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QsCyi7P-wPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="QsCyi7P-wPU" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SLV3YZQCkpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="SLV3YZQCkpk" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/joWgrBaHd88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="joWgrBaHd88" %}

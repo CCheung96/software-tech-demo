@@ -88,7 +88,7 @@ This is analogous to the same question we ask the person in front of us in the q
 
 And our contribution to the answer is adding *low* to the answer we get.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KEEKn7Me-ms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="KEEKn7Me-ms" %}
 
 ## Equivalence
 
@@ -509,6 +509,6 @@ Note that this method uses `getReversed` as a *helper*, which, in turn, is recur
 
 # Relevant MQ Videos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CtFSt9wUj2k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="CtFSt9wUj2k" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DP3wNjB6Hug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="DP3wNjB6Hug" %}

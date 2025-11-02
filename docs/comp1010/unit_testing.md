@@ -177,4 +177,4 @@ Let's take a look at the following code that contains a single method `sumEven`.
 
 The JUnit test is a separate class created to test this method. The following video describes the steps to create a JUnit test. Generally a test is written before implementing a method.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7-T3kxCcMJY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="7-T3kxCcMJY" %}

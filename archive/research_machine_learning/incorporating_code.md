@@ -33,7 +33,7 @@ Creators of the mini console will review your changes and approve or deny them. 
 
 For an insight into what the repository owner see's when you make a pull request, have a look at this video.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O-wH8Yp11hs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="O-wH8Yp11hs" %}
 
 ***
 **NOTE:** There are lots of open-source projects out there. If you were keen on continuing to work on projects similar to this in your spare time, you can find some of them listed at [THIS](www.firsttimersonly.com/) website. You can clone, make changes and create pull requests for these projects within a friendly and supportive online community. Authors will also sometimes tag issues for beginners to help them get started on projects.

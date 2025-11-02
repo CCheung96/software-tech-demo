@@ -129,11 +129,11 @@ The debugger relies of placing `breakpoints` that are like pitstops in a car rac
 
 ## Visual Studio Code
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zZ8ofDJeizs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="zZ8ofDJeizs" %}
 
 ## Eclipse
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NQTQVYhmsL0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="NQTQVYhmsL0" %}
 
 # Pen and paper methodology
 
@@ -259,12 +259,12 @@ Explanation -
 
 Note: the videos below include JUnit testing in Eclipse as well as VS Code. It is recommended you watch both, as the Eclipse video provides foundational information on using JUnit. Also, it's good to get familiar with some of the differences of working with different IDEs.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iFJwFq_KmXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="iFJwFq_KmXY" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iFJwFq_KmXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="iFJwFq_KmXY" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jWwRRzU5hfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="jWwRRzU5hfA" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e9Oj08kgd4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="e9Oj08kgd4A" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Yq_a35_skpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="Yq_a35_skpw" %}

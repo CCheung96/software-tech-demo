@@ -24,9 +24,9 @@ nav_order: 2
 
 Chapters 1 and 2 of [Learning Processing](http://learningprocessing.com/) by Daniel Shiffman.  Macquarie University students have access to an electronic copy [via the library](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/7h5qs5/alma99244413575302171).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a562vsSI2Po" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5N31KNgOO0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n2oHuKG_BQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="a562vsSI2Po" %}
+{% include youtube.html id="5N31KNgOO0g" %}
+{% include youtube.html id="n2oHuKG_BQc" %}
 
 ### Reading
 
@@ -193,7 +193,7 @@ The arithmetic operators we discussed earlier have the following order of preced
 2. Multiplicative operators `*, /, %`. In the order of occurrence in the expression.
 3. Additive operators `+, -`. In the order of occurrence in the expression.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0r5cIBOVH2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="0r5cIBOVH2Y" %}
 
 Examples:
 
@@ -251,9 +251,8 @@ e--; //decreases e by 1
 
 ## Furthering your Understanding
 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/7FM0zvbHKnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="7FM0zvbHKnQ" %}
 
-<p>
+{% include youtube.html id="y48q9MsztzE" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y48q9MsztzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  

@@ -47,7 +47,7 @@ We have cut our teeth with Processing, but now it is time to graduate to the sam
   	* [Eclipse](https://www.eclipse.org/), or,
   	* [IntelliJ](https://www.jetbrains.com/idea/)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VAd5qs46z8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="VAd5qs46z8c" %}
 
 # How do programs run in Java (compared to Processing)
 
@@ -85,11 +85,11 @@ Install Java SE/ JDK and Visual Studio Code. Go to the Computing Drop-in Centre 
 
 ## Installing Java and Visual Studio Code on Windows
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XhshWGx-Rp8?si=_nmNO0qCdd8nPmos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% include youtube.html id="XhshWGx-Rp8?si=_nmNO0qCdd8nPmos" %}
 
 ## Installing Java and Visual Studio Code on Mac
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/i3oxlGHWKaQ?si=99qr9YjNYxPAWifI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% include youtube.html id="i3oxlGHWKaQ?si=99qr9YjNYxPAWifI" %}
 
 # Behind the scenes: Compiling and running java programs from command prompt or terminal
 
@@ -191,9 +191,9 @@ If there are no run-time errors, you will get the following output on the consol
 Hello world!
 ~~~
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VAd5qs46z8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="VAd5qs46z8c" %}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Atxj7fwu5Uk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="Atxj7fwu5Uk" %}
 
 
 <div class="task" markdown="1">
@@ -283,7 +283,7 @@ public class Worker {
 
 ## First java program in Eclipse
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8DcIQcmwuSE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="8DcIQcmwuSE" %}
 
 ## Adding more functions to a java program
 
@@ -311,7 +311,7 @@ Equivalent versions of the same function in `Processing` and `Java` are provided
 
 The `public` keyword is for consistency and will be used for all functions unless explicitly specified to be `private` \(again, more about this in week 2 and 3\).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XS48hrWdm4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtube.html id="XS48hrWdm4Y" %}
 
 # Warm Up
 
@@ -402,4 +402,4 @@ As opposed to the prime checking example, this is a `validation` algorithm, wher
 
 # Some practice functions
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_Yw65zyjRnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html id="_Yw65zyjRnw" %}
