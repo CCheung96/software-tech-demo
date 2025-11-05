@@ -37,6 +37,11 @@ remote_theme: just-the-docs/just-the-docs
 # theme: minima (original theme)
 color_scheme: custom
 
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 plugins:
   # - jekyll-feed   # if a feed for posts is needed
   - jekyll-remote-theme   # to run Just the Docs as a remote theme

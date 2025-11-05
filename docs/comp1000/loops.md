@@ -187,7 +187,17 @@ while(boolean expression) {
 rest of the code
 ```
 
-<center><img src="./assets/images/whileLoop.png" style="width: 300px;"/></center>
+```mermaid
+flowchart TD
+    A@{ shape: hex, label: "boolean expression"}
+    A-->|"False"| F@{ shape: stadium, label: "rest of code" }
+	A -->|"True"| B@{ shape: stadium, label: "statement 1"}
+    B --> C@{ shape: stadium, label: "statement 2" }
+    C --> G@{ shape: text, label: "..." }
+    G --> D@{ shape: stadium, label: "statement n"}
+    D --> A
+    
+```
 
 Example:
 
@@ -201,7 +211,16 @@ while(a > 0) {
 println(result);
 ```
 
-<center><img src="loopsFigs/whileExample.png" style="width: 300px;"/></center>
+```mermaid
+flowchart TD
+A@{ shape: stadium, label: "int a = 6 \n int result = 1"}
+A --> Z@{ shape: f-circ, label: "Junction"}
+Z --> B@{ shape: hex, label: "a > 0?"}
+B -->|"False"| D@{ shape: stadium, label: "println(result)"}
+B -->|"True"| C@{ shape: stadium, label: "result = result * a \n a = a - 1"}
+C --> Z
+
+```
 
 The above code executes the loop 6 times (for `a` = 6,5,4,3,2,1 but not for 0) each time multiplying the current value of `a` into `result` and the final value of `result` is 6\*5\*4\*3\*2\*1 = 720.
 
@@ -291,7 +310,18 @@ for(initializations; boolean expression; post-iteration update(s)) {
 rest of the code;
 ```
 
-<center><img src="./assets/images/forLoop.png" style="width: 300px;"/></center>
+
+```mermaid
+flowchart TD
+A@{ shape: stadium, label: "initialisations"}
+A --> F@{ shape: f-circ, label: "Junction" }
+F --> B@{ shape: hex, label: "boolean expression"}
+B -->|False| E@{ shape: stadium, label: "rest of code"}
+B -->|"True"| C@{ shape: stadium, label: "code inside loop"}
+C --> D@{ shape: stadium, label: "post-iteration update(s)"}
+D --> F
+
+```
 
 Example:
 
@@ -971,5 +1001,5 @@ for(int i = n-1; i > 0; i--){
 println(n + " people means");
 println(handshakes + " handshakes");
 ```
-
-</div>
+</details>
+</div >
