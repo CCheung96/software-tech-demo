@@ -5,18 +5,18 @@ permalink: /comp1000/primitive-operations
 parent: COMP1000
 nav_order: 2
 ---
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
+* [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
+* Be able to create static processing sketches and understand how they came to be.
+* Have the tools to create sketches based on your own imagination.
+* Understand the categories into which values might fit and the consequences of these categories.
+{% endcapture %}
 
-<details class="prereq" markdown="1">
-<summary>Assumed Knowledge:</summary>
-  * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
-</details>
-
-<details class="outcomes" markdown="1">
-<summary>Learning Outcomes:</summary>
-  * Be able to create static processing sketches and understand how they came to be.
-  * Have the tools to create sketches based on your own imagination.
-  * Understand the categories into which values might fit and the consequences of these categories.
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 ## Drawing Primitives
 
@@ -104,12 +104,13 @@ What type is each of the following values?
 
 You must be careful to know what type any particular value has because it affects how the program runs.  For example, each of the basic operations we know about have particular effects based on the types it is working on.
 
-<table border="1px" style="padding: 5px">
- <tr><th>type</th><th><code>+</code></th><th><code>-</code></th><th><code>*</code></th><th><code>/</code></th></tr>
-    <tr><td><code>int</code></td><td>normal addition</td><td>normal subtraction</td><td>normal multiplication</td><td>integer division</td></tr>
-    <tr><td><code>float</code></td><td>normal addition</td><td>normal subtraction</td><td>normal multiplication</td><td>normal division</td></tr>
-    <tr><td><code>char</code></td><td>something strange</td><td>something strange</td><td>something strange</td><td>something strange</td></tr>
-</table>
+{: .table}
+| Type     | `+`                | `-`                | `*`                   | `/`                |
+|----------|--------------------|--------------------|------------------------|--------------------|
+| `int`    | normal addition     | normal subtraction | normal multiplication | integer division   |
+| `float`  | normal addition     | normal subtraction | normal multiplication | normal division    |
+| `char`   | something strange   | something strange  | something strange      | something strange  |
+
 
 You will notice that mostly things work out as you expect, but you need to be aware of _integer division_ and _not doing arithmetic on characters_.  Don't ever try and do arithmetic on characters and as for integer division...
 
@@ -124,9 +125,11 @@ Processing will also convert between some types if you ask it to.  In particular
 
 While we are thinking about it, how does Processing know when I mean the _character_ `'0'` instead of the number `0`?  All characters are within single quotes, so the character `0` will look like `'0'`.  The same holds for all other characters, they look like `'c'`, `'g'`, `'^'`, `'5'`, `'$'`, `'@'`, `'z'` in Processing code.
 
+<!-- Exercise -->
+{% capture my_problem %}
 Identify the _type_ of each item in the following code.
 
-```processing
+```java
 circle(width/2, height/2, 40);
 ```
 
@@ -137,17 +140,24 @@ circle(width/2, height/2, 40);
   * What is the type of `width/2`
   * What is the type of `height/2`
   * `circle` expects `floats` according to the [processing reference](https://processing.org/reference/circle_.html).  How can you resolve this with your answers above.
+{% endcapture %}
 
-<details markdown="1">
-<summary>solution</summary>
-  - <code>int</code> because it is set from <code>size</code> which only accepts <code>int</code>s
-  - <code>int</code> because it is set from <code>size</code> which only accepts <code>int</code>s
-  - <code>int</code> because if you don't say otherwise, processing treats numbers as integers
-  - <code>int</code> because if you don't say otherwise, processing treats numbers as
-  - <code>int</code> because dividing an <code>int</code> by another <code>int</code> will give you a third <code>int</code>
-  - <code>int</code> because dividing an <code>int</code> by another <code>int</code> will give you a third <code>int</code>
+{% capture my_solution %}
+  - `width` is `int`, because it is set from `size` which only accepts `int`s
+  - `height` is`int`, because it is set from `size` which only accepts `int`s
+  - `2` is`int`, because if you don't say otherwise, processing treats numbers as integers
+  - `40` is`int`, because if you don't say otherwise, processing treats numbers as
+  - `width/2` is`int`, because dividing an `int` by another `int` will give you a third `int`
+  - `height` is `int`, because dividing an `int` by another `int` will give you a third `int`
   - Processing automatically converts an integer to a float. For example, `8` is converted to `8.0`, `-17` to `-17.0`.
-</details>
+{% endcapture %}
+
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+%}
+
 
 ## Type significance in arithmetic expressions
 
@@ -228,7 +238,7 @@ Examples:
 
 When you want to update the value of a variable, you can use a *shorthand operator*.
 
-```processing
+```java
 var = var + a; //var+=a;
 var = var - a; //var-=a;
 var = var * a; //var*=a;
@@ -241,7 +251,7 @@ var = var - 1; //var--;
 
 Examples,
 
-```processing
+```java
 nStudents+=4; //increases nStudents by 4
 n*=10; //multiplies n by 10 and copies that into n
 b/=2; //divides b by 2 and copies that into b

@@ -35,12 +35,14 @@ github_username:  CCheung96
 # Build settings
 remote_theme: just-the-docs/just-the-docs
 # theme: minima (original theme)
-color_scheme: custom
+color_scheme: custom  # This is specifically for customising Just The Docs
 
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter: rouge # Stylises code snippets, aside from processing
+  syntax_highlighter_opts:
+    default_lang: java
 
 plugins:
   # - jekyll-feed   # if a feed for posts is needed
@@ -67,6 +69,9 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "custom-page"
+
+back_to_top: true
+back_to_top_text: "Back to top"
 
 exclude:
   - archive

@@ -5,6 +5,10 @@ parent: COMP1000
 nav_order: 8
 ---
 
+- TOC
+{:toc}
+
+
 <details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
@@ -40,9 +44,12 @@ Chapter 5 of [Learning Processing](https://learningprocessing.com) by Danel Shif
 
 A conditional is a statement.  It _does_ one of two things.  However, the boolean that determines which branch is an expression, _it evalates to true or false_.
 
-<div class="task" markdown="1"><a name="one_way_animated_blue_circle"></a>
+<!-- Exercise: One-Way Animated Blue Circle -->
+{% capture my_problem %}
 Write a program that draws a blue cirle that moves from the top to the bottom of the sketch and when reaching the bottom of the screen, will change direction and start moving up the screen.
-<details class="solution" markdown="1"><summary>solution</summary>
+{% endcapture %}
+
+{% capture my_solution %}
 The problem description does not directly relate to conditions, so we need to "re-interpret" it to put it into "code-speak".  Another way to consider the problem statement (as a Processing programmer) is "write a program where a blue circle is drawn on the screen and every time it is drawn it moves a little.  IF it has hit the bottom previously, it should move up, otherwiser it should move down".  This leads us more directly to some code.  We need a condition so that we can choose which code path will run on any individual frame (`if (hitBottom)`) and to make it work we need a boolean _recording_ if we have hit the bottom before.  Finally, we need an condition that checks everytime we draw the sketch if we just hit the bottom.
 
 ~~~~~
@@ -72,8 +79,14 @@ void draw(){
 
 }
 ~~~~~
-</details>
-</div>
+{% endcapture %}
+
+<a id="exercise-one-way-animated-blue-circle"></a>
+{% include exercise.html
+  title="Exercise: One-Way Animated Blue Circle"
+  problem=my_problem
+  solution=my_solution
+%}
 
 We will now go over the material presented in the above videos, but we will be more _precise_ about what is going on to deepen your understanding.
 
@@ -187,9 +200,8 @@ An `if` is a _statement_ not an _expression_. Therefore, you are free to put any
 
 <!--That means it has no intrinsic value, it exists only for what it can _do_.  For example, variables are _expressions_ because if  you put one in your code, it is the same as putting some value in that spot (the value stored in the variable).  However, an `if` may effect variables, or draw things on the screen, but the statement itself has no value, i.e. `if (1 < 2) {line(1,1,,1,);}` is not the same as putting some value in that spot.-->
 
-Exercise:
-
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 Draw a flowchart for the following code and determine the values of `a, b, c` after the code executes.
 
 ```java
@@ -208,12 +220,31 @@ else {
 	}
 }
 ```
-<details><summary>Solution</summary>
-	<center><img src="conditionsFigs/earlyTask.png" style="width: 400px;"/></center>
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% capture my_solution %}
+```mermaid
+flowchart TD
+A("int a = 5, b = 2, c = 10")
+A ==> B@{ shape: hex, label: "a < b?"}
+B -->|true| C@{ shape: hex, label: "c == a?"}
+C -->|true| D(c = c + 1)
+C -->|false| H@{ shape: stadium, label: "end of code"} 
+B ==>|false| E@{ shape: hex, label: "b < c?"} 
+E ==>|true| F(b = c - a)
+E -->|false| G(a = 0)
+F ==> I("a = 5, b = 5, c = 10")
+```
+{% endcapture %}
+
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 What is wrong with the following code? Draw a flowchart to illustrate the problem. Write the corrected code.
 
 ```java
@@ -228,11 +259,22 @@ if(b >= a) {
 }
 println(max);
 ```
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
 
+{% capture my_solution %}
 Both assignment operators are conditional and it is possible, in terms of control flow, that neither of the assignment operators are executed (although mathematically it's not possible in this case). You will get a <strong>Variable max may not have been initialized</strong> error. Diagram of the buggy code:
 
-<center><img src="conditionsFigs/buggyCode.png" style="width: 300px;"/></center>
+```mermaid
+flowchart TD
+A("int a = (int)random(6)<br> int b = (int)random(6)<br> int max")
+A --> B@{ shape: hex, label: "a > b?"} 
+B -->|true| C("max = a")
+C --> D@{ shape: hex, label: "b > = a?"}
+B -->|"false"| D
+D -->|true| E("max = b")
+E --> F("println(max)")
+D -->|false| F
+```
 
 Corrected code:
 
@@ -249,12 +291,30 @@ else {
 println(max);
 ~~~~~
 
-</details>
-</div>
+```mermaid
+flowchart TD
+A("int a = (int)random(6)<br> int b = (int)random(6)<br> int max")
+A --> B@{ shape: hex, label: "a > b?"} 
+B -->|true| C("max = a")
+C --> D("println(max)")
+B -->|false| E("max = b")
+E --> D
+```
+{% endcapture %}
 
-<div class="task" markdown="1"><a name="two_way_animated_blue_circle"></a>
-Adjust [your animated blue circle](./conditions.html#one_way_animated_blue_circle) so it also bounces off the top of the screen, thus always going up and down forever, never disapearing.  Note that there are two approaches to solving this.
-<details class="solution" markdown="1"><summary>Solution 1</summary>
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+%}
+
+
+<!-- Exercise: Two-Way Animated Blue Circle -->
+{% capture my_problem %}
+Adjust [your animated blue circle](#exercise-one-way-animated-blue-circle) so it also bounces off the top of the screen, thus always going up and down forever, never disapearing.  Note that there are two approaches to solving this.
+{% endcapture %}
+
+{% capture my_solution %}
 We can simply use the `hitBottom` boolean in a smarter way.  What if we think of is as "moving up" instead?  Then it will be `false` at the start, and change to `true` when we hit the bottom, then `false` again when we hit the top.
 
 ~~~~~
@@ -287,8 +347,9 @@ void draw(){
 ~~~~~
 
 Notice that we _can't_ use an `else` on the `yPos` check.  Many new programmers will try this.  Why won't that work?
-</details>
-<details class="solution" markdown="1"><summary>Solution 2</summary>
+{% endcapture %}
+
+{% capture my_solution_2 %}
 Solution 1 is the simplest, but you will see many people suggest the following solution.  It works really well if _any more complex animation_ is required, so it is a good idea to understand it now.
 
 In this solution we rephrase the task into the following "draw a blue circle that is moving each frame of the animation.  At first, it should move with a speed of +1 (i.e. down the screen) but when the circle hits the bottom of the screen its speed should reverse to -1 (i.e. up the screen).  Again it will reverse when it hit the top of the screen, etc."
@@ -321,9 +382,16 @@ void draw(){
 ~~~~~
 
 Interestingly, this has saved us from one conditional!  It is perhaps a little harder to see at first, but the code is shorter.  The "variability" of the variable is doing the work of the condition.  Note also how we now have many more options, we can speed up the animation quite easily which we could not in solution 1.
+{% endcapture %}
 
-</details>
-</div>
+<a id="exercise-two-way-animated-blue-circle"></a>
+{% include exercise.html
+  title="Exercise: Two-Way Animated Blue Circle"
+  problem=my_problem
+  solution=my_solution
+  solution2=my_solution_2
+%}
+
 
 ## Tracing "flow" (or control flow)
 
@@ -399,7 +467,8 @@ A program that might look long and daunting actually reduces to a much-smaller f
 
 In real life, we need to convert written/spoken descriptions of a case into precise code and in this section, we'll take a look as such scenarios.
 
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 A website offers discounts based on item categories and quantities. There are four categories - A, B, C, and D. For all categories except D, the following rules exist,
 
 - Less than 2 items: no discount
@@ -412,8 +481,9 @@ For category D, there is a 1% discount for every item purchased, up to a maximum
 
 Write a piece of code that outputs the percentage discount for a given category (stored in `char cateogry` that can be either 'A', 'B', 'C', or 'D') and quantity (stored in `int quantity`).
 
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
 
+{% capture my_solution %}
 ```java
 int discountPercent = 0;
 
@@ -437,10 +507,16 @@ else {
   }
 }
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 The shopping mall charges for parking based on the following rules:
 
 - under 3 hours: free
@@ -453,8 +529,9 @@ The shopping mall charges for parking based on the following rules:
 - 6 hours or over: $40
 
 Given the number of hours and minutes in two variables, write a piece of code that stores the parking cost in a variable `parkingFee`.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution 1</summary>
+{% capture my_solution %}
 We have two solutions, this one only uses simple boolean expressions, but that creates a complex, nested set of `if` statements.
 
 ```java
@@ -494,9 +571,9 @@ if (minutes >= 180) {
   }
 }
 ```
-</details>
+{% endcapture %}
 
-<details markdown="1"><summary>Solution 2</summary>
+{% capture my_solution_2 %}
 This second solution needs more complex boolean expressions, but that makes things simpler overall.
 
 ```java
@@ -531,11 +608,17 @@ if (minutes >= 360) {
 }
 
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+  solution2=my_solution_2
+%}
 
+<!-- Exercise -->
+{% capture my_problem %}
 Write a piece of code to address the same problem as in scenario 3, but an additional rule. Weekend (Sat, Sun) parking incurs a flat rate of $4 per 30 minutes. That is,
 
 - 0 to 29 minutes: $4
@@ -544,9 +627,9 @@ Write a piece of code to address the same problem as in scenario 3, but an addit
 - and so on...
 
 An additional variable `dayOfWeek` is available and is 0 for Monday, 1 for Tuesday and so on.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```java
 int parkingFee = 0;
 
@@ -584,8 +667,17 @@ if (dayOfWeek < 5) { //NOT the weekend
   println("Weekend parking fee for "+minutes/60+" hours and "+minutes%60+" minutes: $"+parkingFee);
 }
 ```
-</details>
-</div>
+{% endcapture %}
+
+{% include exercise.html
+  title="Exercise"
+  problem=my_problem
+  solution=my_solution
+%}
+
+
+
+
 
 <h3>Furthering Your Understanding</h3>
 {% include youtube.html id="wUPc__xuCc0" %}

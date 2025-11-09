@@ -1,4 +1,4 @@
-<!-- The basic structure for Exercise/Example/Scenario blocks -->
+<!-- The standardised HTML structure for Exercise/Example/Scenario blocks with hidden solutions. It is styled with CSS. -->
 <div class="exercise-container">
     <h2>{{ include.title }}</h2>
     <div class="exercise-description">
@@ -10,4 +10,12 @@
             {{ include.solution | markdownify }}
         </details>
     </div>
+    {% if include.solution2 %}
+    <div class="exercise-solution">
+        <details>
+            <summary>Solution 2</summary>
+            {{ include.solution2 | markdownify }}
+        </details>
+    </div>
+    {% endif %}
 </div>
