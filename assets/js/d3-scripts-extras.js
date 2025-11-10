@@ -1,27 +1,8 @@
-// For creating D3 images. 
-
-//This example generates a blue circle wherever you add the HTML id "my-d3-target".
 document.addEventListener("DOMContentLoaded", function () {
-    const el = document.getElementById("my-d3-target");
-    if (!el) return;
-  
-    const svg = d3.select(el)
-      .append("svg")
-      .attr("width", 300)
-      .attr("height", 200);
-  
-    svg.append("circle")
-      .attr("cx", 150)
-      .attr("cy", 100)
-      .attr("r", 50)
-      .style("fill", "steelblue");
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
     const size = 20;
     const rows = 9, cols = 9;
   
-    // Draw function with optional data
+    // Draw 9 x 9 grid with optional data
     function drawGrid(svg, numberData = []) {
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
@@ -45,28 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
-
-  // Grid 3: diagonal matrix
-  const matrix = [
-    ["1", "", "", "", "", "", "", "", ""],
-    ["", "2", "", "", "", "", "", "", ""],
-    ["", "", "3", "", "", "", "", "", ""],
-    ["", "", "", "4", "", "", "", "", ""],
-    ["", "", "", "", "5", "", "", "", ""],
-    ["", "", "", "", "", "6", "", "", ""],
-    ["", "", "", "", "", "", "7", "", ""],
-    ["", "", "", "", "", "", "", "8", ""],
-    ["", "", "", "", "", "", "", "", "9"]
-  ];
-
-  const matrixData = [];
-  for (let y = 0; y < matrix.length; y++) {
-    for (let x = 0; x < matrix[y].length; x++) {
-      if (matrix[y][x]) {
-        matrixData.push({ x, y, text: matrix[y][x] });
-      }
-    }
-  }
   
     // Get all grid elements
     const elements = document.getElementsByClassName("9x9grid");
@@ -80,17 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
         .attr("height", rows * size);
   
       // Use different data depending on the grid
-      if (id === "9x9-grid-1") {
+      if (id === "numbered-grid") {
         drawGrid(svg, [
           { x: 0, y: 0, text: "15" },
-          { x: 0, y: 1, text: "1" }
+          { x: 0, y: 1, text: "1" },
+          { x: 2, y: 2, text: "3" }
         ]);
-      } else if (id === "matrix-grid"){
-        drawGrid(svg, matrixData);
       } else {
         drawGrid(svg); // plain grid
       }
     });
   });
-
-

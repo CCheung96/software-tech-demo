@@ -74,7 +74,7 @@ A variable is declared as,
 
 Examples,
 
-```processing
+```java
 int x;
 float y;
 boolean flag;
@@ -87,7 +87,7 @@ Before you use a variable, you need to assign it a value. You can do it during d
 
 Examples,
 
-```processing
+```java
 int x = 1729;
 float y = 3.14;
 boolean flag = true;
@@ -162,7 +162,7 @@ Notice that the assignment statement is made up of two expressions connected wit
 
 ### Valid
 
-```processing
+```java
 //declarations
 int a;
 float b;
@@ -180,7 +180,7 @@ int first = 'a'; //holds the integer value corresponding to 'a' (97)
 
 ### Invalid
 
-```processing
+```java
 //declarations + initializations
 int rego = 17.29; //cannot store a float in int (without casting)
 float bill = true; //canot store a boolean in a float
@@ -238,6 +238,7 @@ We visualise this memory bank as a grid of buckets (we will also call a bucket a
 </svg>
 
 Whereas a program that is using two slots to hold the values 1 and 15 will look like
+
 
 <svg xmlns="http://www.w3.org/2000/svg" height="200" width="400" version="1.1" viewBox="0 0 105.83333 52.916666">
  <g transform="translate(0 -244.1)">
@@ -544,19 +545,19 @@ void draw(){
 
 In processing, we can get a random floating-point number between 0 and `n` (including 0 but **excluding** `n`) using,
 
-```processing
+```java
 float r = random(n);
 ```
 
 If we cast the result to an integer, that integer will be between 0 and `n` (including 0 but **excluding** `n`)
 
-```processing
+```java
 int z = (int)r;
 ```
 
 Example:
 
-```processing
+```java
 float amount = random(2.5); //could be 0.0000 to 2.49999
 int dollars = (int)amount; 
 //dollars could be 0 or 1 or 2, 2 with lower probability
@@ -564,26 +565,26 @@ int dollars = (int)amount;
 
 Similarly, we can get a random floating-point number between `low` and `high` (including `low` but **excluding** `high`) using,
 
-```processing
+```java
 float r = random(low, high);
 ```
 
 If we cast the result to an integer, that integer will be between `low` and `high` (including `low` but **excluding** `high`)
 
-```processing
+```java
 int z = (int)r;
 ```
 
 Example:
 
-```processing
+```java
 float amount = random(2.5, 4.8); //could be 2.5 to 4.79999
 int dollars = (int)amount; 
 //dollars could be 2 or 3 or 4, 2 with the lowest probability,
 //4 with higher, and 3 with highest
 ```
 
-```processing
+```java
 float r = random(1, 7); //could be 1.0 to 6.99999 but not 7
 int diceRoll = (int)r; 
 //diceRoll can be 1,2,3,4,5,6 all with (almost) the same probability
@@ -617,7 +618,7 @@ Global variables are declared, typically, at the top of the program, **before** 
 
 These variables, if uninitialized, will be assigned the default value of their data type, by `setup`. Global variables can be accessed inside any function and only one shared copy of a global variable exists. If one section of your code modifies the variable, it is modified for all other parts of the program.
 
-```processing
+```java
 int x = 1729;
 
 void setup() {
@@ -632,7 +633,7 @@ void draw() {
 
 Both print statements will display the same value (1729).
 
-```processing
+```java
 int x = 1729;
 
 void setup() {
@@ -649,7 +650,7 @@ void draw() {
 Now, the values output in the statement inside setup will be 1729 while the one in the statement inside draw will be 1730.
 
 
-```processing
+```java
 int x = 1729;
 
 void setup() {
@@ -680,7 +681,7 @@ On the other hand, a variable should be declared locally if its value is needed 
 
 For example, while calculating the length of a line between points `(x1, y1)` and `(x2, y2)`, we'll do something like:
 
-```processing
+```java
 float diffX = (x2 - x1);
 float diffY = (y2 - y1);
 float D = diffX * diffX + diffY * diffY;
@@ -699,7 +700,7 @@ For example, I would then like to draw a circle of diameter 50 centred at the ce
 
 #### Version 1 (buggy)
 
-```processing
+```java
 //BUGGY!
 int x = width/2;
 int y = height/2;
@@ -720,7 +721,7 @@ You will notice the circle first appears centred at the top-left corner. That is
 
 #### Version 2 (buggy)
 
-```processing
+```java
 //BUGGY!
 
 void setup() {
@@ -743,7 +744,7 @@ What we CAN do is to declare them globally but initialize after we have the requ
 
 #### Version 3
 
-```processing
+```java
 int x, y; //global declaration
 
 void setup() {
@@ -829,7 +830,7 @@ Extra whitespaces and newlines are also ignored during compilation.
 
 The following program,
 
-```processing
+```java
 size(300, 200); //300 pixels wide and 200 pixels high
 
 int x = 150;
@@ -847,7 +848,7 @@ float ySpeed = xSpeed * (height - y) / (width - x);
 
 is compiled to,
 
-```processing
+```java
 size(300, 200); 
 int x = 150;
 int y = 100;
