@@ -5,19 +5,24 @@ parent: COMP1000
 nav_order: 14
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
+
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
   * [Loops]({{ site.baseurl }}/comp1000/loops)
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
-
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand how to pass arrays to, and return arrays from, functions
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 # Passing an array to a function
 

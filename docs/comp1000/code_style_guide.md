@@ -5,24 +5,29 @@ parent: COMP1000
 nav_order: 22
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
 
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
   * [Loops]({{ site.baseurl }}/comp1000/loops)
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Name your variables suitably
   * Lay out your code well
   * Comment well
   * Further understand the need to delegate (readability)
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 # Code style guideline 
 

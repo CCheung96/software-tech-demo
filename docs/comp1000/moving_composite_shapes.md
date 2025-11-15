@@ -5,19 +5,22 @@ parent: COMP1000
 nav_order: 5
 ---
 
-<details class="prereq" markdown="1">
-<summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
-</details>
-
-
-<details class="outcomes" markdown="1">
-<summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Be able to move a complex shape (or change some other attributes)
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 All the codes in this page are provided at [movingCompositeShapesCode.zip](./assets/codes/movingCompositeShapesCode.zip). 
 
@@ -27,7 +30,7 @@ A second version is also available at at [movingCompositeShapesCodeTrigonometryV
 
 Once you understand variables, moving simple shapes like circles and rectangles is hopefully straightforward.
 
-```processing
+```java
 float x;
 
 void setup() {
@@ -58,7 +61,7 @@ Moving a composite shape is trickier than moving a basic shape. But the key ther
 
 Consider the following composite shape.
 
-```processing
+```java
 size(600, 400); //change to 100, 100 and see what happens
 background(255);
 
@@ -84,7 +87,7 @@ The first problem is that if we want to relocate this shape to another position 
 However, if we store the `x` and `y` values in two variables, we only have to change it once in case we change our mind.
 
 
-```processing
+```java
 size(600, 400); //change to 100, 100 and see what happens
 background(255);
 
@@ -120,7 +123,7 @@ are hard-coded values, we call *magic numbers*. (As in, appearing magically).
 
 To make the program scalable, we need to fix that. So we identify diameter, and then radius is always going to be half of that.
 
-```processing
+```java
 size(600, 400); //change to 100, 100 and see what happens
 background(255);
 
@@ -148,7 +151,7 @@ text("Harry Potter", x, y + envelopeHeight/2);
 
 Next, put the shape into draw, but **not** move. Variables are *local* and not *global* since we don't need to remember their values from one iteration to another.
 
-```processing
+```java
 void setup() {
   size(600, 400);
   background(255);
@@ -192,7 +195,7 @@ Next, let's say we want the shape to move UP.
 
 If you simply add,
 
-```processing
+```java
 y=y-1;
 ```
 
@@ -244,7 +247,7 @@ So we keep all relevant variables global.
 
 Finally, we get our answer:
 
-```processing
+```java
 float x;
 float y;
 float envelopeWidth;
@@ -304,13 +307,13 @@ It is incredibly easy it is to change the varying aspect here.
 
 Instead of,
 
-```processing
+```java
 y = y - 1;
 ```
 
 try, 
 
-```processing
+```java
 x = x - 1;
 ```
 
@@ -320,13 +323,13 @@ You can also change the dimensions of the shape but in this case, you have to be
 
 If you only add the following, the envelope's height and seal's diameter won't change.
 
-```processing
+```java
 envelopeWidth = envelopeWidth + 1;
 ```
 
 If you increase all three by 1, the *shape* will be lost.
 
-```processing
+```java
 envelopeWidth = envelopeWidth + 1;
 envelopeHeight = envelopeHeight + 1;
 sealDiameter = sealDiameter + 1;
@@ -334,7 +337,7 @@ sealDiameter = sealDiameter + 1;
 
 What you need to do is to increase `envelopeWidth` and calculate the others based on it.
 
-```processing
+```java
 envelopeWidth = envelopeWidth + 1;
 envelopeHeight = envelopeWidth/2;
 sealDiameter = envelopeHeight/4;

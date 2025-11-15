@@ -4,6 +4,10 @@ permalink: /comp1000/transition-to-processing
 parent: COMP1000
 nav_order: 1
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * Basic Computer Literacy

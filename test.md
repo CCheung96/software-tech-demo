@@ -1,9 +1,11 @@
 ---
     title: Test Page
     description: A minimal page for testing new features
+    author: Crystal Cheung
+    nav_exclude: true
 ---
 
-This is a test page.
+This is a hidden test page.
 
 ```java
 void draw() {
@@ -56,7 +58,7 @@ void draw() {
 
 
 
-<div id="variables-in-memory"></div>
+<div id="variables-in-memory-animation"></div>
 
 <script src="assets/js/variables-in-memory.js"></script>
 

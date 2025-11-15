@@ -5,20 +5,22 @@ parent: Recursive Data Structures
 nav_order: 2
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Recursion]({{ site.baseurl }}/comp1010/recursion/)
   * [Lists]({{ site.baseurl }}/comp1010/lists)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand the internal operation of recursively defined lists
   * Be able to create standard list operations for a recursivly defined list
   * Understand the time costs of various list operations
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # Custom built linkedlist
 

@@ -5,18 +5,19 @@ parent: Recursive Data Structures
 nav_order: 1
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-  * [Classes- Composition]({{ site.baseurl }}/comp1010/classes/composition)
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}  * [Classes- Composition]({{ site.baseurl }}/comp1010/classes/composition)
   * [Lists]({{ site.baseurl }}/comp1010/lists)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Be able to create and operate on a class holding one or more references of the same type
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # Pre-requisite knowledge
 

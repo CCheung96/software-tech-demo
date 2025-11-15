@@ -7,22 +7,23 @@ grand_parent: COMP1010
 nav_order: 1
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Better understand the concept of parameter passing.
   * Familiarize yourself with standard terminology - *formal paramters* vs. *actual parameters*.
   * Understand the control flow and memory transactions during a function call.
   * Understand the concept of *Call Stack*.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # Why this page is important?
 

@@ -5,11 +5,14 @@ parent: COMP1000
 nav_order: 20
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * Some basic ability to create and understand programs of reasonable size.
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Be able to distinguish between the three types of problem solving/design we use as programmers.
   * Be able to do simple designs that make the act of programming simpler for larger programs    .
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}

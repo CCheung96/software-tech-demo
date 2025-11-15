@@ -4,22 +4,23 @@ permalink: /comp1010/foundation-for-comp1010
 parent: COMP1010
 nav_order: 2
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
   * [Loops]({{ site.baseurl }}/comp1000/loops)
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand any gaps in knowledge required to begin COMP1010 satisfactorily.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # What do you need to know to begin COMP1010?
 

@@ -6,22 +6,23 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 3
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Recognise that objects have functions attached
   * Be able to use such functions
   * Be able to write such functions
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 Did you know an object can have a function "attached" to it.  In fact, any object can have lots of functions attached to it.  Even more exciting, all objects that are of the same type (i.e. were built from the same class) all have the _same_ functions attached to them.
 

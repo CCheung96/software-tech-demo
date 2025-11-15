@@ -4,20 +4,21 @@ permalink: /comp6010/python-unittest
 parent: COMP6010
 nav_order: 5
 ---
-<details class="prereq" markdown="1">
-<summary>Assumed Knowledge:</summary>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Variables and Operators in Python]({{ site.baseurl }}/comp6010/python-introduction)
   * Control Structures ([Conditions]({{ site.baseurl }}/comp1000/conditions) and [Loops]({{ site.baseurl }}/comp1000/loops))
   * [Functions]({{ site.baseurl }}/comp1000/functions)
-</details>
-
-<details class="outcomes" markdown="1">
-<summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Be acquainted with unittest environment.
   * Write a piece of code based on tests provided.
-</details>
+{% endcapture %}
 
-# Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # Introduction
 

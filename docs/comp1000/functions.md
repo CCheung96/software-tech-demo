@@ -5,15 +5,18 @@ parent: COMP1000
 nav_order: 10
 ---
 
+- TOC
+{:toc}
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Know the syntax of functions
   * Understand how functions relate to algorithms
@@ -22,7 +25,9 @@ nav_order: 10
   * Be able to write your own functions
   * Be able to reason about the flow of a program that uses functions
 
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 {: .keypoint}
 A function is a named piece of code that can be supplied with some inputs (known as parameters) and may return a value back to the caller.

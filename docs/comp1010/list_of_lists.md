@@ -6,18 +6,20 @@ grand_parent: COMP1010
 nav_order: 1
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Lists]({{ site.baseurl }}/comp1010/lists)
   * [Iteration]({{ site.baseurl }}/comp1000/iteration)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand creation and operations on a list of lists.
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 # What are lists... again?
 

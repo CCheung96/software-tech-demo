@@ -5,20 +5,21 @@ parent: COMP1010
 nav_order: 3
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Transition to Java]({{ site.baseurl }}/comp1010/transition-to-java)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Be able to identify input/output pairs that are good for debugging.
   * Be able to debug Java programs with appropriate tools.
   * Be able to do paper traces of Java code.
+{% endcapture %}
 
-</details>
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: Gaurav Gupta
+
 
 # Debugging
 

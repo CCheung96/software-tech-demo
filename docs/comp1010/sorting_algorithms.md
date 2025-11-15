@@ -5,22 +5,24 @@ parent: COMP1010
 nav_order: 9
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Classes- Array of Objects]({{ site.baseurl }}/comp1010/classes/array-of-objects)
   * [ArrayLists]({{ site.baseurl }}/comp1010/lists)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Understand why data needs to be sorted
   * Understand how data can be sorted
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 
 <img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/margeSort.jpeg" alt=""/>
 

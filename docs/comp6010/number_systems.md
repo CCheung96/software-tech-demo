@@ -5,20 +5,21 @@ parent: COMP6010
 nav_order: 2
 katex: true
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Python Introduction]({{ site.baseurl }}/comp6010/python-introduction)  
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Represent integers (including negative integers) in different bases.
   * Convert from one base to other.
-  
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
+
+
 <!--# Table of contents
 
 - [1. Representing Information](#1-representing-information)

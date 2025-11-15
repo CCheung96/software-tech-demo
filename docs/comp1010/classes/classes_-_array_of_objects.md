@@ -5,23 +5,23 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 5
 ---
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
-
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
   * [Instance methods]({{ site.baseurl }}/comp1010/classes/methods)
 
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
 
   * Creating and operating on an array of objects.
 
-</details>
+{% endcapture %}
 
-## Author: Gaurav Gupta
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-# Array of objects
+
 
 ## Class under consideration
 

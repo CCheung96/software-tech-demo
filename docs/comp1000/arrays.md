@@ -5,20 +5,26 @@ parent: COMP1000
 nav_order: 13
 ---
 
-<details class="prereq" markdown="1"><summary>Assumed Knowledge:</summary>
+- TOC
+{:toc}
+
+
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
 
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
   * [Loops]({{ site.baseurl }}/comp1000/loops)
-</details>
-
-<details class="outcomes" markdown="1"><summary>Learning Outcomes:</summary>
-
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
   * Understand how to create, populate and operate on arrays
   <!--* how larger chunks of data are stored in a program
   * Understand how to access these larger chunks of data
   * Understand the most common data chunks, arrays-->
-</details>
+{% endcapture %}
+
+{% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 <!--So far we have been working only with _atomic_ data.  That is data that is "just one thing" and can't be broken up.  This is getting unwieldy.  Every time we have something to draw, we need to have an x-position and a y-position and so we need two variables for something we probably think of as just one thing (the position on the screen).
 

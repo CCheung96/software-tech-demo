@@ -5,6 +5,10 @@ permalink: /comp1000/primitive-operations
 parent: COMP1000
 nav_order: 2
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
 * [Transition to Processing]({{ site.baseurl }}/comp1000/transition-to-processing)
