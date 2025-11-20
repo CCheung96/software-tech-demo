@@ -191,7 +191,7 @@ Here's (a somewhat) acurate memory diagram and the simplified representation we 
 <img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/memoryDiagramBasic.png" alt=""/>
 
 
-<!--![](./fig/03-classes-and-objects/classesObjects1-figure3.png)
+<!--![]({{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure3.png)
 -->
 ### Combining declaration and instantiation
 

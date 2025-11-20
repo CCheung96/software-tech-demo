@@ -9,7 +9,7 @@ nav_order: 1
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Lists]({{ site.baseurl }}/comp1010/lists)
-  * [Iteration]({{ site.baseurl }}/comp1000/iteration)
+  * [Iteration]({{ site.baseurl }}/comp1010/iteration)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
@@ -59,7 +59,7 @@ System.out.println(matrix.get(0)); //[-100, 700, 200, 900]
 System.out.println(b == matrix.get(1)); //reference copy check: true
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/listOfLists/listOfListsSimple.png" />
+<img src="{{ site.baseurl }}/assets/comp1010/list-of-lists/listOfListsSimple.png" />
 ## Traversing a list of lists
 
 You can see that we can display each sub-list, one at a time, using,
@@ -188,7 +188,7 @@ ArrayList<ArrayList<Integer>> varying =
 //varying = [[1000, 700, 200, 900], [500, 300], null, [600, null, 300]]
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/listOfLists/listOfListsComprehensive.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/list-of-lists/listOfListsComprehensive.png" alt=""/>
 
 This is because some sub-lists are of different size, and one is even null.
 
@@ -292,4 +292,4 @@ out of bounds
 */
 ```
 
-Working code in [ListOfListsComprehensive.java](./nuggets/ListOfListsComprehensive/ListOfListsComprehensive.java)
+Working code in [ListOfListsComprehensive.java]({{ site.baseurl }}/assets/comp1010/list-of-lists/ListOfListsComprehensive.java)

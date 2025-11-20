@@ -5,6 +5,9 @@ parent: COMP1010
 nav_order: 11
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Lists]({{ site.baseurl }}/comp1010/lists)
@@ -18,10 +21,6 @@ nav_order: 11
 {% endcapture %}
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
-
-
-
-# Custom-built arraylist
 
 In this chapter, we'll see how an arraylist holds items and how to implement it.
 
@@ -237,12 +236,12 @@ public Double remove(int idx) {
 }
 ```		
 
-# Complete class and client (including homework)
+## Complete class and client (including homework)
 
-- [MyArrayList.java](../../assets/comp1010/custom-built-arraylist/MyArrayList.java) (contains several incomplete methods for practice)
-- [MyArrayListClient.java](../../assets/comp1010/custom-built-arraylist/MyArrayListClient.java)
+- [MyArrayList.java]({{ site.baseurl }}/assets/comp1010/custom-built-arraylist/MyArrayList.java) (contains several incomplete methods for practice)
+- [MyArrayListClient.java]({{ site.baseurl }}/assets/comp1010/custom-built-arraylist/MyArrayListClient.java)
 
-# Homework tasks
+## Homework tasks
 
 ### 1. Percentage used
 

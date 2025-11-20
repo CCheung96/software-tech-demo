@@ -4,6 +4,10 @@ permalink: /comp1010/stacks-and-queues
 parent: COMP1010
 nav_order: 10
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Functions]({{ site.baseurl }}/comp1000/functions)
@@ -14,7 +18,6 @@ nav_order: 10
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Understand the scenarios in which stacks and queues are useful
   * Able to implement stacks and queues
 {% endcapture %}
@@ -23,25 +26,25 @@ nav_order: 10
 
 
 
-## Entire code from this page is available in [stacksQueues.zip](./assets/codes/stacksQueues.zip).
+**Entire code from this page is available in [stacksQueues.zip]({{ site.baseurl }}/assets/comp1010/stacks-and-queues/stacksQueues.zip).**
 
 - To use these in Eclipse, create a java project from scratch and copy the files into the `src` folder.
 - To use these in VS Code, unzip and open the folder.
 
-# Abstract Data Types (ADT)
+## Abstract Data Types (ADT)
 
 - ADT is a way of thinking about a data structure
 - Can be implemented in different ways
 - Might have different performance properties
 - Support the same interface (add, remove, get)
 
-# Stacks and Queues
+## Stacks and Queues
 
 - Two ADTs that are really lists with more restricted interfaces
 	- **Stack**: add items to, and remove items from, the top. This is known as **Last In First Out** (*LIFO*). 
 	- **Queue**: add things to the back, remove from the front. This is known as **First In First Out** (*FIFO*).
 
-# Motivation
+## Motivation
 
 Before we get into the details. . .
 
@@ -52,7 +55,7 @@ The reason for the restrictions is two fold. From the perspective of the user of
 
 From the point of view of the implementer of the ADT, having a more restricted interface means that I might be able to optimise the implementation of the ADT for these operations. So if I only ever want to add to the front of a Stack or Queue I can use a data structure that is optimised for that operation but poor for random access.
 
-# Stack
+## Stack
 
 - A stack is a data structure where elements are added and removed from the top - Called a LIFO data structure: *Last In First Out*.
 - Basic operations: `push`, `pop`, `peek`.
@@ -60,7 +63,7 @@ From the point of view of the implementer of the ADT, having a more restricted i
 - `pop` removes the top item from the stack and returns it - peek returns the top item without removing it
 - `isEmpty` returns `true` if the stack is empty, `false` otherwise.
 
-## Stack operation examples
+### Stack operation examples
 
 Operations, and stack status after the operation, are provided below:
 
@@ -89,7 +92,7 @@ What is the effect of `push(pop())`? What about `push(peek())`?
 `push(peek())` will duplicate the top item on the stack.
 </details>
 
-## Implementing Stack using ArrayList
+### Implementing Stack using ArrayList
 
 We can implement a stack in a variety of ways - using arrays, ArrayList, recursive data structures (that we will study soon).
 
@@ -205,7 +208,7 @@ public class Client {
 }
 ```
 
-## Using a Stack
+### Using a Stack
 
 - Stacks are at the core of computing.
 - Many algorithms make use of stacks to store data as they run
@@ -214,14 +217,14 @@ Stacks – **Undo**.
 - Each operation that changes the text is pushed on the stack.
 - To undo we pop the operation from the stack and reverse it.
 
-## Balanced Parentheses
+### Balanced Parentheses
 
 - To check whether parentheses are balanced in an expression (or program) - Reading through the expression left-to-right
 - When I see an open parenthesis (`(` or `{` or `[`), I push it to the stack
 - When I see a close parenthesis (`)` or `}` or `]`), I ensure it matches with the last open bracket and if so, I pop the stack.
 - At the end, the stack should be empty.
 
-### Example 1
+#### Example 1
 
 ```
 (()())))
@@ -235,7 +238,7 @@ Stacks – **Undo**.
 6. Close round bracket means check if not empty and then for match, which passes, and `pop()`: Stack = empty
 7. Close round bracket means check if not empty which fails, and hence invalid.
 
-### Example 2
+#### Example 2
 
 ```
 (]{}[]
@@ -244,7 +247,7 @@ Stacks – **Undo**.
 1. Open round bracket means `push('(')`: Stack = `(`
 2. Close **square** bracket means check if not empty and then for match, which fails, and hence invalid
 
-### Example 3
+#### Example 3
 
 ```
 (([{}]))
@@ -280,7 +283,7 @@ public static boolean isBalanced(String brackets) {
 ```
 		
 
-## Reverse Polish Notation
+### Reverse Polish Notation
 
 - Arithmetic expressions where the operator comes **AFTER** the operands. We will assume a space as a delimitor. The benefit of RPN expressions is that we don't need brackets to enforce priority.
 
@@ -294,7 +297,7 @@ public static boolean isBalanced(String brackets) {
 	- Now, convert it to RPN: **`3 4 5 * +`**. 
 - (3 + 4) * 5 will become **`3 4 + 5 *`**.
 
-## Evaluating RPN
+### Evaluating RPN
 
 The process to evaluate a valid RPN stored in a String is very simple. We assume only 4 operators `+, -, *, /`. 
 
@@ -304,7 +307,7 @@ The process to evaluate a valid RPN stored in a String is very simple. We assume
 	- For division, it's `second-from-top item` / `top item`. 
 	- For subtraction, it's `second-from-top item` - `top item`.
 
-### Example 1:
+#### Example 1:
 
 ```
 2 4 + 7 2 - /
@@ -318,7 +321,7 @@ The process to evaluate a valid RPN stored in a String is very simple. We assume
 6. Item = -, Stack = `5.0 6.0`
 7. Item = /, Stack = `1.2`
 
-### Example 2:
+#### Example 2:
 
 ```
 5 2 / 6 3 - *
@@ -332,7 +335,7 @@ The process to evaluate a valid RPN stored in a String is very simple. We assume
 6. Item = -, Stack = `3.0 2.5`
 7. Item = *, Stack = `7.5`
 
-## Code for evaluating RPN
+### Code for evaluating RPN
 
 Just a small variation of our `MyStack` class for this example:
 
@@ -424,7 +427,7 @@ public class MyNumberStackClient {
 }
 ```
 
-# Queues
+## Queues
 
 Queues are **First-In-First-Out** (*FIFO*) data structure. The overall structure is very similar to stacks.
 

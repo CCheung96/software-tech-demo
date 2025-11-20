@@ -4,6 +4,10 @@ permalink: /comp6010/boolean-logic
 parent: COMP6010
 nav_order: 3
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
 * [Functions]({{ site.baseurl }}/comp1000/functions)
@@ -23,15 +27,15 @@ nav_order: 3
 
 
 
-# History behind "Boolean"
+## History behind "Boolean"
 
 George Boole was an early 19th century English mathematician who worked in the field of differential equations and Boolean alegbra. Here's a link to his book, [The Laws of Thought](https://www.gutenberg.org/files/15114/15114-pdf.pdf) 
 
-![](./assets/images/georgeBoole.jpg)
+<img src="{{ site.baseurl }}/assets/comp1000/boolean-expressions/georgeBoole.jpg" alt=""/>
 
 **Trivia time**: George Boole's house is at 5, Grenville Place, Cork.
 
-# What is Boolean logic
+## What is Boolean logic
 
 Quite simply, boolean logic is the use of "and", "or", and "not" conditions. 
 
@@ -41,15 +45,15 @@ For example, "if it's raining OR if it's over 50 degrees celsius, take an umbrel
 
 "You are NOT NOT clever" means you are definitely clever!
 
-# Why learn Boolean logic
+## Why learn Boolean logic
 
 Because of the complexity in data relationships leading to various outputs.
 
 As a simple example, if I want to display all positive even numbers in red colour, all negative even numbers in green colour, and all (and only one) other even number in blue colour, I need to use Boolean logic.
 
-# Boolean operators
+## Boolean operators
 
-## AND operator
+### AND operator
 `a AND b` is `true` when **both** `a` and `b` are `true`
 
 | a | b | a AND b |
@@ -68,7 +72,7 @@ In Boolean algebra, `false` is represented by 0 and `true` is represented by 1. 
 |1|0|1|
 |1|1|1|
 
-## OR operator
+### OR operator
 `a OR b` is `true` when **either** `a` **or** `b` is `true`
 
 | a | b | a OR b |
@@ -91,7 +95,7 @@ The `OR` operator can be seen as **addition**.
 
 Well, because we have binary states (0 or 1) so any overflow means you are limited to 1.
 
-## NOT operator
+### NOT operator
 `NOT a` is `true` when `a` is `false`.
 `NOT a` is `false` when `a` is `true`.
 

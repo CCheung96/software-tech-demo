@@ -6,15 +6,16 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 3
 ---
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Copying objects]({{ site.baseurl }}/comp1010/classes/copies)
-
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Recognise that objects have functions attached
   * Be able to use such functions
   * Be able to write such functions
@@ -26,7 +27,7 @@ nav_order: 3
 
 Did you know an object can have a function "attached" to it.  In fact, any object can have lots of functions attached to it.  Even more exciting, all objects that are of the same type (i.e. were built from the same class) all have the _same_ functions attached to them.
 
-# Methods
+## Methods
 
 A function attached to an object is called an *instance method* and it has two differences from a normal function:
 
@@ -42,7 +43,7 @@ This lifts object from mere custom-compound-data to something more, something pr
 
 You will see striking uses of methods especially after we cover *Composition*.
 
-# Using Methods
+## Using Methods
 
 There were methods just waiting for us already, on the `String` objects we have been using:
 
@@ -63,7 +64,7 @@ char allButLast = str.substring(0, str.length()-1);
 
 In each of the above cases, we call the method **on** an object (in this case `str`). This object, on which an instance method is caled, is known as the *calling object*.
 
-# Creating our own methods
+## Creating our own methods
 
 When we want to operate on an instance of a class, we can put that behaviour inside the class as an *instance method*. An instance method has access to the variables of the instance on which it is called. In other words, an instance method has access to the instance variables of the calling object.
 
@@ -99,7 +100,7 @@ public class Client {
 
 We don't have to pass values of instance variables to instance methods.
 
-## A special reference - *"this"*
+### A special reference - *"this"*
 
 When we call the instance method `area` on object `r1`, a reference copy of `r1` is made into `this` which is available while `r1.area` executes. When we access `width` (or `this.width`), it's the instance variable `width` of the calling object (`r1` in this case) that is accessed. Same goes for `height`.
 
@@ -123,7 +124,7 @@ public class Rectangle {
 
 The method call to shrink object `r1` used in the previous example by 50% in each direction would be `r1.resize(0.5);`.
 
-# A method returning an object (typically of the same class)
+## A method returning an object (typically of the same class)
 
 Inside a method, one must (typically) not modify the calling object.
 
@@ -162,7 +163,7 @@ public class Fraction {
 }
 ```
 
-# Special mention - compareTo
+## Special mention - compareTo
 
 It is very common to have to compare objects. This is done through the `compareTo` method, that is called on an object (calling object) with another object of a comparable type (usually an object of the same class) being passed as a parameter (parameter object). It returns,
 
@@ -222,28 +223,24 @@ public class Client {
 3. Control is transferred to `compareTo`.
 4. Following execution ensues:
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdENsaWVudC0-Pit0aGlzOiBjb21wYXJlVG8ob3RoZXIpXG5cdHRoaXMtPj50aGlzOiBhcmVhKClcbiAgdGhpcy0tPj50aGlzOiBhcmVhIG9mIGNhbGxpbmcgb2JqZWN0XG5cdHRoaXMtPj4rb3RoZXI6IGFyZWEoKVxuICBvdGhlci0tPj50aGlzOiBhcmVhIG9mIHBhcmFtZXRlciBvYmplY3Rcblx0dGhpcy0tPj5DbGllbnQ6IHZhbHVlIGJhc2VkIG9uIGNvbXBhcmlzb24gb2YgYXJlYXNcblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdENsaWVudC0-Pit0aGlzOiBjb21wYXJlVG8ob3RoZXIpXG5cdHRoaXMtPj50aGlzOiBhcmVhKClcbiAgdGhpcy0tPj50aGlzOiBhcmVhIG9mIGNhbGxpbmcgb2JqZWN0XG5cdHRoaXMtPj4rb3RoZXI6IGFyZWEoKVxuICBvdGhlci0tPj50aGlzOiBhcmVhIG9mIHBhcmFtZXRlciBvYmplY3Rcblx0dGhpcy0tPj5DbGllbnQ6IHZhbHVlIGJhc2VkIG9uIGNvbXBhcmlzb24gb2YgYXJlYXNcblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
-
-<!--
 ```mermaid
 sequenceDiagram
 	Client->>+this: compareTo(other)
 	this->>this: area()
-  	this->>this: area of calling object
+  this-->>this: area of calling object
 	this->>+other: area()
-  	other->>this: area of parameter object
-	this->>Client: value based on comparison of areas
+  other-->>this: area of parameter object
+	this-->>Client: value based on comparison of areas
 ```
--->
 
-# Special methods all objects have
+## Special methods all objects have
 
-Thanks to a feature of Java [we will learn later](../practice_of_programming/inheritance) there are some methods that "come for free" in every class (and thus are attached to every object).  A few of these are interesting to us:
+Thanks to a feature of Java [we will learn later](/404) there are some methods that "come for free" in every class (and thus are attached to every object).  A few of these are interesting to us:
 
   * `toString(): String`
   * `equals(Object): boolean`
 
-# Distinction between static and non-static
+## Distinction between static and non-static
 
 Members (both variables and methods) in a class can be declared as,
 
@@ -279,7 +276,7 @@ public class Foo {
 }
 ```
 
-# Relevant MQ Videos
+## Relevant MQ Videos
 
 {% include youtube.html id="QsCyi7P-wPU" %}
 

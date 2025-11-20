@@ -27,7 +27,7 @@ nav_order: 8
 Conditions allow different code to run in different frames of the animation.
 
 
-**Recommended Reading(s)**: Chapter 5 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
+**Recommended Reading(s)**: Chapter 5 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
 
 {% include youtube.html id="wsI6N9hfW7E" %}
 

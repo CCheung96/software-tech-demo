@@ -28,7 +28,7 @@ nav_order: 9
 Loops are similar to conditions except that after every iteration of the loop, the expression is checked again.
 
 {: .readings}
-**Reading(s)**: Chapter 6 of [Learning Processing](https://learningprocessing.com) by Danel Shiffman.
+**Reading(s)**: Chapter 6 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
 
 {% include youtube.html id="RtAPBvz6k0Y" %}
 
@@ -395,7 +395,7 @@ void draw(){
 
 {% include youtube.html id="Z8s-7beNP1c" %}
 
-As discussed in the above video, the fact that processing is always in a "draw loop" can confuse things somewhat.  It is possible to see all the operation of loops free of this constraint if we work only on _the console_.  [The console is the black area below your program]({{ site.baseurl }}/comp1000/debugging-in-processing) and it is available even when you do a "static" processing program (one that has no `setup` or `draw`).
+As discussed in the above video, the fact that processing is always in a "draw loop" can confuse things somewhat.  It is possible to see all the operation of loops free of this constraint if we work only on _the console_.  [The console is the black area below your program]({{ site.baseurl }}/comp1000/debugging-in-processing#processing-3-debugger) and it is available even when you do a "static" processing program (one that has no `setup` or `draw`).
 
 
 <!-- Exercise -->

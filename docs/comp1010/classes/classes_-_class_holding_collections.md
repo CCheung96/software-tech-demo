@@ -5,6 +5,10 @@ parent: Classes
 grand_parent: COMP1010
 nav_order: 6
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
@@ -25,13 +29,13 @@ nav_order: 6
 
 
 
-# Class holding ArrayList(s)
+## Class holding ArrayList(s)
 
 Why ArrayLists over arrays? Because resizing an array is a massive pain in the backside :(
 
 So we'll use ArrayLists, and add methods that add or remove items from the lists easily. Later, we'll see some examples with arrays too for deeper understanding.
 
-## Example 1
+### Example 1
 
 ```java
 public class TVData {
@@ -65,9 +69,9 @@ public class TVData {
 }
 ```
 
-## Example 2
+### Example 2
 
-We will be using this [Point](./assets/Point.java) class definition.
+We will be using this [Point]({{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/Point.java) class definition.
 
 ```java
 public class ConnectTheDots {
@@ -97,7 +101,7 @@ public class ConnectTheDots {
 }
 ```
 
-# Class holding array(s)
+## Class holding array(s)
 
 This part provides a "deep dive" and is highly advised if you would like to learn more (and then, automatically, achieve a higher grade). This includes a closer look at design and incremental implementations.
 
@@ -167,7 +171,7 @@ The above client would give the expected outcome:
 390 minutes viewed
 ```
 
-## However ...
+### However ...
 
 What happens when we change the contents of the source data AFTER populating our object with it?
 
@@ -219,11 +223,11 @@ Now, both `GoodClient` and `BadClient` will give the same, logically correct, ou
 390 minutes viewed
 ```
 
-# Class holding an array of objects
+## Class holding an array of objects
 
-This section assumes you are familiar with [Composition](./classes_composition).
+This section assumes you are familiar with [Composition]({{ site.baseurl }}/comp1010/classes/composition).
 
-We will be using this [Point](./assets/Point.java) class definition.
+We will be using this [Point]({{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/Point.java) class definition.
 
 Say we want to create a "connect-the-dots" game where multiple points are present on a canvas and adjacent points need to be connected to reveal the art.
 
@@ -342,8 +346,8 @@ We will get the following output (notice that the `null` object was dropped succ
 [(30,10), (50,30), (30,50), (10,30)]
 ```
 
-Complete code is provided in [ArtGallery.java](./codes/ArtGallery.java)
+Complete code is provided in [ArtGallery.java]({{ site.baseurl }}/assets/comp1010/classes/classes_class_holding_collections/ArtGallery.java)
 
-# Relevant MQ Video
+## Relevant MQ Video
 
 {% include youtube.html id="N7zaCnhB1E4" %}

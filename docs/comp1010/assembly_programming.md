@@ -5,6 +5,9 @@ parent: COMP1010
 nav_order: 14
 ---
 
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Lists]({{ site.baseurl }}/comp1010/lists)
@@ -17,6 +20,5 @@ nav_order: 14
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author:
 
-## Content to be added soon
+<span style="color: red"> Content to be added soon </span>
