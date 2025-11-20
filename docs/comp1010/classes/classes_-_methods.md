@@ -215,7 +215,7 @@ public class Client {
 }
 ```
 
-![](./fig/03-classes-and-objects/compareTo-figure4.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_methods/compareTo-figure4.png" alt=""/>
 
 1. A reference copy of the calling object (`r1` in this case) is made into `this`.
 2. A reference copy of the passed object (`r2` in this case) is made into the formal parameter (`other` in this case).

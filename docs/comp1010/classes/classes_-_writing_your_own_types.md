@@ -133,7 +133,7 @@ using this class has yet been written, and no object (instance) of this
 class has yet been created.
 
 
-![](./fig/03-classes-and-objects/classesObjects1-figure1.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure1.png" alt=""/>
 
 
 <div class="task" markdown="1">
@@ -170,7 +170,7 @@ In the following example, `r` is an object of class `Rectangle1`.
 Rectangle r; //example
 ```
 
-![](./fig/03-classes-and-objects/classesObjects1-figure2.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/classesObjects1-figure2.png" alt=""/>
 
 ### Instantiation
 
@@ -188,7 +188,7 @@ r = new Rectangle(); //example
 
 Here's (a somewhat) acurate memory diagram and the simplified representation we will use from this point onwards.
 
-![](./assets/images/memoryDiagramBasic.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_types/memoryDiagramBasic.png" alt=""/>
 
 
 <!--![](./fig/03-classes-and-objects/classesObjects1-figure3.png)

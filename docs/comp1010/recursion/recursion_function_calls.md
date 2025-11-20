@@ -108,55 +108,55 @@ public static int square(int num) {
 
 ### STEP 1: main function is invoked by JVM
 
-![](./fig/04-recursion/callStack1.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack1.png" alt=""/>
 
 function call is placed on the stack. Note that parameter is `null` because we typically do not pass any arguments to main, at least in this unit.
 
 ### STEP 2: main function calls `distance` with parameters 1, 3, 6 and 5.
 
-![](./fig/04-recursion/callStack2.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack2.png" alt=""/>
 
 Another entry is made for the call to `distance` and placed on the call stack.
 
 ### STEP 3: `distance` calls `square` with parameter `5`
 
-![](./fig/04-recursion/callStack3.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack3.png" alt=""/>
 
 A third entry is made for the call to `square` and placed on the stack.
 
 ### STEP 4: `square` returns 25 to `distance`
 
-![](./fig/04-recursion/callStack4.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack4.png" alt=""/>
 
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 5: `distance` calls `square` with parameter `2`
 
-![](./fig/04-recursion/callStack5.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack5.png" alt=""/>
 
 A third entry is made for the call to `square` and placed on the stack.
 
 ### STEP 6: `square` returns 4 to `distance`
 
-![](./fig/04-recursion/callStack6.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack6.png" alt=""/>
 
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 7: `distance` calls `Math.sqrt` with parameter `29`
 
-![](./fig/04-recursion/callStack7.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack7.png" alt=""/>
 
 A third entry is made for the call to `Math.sqrt` and placed on the stack.
 
 ### STEP 8: `Math.sqrt` returns 5.38516 to `distance`
 
-![](./fig/04-recursion/callStack8.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack8.png" alt=""/>
 
 Entry for `square` is taken off the stack. `distance` becomes the active function.
 
 ### STEP 9: `distance` returns 5.38516 to `main`
 
-![](./fig/04-recursion/callStack9.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/callStack9.png" alt=""/>
 
 Entry for `distance` is taken off the stack. `main` becomes the active function.
 
@@ -166,7 +166,7 @@ Entry for `main` is taken off the stack. Call stack is now empty. Program has no
 
 ## Summary of control flow
 
-![](./fig/04-recursion/controlFlow.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion_function_call/controlFlow.png" alt=""/>
 <!--<iframe src="https://giphy.com/embed/Az1CJ2MEjmsp2" width="480" height="221" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bare-barren-Az1CJ2MEjmsp2">via GIPHY</a></p>-->
 
 # Relevant MQ Video

@@ -29,7 +29,7 @@ nav_order: 12
 {: .keypoint}
 Scope rules tell us what variable we are talking about when two variables have the same name.
 
-# Why scope?
+## Why scope?
 
 We have made it to the point where _we might have two totally separate variables with the same name_.  In truth, we got to that point earlier, but it was unlikely to occur.  Now we are in a world where it will happen a lot.  Lets look at an example where this might naturally occur.
 

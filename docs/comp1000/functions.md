@@ -10,21 +10,18 @@ nav_order: 10
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Variables]({{ site.baseurl }}/comp1000/variables)
   * [Conditions]({{ site.baseurl }}/comp1000/conditions)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Know the syntax of functions
   * Understand how functions relate to algorithms
   * Be able to pass values into a function
   * Be able to get values back from a function
   * Be able to write your own functions
   * Be able to reason about the flow of a program that uses functions
-
 {% endcapture %}
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
@@ -53,7 +50,7 @@ Chapter 7 of [Learning Processing](https://learningprocessing.com) by Danel Shif
 
 {% include youtube.html id="b9AYvekwKIg" %}
 
-# Discussion
+## Discussion
 
 A function is a *named* piece of code with zero or more inputs that optionally returns a value back to the caller.
 
@@ -61,21 +58,21 @@ A function is a *named* piece of code with zero or more inputs that optionally r
 
 <!--For example, we may have a function that determines the higher of two integers. We can call it by passing it two integers. If we pass the values 2 and 5, it should return 5.
 
-<center><img src="functionsFigs/functionMemoryDiagrams-figure1.png" style="width: 300px;"/></center>
+<div class="centred-img"><img src="functionsFigs/functionMemoryDiagrams-figure1.png" style="width: 300px;"/></div>
 
 However, if we pass only one value, it cannot be executed, as it expects two integers.
 
-<center><img src="functionsFigs/functionMemoryDiagrams-figure2.png" style="width: 300px;"/></center>
+<div class="centred-img"><img src="functionsFigs/functionMemoryDiagrams-figure2.png" style="width: 300px;"/></div>
 
 Similarly, you cannot pass it more than 2 values.
 
-<center><img src="functionsFigs/functionMemoryDiagrams-figure3.png" style="width: 300px;"/></center>
+<div class="centred-img"><img src="functionsFigs/functionMemoryDiagrams-figure3.png" style="width: 300px;"/></div>
 
 Even if you pass two values, you must ensure they are of the right type. For example, we cannot pass a `boolean` instead of an integer.
 
-<center><img src="functionsFigs/functionMemoryDiagrams-figure4.png" style="width: 300px;"/></center>
+<div class="centred-img"><img src="functionsFigs/functionMemoryDiagrams-figure4.png" style="width: 300px;"/></div>
 -->
-## Designing a function
+### Designing a function
 
 While designing a function, you must think of three aspects carefully:
 
@@ -83,14 +80,14 @@ While designing a function, you must think of three aspects carefully:
 2. Purpose (decides the name of the function)
 3. Return value (Type of answer)
 
-### Example 1
+#### Example 1
 
-```
+~~~~~
 Alice -> Bob: Is 5 an even number?
 Bob --> Alice: No.
 Charles -> Bob: Is -18 an even number?
 Bob --> Charles: Yes.
-```
+~~~~~
 
 Here, *"Bob"* is the function that expects an integer value to be supplied to them, and gives the answer *"Yes"/"No"* back to the client (caller).
 
@@ -98,9 +95,9 @@ Here, *"Bob"* is the function that expects an integer value to be supplied to th
 2. Purpose: `isEven`
 3. Return value: boolean
 
-### Example 2
+#### Example 2
 
-```
+~~~~~
 Alice -> Bob: What is 12.8 rounded-off to the nearest integer?
 Bob --> Alice: 13.
 Charles -> Bob: What is -3.01 rounded-off to the nearest integer?
@@ -109,7 +106,7 @@ Diane -> Bob: What is "Super Nintendo Chalmers" rounded-off to the nearest integ
 Bob --> Diane: GO AWAY!
 Elise -> Bob: What are 1.5 and -2.7 rounded-off to the nearest integer?
 Bob --> Elise: One number at a time, please.
-```
+~~~~~
 
 Here, we have intentionally made invalid calls from Diane (and Elise) to Bob. This shows that Bob expects one (and only one) `float` to be provided.
 
@@ -117,7 +114,7 @@ Here, we have intentionally made invalid calls from Diane (and Elise) to Bob. Th
 2. Purpose: `roundedOff`
 3. Return value: `int`
 
-## Defining a function
+### Defining a function
 
 All functions have _just one_ function definition - the place that the function itself is described.  Syntax of a function _definition_ is:
 
@@ -134,13 +131,13 @@ returnType function(<parameters>) {
 
 Once this exists, you can have _many_ function calls - the place that the code asks the function to run.  Syntax of a function _call_ is:
 
-```processing
+```java
 functionName (<parameters>);
 ```
 
 For example, the following function _definition_
 
-```processing
+```java
 int foo(int a, int b){
     int result = a + b;
     return result;
@@ -149,7 +146,7 @@ int foo(int a, int b){
 
 can be called by anywhere in the program. For example,
 
-```processing
+```java
 void setup() {
 	int y = foo(12, 5);
 }
@@ -167,7 +164,7 @@ During the call `foo(12, 5)`,
 - Control transfers back to the calling statement.
 - The statement becomes `int y = 17;` since the call is replaced by the value it returns.
 
-## Formal and Actual parameters
+### Formal and Actual parameters
 
 Since we have both function definitions and function calls, and parameters appear in each, it is useful to be able to distinguish the two uses.
   * Parameters appearing in the top line (signature) of a function definition are called _formal parameters_ and are defined in the same way as any other variable declaration. In the example above, `a` and `b` are the *formal parameters*.
@@ -175,17 +172,25 @@ Since we have both function definitions and function calls, and parameters appea
 
 When the function is executed, the actual paramters are copied into the formal paramter slots and the function is run.
 
-<div class="task" markdown="1">
+<!-- Exercise -->
+{% capture my_problem %}
 Suppose we have a function that accepts a real number (`float`) and returns its square.
 
 Draw a block diagram for the interaction when a caller calls the function with the value 2.5. Assume the name of the formal parameter is `val`, and the value returned by the function is copied into a variable `sqr`.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-  <img src="{{ site.baseurl }}/assets/comp1000/functions/block_ans.png" alt="Block Diagram Answer" />
-</details>
-</div>
+{% capture my_solution %}
+<img src="{{ site.baseurl }}/assets/comp1000/functions/block_ans.png" alt="Block Diagram Answer" />
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 Consider the following function definition,
 
 ```java
@@ -195,16 +200,23 @@ int roundOff(float a) {
 ```
 
 Write a statement that calls the function `roundOff` with the parameter 6.8 and stores the value returned in a variable `result`.
-<details markdown="1"><summary>Solution</summary>
+{% endcapture %}
 
+{% capture my_solution %}
 ```java
 int result;
 result = roundOff(6.8);
 ```
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
+<!-- Exercise -->
+{% capture my_problem %}
 Which of the following are valid calls to function `roundOff`?
 
 1. `int a = roundOff(4.5);`
@@ -214,9 +226,9 @@ Which of the following are valid calls to function `roundOff`?
 5. `int d = roundOff(3.2, 4.8);`
 6. `int e = roundOff();`
 7. `int e = roundOff(true);`
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 1. Yes
 2. Yes, the integer is treated like a float when it arrives in the formal parameter.  It is identical to writing `float a = 8`
 3. Yes, the return value is thrown away, but that is allowed
@@ -224,30 +236,40 @@ Which of the following are valid calls to function `roundOff`?
 5. No, too many actual parameters
 6. No, not enough acutal parameters
 7. No, actual parameter type does not match formal parameter type.
-</details>
-</div>
+{% endcapture %}
 
-<div class="task" markdown="1">
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
 
+<!-- Exercise -->
+{% capture my_problem %}
 Define a function that when passed two integers, returns their average. Remember that 15/2 is 7 while 15/2.0 is 7.5.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```java
 float average(int a, int b){
     return (a + b)/2.0;
 }
 ```
-</details>
-</div>
+{% endcapture %}
 
-## void functions
+{% include exercise.html
+  title=""
+  problem=my_problem
+  solution=my_solution
+%}
+
+### Void Functions
 
 Functions that perform some action (like drawing something or displaying some text) but don't return a value have a return type of void. They can still have a `return;` statement, that transfers control back to the caller.
 
 For example,
 
-```processing
+```java
 void drawShip() {
 	//IMPORTANT: should draw the ship ONLY if mouse is in the right half
 	
@@ -265,20 +287,20 @@ void drawShip() {
 
 and the call,
 
-```processing
+```java
 void draw() {
 	background(255);
 	drawShip();
 }
 ```
 
-## Effectively unconditional return
+### Effectively Unconditional Return
 
 A function that promises to return a value, must do so *effectively* unconditionally.
 
 Take the following example,
 
-```processing
+```java
 boolean isEven(int n) {
 	if(n%2 == 0) {
 		return true;
@@ -293,7 +315,7 @@ While mathematically, one of the two boolean expressions (`n%2 == 0` and `n%2 !=
 
 To fix this, you should use,
 
-```processing
+```java
 boolean isEven(int n) {
 	if(n%2 == 0) {
 		return true;
@@ -306,7 +328,7 @@ boolean isEven(int n) {
 
 Now, in terms of programming, either the `if` block, or the `else` block are guaranteed to execute, thereby returning a value unconditionally.
 
-## Statements or Expressions?
+### Statements or Expressions?
 
   * function declarations are statements.
   * function calls are statements if the function returns `void`.
@@ -316,18 +338,16 @@ Now, in terms of programming, either the `if` block, or the `else` block are gua
 
 The fact that a function call in processing can _do_ something and also _evaluate to a value_ makes them special.  In fact, this double-life is a bit of a point of friction in language design.  Some languages insist that functions must be statements and others insist they must be expressions, but those are rare.  The situation we have here, while strange, is quite common.
 
-# Furthering your Understanding
+## Furthering our Understanding
 
 {% include youtube.html id="VU284tKC_HY" %}
 
-#### Number of digits in an integer
-
-<div class="task" markdown="1">
-
+<!-- Number of digits in an integer -->
+{% capture my_problem %}
 Define a function that when passed an integer, returns the number of digits in the integer.
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```java
 int digits(int input){
     int totalSoFar = 0;
@@ -338,13 +358,16 @@ int digits(int input){
     return totalSoFar;
 }
 ```
-</details>
-</div>
+{% endcapture %}
 
-#### Is Divisible
+{% include exercise.html
+  title="Number of digits in an integer"
+  problem=my_problem
+  solution=my_solution
+%}
 
-<div class="task" markdown="1">
-
+<!-- Is Divisible -->
+{% capture my_problem %}
 Given two integers (store in formal parameters `a, b`), define a function that determines if either of them is divisible by the other. Some input-output mappings are:
 
   * `a = 14, b = 6` --> return `false`
@@ -352,9 +375,9 @@ Given two integers (store in formal parameters `a, b`), define a function that d
   * `a = 9, b = 30` --> return `false`
   * `a = 9, b = 36` --> return `true`
   * `a = 12, b = 0` --> return `true` (0 is divisible by 12)
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```java
 /*
 	We need to check if divisible both ways. That is, a % b and b % a. 
@@ -371,14 +394,16 @@ boolean isDivisible(int a, int b){
     return false;
 }
 ```
+{% endcapture %}
 
-</details>
-</div>
+{% include exercise.html
+  title="Is Divisible"
+  problem=my_problem
+  solution=my_solution
+%}
 
-#### Leap Years
-
-<div class="task" markdown="1">
-
+<!-- Leap Years -->
+{% capture my_problem %}
 A year is leap if it satisfies one of the two conditions,
 
 1. it's divisible by 400, or,
@@ -390,40 +415,48 @@ Define a function that determines if an year passed (store in formal parameter `
   * `year = 1800` --> return `false`
   * `year = 2018` --> return `false`
   * `year = 1600` --> return `true`
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```java
 boolean isLeapYear(int year){
     return (isDivisible(year, 400) || (isDivisible(year, 4) && !isDivisible(year 100)));
 }
 ```
-</details>
-</div>
+{% endcapture %}
 
-#### Non-trivial divisors
+{% include exercise.html
+  title="Leap Years"
+  problem=my_problem
+  solution=my_solution
+%}
 
-<div class="task" markdown="1">
 
-
+<!-- Non-trivial divisors -->
+{% capture my_problem %}
 I would like to count the number of non-trivial (apart from 1 and itself) divisors of a given integer. Some input-output mappings are:
 
   * `n = 18` --> return `4` (as there are 4 non-trivial divisors: 2, 3, 6, 9)
   * `n = 31` --> return `0` (as there is no non-trivial divisor of 31)
   * `n = 77` --> return `2` (as there are 2 non-trivial divisors: 7, 11)
+{% endcapture %}
 
-<details markdown="1"><summary>Solution</summary>
-
+{% capture my_solution %}
 ```java
 int divisors(int input){
     found = 0;
     for(int i = 2; i < input; i++){
-        if (isDivisible(input, i){
+        if (isDivisible(input, i)){
             found++;
         }
     }
     return found;
 }
 ```
-</details>
-</div>
+{% endcapture %}
+
+{% include exercise.html
+  title="Non-trivial divisors"
+  problem=my_problem
+  solution=my_solution
+%}

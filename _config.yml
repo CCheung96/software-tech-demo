@@ -20,7 +20,7 @@
 
 title: Software Tech Demo
 logo: "assets/lorem_ipsum.avif"  # for putting a logo in place of the website title
-favicon_ico: "assets/lorem_ipsum.avif" # for adding a favicon
+favicon_ico: "assets/MQ_logo.png" # for adding a favicon
 # email: crystal.yuen.ki.chueng@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this

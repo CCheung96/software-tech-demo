@@ -10,12 +10,10 @@ nav_order: 18
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-
   * [Arrays]({{ site.baseurl }}/comp1000/arrays)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Understand how to operate on String data type
 {% endcapture %}
 
@@ -51,9 +49,7 @@ String second = "Super Nintendo Chalmers"; // declaring and initializing in one 
 
 The memory diagram for the first object is provided below. The variable str is a `String` reference to the `String` instance that holds a `char[]` reference (named `elements`) which refers to a `char[]` instance holding the actual items (and the `length` attribute).
 
-<p align="center">
-	<img src="./assets/images/StringObject.png" width=500 alt="String object">
-</p>
+<div class="centred-img"> <img src="{{ site.baseurl }}/assets/comp1000/strings/StringObject.png" width=500 alt="String object"> </div>
 
 ## Length of a String
 

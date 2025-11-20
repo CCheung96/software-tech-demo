@@ -73,7 +73,7 @@ public class Client {
 
 In the above example, the contents of `r1`, which is the address that `r1` holds is copied into the contents of `r2`. Thus, `r2` holds the same address that `r1` holds.
 
-![](./fig/03-classes-and-objects/referenceCopy.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy.png" alt=""/>
 
 We say,
 
@@ -115,7 +115,7 @@ public class Client {
 }
 ```
 
-![](./fig/03-classes-and-objects/referenceCopy2.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy2.png" alt=""/>
 
 
 # Instance copy
@@ -134,7 +134,7 @@ public class Client {
 }
 ```
 
-![](./fig/03-classes-and-objects/instanceCopy.png)
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/instanceCopy.png" alt=""/>
 
 
 In the above example, we passed `r1.width` and `r1.height` (which are variables of primitive data type) as parameters to the constructor to create `r2`.

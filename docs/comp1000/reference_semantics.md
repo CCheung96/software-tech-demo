@@ -70,7 +70,7 @@ int total(int[] data) {
 }
 ```
 
-<div><center><img src="arraysAndFunctionsFigs/arraysAndFunctionMemoryDiagrams-figure0.png" style="width: 500px;"></center></div>
+<div class="centred-img"><img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/arraysAndFunctionMemoryDiagrams-figure0.png" style="width: 500px;"></div>
 
 ## Modifying contents of array passed
 
@@ -90,7 +90,7 @@ void negate(int[] data) {
 }
 ```
 
-<div><center><img src="arraysAndFunctionsFigs/arraysAndFunctionMemoryDiagrams-figure1.png" style="width: 500px;"></center></div>
+<div class="centred-img"><img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/arraysAndFunctionMemoryDiagrams-figure1.png" style="width: 500px;"></div>
 
 ## Returning an array from a function
 
@@ -115,7 +115,7 @@ int[] getDiceOutcomes(int n) {
 }
 ```
 
-<div><center><img src="arraysAndFunctionsFigs/arraysAndFunctionMemoryDiagrams-figure2.png" style="width: 500px;"></center></div>
+<div class="centred-img"><img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/arraysAndFunctionMemoryDiagrams-figure2.png" style="width: 500px;"></div>
 
 # Multi-Dimensional Arrays
 
@@ -135,6 +135,7 @@ multiDArray = new int[2][3];
 ```
 Resulting in the following occuring in memory
 
+<!-- TODO: replace with d3js -->
 <svg xmlns="http://www.w3.org/2000/svg" height="200" width="300" version="1.1" viewBox="0 0 79.375011 52.916666">
  <defs>
   <marker id="marker10561" refY="0" refX="0" orient="auto" overflow="visible">

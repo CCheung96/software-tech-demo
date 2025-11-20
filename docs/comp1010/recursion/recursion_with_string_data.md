@@ -85,7 +85,7 @@ When designing and implementing recursive solutions in the context of String dat
 4. Extract the String without the first character (`remaining`).
 5. Return `contri + countVowels(remaining)`
 
-![](./fig/04-recursion/recursion-strings-1.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion-strings/recursion-strings-1.png" alt=""/>
 
 ```java
 public static int countVowels(String str) {
@@ -177,7 +177,7 @@ public static int countVowels(String str) {
 
 `areMutuallyReverse("pat", "tap")` returns `true`
 
-![](./fig/04-recursion/recursion-strings-2.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion-strings/recursion-strings-2.png" alt=""/>
 
 ```java
 public static boolean areMutuallyReverse(String str1, String str2) {
@@ -212,7 +212,7 @@ Example: `keepUnique("aaaaaaabbbbbcccccddd")` returns `"abcd"`
 6. Extract the String without the first character (`withoutFirst`).
 7. Return `first + keepUnique(withoutFirst)`
 
-![](./fig/04-recursion/recursion-strings-3.png)
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion-strings/recursion-strings-3.png" alt=""/>
 
 ```java
 public static String keepUnique(String str) {
