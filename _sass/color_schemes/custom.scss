@@ -2,5 +2,162 @@
 // The CSS file for stylisation of everything else is found in assets/css/main.css.
 // See https://just-the-docs.com/docs/customization/ for more details.
 
+// Define SCSS values here before you use them
 // Eg.
-// $link-color: $blue-000;
+// $color-1: $blue-000;
+// could be used to define properties later on
+// Eg.
+// background-color: $color-1
+
+
+// CSS rules here
+@media (min-width: 15rem) {
+    .main-content h2 {
+        font-size: $font-size-8 !important;
+    }
+
+    .main-content h3 {
+        font-size: $font-size-7 !important;
+    }
+
+    .main-content h4 {
+        font-size: $font-size-6 !important;
+        font-weight: 500;
+        text-transform: none;
+    }
+
+    .main-content h5 {
+        font-size: $font-size-5 !important;
+    }
+
+    .main-content h6 {
+        font-size: $font-size-4 !important;
+    }
+}
+
+
+aside {
+    background-color: #fcf8f2;
+    padding: 20px;
+    margin: 2em 0;
+    border-radius: 0.5em;
+}
+
+.exercise-container {
+    border-left: 5px solid #8ad6af;
+    background-color: #f2fcf7;
+    padding: 20px 20px 30px 20px;
+    /*1.5em; */
+    margin: 2em 0;
+    border-radius: 0.5em;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.exercise-container h3 {
+    margin-top: 0 !important;
+    text-align: center;
+}
+
+.exercise-description {
+    margin-bottom: 1em;
+}
+
+.exercise-solution {
+    background-color: #c8fce1;
+    padding: 20px;
+    margin-bottom: 2px;
+}
+
+.exercise-solution summary {
+    font-weight: bold;
+}
+
+.chat {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 60%;
+}
+
+.chat.left {
+    text-align: left;
+    background-color: #f1f1f1;
+}
+
+.chat.right {
+    text-align: right;
+    background-color: #dbeafe;
+    margin-left: auto;
+}
+
+.chat.user {
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.chat.compiler {
+    font-style: italic;
+    color: #6b7280;
+}
+
+.chat.processing {
+    color: #07966d;
+}
+
+.chat.computer {
+    color: #7c3aed;
+}
+
+#backToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    font-size: 1.25rem;
+    border: none;
+    outline: none;
+    background-color: #2d2d2d;
+    color: white;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+.prereq-outcomes-container {
+    background: #eeebee;
+    padding: 5px;
+    margin-bottom: 9px;
+    border-radius: 0.5em;
+}
+
+.prereq-outcomes-container ul {
+    margin-left: 15px;
+}
+
+.task {
+    border-left: 5px solid #8ad6af;
+    background-color: #f2fcf7;
+    padding: 20px;
+    margin: 2em 0;
+    border-radius: 0.5em;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.keypoint {
+    background-color: #97e6a4;
+    padding: 20px;
+    margin: 2em 0;
+    border-radius: 0.5em;
+    font-size: 1.25rem;
+}
+
+.centred-img {
+    display: flex;
+    justify-content: center;
+}

@@ -1,8 +1,8 @@
 <!-- The standardised HTML structure for Exercise/Example/Scenario blocks with hidden solutions. It is styled with CSS. -->
 <div class="exercise-container">
-    <h2 id="{{ include.id | default: include.title | slugify }}">
+    <h3 id="{{ include.id | default: include.title | slugify }}">
         {{ include.title }}
-    </h2>
+    </h3>
     <div class="exercise-description">
         {{ include.problem | markdownify }}
     </div>
