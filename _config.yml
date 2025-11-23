@@ -43,6 +43,8 @@ kramdown:
   syntax_highlighter: rouge # Stylises code snippets, aside from processing
   syntax_highlighter_opts:
     default_lang: java
+    block:
+      line_numbers: true
 
 plugins:
   # - jekyll-feed   # if a feed for posts is needed
@@ -73,10 +75,15 @@ defaults:
 back_to_top: true
 back_to_top_text: "Back to top"
 
+# Turning off HTML compression is needed to prevent the incorrect rendering of Syntax Highlighting and Line Numbers
+compress_html: 
+  ignore:
+    envs: all   
+
 exclude:
   - archive
 
-# library to add diagrams
+# library to add mermaid diagrams
 mermaid:
   version: "11.6.0"
 
