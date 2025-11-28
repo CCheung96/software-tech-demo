@@ -20,13 +20,13 @@ nav_order: 8
 
 
 
-# File reading
+## File Reading
 
 Reading a file is perhaps the simplest of operations when it comes to File I/O.
 
 There are a couple of ways to open a file for reading:
 
-## 1. open
+### 1. open
 
 ```python
 f = open(<file to open>, "r")
@@ -46,7 +46,7 @@ h = open("usr/gauravgupta/grades.csv", "r")
 <do something with h>
 ```
 
-## 2. with - as - open
+### 2. with - as - open
 
 The advantage of opening files in this way is to not have to flush and close them (in case of write mode).
 
@@ -70,7 +70,7 @@ with open("usr/gauravgupta/grades.csv", "r") as h:
 
 We will continue using the second method from now on.
 
-# Reading data from file opened
+## Reading data from file opened
 
 There are three main functions using which we can read data from files:
 
@@ -86,7 +86,7 @@ It contains many sentences.
 This being the last one.
 ```
 
-## read()
+### read()
 
 ```python
 with open("data.txt", "r") as f:
@@ -101,7 +101,7 @@ It contains many sentences.
 This being the last one.
 ```
 
-## readline()
+### readline()
 
 ```python
 with open("data.txt", "r") as f:
@@ -120,7 +120,7 @@ Line: This being the last one.
 
 Reading the whole file line-by-line like this is possible, but awkward.
 
-## readlines()
+### readlines()
 
 ```python
 with open("data.txt", "r") as f:
@@ -145,7 +145,7 @@ with open("data.txt", "r") as f:
 		print("Line:",line)
 ```
 
-## Easiest way to read line-by-line
+### Easiest way to read line-by-line
 
 After seeing those three ways, the easiest way to read a file line-by-line is using an iterator, and is given below:
 
@@ -155,7 +155,7 @@ for line in myfile:
     print(line)
 ```
 
-## Handling headers
+### Handling headers
 
 You can ignore header line or lines using the `next()` function.
 
@@ -218,7 +218,7 @@ with open('grades_file.csv', 'r') as f:
 	print(records)
 ```
 
-# File Writing
+## File Writing
 
 You open a file for writing the same way you open it from reading - using the `open` function, except that you use `"w"` mode.
 
@@ -266,9 +266,9 @@ Bye!
 DONE.
 ```
 
-# A practical example
+## A practical example
 
 Say, we have a csv file that holds student grades. We can read the file, store the data in a collection, perform analysis, and then output filtered information to a file. 
 
-# Complete example: 
-# [example\_python\_file\_io.zip](./assets/codes/COMP6010/example_python_file_io.zip)
+## Complete example: 
+[example\_python\_file\_io.zip](./assets/codes/COMP6010/example_python_file_io.zip)

@@ -40,7 +40,7 @@ The underlying concept is simple enough, now lets see some consequences that flo
 
 {% include youtube.html id="iOSm0gQ-z1s" %}
 
-# Arrays and functions
+## Arrays and functions
 
 {% include youtube.html id="M_wqSKvOsXs" %}
 
@@ -49,7 +49,7 @@ It's very common to pass an array to a function. Generally, we operate on an arr
 1. modify the contents of the passed array inside the function
 2. return an array from the function that is copied into an array in the caller.
 
-## Operating on an array passed to a function
+### Operating on an array passed to a function
 
 When you pass an array to a function, a shallow copy of the actual
 parameter is made into the formal parameter. For example, in the
@@ -72,7 +72,7 @@ int total(int[] data) {
 
 <div class="centred-img"><img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/arraysAndFunctionMemoryDiagrams-figure0.png" style="width: 500px;"></div>
 
-## Modifying contents of array passed
+### Modifying contents of array passed
 
 If you have a function that modifies the passed array, the contents of
 the actual parameter will also change.
@@ -92,7 +92,7 @@ void negate(int[] data) {
 
 <div class="centred-img"><img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/arraysAndFunctionMemoryDiagrams-figure1.png" style="width: 500px;"></div>
 
-## Returning an array from a function
+### Returning an array from a function
 
 If a function returns an array (source) and the caller copies it into an
 array (destination), it’s a shallow copy as demonstrated in the
@@ -117,7 +117,7 @@ int[] getDiceOutcomes(int n) {
 
 <div class="centred-img"><img src="{{ site.baseurl }}/assets/comp1000/arrays-and-functions/arraysAndFunctionMemoryDiagrams-figure2.png" style="width: 500px;"></div>
 
-# Multi-Dimensional Arrays
+## Multi-Dimensional Arrays
 
 {% include youtube.html id="nGyy4kcsglg" %}
 
@@ -283,7 +283,7 @@ for(int i=0; i < arr.length; i++) {
 }
 ```
 
-# Exercises
+## Exercises
 
 #### Exercise 1
 Define a function that when passed an integer array, returns the sum of all even numbers in the array.
@@ -310,12 +310,12 @@ Define a function that when passed an integer array, returns an array containing
 Define a function that when passed two integer arrays, returns `true` if they are the same (same items but not necessarily in the same order), `false` otherwise.
 
 
-# Coding in the real world
+## Coding in the real world
 
-## SCENARIO 1
+### SCENARIO 1
 Define a function that when passed an array containing outcomes of a series of dice rolls (6-faced dice), returns the number of times a 6 was rolled.
 
-## SCENARIO 2
+### SCENARIO 2
 Define a function that when passed an array containing weekly salaries of a person, returns the amount of tax that should be withheld based on the following payroll department's withholding rules,
 
 - income up to `$300` a week is tax-free
@@ -335,18 +335,18 @@ and the second week's salary is taxed
 
 Total tax: 250.
 
-## SCENARIO 3
+### SCENARIO 3
 Time to time, we get a list of students and their marks. The list of students is in a `String` array, while the marks are in an integer array. Obviously, the size of both the arrays is the same. Also, the name of the first student is at index 0 of the names array and his/her marks are at index 0 in the marks array and so on.
 
 Define a function that returns the name of the student with the highest mark. For the basic version, in case of a tie, return the name of the first student with the highest mark. For the advanced version, in case of a tie, return an array with the names of all the students who have the same highest mark.
 
-## SCENARIO 4
+### SCENARIO 4
 During an experiment, our data was corrupted. While the valid values should be between 0 and 100, some values were inserted that are outside this range and therefore invalid.
 
 Define a function to which we can pass an array containing the unfiltered values and it returns an array with the filtered values. For example, if the array passed is `{4, -1, 0, 89, 105, 67, 100}`, the method should return the array `{4, 0, 89, 67, 100}`.
 
-## SCENARIO 5
+### SCENARIO 5
 Define a function that returns the number of distinct values in the array passed. For example, if the array passed is `{3, 7, 3, 3, 3, 20, 9, 20}`, return 4 as there are four distinct values (3, 7, 20 and 9).
 
-## SCENARIO 6
+### SCENARIO 6
 Define a function that when passed an integer (store the value passed in the formal parameter `n`), returns an array that holds the first `n` prime numbers (a number is *prime* if it is more than or equal to 2 and is divisible by only 1 and itself).

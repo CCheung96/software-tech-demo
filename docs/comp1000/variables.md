@@ -24,7 +24,7 @@ nav_order: 4
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
+{: .keynote}
 Variables are a slot of memory in the computer with a name.
 
 Chapters 3 and 4 of [Learning Processing](http://learningprocessing.com/) by Danel Shiffman.
@@ -135,7 +135,8 @@ Some programmers find the following analogy useful too:
 All poodles are dogs and all dogs are animals.
 But all animals are not dogs and all dogs are not poodles.
 
-NOTE: You can still copy a `float` into an `int` by explicitly dropping the precision, or an `int` into a `char`. This is known as *casting* and will be covered soon.
+{ .note}
+You can still copy a `float` into an `int` by explicitly dropping the precision, or an `int` into a `char`. This is known as *casting* and will be covered soon.
 
 ## Expressions or Statements
 
@@ -206,7 +207,7 @@ Note that different variables need different number of bytes in the memory.
 Memory assigned to variables does not need to be in the same order as the variable assignment operation. Where will a variable be stored depends on Operating System.
 
 
-<div id="variables-in-memory-animation"></div>
+<div class="d3js" id="variables-in-memory-animation"></div>
 
 <script src="{{ site.baseurl }}/assets/js/variables-in-memory.js"></script>
 
@@ -617,9 +618,9 @@ Experiment with this program by changing what is in line 5 and checking the anim
 
 **Hold-on!** It's not working????  This solution is actually wrong thanks to a subtlety of how `int`s and `float`s are divided.  See what happens when the height of the window goes below 200 (say 100)?  The circle does not move.  If we "think backwards from the problem to what must be happening" we see that `yspeed` must be getting set to `0`, but how?  Well `100/200` is 0.5 in `float` arithmetic, but it is `0` in `int` arithmetic.  So processing must be using `int` arithmetic. But why?  `height` is an `int`, and, because procesing uses the _left-most_ number to decide which type of arithmetic to use, `int`/`float` is done in `int` arithmetic, so we have to convert `height` to a `float` _first_. 
 
-<aside markdown="1">
+{: .note}
 "Tricky" rules like `int`/`float` being different from `float`/`int` are called _edge cases_ and are frequent sources of bugs.  You can't remember all the edge cases, so you often need to work backwards and think what "must be" true to find them.
-</aside>
+
 
 ~~~~~
 float yPos;

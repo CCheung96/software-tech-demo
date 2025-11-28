@@ -257,7 +257,8 @@ Explanation -
 
 # Relevant MQ Videos
 
-Note: the videos below include JUnit testing in Eclipse as well as VS Code. It is recommended you watch both, as the Eclipse video provides foundational information on using JUnit. Also, it's good to get familiar with some of the differences of working with different IDEs.
+{: .note}
+The videos below include JUnit testing in Eclipse as well as VS Code. It is recommended you watch both, as the Eclipse video provides foundational information on using JUnit. Also, it's good to get familiar with some of the differences of working with different IDEs.
 
 {% include youtube.html id="iFJwFq_KmXY" %}
 

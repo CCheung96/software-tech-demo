@@ -30,7 +30,7 @@ nav_order: 2
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
+{: .keynote}
 Coding, like cooking or swimming or soccer, is all about practice.
 
 <img src="{{ site.baseurl }}/assets/comp1010/transition_to_java/practice.jpg">
@@ -363,7 +363,8 @@ Therefore, it's not a prime number.
 ~~~
 {: .output}
 
-**NOTE:** You can see that this is a kind of `violation` algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with `failure (false)` status. Only if **no** violations are found, can the algorithm exit with `success (true)`status. The algorithm is,
+{: .note}
+You can see that this is a kind of `violation` algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with `failure (false)` status. Only if **no** violations are found, can the algorithm exit with `success (true)`status. The algorithm is,
 
 ~~~
 INPUT: Integer n

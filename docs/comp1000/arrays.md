@@ -53,9 +53,10 @@ You will notice two interesting features that we will now discuss:
 So, compound data is _bigger_, so much so, that it can't fit into a single memory slot.  _But_ variables can only point to single buckets, so what do we do?
 
 For compound data, a variable will point to one memory location that then tells you _where the larger chunk of memory is_.
-<aside markdown="1">
-Note that the reasons for this way of doing things are myriad.  In the end, it is the right way but we don't need to know all the reasons, we only need to know that it is so and know how to work with it.  Atomic data (`int`, `float`, `char`) is stored directly in their memory slot but compound data reference is stored as a "reference" to another location where the compound data instance is stored.
-</aside>
+
+{: .note}
+The reasons for this way of doing things are myriad.  In the end, it is the right way but we don't need to know all the reasons, we only need to know that it is so and know how to work with it.  Atomic data (`int`, `float`, `char`) is stored directly in their memory slot but compound data reference is stored as a "reference" to another location where the compound data instance is stored.
+
 
 <div class="row">
 <div class="col-xs-6" markdown="1">
@@ -123,7 +124,8 @@ The other new step is to "follow the arrow" from the memory box to the bigger ch
 
 Processing actually has two different forms of compound data - objects like `PVector` (and many others), and arrays.  We will focus on arrays from here but feel free to use objects whenenver you like.
 
-Note:  objects are often taught with a related concept - classes - however, we will not address classes in any way at this point.
+{: .note}
+Objects are often taught with a related concept - classes - however, we will not address classes in any way at this point.
 
 Note that the two different versions of compound data come with two different syntaxes for dereferences - for objects is it `.name` and for arrays it is `[number]`.  See below for details.
 
@@ -178,7 +180,8 @@ The most common way to create an array is by specifying the type and size of the
 type[] arrayName = new type[size];
 ```
 
-**NOTE**: This only works when the array is first created (more on this later) 
+{: .note}
+This only works when the array is first created (more on this later) 
 
 #### Example - integer array
 
@@ -241,9 +244,8 @@ boolean[] twentyTwo = {true, false, true, true, false};
 
 The number of items in an array `arr` is given by `arr.length`.
 
-<div class="aside" markdown="1">
-Note that, given what we said above this means `.length` should be read as "follow the reference and see how large the chunk of memory at the other end is".
-</div>
+{: .note}
+Given what we said above this means `.length` should be read as "follow the reference and see how large the chunk of memory at the other end is".
 
 For example,
 
@@ -352,7 +354,8 @@ int[] dest = src;
 
 We call this a ***reference copy***.
 
-**NOTE:** The type of arrays must be the same. You cannot copy an `int` array into a `float` array. The following will not work:
+{: .note}
+The type of arrays must be the same. You cannot copy an `int` array into a `float` array. The following will not work:
 
 ```java
 int[] taxi = {10, 70, 20, 90};

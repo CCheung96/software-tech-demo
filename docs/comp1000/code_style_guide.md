@@ -372,7 +372,8 @@ int a = (int)(val+0.5);
 int a = (int)(val+0.5); //a holds val casted to nearest integer
 ```
 
-Note: this is the version where the reader isn't concerned with the underlying math.
+{: .note}
+This is the version where the reader isn't concerned with the underlying math.
 
 - Over-commenting is bad!
 

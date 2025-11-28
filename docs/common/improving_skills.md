@@ -25,7 +25,8 @@ HackerRank is similar to CodingBat in that it has questions sorted by different 
 
 Kattis tends to be a bit more advanced, however you can sort by the difficulty of problems and go from there!
 
-*Note: Kattis usually requires the use of some type of input reader, in Java it is called `Scanner` (very straight-forward to learn and there are lots of YouTube tutorials that will guide you through it).*
+{: .note}
+Kattis usually requires the use of some type of input reader, in Java it is called `Scanner` (very straight-forward to learn and there are lots of YouTube tutorials that will guide you through it).
 
 ### <a href="https://leetcode.com/" target="_blank">LeetCode</a>
 

@@ -4,6 +4,10 @@ permalink: /comp1010/foundation-for-comp1010
 parent: COMP1010
 nav_order: 2
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Variables]({{ site.baseurl }}/comp1000/variables)
@@ -417,21 +421,22 @@ int smallest(int a, int b, int c) {
 }
 ```
 
-Note: the following solution will not work because there is no UNCONDITIONAL return, even though, mathematically, it is correct
-
-```java
-int smallestBuggy(int a, int b, int c) {
-	if(a <= b && a <= c) {
-		return a;
-	}
-	if(b <= a && b <= c) {
-		return b;
-	}
-	if(c <= a && c <= b) {
-		return c;
-	}
-}
-```
+{: .note}
+> The following solution will not work because there is no UNCONDITIONAL return, even though, mathematically, it is correct
+> 
+> ```java
+> int smallestBuggy(int a, int b, int c) {
+> 	if(a <= b && a <= c) {
+> 		return a;
+> 	}
+> 	if(b <= a && b <= c) {
+> 		return b;
+> 	}
+> 	if(c <= a && c <= b) {
+> 		return c;
+> 	}
+> }
+> ```
 </details> 
 
 ## 3. Operating on arrays

@@ -195,7 +195,7 @@ for(Node temp = head; temp != null && allPositives; temp = temp.next) {
    }
 }
 ```
-
+{: .highlight}
 Note how we updated the loop expression to `temp != null && allPositives` so as soon as the first non-positive item is found, we can exit the loop (without break, because ... *Ew!*)
 
 #### 4. Remove the last item in the list

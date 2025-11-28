@@ -23,11 +23,11 @@ nav_order: 8
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
-Conditions allow different code to run in different frames of the animation.
+{: .keynote}
+Conditions allow different lines of code to run in different frames of the animation.
 
-
-**Recommended Reading(s)**: Chapter 5 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
+{: .readings}
+* Chapter 5 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
 
 {% include youtube.html id="wsI6N9hfW7E" %}
 

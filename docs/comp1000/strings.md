@@ -55,7 +55,8 @@ The memory diagram for the first object is provided below. The variable str is a
 
 Length (number of characters) of a String `str` is given by `str.length()`.
 
-**!!! Note the brackets at the end of `length`, unlike array length !!!**
+{: .highlight}
+**!!! Note the brackets at the end of `length`, unlike with an array's length !!!**
 
 (And yes, we all hate Java for that!)
 

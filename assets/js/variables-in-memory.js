@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const svg = d3.select('#variables-in-memory-animation').append('svg')
     .attr('width', 700)
     .attr('height', 510);
+    // .attr('viewBox', `0 0 700 510`)
+    // .attr('preserveAspectRatio', 'xMidYMid meet')
+    // .classed('responsive-svg', true);
   
   
     const x = 450;
@@ -237,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Restart
       setTimeout(() => {
         group.selectAll("*").remove();
+
         runAnimation();
       }, delay + 4000);
     }

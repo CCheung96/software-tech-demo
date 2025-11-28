@@ -26,11 +26,11 @@ nav_order: 10
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-{: .keypoint}
+{: .keynote}
 A function is a named piece of code that can be supplied with some inputs (known as parameters) and may return a value back to the caller.
 
 {: .readings}
-Chapter 7 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
+* Chapter 7 of [Learning Processing](http://learningprocessing.com) by Danel Shiffman.
 
 ## Macquarie University Videos
 
