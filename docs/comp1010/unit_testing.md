@@ -116,45 +116,45 @@ A list of important assertions are given below:
 
 * `assertTrue(boolean expression)`: passes if the boolean expression passed to the assertion is `true`, fails otherwise.
 
-	~~~
+	```
 	assertTrue(5 > 3): pass
 	assertTrue(6 == 12/3): fail
-	~~~
+	```
 
 * `assertFalse(boolean expression)`: passes if the boolean expression passed to the assertion is `false`, fails otherwise.
 
-	~~~
+	```
 	assertFalse(2 >= 3): pass
 	assertFalse(6 == 12/2): fail
-	~~~
+	```
 
 * `assertEquals(expected integer value, integer expression)`: passes if the integer expression passed to the assertion equals the expected integer value, fails otherwise.
 
-	~~~
+	```
 	assertEquals(5, 10/2): pass
 	assertEquals(5, 2*3): fail
-	~~~
+	```
 
 * `assertEquals(expected floating-point value, floating-point expression, tolerance)`: passes if the floating-point expression passed to the assertion is within tolerance distance of the expected floating-point value, fails otherwise.
 
-	~~~
+	```
 	assertEquals(1.2, 1.21, 0.02): pass
 	assertEquals(1.2, 1.23, 0.02): fail
-	~~~
+	```
 
 * `assertNull(reference)`: passes if the reference (object/array) passed to the assertion is `null`, fails otherwise.
 
-	~~~
+	```
 	assertNull(null): pass
 	assertNull(new int[]{1,7,2,9}): fail
-	~~~
+	```
 
 * `assertNotNull(reference)`: passes if the reference (object/array) passed to the assertion is not `null`, fails otherwise.
 
-	~~~
+	```
 	assertNotNull(new int[]{1,7,2,9}): pass
 	assertNotNull(null): fail
-	~~~
+	```
 
 * `assertArrayEquals(expected integer array, actual integer array)`: passes if the actual integer array passed to the assertion equals the expected integer array, fails otherwise.
 
@@ -166,10 +166,10 @@ A list of important assertions are given below:
 	int[] c = {1,7,2,9};
 	```
 
-	~~~
+	```
 	assertArrayEquals(a,c): pass
 	assertArrayEquals(a,b): fail
-	~~~
+	```
 
 ### How to write a JUnit test
 
@@ -177,7 +177,24 @@ First you need a method that you need to test.
 
 Let's take a look at the following code that contains a single method `sumEven`.
 
-<script src="https://gist.github.com/gaurav1780/b3df9f0a24fcf9a0c41cc75cdb8616a3.js"></script>
+```java
+public class Client {
+	/**
+	 * 
+	 * @param arr
+	 * @return 	the sum of all even numbers 
+	 * 		in the array passed
+	 * for example,
+	 * if 		arr = {4, 9, -6, 0, -15, 8}, 
+	 * 		return 4+(-6)+0+8=6
+	 */
+	public static int sumEven(int[] arr) {
+		return 0; //to be completed
+	}
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/b3df9f0a24fcf9a0c41cc75cdb8616a3.js"></script> -->
 
 The JUnit test is a separate class created to test this method. The following video describes the steps to create a JUnit test. Generally a test is written before implementing a method.
 

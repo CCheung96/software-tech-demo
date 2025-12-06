@@ -86,7 +86,7 @@ Operations, and stack status after the operation, are provided below:
 
 What is the effect of `push(pop())`? What about `push(peek())`?
 
-<details>
+<details markdown='1'>
 <summary>Answer</summary>
 `push(pop())` has no effect since we are removing one item and then putting it right back. 
 `push(peek())` will duplicate the top item on the stack.
@@ -229,6 +229,7 @@ Stacks – **Undo**.
 ```
 (()())))
 ```
+{: .nolineno}
 
 1. Open round bracket means `push('(')`: Stack = `(`
 2. Open round bracket means `push('(')`: Stack = `(, (`
@@ -243,6 +244,7 @@ Stacks – **Undo**.
 ```
 (]{}[]
 ```
+{: .nolineno}
 
 1. Open round bracket means `push('(')`: Stack = `(`
 2. Close **square** bracket means check if not empty and then for match, which fails, and hence invalid
@@ -252,6 +254,7 @@ Stacks – **Undo**.
 ```
 (([{}]))
 ```
+{: .nolineno}
 
 This will pass as every closing bracket matches with the top of the stack opening bracket (which is then popped).
 
@@ -312,6 +315,7 @@ The process to evaluate a valid RPN stored in a String is very simple. We assume
 ```
 2 4 + 7 2 - /
 ```
+{: .nolineno}
 
 1. Item = 2, Stack = `2.0`
 2. Item = 5, Stack = `4.0 2.0`
@@ -326,6 +330,7 @@ The process to evaluate a valid RPN stored in a String is very simple. We assume
 ```
 5 2 / 6 3 - *
 ```
+{: .nolineno}
 
 1. Item = 5, Stack = `5.0`
 2. Item = 2, Stack = `2.0 5.0`

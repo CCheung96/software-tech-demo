@@ -23,15 +23,15 @@ has_children: true
 
 
 
-# What is recursion?
+## What is recursion?
 
 There are two common approaches to solving algorithmic problems - _iterative_ and _recursive_.
 
-## 1. Iterative solution
+### 1. Iterative solution
 
 The distinctive property of *recursive* solutions is that they reduce a problem to a simpler form of itself.
 
-### EXAMPLE
+#### EXAMPLE
 
 Add all integers between `low` and `high` (inclusive on both sides, and assuming `low` <= `high`), I can go through each integer and add it to an accumulating variable, say `total`.
 
@@ -45,7 +45,7 @@ public static int sum(int low, int high) {
 }
 ```
 
-## 2. Recursive solution
+### 2. Recursive solution
 
 The distinctive property of *recursive* solutions is that they reduce a problem to a simpler form of itself.
 
@@ -67,7 +67,7 @@ One example (shared by one of the students on MACS Discord) is if you are standi
 - So each person adds one to the answer they get and that's the answer they give the person behind them.
 - until you get back to the person who originally asked the question, and then they have the answer.
 
-### EXAMPLE 2
+#### EXAMPLE 2
 
 Now, for the same problem statement used for iterative solutions, we can say that the sum of all integers from `low` to `high` is:
 
@@ -84,6 +84,7 @@ Focus on the part,
 ```
 sum of all integers from (low+1) to high
 ```
+{: .nolineno}
 
 This is analogous to the same question we ask the person in front of us in the queue example.
 
@@ -91,11 +92,11 @@ And our contribution to the answer is adding *low* to the answer we get.
 
 {% include youtube.html id="KEEKn7Me-ms" %}
 
-## Equivalence
+### Equivalence
 
 It has been proven that there is a recursive solution for every iterative solution and vice versa. We will soon look at some of the aspects to consider while deciding on which approach to take.
 
-## Advantages
+### Advantages
 
 #### 1. Intuitiveness
 
@@ -159,7 +160,7 @@ Plugging the values back:
 
 Advanced data structures (such as linked lists, trees and graphs) are recursive in nature and it is logical to operate recursively on them.
 
-# When should I NOT use recursion?
+## When should I NOT use recursion?
 
 Recursion has it's own set of disadvantages. Each method call requires,
 
@@ -168,7 +169,7 @@ Recursion has it's own set of disadvantages. Each method call requires,
 
 We will see concrete examples of this once we talk about recursive implementation.
 
-# Method calling itself
+## Method calling itself
 
 When a method calls itself, another entry is added to the top of the method stack.
 
@@ -213,8 +214,10 @@ The output you will get before finally getting a `StackOverflowError` is:
 -2
 -3
 -4
-and on and on and on ...
 ```
+{: .nolineno}
+
+and on and on and on ...
 
 An illustration of memory transactions is given below
 
@@ -226,7 +229,7 @@ An illustration of memory transactions is given below
 
 ... and it repeats forever (ends with `StackOverflowError`)
 
-# End-case or terminal case is CRITICAL
+## End-case or terminal case is CRITICAL
 
 It is critical that we have an *end case* of a *terminal case*.
 
@@ -263,6 +266,7 @@ The output you get is:
 2
 1
 ```
+{: .nolineno}
 
 Following are two different ways of handling the terminal case:
 
@@ -307,7 +311,7 @@ public static int sum(int n) {
 }
 ```
 
-# First look at a recursive solution
+## First look at a recursive solution
 
 ### PROBLEM STATEMENT
 
@@ -508,7 +512,7 @@ Some variations of `sum` function are provided to help you understand recursion 
 
 Note that this method uses `getReversed` as a *helper*, which, in turn, is recursive.
 
-# Relevant MQ Videos
+## Relevant MQ Videos
 
 {% include youtube.html id="CtFSt9wUj2k" %}
 

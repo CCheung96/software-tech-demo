@@ -18,10 +18,6 @@ nav_order: 3
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-
-
-# Debugging
-
 For any given problem, we design a solution and then implement it.
 
 As an example, let's say that we are writing a program that gives you the number of digits in an integer. We expect the following *input-output mappings*.
@@ -50,8 +46,20 @@ We need to find out why do some inputs have incorrect outputs. So we go through 
 ## Example 1
 
 Consider the following code that is supposed to return the product of all integers from 1 to `n` (`n` >= 1).
+```java
+/**
+ * @param n >= 1
+ * @return product of integers from 1 to n (including 1 and n).
+ */
+public static int factorial(int n) {
+    int result = 0;
+    for(int i=1; i < n; i++) {
+        result = result * i;
+    }
+}
+ ```
 
-<script src="https://gist.github.com/gaurav1780/71d8008cd4cc632dc6119b1594dcfe88.js"></script>
+<!-- <script src="https://gist.github.com/gaurav1780/71d8008cd4cc632dc6119b1594dcfe88.js"></script> -->
 
 The input-output mappings are -
 
@@ -77,7 +85,20 @@ Thus, the first bug is that `result` should be initalized to 1 and not 0.
 
 Our partially fixed code:
 
-<script src="https://gist.github.com/gaurav1780/526b68d197c7c3a705780af2fcef93c1.js"></script>
+```java
+/**
+ * @param n >= 1
+ * @return product of integers from 1 to n (including 1 and n).
+ */
+public static int factorial(int n) {
+    int result = 1; //fixed initial value of result
+    for(int i=1; i < n; i++) {
+        result = result * i;
+    }
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/526b68d197c7c3a705780af2fcef93c1.js"></script> -->
 
 The new input-output mappings are,
 
@@ -101,7 +122,20 @@ A trace for `n=4` using *logic table* is provided below,
 
 It can now be seen that the loop **should** execute for `i=4` and multiply it into the `result` but it doesn't. By changing `i < n` to `i <= n`, we fix this problem.
 
-<script src="https://gist.github.com/gaurav1780/331fb94f328322b2fc4bd781ef22d18e.js"></script>
+```java
+/**
+ * @param n >= 1
+ * @return product of integers from 1 to n (including 1 and n).
+ */
+public static int factorial(int n) {
+    int result = 1; //fixed initial value of result
+    for(int i=1; i <= n; i++) {
+        result = result * i;
+    }
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/331fb94f328322b2fc4bd781ef22d18e.js"></script> -->
 
 To confirm, we trace once more for `i=4`.
 
@@ -118,8 +152,26 @@ QUESTION:
 Debug the following method for which the expected input-output mappings are provided in the javadoc (comment above the method).
 
 SOLUTION:
-**CRITICAL STEP!!!** Write down the actual input-output mappings after every iteration of debugging
-<script src="https://gist.github.com/gaurav1780/7556eea66978a974423447f544150841.js"></script>
+
+{: .highlight}
+**CRITICAL STEP!!!** Write down the actual input-output mappings after every iteration of debugging.
+
+```java
+public static boolean allPositives(int[] arr) {
+    for(int i=0; i < arr.length; i++) { //(first item is at index 0 not 1)
+        if(arr[i] <= 0) //check if the current item is NOT positive
+            return false; 
+        /*
+            if it IS positve, you cannot return true immediately 
+            as one or more of the subsequent items might not be!
+        */
+    }
+    //loop ended, means all items checked, none NOT positive
+    return true;
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/7556eea66978a974423447f544150841.js"></script> -->
  
 ## Performing Debugging in Popular IDEs
 
@@ -145,7 +197,20 @@ Debugging is still mostly done in your head or on paper, so it is worth revisiti
 
 QUESTION:
 Trace the flow of the following program and determine the value of `result` at the end of it.
-<script src="https://gist.github.com/gaurav1780/767824769b5456ddb080e63d84124d70.js"></script>
+
+```java
+int a = 5;
+int b = 10;
+int result;
+if(a < b && b % a == 0 && a % 2 == 0) { //b should be divisible by a and a should be even
+	result = a;
+}
+else {
+	result = b;
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/767824769b5456ddb080e63d84124d70.js"></script> -->
 
 SOLUTION:
 `a < b` is `true`
@@ -163,7 +228,22 @@ Hence, the `else` block executes, and `result` becomes `b (10)`.
 
 QUESTION:
 Trace the flow of the following program and determine the value of `result` at the end of it.
-<script src="https://gist.github.com/gaurav1780/0f335474bbbf8fcf488150b7b411c33a.js"></script>
+
+```java
+int a = 5, b = 10;
+int result = 0;
+if(a == b) { //check for equality
+	result = a;
+}
+else {
+	b = b - a;
+	if(a == b) {
+		result = b;
+	}
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/0f335474bbbf8fcf488150b7b411c33a.js"></script> -->
 
 SOLUTION:
 `a == b` is `false`,
@@ -175,7 +255,17 @@ SOLUTION:
 
 QUESTION:
 Trace the flow of the following program and determine the value of `result` at the end of it.
-<script src="https://gist.github.com/gaurav1780/0302ce7e20a43b1807584b4ca7f49ce7.js"></script>
+
+```java
+int result = -3;
+for(int i=1; i <= 7; i++) {
+	if(i%2 == 1) { //is i an odd number?
+		result = result + i;
+	}
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/0302ce7e20a43b1807584b4ca7f49ce7.js"></script> -->
 
 SOLUTION:
 
@@ -247,13 +337,87 @@ SOLUTION:
 
 QUESTION:
 Trace the flow of the following code -
-<script src="https://gist.github.com/gaurav1780/0b8969cabc916cff8ed88cfcde631560.js"></script>
+
+```java
+int a = 4, b = 12, c = 3;
+boolean d = false;
+int result = 4;
+if(a > b || b % c == 0) {
+	if(d == true) {
+		result = result + 1;
+	}
+	else {
+		result = result - 1;
+	}
+	result = result * 2;
+}
+
+if(d == false && a == b/c) {
+	result = result + 1;
+	a = a + 1;
+	d = true;
+}
+
+if(d == false && a == b/c) {
+	result = result + 2;
+}
+else {
+	b = b - 2;
+	c = c - 1;
+	d = false;
+}
+
+if(d == false && a == b/c) {
+	result = result + 3;
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/0b8969cabc916cff8ed88cfcde631560.js"></script> -->
 
 SOLUTION:
 At the end of the code,
 `a = 5`, `b = 10`, `c = 2`, `d = false`, `result = 10`.
 Explanation -
-<script src="https://gist.github.com/gaurav1780/7edd01a8e4ae3182e3ddd7f6166a0e53.js"></script>
+
+```java
+int a = 4, b = 12, c = 3;
+boolean d = false;
+int result = 4;
+if(a < b || b % c == 1) {
+	//a < b: false, b%c==0: true, false || true: true
+	if(d == true) { //false == true: false
+		result = result + 1;
+	}
+	else { //else block executes
+		result = result - 1; //result becomes 4 - 1 = 3
+	}
+	result = result * 2; //result becomes 3 * 2 = 6
+}
+
+if(d == false && a == b/c) {
+	//false==false: true, 4 == 12/3: true, true && true: true
+	result = result + 1; //result becomes 6 + 1 = 7
+	a = a + 1; //a becomes 4 + 1 = 5
+	d = !d; //d becomes !false (true)
+}
+
+if(d == false && a == b/c) {
+	//true==false: false, false && anything: false
+	result = result + 2;
+}
+else { //else block executes
+	b = b - 2; //b becomes 12-2 = 10
+	c = c - 1; //c becomes 3-1 = 2
+	d = !d; //d becomes !true (false)
+}
+
+if(d == false && a == b/c) {
+	//false==false: true, 5==10/2: true, true&&true: true
+	result = result + 3; //result becomes 7+3 = 10
+}
+```
+
+<!-- <script src="https://gist.github.com/gaurav1780/7edd01a8e4ae3182e3ddd7f6166a0e53.js"></script> -->
 
 # Relevant MQ Videos
 

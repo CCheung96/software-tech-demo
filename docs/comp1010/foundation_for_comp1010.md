@@ -66,13 +66,50 @@ First function to execute (and in this case the only function) is `setup()`.
 
 Thus, the lines executed are:
 
-```
+```text
 2 -> 3 -> 4 -> 9
 ```
+{: .nolineno}
 
 Note that function headers, lines with JUST curly brackets (opening or closing), and empty lines are not considered while tracing.
 
 Also, note our program doesn't have a `draw()` function, which is also fine.
+
+<!-- Exercise -->
+<!-- {% capture my_problem %}
+Based on our walkthrough, trace the flow of the following program and summarize with the sequence of lines that are executed.
+
+```java
+void setup() {
+	int a = -7;
+	if(a > 0) {
+	   	println("Positive");
+	}
+	else {
+		if(a == 0) {
+			println("Zero (Non-positive, non-negative)");
+		}
+		else {
+			println("Negative");
+		}
+	}
+	println("Ciao!");
+}
+```
+{% endcapture %}
+
+{% capture my_solution %}
+```text
+Lines 2 -> 3 -> 7 -> 11 -> 14
+```
+{: .nolineno}
+{% endcapture %}
+
+{% include exercise.html
+	title="Activity 1.1"
+	problem=my_problem
+	solution=my_solution
+%} -->
 
 #### Activity 1.1
 
@@ -97,9 +134,10 @@ void setup() {
 ```
 
 <details class="answer" markdown="1"><summary>Solution</summary>
-```
+```text
 Lines 2 -> 3 -> 7 -> 11 -> 14
 ```
+{: .nolineno}
 </details>
 
 ### Example 2
@@ -136,9 +174,10 @@ float average(int a, int b) {
 
 If we summarize the above trace, the lines executed are:
 
-```
+```text
 11 -> 12 -> 2 -> 6 -> 12 -> 13
 ```
+{: .nolineno}
 
 Wow! That's a very few lines actually being executed for a relatively large piece of code. And that is absolutely true of any code that has lots of conditions.
 
@@ -166,7 +205,10 @@ void setup() {
 ```
 
 <details class="answer" markdown="1"><summary>Solution</summary>
+```text
 Lines 12 -> 13 -> 7 -> 8 -> 13 -> 14 -> 2 -> 3 -> 14 -> 15
+```
+{: .nolineno}
 </details>
 
 ### Example 3
@@ -182,22 +224,23 @@ void setup() {
 }
 ```
    
-1. Line 2
-2. Line 3
-3. Line 4 - loop encountered, `i` initialized, loop expression checked. Is `true`.
-4. Line 5
-5. Line 4 - loop variable updated, loop expression checked again. Is `true`.
-6. Line 5
-7. Line 4 - loop variable updated, loop expression checked again. Is `true`.
-8. Line 5
-9. Line 4 - loop variable updated, loop expression checked again. Is `true`.
-10. Line 5
-11. Line 4 - loop variable updated, loop expression checked again. Is `false`.
-12. Line 7
+Line 2
+Line 3
+Line 4 - loop encountered, `i` initialized, loop expression checked. Is `true`.
+Line 5
+Line 4 - loop variable updated, loop expression checked again. Is `true`.
+Line 5
+Line 4 - loop variable updated, loop expression checked again. Is `true`.
+Line 5
+Line 4 - loop variable updated, loop expression checked again. Is `true`.
+Line 5
+Line 4 - loop variable updated, loop expression checked again. Is `false`.
+Line 7
 
-```
+```text
 2 -> 3 -> 4 -> 5 -> 4 -> 5 -> 4 -> 5 -> 4 -> 5 -> 4 -> 7
 ```
+{: .nolineno}
 
 A code that has a lot of loops will **often** have many more statements executed than lines in the program.
 
@@ -219,10 +262,13 @@ void setup() {
 ```
 
 <details class="answer" markdown="1"><summary>Solution</summary>
+```text
 Lines 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 4 -> 5 -> 6 -> 7 -> 4 -> 9 (loop executes twice)
+```
+{: .nolineno}
 </details>
 
-## Activity 1.4
+#### Activity 1.4
 
 Now, all (conditions, functions, loops together)
 
@@ -259,7 +305,10 @@ void setup() {
 ```
 
 <details class="answer" markdown="1"><summary>Solution</summary>
+```text
 Lines 20 -> 21 -> 22 -> 26 -> 11 -> 12 -> 13 > 14 -> 12 -> 13 > 14 -> 12 -> 13 > 14 -> 12 -> 13 > 14 -> 12 -> 16 -> 26 -> 28
+```
+{: .nolineno}
 </details>
 
 ## 2. Define functions

@@ -82,12 +82,12 @@ While designing a function, you must think of three aspects carefully:
 
 #### Example 1
 
-~~~~~
+```text
 Alice -> Bob: Is 5 an even number?
 Bob --> Alice: No.
 Charles -> Bob: Is -18 an even number?
 Bob --> Charles: Yes.
-~~~~~
+```
 
 Here, *"Bob"* is the function that expects an integer value to be supplied to them, and gives the answer *"Yes"/"No"* back to the client (caller).
 
@@ -97,7 +97,7 @@ Here, *"Bob"* is the function that expects an integer value to be supplied to th
 
 #### Example 2
 
-~~~~~
+```text
 Alice -> Bob: What is 12.8 rounded-off to the nearest integer?
 Bob --> Alice: 13.
 Charles -> Bob: What is -3.01 rounded-off to the nearest integer?
@@ -106,7 +106,7 @@ Diane -> Bob: What is "Super Nintendo Chalmers" rounded-off to the nearest integ
 Bob --> Diane: GO AWAY!
 Elise -> Bob: What are 1.5 and -2.7 rounded-off to the nearest integer?
 Bob --> Elise: One number at a time, please.
-~~~~~
+```
 
 Here, we have intentionally made invalid calls from Diane (and Elise) to Bob. This shows that Bob expects one (and only one) `float` to be provided.
 

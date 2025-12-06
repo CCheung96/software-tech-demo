@@ -39,7 +39,7 @@ Use the console to _print out_ the value of `ypos` as the code from your animate
 {% capture my_solution %}
 A single new line is added at the start of the `draw` function that will "report" the current value in the `ypos` variable everytime an animation frame is drawn.
 
-~~~~~
+```
 int ypos;
 
 void setup(){
@@ -55,7 +55,7 @@ void draw(){
 
   ypos++;
 }
-~~~~~
+```
 
 When the circle has gone off the bottom of the screen nothing changes!  The variable keeps going up, but the place where it will be drawn is not visible to us anymore.
 {% endcapture %}

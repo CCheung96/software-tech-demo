@@ -60,10 +60,10 @@ The reasons for this way of doing things are myriad.  In the end, it is the righ
 
 <div class="row">
 <div class="col-xs-6" markdown="1">
-~~~~~
+```
 int[] myArray;
 myArray = new int[5];
-~~~~
+```
 </div>
 <div class="col-xs-6">
 <svg xmlns="http://www.w3.org/2000/svg" height="400" width="480" version="1.1" viewBox="0 0 105.83333 52.916666">
@@ -155,18 +155,15 @@ So you can have,
 - and so on...
 
 
+{: .keynote}
+>~~Perhaps~~ The most important concept to understand in arrays is the difference between a *reference* and an *instance*.
+>
+><img src="https://media.giphy.com/media/WV2tRAlb4Qc741GHVn/giphy.gif" alt="This is a critical moment" style="width: 50%; margin: 16px"/>
+>
+>* **Reference** - the variable name by which you know the array
+>
+>* ***Instance*** - the actual collection of items to which a reference refers.
 
-
-<div class="keypoint" markdown="1">
-~~Perhaps~~ The most important concept to understand in arrays is the difference between a *reference* and an *instance*.
-
-<img src="https://media.giphy.com/media/WV2tRAlb4Qc741GHVn/giphy.gif" alt="This is a critical moment" style="width: 50%; margin: 16px"/>
-
-* **Reference** - the variable name by which you know the array
-
-* ***Instance*** - the actual collection of items to which a reference refers.
-
-</div>
 
 ## Syntax to create an array
 

@@ -22,7 +22,7 @@ nav_order: 13
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-# Binary search
+## Binary search
 
 In this section, we'll learn a fast way of searching through data, under one assumption...
 
@@ -32,11 +32,12 @@ We can always tweak the algorithm based on the order of sorting.
 
 Before explaining things descriptively, how about a video to illustrate binary search, from our good friends at HackerRank.
 
-**IMPORTANT!!!**
-
-The implementation discussed is recursive. We haven't covered recursion yet so only the first 2 minutes 40 seconds of the video are relevant.
-
-{% include youtube.html id="P3YID7liBug" %}
+{: .highlight}
+>**IMPORTANT!!!**
+>
+>The implementation discussed is recursive. We haven't covered recursion yet so only the first 2 minutes 40 seconds of the video are relevant.
+>
+>{% include youtube.html id="P3YID7liBug" %}
 
 ## The game is on!
 
@@ -68,7 +69,7 @@ The strategy explained in the last exercise is the same strategy we use to find 
 
 For those of you who may have used the dictionary, it's again, the same strategy used to find a particular word in a dictionary.
 
-## Visualising the game
+### Visualising the game
 
 Assume the numbers in contention being in green. Initially all the numbers are in contention
 
@@ -92,7 +93,7 @@ Guess 4: 18. Feedback: target is higher than 18
 
 Guess 5: 19. Feedback: target equals 19 - **FOUND!**
 
-## Coding the game
+### Coding the game
 
 Say the array `arr` is:
 

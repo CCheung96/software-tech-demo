@@ -196,8 +196,9 @@ Next, let's say we want the shape to move UP.
 If you simply add,
 
 ```java
-y=y-1;
+y = y - 1;
 ```
+{: .nolineno}
 
 as the last statement, nothing will happen (seriously, try it!). This is because y decreases by 1 and is IMMEDIATELY destroyed in the memory upon completion of first iteration of `draw()`. Then, it is declared and assigned to `height/2` again at the start of the second iteration. Again, it is destroyed in the memory upon completion of second iteration of `draw()` and so on and so forth.
 
@@ -310,12 +311,14 @@ Instead of,
 ```java
 y = y - 1;
 ```
+{: .nolineno}
 
 try, 
 
 ```java
 x = x - 1;
 ```
+{: .nolineno}
 
 and see what happens. 
 

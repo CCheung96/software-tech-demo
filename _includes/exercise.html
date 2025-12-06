@@ -6,12 +6,14 @@
     <div class="exercise-description">
         {{ include.problem | markdownify }}
     </div>
+    {% if include.solution %}
     <div class="exercise-solution">
         <details>
             <summary>Solution</summary>
             {{ include.solution | markdownify }}
         </details>
     </div>
+    {% endif %}
     {% if include.solution2 %}
     <div class="exercise-solution">
         <details>

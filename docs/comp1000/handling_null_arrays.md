@@ -65,7 +65,7 @@ int[] data = null;
 println(data[0]); //NullPointerException
 ```
 
-# Lesson 1: Before we access the `length` attribute of an array, we must ensure it's not `null`.
+## Lesson 1: Before we access the `length` attribute of an array, we must ensure it's not `null`.
 
 ```java
 //UNSAFE:
@@ -85,7 +85,7 @@ if(data != null) {
 
 Similarly, for a two-dimensional array, either the 2d array itself can be `null` or one or more of its subarrays can be `null`. Following are two versions of a program that store the sum of all items in a variable `total`, the first one unsafe, and the second one safe.
 
-## Version 1 (Unsafe)
+### Version 1 (Unsafe)
 
 ```java
 int total = 0;
@@ -104,7 +104,7 @@ int[] cab = { {10, 70}, null, {20, 90} };
 ```
 
 
-## Version 2 (Safe)
+### Version 2 (Safe)
 
 ```java
 int total = 0;
@@ -129,7 +129,7 @@ int[] cab = { {10, 70}, null, {20, 90} };
 int[] mixedBag = { {10, 70, 20}, null, {90}, null, {} };
 ```
 
-# Moral of the story: 
+## Moral of the story: 
 
 1. Always check an array is NOT null before accessing its length, and, 
 2. Always check the index is within bounds before accessing an item at that index (our loop expressions are doing that in the above examples).
