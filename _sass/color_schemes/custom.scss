@@ -145,27 +145,6 @@
     color: #7c3aed;
 }
 
-// #backToTop {
-//   position: fixed;
-//   bottom: 2rem;
-//   right: 2rem;
-//   padding: 0.6rem 0.9rem;
-//   font-size: 1.2rem;
-//   border: none;
-//   border-radius: 50%;
-//   background: #444;
-//   color: white;
-//   cursor: pointer;
-//   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-//   display: none; /* hidden until scroll */
-//   z-index: 1000;
-// }
-
-// #backToTop:hover {
-//   background: #222;
-// }
-
-
 .prereq-outcomes-container {
     background: #eeebee;
     padding: 5px;
@@ -186,14 +165,6 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-.keypoint {
-    background-color: #97e6a4;
-    padding: 1.5em;
-    margin: 2em;
-    border-radius: 0.5em;
-    font-size: 1.25rem;
-}
-
 .centred-img {
     display: flex;
     justify-content: center;
@@ -204,29 +175,14 @@ div.highlighter-rouge.nolineno .rouge-gutter {
   display: none; /* hides the line number column */
 }
 
-// div.highlighter-rouge.nolineno .rouge-table {
+div.highlighter-rouge.nolineno .rouge-table {
 //   border-spacing: 0; /* remove table spacing */
-// }
+}
 
 div.highlighter-rouge.nolineno .rouge-code {
   width: 100%; /* let code expand full width */
   display: block;
 }
-
-// .youtube-container {
-//     position: relative;
-//     max-width: 100%;
-//     aspect-ratio: 16 / 9; /* modern, preferred */
-//     height: auto;
-//     margin-bottom: 1rem;
-// }
-
-// .youtube-container iframe {
-//     max-width: 100%;
-//     height: 100%;
-//     border: 0;
-//     display: block;
-// }
 
 // .d3js {
 //     width: 100%;
@@ -239,14 +195,3 @@ div.highlighter-rouge.nolineno .rouge-code {
 //   height: auto;
 //   display: block;
 // }
-
-// .youtube-container iframe {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   border: 0;
-// }
-
-

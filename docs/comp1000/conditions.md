@@ -51,7 +51,7 @@ Write a program that draws a blue cirle that moves from the top to the bottom of
 {% capture my_solution %}
 The problem description does not directly relate to conditions, so we need to "re-interpret" it to put it into "code-speak".  Another way to consider the problem statement (as a Processing programmer) is "write a program where a blue circle is drawn on the screen and every time it is drawn it moves a little.  IF it has hit the bottom previously, it should move up, otherwiser it should move down".  This leads us more directly to some code.  We need a condition so that we can choose which code path will run on any individual frame (`if (hitBottom)`) and to make it work we need a boolean _recording_ if we have hit the bottom before.  Finally, we need an condition that checks everytime we draw the sketch if we just hit the bottom.
 
-```
+```java
 int yPos;
 boolean hitBottom;
 
@@ -152,7 +152,7 @@ rest of the code
 
 ```mermaid
 flowchart TD
-    A[boolean expression] 
+    A[boolean expression]
     A -->|if| B(if-block statements)
     A -->|else| C(else-block statements)
     B --> D(rest of code)
@@ -227,8 +227,8 @@ A("int a = 5, b = 2, c = 10")
 A ==> B@{ shape: hex, label: "a < b?"}
 B -->|true| C@{ shape: hex, label: "c == a?"}
 C -->|true| D(c = c + 1)
-C -->|false| H@{ shape: stadium, label: "end of code"} 
-B ==>|false| E@{ shape: hex, label: "b < c?"} 
+C -->|false| H@{ shape: stadium, label: "end of code"}
+B ==>|false| E@{ shape: hex, label: "b < c?"}
 E ==>|true| F(b = c - a)
 E -->|false| G(a = 0)
 F ==> I("a = 5, b = 5, c = 10")
@@ -265,7 +265,7 @@ Both assignment operators are conditional and it is possible, in terms of contro
 ```mermaid
 flowchart TD
 A("int a = (int)random(6)<br> int b = (int)random(6)<br> int max")
-A --> B@{ shape: hex, label: "a > b?"} 
+A --> B@{ shape: hex, label: "a > b?"}
 B -->|true| C("max = a")
 C --> D@{ shape: hex, label: "b > = a?"}
 B -->|"false"| D
@@ -292,7 +292,7 @@ println(max);
 ```mermaid
 flowchart TD
 A("int a = (int)random(6)<br> int b = (int)random(6)<br> int max")
-A --> B@{ shape: hex, label: "a > b?"} 
+A --> B@{ shape: hex, label: "a > b?"}
 B -->|true| C("max = a")
 C --> D("println(max)")
 B -->|false| E("max = b")
@@ -398,17 +398,17 @@ As an example, consider the following code:
 ```java
 int a = (int)random(5), b = (int)random(5), c = (int)random(5);
 if(a < b) {
-	if(c == a) {
-		c = c + 1;
-	}
+  if(c == a) {
+    c = c + 1;
+  }
 }
 else {
-	if(b < c) {
-		b = c - a;
-	}
-	else {
-		a = 0;
-	}
+  if(b < c) {
+    b = c - a;
+  }
+  else {
+    a = 0;
+  }
 }
 ```
 
@@ -419,7 +419,7 @@ There are four possibilities:
 Lines 1 --> 2 --> 3--> 4
 
 Effective program:
-	
+
 ```java
 int a = (int)random(5), b = (int)random(5), c = (int)random(5);
 c = c + 1;
@@ -430,7 +430,7 @@ c = c + 1;
 Lines 1 --> 2 --> 3
 
 Effective program:
-	
+
 ```java
 int a = (int)random(5), b = (int)random(5), c = (int)random(5);
 ```
@@ -440,7 +440,7 @@ int a = (int)random(5), b = (int)random(5), c = (int)random(5);
 Lines 1 --> 2 --> 8 --> 9
 
 Effective program:
-	
+
 ```java
 int a = (int)random(5), b = (int)random(5), c = (int)random(5);
 b = c - a;
@@ -451,7 +451,7 @@ b = c - a;
 Lines 1 --> 2 --> 8 --> 12
 
 Effective program:
-	
+
 ```java
 int a = (int)random(5), b = (int)random(5), c = (int)random(5);
 a = 0;
