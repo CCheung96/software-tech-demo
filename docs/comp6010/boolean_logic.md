@@ -10,7 +10,7 @@ nav_order: 3
 
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-* [Functions]({{ site.baseurl }}/comp1000/functions)
+  * [Functions]({{ site.baseurl }}/comp1000/functions)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
@@ -29,7 +29,7 @@ nav_order: 3
 
 ## History behind "Boolean"
 
-George Boole was an early 19th century English mathematician who worked in the field of differential equations and Boolean alegbra. Here's a link to his book, [The Laws of Thought](https://www.gutenberg.org/files/15114/15114-pdf.pdf) 
+George Boole was an early 19th century English mathematician who worked in the field of differential equations and Boolean alegbra. Here's a link to his book, [The Laws of Thought](https://www.gutenberg.org/files/15114/15114-pdf.pdf)
 
 <img src="{{ site.baseurl }}/assets/comp1000/boolean-expressions/georgeBoole.jpg" alt=""/>
 
@@ -37,9 +37,9 @@ George Boole was an early 19th century English mathematician who worked in the f
 
 ## What is Boolean logic
 
-Quite simply, boolean logic is the use of "and", "or", and "not" conditions. 
+Quite simply, boolean logic is the use of "and", "or", and "not" conditions.
 
-For example, "if it's raining OR if it's over 50 degrees celsius, take an umbrella" means that one must carry an umbrella if it's raining. One must also carry an umbrella if the temperature is over 50 degrees. On the other hand, "if it's raining AND if it's over 50 degrees celsius, take an umbrella" means that one must carry an umbrella if it's raining AND AT THE SAME TIME the temperature is over 50 degrees. 
+For example, "if it's raining OR if it's over 50 degrees celsius, take an umbrella" means that one must carry an umbrella if it's raining. One must also carry an umbrella if the temperature is over 50 degrees. On the other hand, "if it's raining AND if it's over 50 degrees celsius, take an umbrella" means that one must carry an umbrella if it's raining AND AT THE SAME TIME the temperature is over 50 degrees.
 
 "You are NOT stupid" explicitly means that the person is not unintelligent. But does it mean that the person is intelligent?!? Not really. Just like "The number is NOT positive" could mean the number being negative, or zero (which is neither positive nor negative).
 
@@ -91,7 +91,7 @@ The `OR` operator can be seen as **addition**.
 |1|0|1|
 |1|1|1|
 
-### Why is 1 + 1 = 1? 
+### Why is 1 + 1 = 1?
 
 Well, because we have binary states (0 or 1) so any overflow means you are limited to 1.
 

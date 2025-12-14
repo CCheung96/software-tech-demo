@@ -29,7 +29,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "/software-tech-demo" # the subpath of your site, e.g. /blog
 url: "https://ccheung96.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: 
+# twitter_username:
 github_username:  CCheung96
 
 # Build settings
@@ -42,7 +42,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge # Stylises code snippets, aside from processing
   syntax_highlighter_opts:
-    default_lang: java
+    default_lang: text
     block:
       line_numbers: true
 
@@ -76,9 +76,9 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Turning off HTML compression is needed to prevent the incorrect rendering of Syntax Highlighting and Line Numbers
-compress_html: 
+compress_html:
   ignore:
-    envs: all   
+    envs: all
 
 exclude:
   - archive

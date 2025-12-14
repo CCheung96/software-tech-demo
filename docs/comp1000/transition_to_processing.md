@@ -24,7 +24,7 @@ nav_order: 1
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 ## Textbook
- The textbook for this unit is "Learning Processing: A Beginner's Guide to Programming Images, Animation, and Interaction" by Daniel Shiffman. Scan the following QR Code or click on [this link](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/467l3g/cdi_skillsoft_books24x7_bks00089202) to download it via Macquarie University. 
+ The textbook for this unit is "Learning Processing: A Beginner's Guide to Programming Images, Animation, and Interaction" by Daniel Shiffman. Scan the following QR Code or click on [this link](https://multisearch.mq.edu.au/permalink/61MACQUARIE_INST/467l3g/cdi_skillsoft_books24x7_bks00089202) to download it via Macquarie University.
 
  Steps to download the book:
 
@@ -37,7 +37,9 @@ nav_order: 1
 
 <div style="text-align: center;">
   <h4>QR Code for textbook</h4>
-  <img src="{{ site.baseurl }}/assets/comp1000/learningProcessingQR.png" style="width: 400px;" alt="QR code for textbook"/>
+  <div class="centred-img">
+    <img src="{{ site.baseurl }}/assets/comp1000/learningProcessingQR.png" style="width: 200px;" alt="QR code for textbook"/>
+  </div>
 </div>
 
 
@@ -81,10 +83,10 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 - a pixels below (x, y): (x, y+a)
 {% endcapture %}
 
-{% include exercise.html 
-  title="Exercise 1" 
-  problem=problem 
-  solution=solution 
+{% include exercise.html
+  title="Exercise 1"
+  problem=problem
+  solution=solution
 %}
 
 
@@ -97,10 +99,10 @@ By default, Processing display window is of size 100 by 100, which means it's 10
 (60, 40)
 {% endcapture %}
 
-{% include exercise.html 
-  title="Exercise 2" 
-  problem=problem 
-  solution=solution 
+{% include exercise.html
+  title="Exercise 2"
+  problem=problem
+  solution=solution
 %}
 
 <!--Exercise 3-->
@@ -172,7 +174,7 @@ Do you see any output window and if so, what is the end result? If not, what is 
 {% endcapture %}
 
 {% capture my_solution %}
-```console
+```console?output
 Syntax error - Missing ";".
 ```
 {: .nolineno}
@@ -285,9 +287,9 @@ Which component is responsible for each of the following tasks:
 {% endcapture %}
 
 {% capture solution %}
-_The compiler_ will convert text to a runnable program.  
-_Processing_ will work out what occurs in `draw`.  
-_The computer (or the operating system)_ will put actual pictures on the screen.  
+_The compiler_ will convert text to a runnable program.
+_Processing_ will work out what occurs in `draw`.
+_The computer (or the operating system)_ will put actual pictures on the screen.
 _Processing_ will work out what occurs in `setup`.
 {% endcapture %}
 
@@ -335,13 +337,13 @@ Compute the following expressions according to rules of Processing:
 </div>
 -->
 
-## Practice programs 
+## Practice programs
 
 These are programs to help you start with simple sketches are work your way up to more complex animation (over the course of the session). Very helpful for incremental learning and assignments.
 
 [COMP1000PracticePrograms.zip]({{ site.baseurl }}/assets/comp1000/transition-to-processing/COMP1000PracticePrograms.zip)
 
-<!--## ADVANCED (HD-level for now) Test-driven development programs 
+<!--## ADVANCED (HD-level for now) Test-driven development programs
 
 These are programs to help you get acquainted with test-driven development and help you with module exams (and also major work). Instructions file inside the package explains what needs to be done.
 

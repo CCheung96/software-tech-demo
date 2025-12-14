@@ -5,41 +5,23 @@ parent: COMP6010
 nav_order: 2
 katex: true
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
-  * [Python Introduction]({{ site.baseurl }}/comp6010/python-introduction)  
-
+  * [Python Introduction]({{ site.baseurl }}/comp6010/python-introduction)
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
-
   * Represent integers (including negative integers) in different bases.
   * Convert from one base to other.
 {% endcapture %}
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-
-<!--# Table of contents
-
-- [1. Representing Information](#1-representing-information)
-- [2. Representing numbers in different bases](#2-representing-numbers-in-different-bases)
-  - [2.1 Positional number systems](#21-positional-number-systems)
-  - [2.2 Converting to base *b*](#22-converting-to-base-b)
-- [3. Data Types](#3-data-types)
-  - [3.1 Integers](#31-integers)
-    - [3.1.1 Unsigned Integers](#311-unsigned-integers)
-    - [3.1.2 Signed Integers](#312-signed-integers)
-    - [3.1.3 One's Complement](#313-ones-complement)
-    - [3.1.4 Two's Complement](#314-twos-complement)
-  - [3.2 Floating Point Numbers (ADVANCED)](#32-floating-point-numbers-advanced)
-    - [3.2.1 To IEEE format](#321-to-ieee-format)
-    - [Example 1](#example-1)
-    - [Example 2](#example-2)
-    - [3.2.2 From IEEE format](#322-from-ieee-format)-->
-
-
-# 1. Representing Information
+## 1. Representing Information
 
 How do we represent data in a computer? At a fundamental level, a computer is an electronic machine that works by controlling the flow of electrons
 
@@ -48,7 +30,7 @@ It is easy to recognize two scenarios:
 1. presence of current flowing through - call this state "1"
 2. absence of current flowing through - call this state "0"
 
-# 2. Representing numbers in different bases
+## 2. Representing numbers in different bases
 
 An integer in base $$b$$ consists of values from 0 to $$b-1$$.
 
@@ -66,7 +48,7 @@ Hexadecimal is base-16, so it has values rom 0 to 15. However, beyond 9, the fol
 
 A number $$n$$ in base $$b$$ is represented as $$n_b$$. That is the base is in the subscript. Absence of subscript means it is a decimal value.
 
-For example, 
+For example,
 
 $$1101_2$$ is a base-2 or binary value.
 $$1304_8$$ is a base-8 or octal value.
@@ -76,7 +58,7 @@ $$1603_6$$ is is an invalid number since base-6 can only have digits between 0 a
 Hexadecimal numbers are often prefixed with `0x`. For example `0x17c9` represents the hexadecimal number `17c9`.
 Similarly, binary numbers are often prefixed with `0b`. For example `0b1101` represents the binary number `1101`.
 
-## 2.1 Positional number systems
+### 2.1 Positional number systems
 
 Consider these positions in a number system:
 
@@ -99,53 +81,53 @@ Consider these positions in a number system:
 
 {% raw %}
 $$
-d_3 \times n^3 + d_2 \times n^2 + d_1 \times n^1 + d_0 \times n^0 
+d_3 \times n^3 + d_2 \times n^2 + d_1 \times n^1 + d_0 \times n^0
 $$
 {% endraw %}
 
-Consider the number 350 in base 10 (radix 10). That is, n is 10, and thus: 
+Consider the number 350 in base 10 (radix 10). That is, n is 10, and thus:
 
 {% raw %}
 $$
-3 \times n^2 + 5 \times n^1 + 0 \times n^0 
-$$
-{% endraw %}
-
-{% raw %}
-$$
-3 \times 100 + 5 \times 10 + 0 \times 1 
-$$
-{% endraw %}
-
-Consider the number 10110 in base 2 (radix 2). That is, n is 2, and thus: 
-
-{% raw %}
-$$
-1 \times n^4 + 0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 
+3 \times n^2 + 5 \times n^1 + 0 \times n^0
 $$
 {% endraw %}
 
 {% raw %}
 $$
-1 \times 16 + 0 \times 8 + 1 \times 4 + 1 \times 2 + 0 \times 1 
+3 \times 100 + 5 \times 10 + 0 \times 1
+$$
+{% endraw %}
+
+Consider the number 10110 in base 2 (radix 2). That is, n is 2, and thus:
+
+{% raw %}
+$$
+1 \times n^4 + 0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0
+$$
+{% endraw %}
+
+{% raw %}
+$$
+1 \times 16 + 0 \times 8 + 1 \times 4 + 1 \times 2 + 0 \times 1
 $$
 {% endraw %}
 
 or 22 in base 10.
 
-## 2.2 Converting between number systems
+### 2.2 Converting between number systems
 
-### 2.2.1 Converting from decimal to base *b*
+#### 2.2.1 Converting from decimal to base *b*
 
 1. Start with result = 0
 2. If number is zero, go to step 5.
-3. Divide the number by $$b$$ and put the remainder (a value between 0 and $$b-1$$ to the left of result. 
-4. Go to step 2. 
+3. Divide the number by $$b$$ and put the remainder (a value between 0 and $$b-1$$ to the left of result.
+4. Go to step 2.
 5. Binary number is in the result.
 
 In the operation $$\frac{a}{b}$$, if $$a \times d + r = b$$, we call $$d$$ the *quotient* and $$r$$ the *remainder*. Here $$a$$ is being divided by $$b$$ and $$a$$ is the *dividend* (numerator) while $$b$$ is the *divisor* (denomenator).
 
-#### Examples
+##### Examples
 
 46 to binary:
 
@@ -199,14 +181,14 @@ In the operation $$\frac{a}{b}$$, if $$a \times d + r = b$$, we call $$d$$ the *
 | 10	| 16 | 0 | 10 (A) | DB -> ADB |
 
 
-### 2.2.2 Converting from base *b* to decimal
+#### 2.2.2 Converting from base *b* to decimal
 
 1. $$weight = 1, result = 0$$
 2. Start with right-most digit (least significant digit)
 2. Multiply digit by $$weight$$ and add to $$result$$
 3. Multiply $$weight$$ by $$b$$
 4. If digit exists to the left of current digit, go to step 2
-5. Result holds the decimal value 
+5. Result holds the decimal value
 
 Examples
 
@@ -218,7 +200,7 @@ $$1101_2$$ to decimal:
 | 0 | 2	| 1 -> 1 + 0\*2 = 1 |
 | 1 | 4 | 1 -> 1 + 1\*4 = 5 |
 | 1 | 8 | 5 -> 5 + 1\*8 = 13 (result) |
- 
+
 
 $$ADB_{16}$$ to decimal:
 
@@ -237,7 +219,7 @@ $$1201_3$$ to decimal:
 | 2 | 9 | 1 -> 1 + 2\*9 = 19 |
 | 1 | 27 | 19 -> 19 + 1\*27 = 46 (result) |
 
-### 2.2.3 Converting between arbitrary bases
+#### 2.2.3 Converting between arbitrary bases
 
 Say, we need to convert a number $$n$$ from base $$b_1$$ to base $$b_2$$.
 
@@ -257,9 +239,9 @@ Convert $$4307_9$$ to base-16.
 2. Convert from decimal to base-3: $$C5E_{16}$$
 
 
-# 3. Data Types
+## 3. Data Types
 
-## 3.1 Integers
+### 3.1 Integers
 
 There are two categories of integers (whole numbers):
 
@@ -274,7 +256,7 @@ Unsigned integers are all positive, and thus you can use all bits to represent p
 
 Signed integers use a bit to represent whether the integer is positive or negative.
 
-### 3.1.1 Unsigned Integers
+#### 3.1.1 Unsigned Integers
 
 Let's see how many unsigned (non-negative) integers can we store using 4 bits.
 
@@ -301,11 +283,11 @@ Let's see how many unsigned (non-negative) integers can we store using 4 bits.
 - **What is the largest unsigned integer using 16 bits?**
 - **What is the largest unsigned integer using 32 bits?**
 
-### 3.1.2 Signed Integers
+#### 3.1.2 Signed Integers
 
 But how can we represent negative numbers?
 
-#### 3.1.2.1 Signed Magnitude
+##### 3.1.2.1 Signed Magnitude
 
 The simplest pattern (at least for humans) might be the "signed magnitude"... just use the left-most bit to mean negative.
 
@@ -329,10 +311,10 @@ The simplest pattern (at least for humans) might be the "signed magnitude"... ju
 <tr><td>7</td><td>0111</td></tr>
 </table>
 
-If we add 1 and -1, we should get zero. Using signed magnitude, it's 0001 + 1001 = 1010, which is -2. 
+If we add 1 and -1, we should get zero. Using signed magnitude, it's 0001 + 1001 = 1010, which is -2.
 So, no good :(
 
-#### 3.1.2.2 One's Complement
+##### 3.1.2.2 One's Complement
 
 We can keep the left-most bit for sign and flip the others so `n` + `-n` is always `0000000` (Ignoring the sign bit).
 
@@ -358,7 +340,7 @@ We can keep the left-most bit for sign and flip the others so `n` + `-n` is alwa
 
 But this leads to two representations of 0 (positive zero and negative zero) - no good!
 
-#### 3.1.2.3 Two's Complement
+##### 3.1.2.3 Two's Complement
 
 An $$n$$-bit two's complement represents integers in the range $$[-2^{(n-1)}, \hskip 2mm 2^{(n-1)} - 1$$] (That represents all integers from $$-2^{(n-1)}$$ to $$2^{(n-1)} - 1$$(inclusive on both sides).
 
@@ -366,14 +348,14 @@ A negative number $$k$$ is represented by,
 
 1. Add 1 to $$k$$. Call this $$m$$. Note that $$m <= 0$$.
 2. Negate $$m$$. Call this $$p$$. Note that $$p >= 0$$.
-3. Flip the bits of $$p$$. 
+3. Flip the bits of $$p$$.
 
-This can be represented as 
+This can be represented as
 
-{% raw %} 
+{% raw %}
 $$
 bin(k | k < 0) = flip(toBinary(negate(inc(k))))
-$$ 
+$$
 {% endraw %}
 
 The order of operations should be:
@@ -384,7 +366,7 @@ You can remember it as "INToF"
 
 In a 4-bit system, -6 would be represented by,
 
-1. adding 1 to get -5, 
+1. adding 1 to get -5,
 2. negating -5 to get 5,
 3. flipping binary representation of 5 (`0101`) to get `1010`.
 
@@ -416,7 +398,7 @@ Advantages:
 
 **What is the range of numbers represented in 16 bits using 2's complement?**
 
-#### Examples
+##### Examples
 
 ```
 -46 in 8-bit binary
@@ -434,7 +416,7 @@ To: To binary = 0000001100011000
 F: Flip = 1111110011100111
 ```
 
-## 3.2 Floating Point Numbers (ADVANCED)
+### 3.2 Floating Point Numbers (ADVANCED)
 
 Could be used just to indicate where a decimal place
 
@@ -446,19 +428,19 @@ Consider that we have 32 bits to use. The *IEEE Standard for Floating Point Arit
 * 8 bits for exponent (offset by 127)
 * 23 bits for precision (leading 1 assumed)
 
-### 3.2.1 To IEEE format
+#### 3.2.1 To IEEE format
 
-### Example 1 
+#### Example 1
 
 Convert to IEEE floating-point representation:
 
 {% raw %}
-$$ 
+$$
 -6 \dfrac{5}{8}
 $$
 {% endraw %}
 
-#### 3.2.1.1 Convert to binary representation
+##### 3.2.1.1 Convert to binary representation
 
 <table>
 <tr>
@@ -504,7 +486,7 @@ or:
 
 -0110.101
 
-#### 3.2.1.2 Normalize
+##### 3.2.1.2 Normalize
 
 Move the decimal place to left or right to get a single 1 to the left of the decimal place. Count how many places and in which direction:
 
@@ -516,7 +498,7 @@ becomes:
 
 with 2 moves (exponent).
 
-#### 3.2.1.3 Add 127 to exponent, convert to binary
+##### 3.2.1.3 Add 127 to exponent, convert to binary
 
 2 + 127 = 129
 
@@ -526,7 +508,7 @@ which is:
 
 in binary.
 
-#### 3.2.1.4 Combine, leaving off leading 1 of precision
+##### 3.2.1.4 Combine, leaving off leading 1 of precision
 
 1 100000001 10101
 
@@ -534,13 +516,13 @@ and pad to a total of 32 bits:
 
 1 100000001 10101000000000000000000
 
-### Example 2
+#### Example 2
 
-$$ 
+$$
 -6 \dfrac{5}{16}
 $$
 
-#### 3.2.1.1 Convert to binary representation
+##### 3.2.1.1 Convert to binary representation
 
 <table>
 <tr>
@@ -589,7 +571,7 @@ or:
 
 Rest remains the same.
 
-### 3.2.2 From IEEE format
+#### 3.2.2 From IEEE format
 
 Consider:
 
@@ -597,7 +579,7 @@ Consider:
 
 Do the reverse:
 
-#### 3.2.2.1 First digit is sign
+##### 3.2.2.1 First digit is sign
 
 Break into parts:
 
@@ -605,7 +587,7 @@ Break into parts:
 
 It is positive!
 
-#### 3.2.2.1 Next 8 bits is exponent, minus 127
+##### 3.2.2.1 Next 8 bits is exponent, minus 127
 
 Convert next 8 unsigned bits into decimal, and subtract 127:
 
@@ -613,7 +595,7 @@ Convert next 8 unsigned bits into decimal, and subtract 127:
 
 123 - 127 = -4
 
-#### 3.2.2.1 Get precision
+##### 3.2.2.1 Get precision
 
 Put a one in front of the last 23 bits:
 
@@ -631,7 +613,7 @@ $$
 $$
 {% endraw %}
 
-#### 3.2.2.1 All together
+##### 3.2.2.1 All together
 
 {% raw %}
 $$

@@ -2,7 +2,7 @@
 title: "Ethical Game Development"
 permalink: /comp2160/ethical-game-dev
 parent: COMP2160
-nav_order: 
+nav_order:
 ---
 
 
@@ -10,7 +10,7 @@ nav_order:
 {% capture topic_prereq %}
  * Assumed topic 1
  * Assumed topic 2
- 
+
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
@@ -21,7 +21,8 @@ nav_order:
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-## Author: 
+
+Where the hell did this come from??????? - Crystal
 
 
 Okay. Welcome to the Week One. Lectures for 21. 60.  this week we'll be talking about just the basics

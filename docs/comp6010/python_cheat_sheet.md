@@ -4,8 +4,10 @@ permalink: /comp6010/pyhon-cheat-sheet
 parent: COMP6010
 nav_order: 4
 ---
+
 <!-- Assumed Knowledge -->
-{% capture topic_prereq %}  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
+{% capture topic_prereq %}
+  * [Primitive Operations]({{ site.baseurl }}/comp1000/primitive-operations)
   * [Algorithms]({{ site.baseurl }}/comp1000/algorithms)
 {% endcapture %}
 <!-- Learning Outcomes -->
@@ -37,211 +39,27 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-# About
+## About
 
 The basic cheatsheet for Python is mostly based on the book written by Al Sweigart, [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) under the [Creative Commons license](https://creativecommons.org/licenses/by-nc-sa/3.0/) and many other sources.
 
-## Python Cheatsheet
+### Contribute
 
-- [About](#about)
-  - [Contribute](#contribute)
-  - [Read It](#read-it)
-  - [Python Cheatsheet](#python-cheatsheet)
-  - [The Zen of Python](#the-zen-of-python)
-  - [Python Basics](#python-basics)
-    - [Math Operators](#math-operators)
-    - [Data Types](#data-types)
-    - [String Concatenation and Replication](#string-concatenation-and-replication)
-    - [Variables](#variables)
-    - [Comments](#comments)
-    - [The print() Function](#the-print-function)
-    - [The input() Function](#the-input-function)
-    - [The len() Function](#the-len-function)
-    - [The str(), int(), and float() Functions](#the-str-int-and-float-functions)
-  - [Flow Control](#flow-control)
-    - [Comparison Operators](#comparison-operators)
-    - [Boolean evaluation](#boolean-evaluation)
-    - [Boolean Operators](#boolean-operators)
-    - [Mixing Boolean and Comparison Operators](#mixing-boolean-and-comparison-operators)
-    - [if Statements](#if-statements)
-    - [else Statements](#else-statements)
-    - [elif Statements](#elif-statements)
-    - [while Loop Statements](#while-loop-statements)
-    - [break Statements](#break-statements)
-    - [continue Statements](#continue-statements)
-    - [for Loops and the range() Function](#for-loops-and-the-range-function)
-    - [For else statement](#for-else-statement)
-    - [Importing Modules](#importing-modules)
-    - [Ending a Program Early with sys.exit()](#ending-a-program-early-with-sysexit)
-  - [Functions](#functions)
-    - [Return Values and return Statements](#return-values-and-return-statements)
-    - [The None Value](#the-none-value)
-    - [Keyword Arguments and print()](#keyword-arguments-and-print)
-    - [Local and Global Scope](#local-and-global-scope)
-    - [The global Statement](#the-global-statement)
-  - [Exception Handling](#exception-handling)
-    - [Basic exception handling](#basic-exception-handling)
-    - [Final code in exception handling](#final-code-in-exception-handling)
-  - [Lists](#lists)
-    - [Getting Individual Values in a List with Indexes](#getting-individual-values-in-a-list-with-indexes)
-    - [Negative Indexes](#negative-indexes)
-    - [Getting Sublists with Slices](#getting-sublists-with-slices)
-    - [Getting a List’s Length with len()](#getting-a-lists-length-with-len)
-    - [Changing Values in a List with Indexes](#changing-values-in-a-list-with-indexes)
-    - [List Concatenation and List Replication](#list-concatenation-and-list-replication)
-    - [Removing Values from Lists with del Statements](#removing-values-from-lists-with-del-statements)
-    - [Using for Loops with Lists](#using-for-loops-with-lists)
-    - [Looping Through Multiple Lists with zip()](#looping-through-multiple-lists-with-zip)
-    - [The in and not in Operators](#the-in-and-not-in-operators)
-    - [The Multiple Assignment Trick](#the-multiple-assignment-trick)
-    - [Augmented Assignment Operators](#augmented-assignment-operators)
-    - [Finding a Value in a List with the index() Method](#finding-a-value-in-a-list-with-the-index-method)
-    - [Adding Values to Lists with the append() and insert() Methods](#adding-values-to-lists-with-the-append-and-insert-methods)
-    - [Removing Values from Lists with remove()](#removing-values-from-lists-with-remove)
-    - [Removing Values from Lists with pop()](#removing-values-from-lists-with-pop)
-    - [Sorting the Values in a List with the sort() Method](#sorting-the-values-in-a-list-with-the-sort-method)
-    - [Tuple Data Type](#tuple-data-type)
-    - [Converting Types with the list() and tuple() Functions](#converting-types-with-the-list-and-tuple-functions)
-  - [Dictionaries and Structuring Data](#dictionaries-and-structuring-data)
-    - [The keys(), values(), and items() Methods](#the-keys-values-and-items-methods)
-    - [Checking Whether a Key or Value Exists in a Dictionary](#checking-whether-a-key-or-value-exists-in-a-dictionary)
-    - [The get() Method](#the-get-method)
-    - [The setdefault() Method](#the-setdefault-method)
-    - [Pretty Printing](#pretty-printing)
-    - [Merge two dictionaries](#merge-two-dictionaries)
-  - [sets](#sets)
-    - [Initializing a set](#initializing-a-set)
-    - [sets: unordered collections of unique elements](#sets-unordered-collections-of-unique-elements)
-    - [set add() and update()](#set-add-and-update)
-    - [set remove() and discard()](#set-remove-and-discard)
-    - [set union()](#set-union)
-    - [set intersection](#set-intersection)
-    - [set difference](#set-difference)
-    - [set symetric_difference](#set-symetric_difference)
-  - [itertools Module](#itertools-module)
-    - [accumulate()](#accumulate)
-    - [combinations()](#combinations)
-    - [combinations_with_replacement()](#combinations_with_replacement)
-    - [count()](#count)
-    - [cycle()](#cycle)
-    - [chain()](#chain)
-    - [compress()](#compress)
-    - [dropwhile()](#dropwhile)
-    - [filterfalse()](#filterfalse)
-    - [groupby()](#groupby)
-    - [islice()](#islice)
-    - [permutations()](#permutations)
-    - [product()](#product)
-    - [repeat()](#repeat)
-    - [starmap()](#starmap)
-    - [takewhile()](#takewhile)
-    - [tee()](#tee)
-    - [zip_longest()](#zip_longest)
-  - [Comprehensions](#comprehensions)
-    - [List comprehension](#list-comprehension)
-    - [Set comprehension](#set-comprehension)
-    - [Dict comprehension](#dict-comprehension)
-  - [Manipulating Strings](#manipulating-strings)
-    - [Escape Characters](#escape-characters)
-    - [Raw Strings](#raw-strings)
-    - [Multiline Strings with Triple Quotes](#multiline-strings-with-triple-quotes)
-    - [Indexing and Slicing Strings](#indexing-and-slicing-strings)
-    - [The in and not in Operators with Strings](#the-in-and-not-in-operators-with-strings)
-    - [The in and not in Operators with list](#the-in-and-not-in-operators-with-list)
-    - [The upper(), lower(), isupper(), and islower() String Methods](#the-upper-lower-isupper-and-islower-string-methods)
-    - [The isX String Methods](#the-isx-string-methods)
-    - [The startswith() and endswith() String Methods](#the-startswith-and-endswith-string-methods)
-    - [The join() and split() String Methods](#the-join-and-split-string-methods)
-    - [Justifying Text with rjust(), ljust(), and center()](#justifying-text-with-rjust-ljust-and-center)
-    - [Removing Whitespace with strip(), rstrip(), and lstrip()](#removing-whitespace-with-strip-rstrip-and-lstrip)
-    - [Copying and Pasting Strings with the pyperclip Module (need pip install)](#copying-and-pasting-strings-with-the-pyperclip-module-need-pip-install)
-  - [String Formatting](#string-formatting)
-    - [% operator](#-operator)
-    - [String Formatting (str.format)](#string-formatting-strformat)
-    - [Lazy string formatting](#lazy-string-formatting)
-    - [Formatted String Literals or f-strings (Python 3.6+)](#formatted-string-literals-or-f-strings-python-36)
-    - [Template Strings](#template-strings)
-  - [Regular Expressions](#regular-expressions)
-    - [Matching Regex Objects](#matching-regex-objects)
-    - [Grouping with Parentheses](#grouping-with-parentheses)
-    - [Matching Multiple Groups with the Pipe](#matching-multiple-groups-with-the-pipe)
-    - [Optional Matching with the Question Mark](#optional-matching-with-the-question-mark)
-    - [Matching Zero or More with the Star](#matching-zero-or-more-with-the-star)
-    - [Matching One or More with the Plus](#matching-one-or-more-with-the-plus)
-    - [Matching Specific Repetitions with Curly Brackets](#matching-specific-repetitions-with-curly-brackets)
-    - [Greedy and Nongreedy Matching](#greedy-and-nongreedy-matching)
-    - [The findall() Method](#the-findall-method)
-    - [Making Your Own Character Classes](#making-your-own-character-classes)
-    - [The Caret and Dollar Sign Characters](#the-caret-and-dollar-sign-characters)
-    - [The Wildcard Character](#the-wildcard-character)
-    - [Matching Everything with Dot-Star](#matching-everything-with-dot-star)
-    - [Matching Newlines with the Dot Character](#matching-newlines-with-the-dot-character)
-    - [Review of Regex Symbols](#review-of-regex-symbols)
-    - [Case-Insensitive Matching](#case-insensitive-matching)
-    - [Substituting Strings with the sub() Method](#substituting-strings-with-the-sub-method)
-    - [Managing Complex Regexes](#managing-complex-regexes)
-  - [Handling File and Directory Paths](#handling-file-and-directory-paths)
-    - [Backslash on Windows and Forward Slash on OS X and Linux](#backslash-on-windows-and-forward-slash-on-os-x-and-linux)
-    - [The Current Working Directory](#the-current-working-directory)
-    - [Creating New Folders](#creating-new-folders)
-    - [Absolute vs. Relative Paths](#absolute-vs-relative-paths)
-    - [Handling Absolute and Relative Paths](#handling-absolute-and-relative-paths)
-    - [Checking Path Validity](#checking-path-validity)
-    - [Finding File Sizes and Folder Contents](#finding-file-sizes-and-folder-contents)
-    - [Copying Files and Folders](#copying-files-and-folders)
-    - [Moving and Renaming Files and Folders](#moving-and-renaming-files-and-folders)
-    - [Permanently Deleting Files and Folders](#permanently-deleting-files-and-folders)
-    - [Safe Deletes with the send2trash Module](#safe-deletes-with-the-send2trash-module)
-    - [Walking a Directory Tree](#walking-a-directory-tree)
-  - [Reading and Writing Files](#reading-and-writing-files)
-    - [The File Reading/Writing Process](#the-file-readingwriting-process)
-    - [Opening and reading files with the open() function](#opening-and-reading-files-with-the-open-function)
-    - [Writing to Files](#writing-to-files)
-    - [Saving Variables with the shelve Module](#saving-variables-with-the-shelve-module)
-    - [Saving Variables with the pprint.pformat() Function](#saving-variables-with-the-pprintpformat-function)
-    - [Reading ZIP Files](#reading-zip-files)
-    - [Extracting from ZIP Files](#extracting-from-zip-files)
-    - [Creating and Adding to ZIP Files](#creating-and-adding-to-zip-files)
-  - [JSON, YAML and configuration files](#json-yaml-and-configuration-files)
-    - [JSON](#json)
-    - [YAML](#yaml)
-    - [Anyconfig](#anyconfig)
-  - [Debugging](#debugging)
-    - [Raising Exceptions](#raising-exceptions)
-    - [Getting the Traceback as a String](#getting-the-traceback-as-a-string)
-    - [Assertions](#assertions)
-    - [Logging](#logging)
-    - [Logging Levels](#logging-levels)
-    - [Disabling Logging](#disabling-logging)
-    - [Logging to a File](#logging-to-a-file)
-  - [Lambda Functions](#lambda-functions)
-  - [Ternary Conditional Operator](#ternary-conditional-operator)
-  - [args and kwargs](#args-and-kwargs)
-    - [Things to Remember(args)](#things-to-rememberargs)
-    - [Things to Remember(kwargs)](#things-to-rememberkwargs)
-  - [Context Manager](#context-manager)
-    - [with statement](#with-statement)
-    - [Writing your own contextmanager using generator syntax](#writing-your-own-contextmanager-using-generator-syntax)
-  - [`__main__` Top-level script environment](#__main__-top-level-script-environment)
-    - [Advantages](#advantages)
-  - [setup.py](#setuppy)
-  - [Dataclasses](#dataclasses)
-    - [Features](#features)
-    - [Default values](#default-values)
-    - [Type hints](#type-hints)
-  - [Virtual Environment](#virtual-environment)
-    - [virtualenv](#virtualenv)
-    - [poetry](#poetry)
-    - [pipenv](#pipenv)
-    - [anaconda](#anaconda)
+### Read It
 
-## The Zen of Python
+### Python Cheatsheet
+
+- TOC
+{:toc}
+<!-- I added the Contribute and Read It headings to make the TOC match the original hard-coded TOC.  -->
+
+### The Zen of Python
 
 From the [PEP 20 -- The Zen of Python](https://www.python.org/dev/peps/pep-0020/):
 
 > Long time Pythoneer Tim Peters succinctly channels the BDFL's guiding principles for Python's design into 20 aphorisms, only 19 of which have been written down.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import this
 The Zen of Python, by Tim Peters
 
@@ -268,9 +86,9 @@ Namespaces are one honking great idea -- let's do more of those!
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Python Basics
+### Python Basics
 
-### Math Operators
+#### Math Operators
 
 From **Highest** to **Lowest** precedence:
 
@@ -286,39 +104,39 @@ From **Highest** to **Lowest** precedence:
 
 Examples of expressions in the interactive shell:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 2 + 3 * 6
 20
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> (2 + 3) * 6
 30
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 2 ** 8
 256
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 23 // 7
 3
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 23 % 7
 2
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> (5 - 1) * ((7 + 1) / (3 - 1))
 16.0
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Data Types
+#### Data Types
 
 | Data Type              | Examples                                  |
 | ---------------------- | ----------------------------------------- |
@@ -328,11 +146,11 @@ Examples of expressions in the interactive shell:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### String Concatenation and Replication
+#### String Concatenation and Replication
 
 String concatenation:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Alice' 'Bob'
 'AliceBob'
 ```
@@ -341,14 +159,14 @@ Note: Avoid `+` operator for string concatenation. Prefer string formatting.
 
 String Replication:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Alice' * 5
 'AliceAliceAliceAliceAlice'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Variables
+#### Variables
 
 You can name a variable anything as long as it obeys the following rules:
 
@@ -359,13 +177,13 @@ You can name a variable anything as long as it obeys the following rules:
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'Hello'
 >>> spam
 'Hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> _spam = 'Hello'
 ```
 
@@ -373,7 +191,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Comments
+#### Comments
 
 Inline comment:
 
@@ -383,7 +201,7 @@ Inline comment:
 
 Multiline comment:
 
-```Python
+```python
 # This is a
 # multiline comment
 ```
@@ -409,26 +227,26 @@ def foo():
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The print() Function
+#### The print() Function
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('Hello world!')
 Hello world!
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> a = 1
->>> print('Hello world!', a)
+>>> print('Hello world!', a) # comment test
 Hello world! 1
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The input() Function
+#### The input() Function
 
 Example Code:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('What is your name?')   # ask for their name
 >>> myName = input()
 >>> print('It is good to meet you, {}'.format(myName))
@@ -439,11 +257,11 @@ It is good to meet you, Al
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The len() Function
+#### The len() Function
 
 Evaluates to the integer value of the number of characters in a string:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> len('hello')
 5
 ```
@@ -451,7 +269,7 @@ Evaluates to the integer value of the number of characters in a string:
 Note: test of emptiness of strings, lists, dictionary, etc, should **not** use len, but prefer direct
 boolean evaluation.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> a = [1, 2, 3]
 >>> if a:
 >>>     print("the list is not empty!")
@@ -459,42 +277,42 @@ boolean evaluation.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The str(), int(), and float() Functions
+#### The str(), int(), and float() Functions
 
 Integer to String or Float:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> str(29)
 '29'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('I am {} years old.'.format(str(29)))
 I am 29 years old.
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> str(-3.14)
 '-3.14'
 ```
 
 Float to Integer:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> int(7.7)
 7
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> int(7.7) + 1
 8
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Flow Control
+### Flow Control
 
-### Comparison Operators
+#### Comparison Operators
 
 | Operator | Meaning                  |
 | -------- | ------------------------ |
@@ -509,73 +327,73 @@ These operators evaluate to True or False depending on the values you give them.
 
 Examples:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 42 == 42
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 40 == 42
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'hello' == 'hello'
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'hello' == 'Hello'
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'dog' != 'cat'
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 42 == 42.0
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 42 == '42'
 False
 ```
 
-### Boolean evaluation
+#### Boolean evaluation
 
 Never use `==` or `!=` operator to evaluate boolean operation. Use the `is` or `is not` operators,
 or use implicit boolean evaluation.
 
 NO (even if they are valid Python):
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> True == True
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> True != False
 True
 ```
 
 YES (even if they are valid Python):
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> True is True
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> True is not False
 True
 ```
 
 These statements are equivalent:
 
-```Python
+```console?lang=python&prompt=>>>&output&comments
 >>> if a is True:
 >>>    pass
 >>> if a is not False:
@@ -586,7 +404,7 @@ These statements are equivalent:
 
 And these as well:
 
-```Python
+```console?lang=python&prompt=>>>&output&comments
 >>> if a is False:
 >>>    pass
 >>> if a is not True:
@@ -597,7 +415,7 @@ And these as well:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Boolean Operators
+#### Boolean Operators
 
 There are three Boolean operators: and, or, and not.
 
@@ -628,33 +446,33 @@ The _not_ Operator’s _Truth_ Table:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Mixing Boolean and Comparison Operators
+#### Mixing Boolean and Comparison Operators
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> (4 < 5) and (5 < 6)
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> (4 < 5) and (9 < 6)
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> (1 == 2) or (2 == 2)
 True
 ```
 
 You can also use multiple Boolean operators in an expression, along with the comparison operators:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
 True
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### if Statements
+#### if Statements
 
 ```python
 if name == 'Alice':
@@ -663,7 +481,7 @@ if name == 'Alice':
 
 [_Return to the Top_](#python-cheatsheet)
 
-### else Statements
+#### else Statements
 
 ```python
 name = 'Bob'
@@ -675,7 +493,7 @@ else:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### elif Statements
+#### elif Statements
 
 ```python
 name = 'Bob'
@@ -699,7 +517,7 @@ else:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### while Loop Statements
+#### while Loop Statements
 
 ```python
 spam = 0
@@ -710,7 +528,7 @@ while spam < 5:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### break Statements
+#### break Statements
 
 If the execution reaches a break statement, it immediately exits the while loop’s clause:
 
@@ -725,7 +543,7 @@ print('Thank you!')
 
 [_Return to the Top_](#python-cheatsheet)
 
-### continue Statements
+#### continue Statements
 
 When the program execution reaches a continue statement, the program execution immediately jumps back to the start of the loop.
 
@@ -744,9 +562,9 @@ print('Access granted.')
 
 [_Return to the Top_](#python-cheatsheet)
 
-### for Loops and the range() Function
+#### for Loops and the range() Function
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('My name is')
 >>> for i in range(5):
 >>>     print('Jimmy Five Times ({})'.format(str(i)))
@@ -760,7 +578,7 @@ Jimmy Five Times (4)
 
 The _range()_ function can also be called with three arguments. The first two arguments will be the start and stop values, and the third will be the step argument. The step is the amount that the variable is increased by after each iteration.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> for i in range(0, 10, 2):
 >>>    print(i)
 0
@@ -772,7 +590,7 @@ The _range()_ function can also be called with three arguments. The first two ar
 
 You can even use a negative number for the step argument to make the for loop count down instead of up.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> for i in range(5, -1, -1):
 >>>     print(i)
 5
@@ -783,7 +601,7 @@ You can even use a negative number for the step argument to make the for loop co
 0
 ```
 
-### For else statement
+#### For else statement
 
 This allows to specify a statement to execute in case of the full loop has been executed. Only
 useful when a `break` condition can occur in the loop:
@@ -798,7 +616,7 @@ useful when a `break` condition can occur in the loop:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Importing Modules
+#### Importing Modules
 
 ```python
 import random
@@ -816,7 +634,7 @@ from random import *
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Ending a Program Early with sys.exit()
+#### Ending a Program Early with sys.exit()
 
 ```python
 import sys
@@ -831,9 +649,9 @@ while True:
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Functions
+### Functions
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def hello(name):
 >>>     print('Hello {}'.format(name))
 >>>
@@ -845,7 +663,7 @@ Hello Bob
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Return Values and return Statements
+#### Return Values and return Statements
 
 When creating a function using the def statement, you can specify what the return value should be with a return statement. A return statement consists of the following:
 
@@ -882,14 +700,14 @@ print(fortune)
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The None Value
+#### The None Value
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = print('Hello!')
 Hello!
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam is None
 True
 ```
@@ -898,27 +716,27 @@ Note: never compare to `None` with the `==` operator. Always use `is`.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Keyword Arguments and print()
+#### Keyword Arguments and print()
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('Hello', end='')
 >>> print('World')
 HelloWorld
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('cats', 'dogs', 'mice')
 cats dogs mice
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('cats', 'dogs', 'mice', sep=',')
 cats,dogs,mice
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Local and Global Scope
+#### Local and Global Scope
 
 - Code in the global scope cannot use any local variables.
 
@@ -930,11 +748,11 @@ cats,dogs,mice
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The global Statement
+#### The global Statement
 
 If you need to modify a global variable from within a function, use the global statement:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def spam():
 >>>     global eggs
 >>>     eggs = 'spam'
@@ -957,11 +775,11 @@ There are four rules to tell whether a variable is in a local scope or global sc
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Exception Handling
+### Exception Handling
 
-### Basic exception handling
+#### Basic exception handling
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def spam(divideBy):
 >>>     try:
 >>>         return 42 / divideBy
@@ -981,12 +799,12 @@ None
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Final code in exception handling
+#### Final code in exception handling
 
 Code inside the `finally` section is always executed, no matter if an exception has been raised or
 not, and even if an exception is not caught.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def spam(divideBy):
 >>>     try:
 >>>         return 42 / divideBy
@@ -1011,9 +829,9 @@ None
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Lists
+### Lists
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 
 >>> spam
@@ -1022,83 +840,83 @@ None
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Getting Individual Values in a List with Indexes
+#### Getting Individual Values in a List with Indexes
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam[0]
 'cat'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[1]
 'bat'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[2]
 'rat'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[3]
 'elephant'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Negative Indexes
+#### Negative Indexes
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam[-1]
 'elephant'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[-3]
 'bat'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'The {} is afraid of the {}.'.format(spam[-1], spam[-3])
 'The elephant is afraid of the bat.'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Getting Sublists with Slices
+#### Getting Sublists with Slices
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam[0:4]
 ['cat', 'bat', 'rat', 'elephant']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[1:3]
 ['bat', 'rat']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[0:-1]
 ['cat', 'bat', 'rat']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam[:2]
 ['cat', 'bat']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[1:]
 ['bat', 'rat', 'elephant']
 ```
 
 Slicing the complete list will perform a copy:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam2 = spam[:]
 ['cat', 'bat', 'rat', 'elephant']
 >>> spam.append('dog')
@@ -1110,9 +928,9 @@ Slicing the complete list will perform a copy:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Getting a List’s Length with len()
+#### Getting a List’s Length with len()
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'dog', 'moose']
 >>> len(spam)
 3
@@ -1120,9 +938,9 @@ Slicing the complete list will perform a copy:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Changing Values in a List with Indexes
+#### Changing Values in a List with Indexes
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam[1] = 'aardvark'
 
@@ -1142,9 +960,9 @@ Slicing the complete list will perform a copy:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### List Concatenation and List Replication
+#### List Concatenation and List Replication
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> [1, 2, 3] + ['A', 'B', 'C']
 [1, 2, 3, 'A', 'B', 'C']
 
@@ -1161,16 +979,16 @@ Slicing the complete list will perform a copy:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Removing Values from Lists with del Statements
+#### Removing Values from Lists with del Statements
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> del spam[2]
 >>> spam
 ['cat', 'bat', 'elephant']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> del spam[2]
 >>> spam
 ['cat', 'bat']
@@ -1178,9 +996,9 @@ Slicing the complete list will perform a copy:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Using for Loops with Lists
+#### Using for Loops with Lists
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
 >>> for i, supply in enumerate(supplies):
 >>>     print('Index {} in supplies is: {}'.format(str(i), supply))
@@ -1192,9 +1010,9 @@ Index 3 in supplies is: binders
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Looping Through Multiple Lists with zip()
+#### Looping Through Multiple Lists with zip()
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> name = ['Pete', 'John', 'Elizabeth']
 >>> age = [6, 23, 44]
 >>> for n, a in zip(name, age):
@@ -1204,32 +1022,32 @@ John is 23 years old
 Elizabeth is 44 years old
 ```
 
-### The in and not in Operators
+#### The in and not in Operators
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'howdy' in ['hello', 'hi', 'howdy', 'heyas']
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['hello', 'hi', 'howdy', 'heyas']
 >>> 'cat' in spam
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'howdy' not in spam
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'cat' not in spam
 True
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The Multiple Assignment Trick
+#### The Multiple Assignment Trick
 
 The multiple assignment trick is a shortcut that lets you assign multiple variables with the values in a list in one line of code. So instead of doing this:
 
@@ -1253,21 +1071,21 @@ You could type this line of code:
 
 The multiple assignment trick can also be used to swap the values in two variables:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> a, b = 'Alice', 'Bob'
 >>> a, b = b, a
 >>> print(a)
 'Bob'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print(b)
 'Alice'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Augmented Assignment Operators
+#### Augmented Assignment Operators
 
 | Operator    | Equivalent        |
 | ----------- | ----------------- |
@@ -1279,7 +1097,7 @@ The multiple assignment trick can also be used to swap the values in two variabl
 
 Examples:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'Hello'
 >>> spam += ' world!'
 >>> spam
@@ -1293,9 +1111,9 @@ Examples:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Finding a Value in a List with the index() Method
+#### Finding a Value in a List with the index() Method
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka']
 
 >>> spam.index('Pooka')
@@ -1304,11 +1122,11 @@ Examples:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Adding Values to Lists with the append() and insert() Methods
+#### Adding Values to Lists with the append() and insert() Methods
 
 **append()**:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'dog', 'bat']
 
 >>> spam.append('moose')
@@ -1319,7 +1137,7 @@ Examples:
 
 **insert()**:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'dog', 'bat']
 
 >>> spam.insert(1, 'chicken')
@@ -1330,9 +1148,9 @@ Examples:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Removing Values from Lists with remove()
+#### Removing Values from Lists with remove()
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 
 >>> spam.remove('bat')
@@ -1345,9 +1163,9 @@ If the value appears multiple times in the list, only the first instance of the 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Removing Values from Lists with pop()
+#### Removing Values from Lists with pop()
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 
 >>> spam.pop()
@@ -1365,16 +1183,16 @@ If the value appears multiple times in the list, only the first instance of the 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Sorting the Values in a List with the sort() Method
+#### Sorting the Values in a List with the sort() Method
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = [2, 5, 3.14, 1, -7]
 >>> spam.sort()
 >>> spam
 [-7, 1, 2, 3.14, 5]
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
 >>> spam.sort()
 >>> spam
@@ -1383,7 +1201,7 @@ If the value appears multiple times in the list, only the first instance of the 
 
 You can also pass True for the reverse keyword argument to have sort() sort the values in reverse order:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam.sort(reverse=True)
 >>> spam
 ['elephants', 'dogs', 'cats', 'badgers', 'ants']
@@ -1391,7 +1209,7 @@ You can also pass True for the reverse keyword argument to have sort() sort the 
 
 If you need to sort the values in regular alphabetical order, pass str. lower for the key keyword argument in the sort() method call:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['a', 'z', 'A', 'Z']
 >>> spam.sort(key=str.lower)
 >>> spam
@@ -1400,7 +1218,7 @@ If you need to sort the values in regular alphabetical order, pass str. lower fo
 
 You can use the built-in function `sorted` to return a new list:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
 >>> sorted(spam)
 ['ants', 'badgers', 'cats', 'dogs', 'elephants']
@@ -1408,20 +1226,20 @@ You can use the built-in function `sorted` to return a new list:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Tuple Data Type
+#### Tuple Data Type
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> eggs = ('hello', 42, 0.5)
 >>> eggs[0]
 'hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> eggs[1:3]
 (42, 0.5)
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> len(eggs)
 3
 ```
@@ -1430,26 +1248,26 @@ The main way that tuples are different from lists is that tuples, like strings, 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Converting Types with the list() and tuple() Functions
+#### Converting Types with the list() and tuple() Functions
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> tuple(['cat', 'dog', 5])
 ('cat', 'dog', 5)
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> list(('cat', 'dog', 5))
 ['cat', 'dog', 5]
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> list('hello')
 ['h', 'e', 'l', 'l', 'o']
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Dictionaries and Structuring Data
+### Dictionaries and Structuring Data
 
 Example Dictionary:
 
@@ -1459,11 +1277,11 @@ myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The keys(), values(), and items() Methods
+#### The keys(), values(), and items() Methods
 
 values():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = {'color': 'red', 'age': 42}
 >>> for v in spam.values():
 >>>     print(v)
@@ -1473,7 +1291,7 @@ red
 
 keys():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> for k in spam.keys():
 >>>     print(k)
 color
@@ -1482,7 +1300,7 @@ age
 
 items():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> for i in spam.items():
 >>>     print(i)
 ('color', 'red')
@@ -1491,7 +1309,7 @@ items():
 
 Using the keys(), values(), and items() methods, a for loop can iterate over the keys, values, or key-value pairs in a dictionary, respectively.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 
 >>> spam = {'color': 'red', 'age': 42}
 >>>
@@ -1503,54 +1321,54 @@ Key: color Value: red
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Checking Whether a Key or Value Exists in a Dictionary
+#### Checking Whether a Key or Value Exists in a Dictionary
 
 ```python
 >>> spam = {'name': 'Zophie', 'age': 7}
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'name' in spam.keys()
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Zophie' in spam.values()
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> # You can omit the call to keys() when checking for a key
 >>> 'color' in spam
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'color' not in spam
 True
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The get() Method
+#### The get() Method
 
 Get has two parameters: key and default value if the key did not exist
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> picnic_items = {'apples': 5, 'cups': 2}
 
 >>> 'I am bringing {} cups.'.format(str(picnic_items.get('cups', 0)))
 'I am bringing 2 cups.'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'I am bringing {} eggs.'.format(str(picnic_items.get('eggs', 0)))
 'I am bringing 0 eggs.'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The setdefault() Method
+#### The setdefault() Method
 
 Let's consider this code:
 
@@ -1563,32 +1381,32 @@ if 'color' not in spam:
 
 Using `setdefault` we could write the same code more succinctly:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = {'name': 'Pooka', 'age': 5}
 >>> spam.setdefault('color', 'black')
 'black'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam
 {'color': 'black', 'age': 5, 'name': 'Pooka'}
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam.setdefault('color', 'white')
 'black'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam
 {'color': 'black', 'age': 5, 'name': 'Pooka'}
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Pretty Printing
+#### Pretty Printing
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import pprint
 >>>
 >>> message = 'It was a bright cold day in April, and the clocks were striking
@@ -1627,9 +1445,9 @@ Using `setdefault` we could write the same code more succinctly:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Merge two dictionaries
+#### Merge two dictionaries
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 # in Python 3.5+:
 >>> x = {'a': 1, 'b': 2}
 >>> y = {'b': 3, 'c': 4}
@@ -1643,13 +1461,13 @@ Using `setdefault` we could write the same code more succinctly:
 {'c': 4, 'a': 1, 'b': 3}
 ```
 
-## sets
+### sets
 
 From the Python 3 [documentation](https://docs.python.org/3/tutorial/datastructures.html)
 
 > A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
 
-### Initializing a set
+#### Initializing a set
 
 There are two ways to create sets: using curly braces `{}` and the built-in function `set()`
 
@@ -1660,17 +1478,17 @@ There are two ways to create sets: using curly braces `{}` and the built-in func
 
 When creating an empty set, be sure to not use the curly braces `{}` or you will get an empty dictionary instead.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {}
 >>> type(s)
 <class 'dict'>
 ```
 
-### sets: unordered collections of unique elements
+#### sets: unordered collections of unique elements
 
 A set automatically remove all the duplicate values.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {1, 2, 3, 2, 3, 4}
 >>> s
 {1, 2, 3, 4}
@@ -1678,7 +1496,7 @@ A set automatically remove all the duplicate values.
 
 And as an unordered data type, they can't be indexed.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {1, 2, 3}
 >>> s[0]
 Traceback (most recent call last):
@@ -1687,11 +1505,11 @@ TypeError: 'set' object does not support indexing
 >>>
 ```
 
-### set add() and update()
+#### set add() and update()
 
 Using the `add()` method we can add a single element to the set.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {1, 2, 3}
 >>> s.add(4)
 >>> s
@@ -1700,18 +1518,18 @@ Using the `add()` method we can add a single element to the set.
 
 And with `update()`, multiple ones .
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {1, 2, 3}
 >>> s.update([2, 3, 4, 5, 6])
 >>> s
 {1, 2, 3, 4, 5, 6}  # remember, sets automatically remove duplicates
 ```
 
-### set remove() and discard()
+#### set remove() and discard()
 
 Both methods will remove an element from the set, but `remove()` will raise a `key error` if the value doesn't exist.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {1, 2, 3}
 >>> s.remove(3)
 >>> s
@@ -1724,7 +1542,7 @@ KeyError: 3
 
 `discard()` won't raise any errors.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s = {1, 2, 3}
 >>> s.discard(3)
 >>> s
@@ -1733,22 +1551,22 @@ KeyError: 3
 >>>
 ```
 
-### set union()
+#### set union()
 
 `union()` or `|` will create a new set that contains all the elements from the sets provided.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s1 = {1, 2, 3}
 >>> s2 = {3, 4, 5}
 >>> s1.union(s2)  # or 's1 | s2'
 {1, 2, 3, 4, 5}
 ```
 
-### set intersection
+#### set intersection
 
 `intersection` or `&` will return a set containing only the elements that are common to all of them.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s1 = {1, 2, 3}
 >>> s2 = {2, 3, 4}
 >>> s3 = {3, 4, 5}
@@ -1756,11 +1574,11 @@ KeyError: 3
 {3}
 ```
 
-### set difference
+#### set difference
 
 `difference` or `-` will return only the elements that are unique to the first set (invoked set).
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s1 = {1, 2, 3}
 >>> s2 = {2, 3, 4}
 >>> s1.difference(s2)  # or 's1 - s2'
@@ -1769,11 +1587,11 @@ KeyError: 3
 {4}
 ```
 
-### set symetric_difference
+#### set symetric_difference
 
 `symetric_difference` or `^` will return all the elements that are not common between them.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> s1 = {1, 2, 3}
 >>> s2 = {2, 3, 4}
 >>> s1.symmetric_difference(s2)  # or 's1 ^ s2'
@@ -1782,7 +1600,7 @@ KeyError: 3
 
 [_Return to the Top_](#python-cheatsheet)
 
-## itertools Module
+### itertools Module
 
 The _itertools_ module is a collection of tools intended to be fast and use memory efficiently when handling iterators (like [lists](#lists) or [dictionaries](#dictionaries-and-structuring-data)).
 
@@ -1796,7 +1614,7 @@ The [operator](https://docs.python.org/3/library/operator.html) module will also
 
 [_Return to the Top_](#python-cheatsheet)
 
-### accumulate()
+#### accumulate()
 
 Makes an iterator that returns the results of a function.
 
@@ -1806,7 +1624,7 @@ itertools.accumulate(iterable[, func])
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> data = [1, 2, 3, 4, 5]
 >>> result = itertools.accumulate(data, operator.mul)
 >>> for each in result:
@@ -1820,7 +1638,7 @@ Example:
 
 The operator.mul takes two numbers and multiplies them:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 operator.mul(1, 2)
 2
 operator.mul(2, 3)
@@ -1833,7 +1651,7 @@ operator.mul(24, 5)
 
 Passing a function is optional:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> data = [5, 2, 6, 4, 5, 9, 1]
 >>> result = itertools.accumulate(data)
 >>> for each in result:
@@ -1861,7 +1679,7 @@ If no function is designated the items will be summed:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### combinations()
+#### combinations()
 
 Takes an iterable and a integer. This will create all the unique combination that have r members.
 
@@ -1871,7 +1689,7 @@ itertools.combinations(iterable, r)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> shapes = ['circle', 'triangle', 'square',]
 >>> result = itertools.combinations(shapes, 2)
 >>> for each in result:
@@ -1883,7 +1701,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### combinations_with_replacement()
+#### combinations_with_replacement()
 
 Just like combinations(), but allows individual elements to be repeated more than once.
 
@@ -1893,7 +1711,7 @@ itertools.combinations_with_replacement(iterable, r)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> shapes = ['circle', 'triangle', 'square']
 >>> result = itertools.combinations_with_replacement(shapes, 2)
 >>> for each in result:
@@ -1908,7 +1726,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### count()
+#### count()
 
 Makes an iterator that returns evenly spaced values starting with number start.
 
@@ -1918,7 +1736,7 @@ itertools.count(start=0, step=1)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> for i in itertools.count(10,3):
 >>>    print(i)
 >>>    if i > 20:
@@ -1932,7 +1750,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### cycle()
+#### cycle()
 
 This function cycles through an iterator endlessly.
 
@@ -1942,7 +1760,7 @@ itertools.cycle(iterable)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet']
 >>> for color in itertools.cycle(colors):
 >>>    print(color)
@@ -1960,7 +1778,7 @@ When reached the end of the iterable it start over again from the beginning.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### chain()
+#### chain()
 
 Take a series of iterables and return them as one long iterable.
 
@@ -1970,7 +1788,7 @@ itertools.chain(*iterables)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> colors = ['red', 'orange', 'yellow', 'green', 'blue']
 >>> shapes = ['circle', 'triangle', 'square', 'pentagon']
 >>> result = itertools.chain(colors, shapes)
@@ -1989,7 +1807,7 @@ pentagon
 
 [_Return to the Top_](#python-cheatsheet)
 
-### compress()
+#### compress()
 
 Filters one iterable with another.
 
@@ -1999,7 +1817,7 @@ itertools.compress(data, selectors)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> shapes = ['circle', 'triangle', 'square', 'pentagon']
 >>> selections = [True, False, True, False]
 >>> result = itertools.compress(shapes, selections)
@@ -2011,7 +1829,7 @@ square
 
 [_Return to the Top_](#python-cheatsheet)
 
-### dropwhile()
+#### dropwhile()
 
 Make an iterator that drops elements from the iterable as long as the predicate is true; afterwards, returns every element.
 
@@ -2021,7 +1839,7 @@ itertools.dropwhile(predicate, iterable)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
 >>> result = itertools.dropwhile(lambda x: x<5, data)
 >>> for each in result:
@@ -2037,7 +1855,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### filterfalse()
+#### filterfalse()
 
 Makes an iterator that filters elements from iterable returning only those for which the predicate is False.
 
@@ -2047,7 +1865,7 @@ itertools.filterfalse(predicate, iterable)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
 >>> result = itertools.filterfalse(lambda x: x<5, data)
 >>> for each in result:
@@ -2062,7 +1880,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### groupby()
+#### groupby()
 
 Simply put, this function groups things together.
 
@@ -2072,7 +1890,7 @@ itertools.groupby(iterable, key=None)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> robots = [{
     'name': 'blaster',
     'faction': 'autobot'
@@ -2107,7 +1925,7 @@ decepticon
 
 [_Return to the Top_](#python-cheatsheet)
 
-### islice()
+#### islice()
 
 This function is very much like slices. This allows you to cut out a piece of an iterable.
 
@@ -2117,7 +1935,7 @@ itertools.islice(iterable, start, stop[, step])
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> colors = ['red', 'orange', 'yellow', 'green', 'blue',]
 >>> few_colors = itertools.islice(colors, 2)
 >>> for each in few_colors:
@@ -2128,7 +1946,7 @@ orange
 
 [_Return to the Top_](#python-cheatsheet)
 
-### permutations()
+#### permutations()
 
 ```python
 itertools.permutations(iterable, r=None)
@@ -2136,7 +1954,7 @@ itertools.permutations(iterable, r=None)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> alpha_data = ['a', 'b', 'c']
 >>> result = itertools.permutations(alpha_data)
 >>> for each in result:
@@ -2151,11 +1969,11 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### product()
+#### product()
 
 Creates the cartesian products from a series of iterables.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> num_data = [1, 2, 3]
 >>> alpha_data = ['a', 'b', 'c']
 >>> result = itertools.product(num_data, alpha_data)
@@ -2174,7 +1992,7 @@ Creates the cartesian products from a series of iterables.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### repeat()
+#### repeat()
 
 This function will repeat an object over and over again. Unless, there is a times argument.
 
@@ -2184,7 +2002,7 @@ itertools.repeat(object[, times])
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> for i in itertools.repeat("spam", 3):
     print(i)
 spam
@@ -2194,7 +2012,7 @@ spam
 
 [_Return to the Top_](#python-cheatsheet)
 
-### starmap()
+#### starmap()
 
 Makes an iterator that computes the function using arguments obtained from the iterable.
 
@@ -2204,7 +2022,7 @@ itertools.starmap(function, iterable)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> data = [(2, 6), (8, 4), (7, 3)]
 >>> result = itertools.starmap(operator.mul, data)
 >>> for each in result:
@@ -2216,7 +2034,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### takewhile()
+#### takewhile()
 
 The opposite of dropwhile(). Makes an iterator and returns elements from the iterable as long as the predicate is true.
 
@@ -2226,7 +2044,7 @@ itertools.takewhile(predicate, iterable)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
 >>> result = itertools.takewhile(lambda x: x<5, data)
 >>> for each in result:
@@ -2239,7 +2057,7 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### tee()
+#### tee()
 
 Return n independent iterators from a single iterable.
 
@@ -2249,7 +2067,7 @@ itertools.tee(iterable, n=2)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> colors = ['red', 'orange', 'yellow', 'green', 'blue']
 >>> alpha_colors, beta_colors = itertools.tee(colors)
 >>> for each in alpha_colors:
@@ -2261,7 +2079,7 @@ green
 blue
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> colors = ['red', 'orange', 'yellow', 'green', 'blue']
 >>> alpha_colors, beta_colors = itertools.tee(colors)
 >>> for each in beta_colors:
@@ -2275,7 +2093,7 @@ blue
 
 [_Return to the Top_](#python-cheatsheet)
 
-### zip_longest()
+#### zip_longest()
 
 Makes an iterator that aggregates elements from each of the iterables. If the iterables are of uneven length, missing values are filled-in with fillvalue. Iteration continues until the longest iterable is exhausted.
 
@@ -2285,7 +2103,7 @@ itertools.zip_longest(*iterables, fillvalue=None)
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> colors = ['red', 'orange', 'yellow', 'green', 'blue',]
 >>> data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
 >>> for each in itertools.zip_longest(colors, data, fillvalue=None):
@@ -2304,28 +2122,28 @@ Example:
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Comprehensions
+### Comprehensions
 
-### List comprehension
+#### List comprehension
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> a = [1, 3, 5, 7, 9, 11]
 
 >>> [i - 1 for i in a]
 [0, 2, 4, 6, 8, 10]
 ```
 
-### Set comprehension
+#### Set comprehension
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> b = {"abc", "def"}
 >>> {s.upper() for s in b}
 {"ABC", "DEF"}
 ```
 
-### Dict comprehension
+#### Dict comprehension
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> c = {'name': 'Pooka', 'age': 5}
 >>> {v: k for k, v in c.items()}
 {'Pooka': 'name', 5: 'age'}
@@ -2333,15 +2151,15 @@ Example:
 
 A List comprehension can be generated from a dictionary:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> c = {'name': 'Pooka', 'first_name': 'Oooka'}
 >>> ["{}:{}".format(k.upper(), v.upper()) for k, v in c.items()]
 ['NAME:POOKA', 'FIRST_NAME:OOOKA']
 ```
 
-## Manipulating Strings
+### Manipulating Strings
 
-### Escape Characters
+#### Escape Characters
 
 | Escape character | Prints as            |
 | ---------------- | -------------------- |
@@ -2356,7 +2174,7 @@ A List comprehension can be generated from a dictionary:
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print("Hello there!\nHow are you?\nI\'m doing fine.")
 Hello there!
 How are you?
@@ -2365,11 +2183,11 @@ I'm doing fine.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Raw Strings
+#### Raw Strings
 
 A raw string completely ignores all escape characters and prints any backslash that appears in the string.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print(r'That is Carol\'s cat.')
 That is Carol\'s cat.
 ```
@@ -2378,9 +2196,9 @@ Note: mostly used for regular expression definition (see `re` package)
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Multiline Strings with Triple Quotes
+#### Multiline Strings with Triple Quotes
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> print('''Dear Alice,
 >>>
 >>> Eve's cat has been arrested for catnapping, cat burglary, and extortion.
@@ -2415,62 +2233,62 @@ This generates the same string than before.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Indexing and Slicing Strings
+#### Indexing and Slicing Strings
 
     H   e   l   l   o       w   o   r   l   d    !
     0   1   2   3   4   5   6   7   8   9   10   11
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'Hello world!'
 
 >>> spam[0]
 'H'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[4]
 'o'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[-1]
 '!'
 ```
 
 Slicing:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 
 >>> spam[0:5]
 'Hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[:5]
 'Hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[6:]
 'world!'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[6:-1]
 'world'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[:-1]
 'Hello world'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam[::-1]
 '!dlrow olleH'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'Hello world!'
 >>> fizz = spam[0:5]
 >>> fizz
@@ -2479,60 +2297,60 @@ Slicing:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The in and not in Operators with Strings
+#### The in and not in Operators with Strings
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello' in 'Hello World'
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello' in 'Hello'
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'HELLO' in 'Hello World'
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> '' in 'spam'
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'cats' not in 'cats and dogs'
 False
 ```
 
-### The in and not in Operators with list
+#### The in and not in Operators with list
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> a = [1, 2, 3, 4]
 >>> 5 in a
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 2 in a
 True
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The upper(), lower(), isupper(), and islower() String Methods
+#### The upper(), lower(), isupper(), and islower() String Methods
 
 `upper()` and `lower()`:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'Hello world!'
 >>> spam = spam.upper()
 >>> spam
 'HELLO WORLD!'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = spam.lower()
 >>> spam
 'hello world!'
@@ -2540,40 +2358,40 @@ True
 
 isupper() and islower():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'Hello world!'
 >>> spam.islower()
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam.isupper()
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'HELLO'.isupper()
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'abc12345'.islower()
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> '12345'.islower()
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> '12345'.isupper()
 False
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The isX String Methods
+#### The isX String Methods
 
 - **isalpha()** returns True if the string consists only of letters and is not blank.
 - **isalnum()** returns True if the string consists only of letters and numbers and is not blank.
@@ -2583,147 +2401,147 @@ False
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The startswith() and endswith() String Methods
+#### The startswith() and endswith() String Methods
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello world!'.startswith('Hello')
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello world!'.endswith('world!')
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'abc123'.startswith('abcdef')
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'abc123'.endswith('12')
 False
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello world!'.startswith('Hello world!')
 True
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello world!'.endswith('Hello world!')
 True
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The join() and split() String Methods
+#### The join() and split() String Methods
 
 join():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> ', '.join(['cats', 'rats', 'bats'])
 'cats, rats, bats'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> ' '.join(['My', 'name', 'is', 'Simon'])
 'My name is Simon'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'ABC'.join(['My', 'name', 'is', 'Simon'])
 'MyABCnameABCisABCSimon'
 ```
 
 split():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'My name is Simon'.split()
 ['My', 'name', 'is', 'Simon']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'MyABCnameABCisABCSimon'.split('ABC')
 ['My', 'name', 'is', 'Simon']
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'My name is Simon'.split('m')
 ['My na', 'e is Si', 'on']
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Justifying Text with rjust(), ljust(), and center()
+#### Justifying Text with rjust(), ljust(), and center()
 
 rjust() and ljust():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.rjust(10)
 '     Hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.rjust(20)
 '               Hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello World'.rjust(20)
 '         Hello World'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.ljust(10)
 'Hello     '
 ```
 
 An optional second argument to rjust() and ljust() will specify a fill character other than a space character. Enter the following into the interactive shell:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.rjust(20, '*')
 '***************Hello'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.ljust(20, '-')
 'Hello---------------'
 ```
 
 center():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.center(20)
 '       Hello       '
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> 'Hello'.center(20, '=')
 '=======Hello========'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Removing Whitespace with strip(), rstrip(), and lstrip()
+#### Removing Whitespace with strip(), rstrip(), and lstrip()
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = '    Hello World     '
 >>> spam.strip()
 'Hello World'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam.lstrip()
 'Hello World '
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam.rstrip()
 '    Hello World'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> spam = 'SpamSpamBaconSpamEggsSpamSpam'
 >>> spam.strip('ampS')
 'BaconSpamEggs'
@@ -2731,9 +2549,9 @@ center():
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Copying and Pasting Strings with the pyperclip Module (need pip install)
+#### Copying and Pasting Strings with the pyperclip Module (need pip install)
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import pyperclip
 
 >>> pyperclip.copy('Hello world!')
@@ -2744,11 +2562,11 @@ center():
 
 [_Return to the Top_](#python-cheatsheet)
 
-## String Formatting
+### String Formatting
 
-### % operator
+#### % operator
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> name = 'Pete'
 >>> 'Hello %s' % name
 "Hello Pete"
@@ -2756,7 +2574,7 @@ center():
 
 We can use the `%x` format specifier to convert an int value to a string:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> num = 5
 >>> 'I have %x apples' % num
 "I have 5 apples"
@@ -2766,11 +2584,11 @@ Note: For new code, using [str.format](#string-formatting-strformat) or [f-strin
 
 [_Return to the Top_](#python-cheatsheet)
 
-### String Formatting (str.format)
+#### String Formatting (str.format)
 
 Python 3 introduced a new way to do string formatting that was later back-ported to Python 2.7. This makes the syntax for string formatting more regular.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> name = 'John'
 >>> age = 20'
 
@@ -2778,7 +2596,7 @@ Python 3 introduced a new way to do string formatting that was later back-ported
 "Hello I'm John, my age is 20"
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> "Hello I'm {0}, my age is {1}".format(name, age)
 "Hello I'm John, my age is 20"
 ```
@@ -2789,7 +2607,7 @@ The official [Python 3.x documentation](https://docs.python.org/3/library/stdtyp
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Lazy string formatting
+#### Lazy string formatting
 
 You would only use `%s` string formatting on functions that can do lazy parameters evaluation,
 the most common being logging:
@@ -2815,9 +2633,9 @@ Or:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Formatted String Literals or f-strings (Python 3.6+)
+#### Formatted String Literals or f-strings (Python 3.6+)
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> name = 'Elizabeth'
 >>> f'Hello {name}!'
 'Hello Elizabeth!
@@ -2825,7 +2643,7 @@ Or:
 
 It is even possible to do inline arithmetic with it:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> a = 5
 >>> b = 10
 >>> f'Five plus ten is {a + b} and not {2 * (a + b)}.'
@@ -2834,11 +2652,11 @@ It is even possible to do inline arithmetic with it:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Template Strings
+#### Template Strings
 
 A simpler and less powerful mechanism, but it is recommended when handling format strings generated by users. Due to their reduced complexity template strings are a safer choice.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from string import Template
 >>> name = 'Elizabeth'
 >>> t = Template('Hey $name!')
@@ -2848,7 +2666,7 @@ A simpler and less powerful mechanism, but it is recommended when handling forma
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Regular Expressions
+### Regular Expressions
 
 1. Import the regex module with `import re`.
 1. Create a Regex object with the `re.compile()` function. (Remember to use a raw string.)
@@ -2863,9 +2681,9 @@ All the regex functions in Python are in the re module:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching Regex Objects
+#### Matching Regex Objects
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> phone_num_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 
 >>> mo = phone_num_regex.search('My number is 415-555-4242.')
@@ -2876,9 +2694,9 @@ Phone number found: 415-555-4242
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Grouping with Parentheses
+#### Grouping with Parentheses
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> phone_num_regex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 
 >>> mo = phone_num_regex.search('My number is 415-555-4242.')
@@ -2898,7 +2716,7 @@ Phone number found: 415-555-4242
 
 To retrieve all the groups at once: use the groups() method—note the plural form for the name.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> mo.groups()
 ('415', '555-4242')
 
@@ -2913,11 +2731,11 @@ To retrieve all the groups at once: use the groups() method—note the plural fo
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching Multiple Groups with the Pipe
+#### Matching Multiple Groups with the Pipe
 
 The | character is called a pipe. You can use it anywhere you want to match one of many expressions. For example, the regular expression r'Batman|Tina Fey' will match either 'Batman' or 'Tina Fey'.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> hero_regex = re.compile (r'Batman|Tina Fey')
 
 >>> mo1 = hero_regex.search('Batman and Tina Fey.')
@@ -2933,7 +2751,7 @@ The | character is called a pipe. You can use it anywhere you want to match one 
 
 You can also use the pipe to match one of several patterns as part of your regex:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> bat_regex = re.compile(r'Bat(man|mobile|copter|bat)')
 
 >>> mo = bat_regex.search('Batmobile lost a wheel')
@@ -2947,11 +2765,11 @@ You can also use the pipe to match one of several patterns as part of your regex
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Optional Matching with the Question Mark
+#### Optional Matching with the Question Mark
 
 The ? character flags the group that precedes it as an optional part of the pattern.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> bat_regex = re.compile(r'Bat(wo)?man')
 >>> mo1 = bat_regex.search('The Adventures of Batman')
 >>> mo1.group()
@@ -2964,11 +2782,11 @@ The ? character flags the group that precedes it as an optional part of the patt
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching Zero or More with the Star
+#### Matching Zero or More with the Star
 
 The \* (called the star or asterisk) means “match zero or more”—the group that precedes the star can occur any number of times in the text.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> bat_regex = re.compile(r'Bat(wo)*man')
 >>> mo1 = bat_regex.search('The Adventures of Batman')
 >>> mo1.group()
@@ -2985,24 +2803,24 @@ The \* (called the star or asterisk) means “match zero or more”—the group 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching One or More with the Plus
+#### Matching One or More with the Plus
 
 While \* means “match zero or more,” the + (or plus) means “match one or more”. The group preceding a plus must appear at least once. It is not optional:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> bat_regex = re.compile(r'Bat(wo)+man')
 >>> mo1 = bat_regex.search('The Adventures of Batwoman')
 >>> mo1.group()
 'Batwoman'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> mo2 = bat_regex.search('The Adventures of Batwowowowoman')
 >>> mo2.group()
 'Batwowowowoman'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> mo3 = bat_regex.search('The Adventures of Batman')
 >>> mo3 is None
 True
@@ -3010,20 +2828,20 @@ True
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching Specific Repetitions with Curly Brackets
+#### Matching Specific Repetitions with Curly Brackets
 
 If you have a group that you want to repeat a specific number of times, follow the group in your regex with a number in curly brackets. For example, the regex (Ha){3} will match the string 'HaHaHa', but it will not match 'HaHa', since the latter has only two repeats of the (Ha) group.
 
 Instead of one number, you can specify a range by writing a minimum, a comma, and a maximum in between the curly brackets. For example, the regex (Ha){3,5} will match 'HaHaHa', 'HaHaHaHa', and 'HaHaHaHaHa'.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> ha_regex = re.compile(r'(Ha){3}')
 >>> mo1 = ha_regex.search('HaHaHa')
 >>> mo1.group()
 'HaHaHa'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> mo2 = ha_regex.search('Ha')
 >>> mo2 is None
 True
@@ -3031,18 +2849,18 @@ True
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Greedy and Nongreedy Matching
+#### Greedy and Nongreedy Matching
 
 Python’s regular expressions are greedy by default, which means that in ambiguous situations they will match the longest string possible. The non-greedy version of the curly brackets, which matches the shortest string possible, has the closing curly bracket followed by a question mark.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> greedy_ha_regex = re.compile(r'(Ha){3,5}')
 >>> mo1 = greedy_ha_regex.search('HaHaHaHaHa')
 >>> mo1.group()
 'HaHaHaHaHa'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> nongreedy_ha_regex = re.compile(r'(Ha){3,5}?')
 >>> mo2 = nongreedy_ha_regex.search('HaHaHaHaHa')
 >>> mo2.group()
@@ -3051,11 +2869,11 @@ Python’s regular expressions are greedy by default, which means that in ambigu
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The findall() Method
+#### The findall() Method
 
 In addition to the search() method, Regex objects also have a findall() method. While search() will return a Match object of the first matched text in the searched string, the findall() method will return the strings of every match in the searched string.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> phone_num_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # has no groups
 
 >>> phone_num_regex.findall('Cell: 415-555-9999 Work: 212-555-0000')
@@ -3070,11 +2888,11 @@ To summarize what the findall() method returns, remember the following:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Making Your Own Character Classes
+#### Making Your Own Character Classes
 
 There are times when you want to match a set of characters but the shorthand character classes (\d, \w, \s, and so on) are too broad. You can define your own character class using square brackets. For example, the character class [aeiouAEIOU] will match any vowel, both lowercase and uppercase.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> vowel_regex = re.compile(r'[aeiouAEIOU]')
 
 >>> vowel_regex.findall('Robocop eats baby food. BABY FOOD.')
@@ -3085,7 +2903,7 @@ You can also include ranges of letters or numbers by using a hyphen. For example
 
 By placing a caret character (^) just after the character class’s opening bracket, you can make a negative character class. A negative character class will match all the characters that are not in the character class. For example, enter the following into the interactive shell:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> consonant_regex = re.compile(r'[^aeiouAEIOU]')
 
 >>> consonant_regex.findall('Robocop eats baby food. BABY FOOD.')
@@ -3095,7 +2913,7 @@ By placing a caret character (^) just after the character class’s opening brac
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The Caret and Dollar Sign Characters
+#### The Caret and Dollar Sign Characters
 
 - You can also use the caret symbol (^) at the start of a regex to indicate that a match must occur at the beginning of the searched text.
 
@@ -3105,7 +2923,7 @@ By placing a caret character (^) just after the character class’s opening brac
 
 The r'^Hello' regular expression string matches strings that begin with 'Hello':
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> begins_with_hello = re.compile(r'^Hello')
 
 >>> begins_with_hello.search('Hello world!')
@@ -3117,7 +2935,7 @@ True
 
 The r'\d\$' regular expression string matches strings that end with a numeric character from 0 to 9:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> whole_string_is_num = re.compile(r'^\d+$')
 
 >>> whole_string_is_num.search('1234567890')
@@ -3132,11 +2950,11 @@ True
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The Wildcard Character
+#### The Wildcard Character
 
 The . (or dot) character in a regular expression is called a wildcard and will match any character except for a newline:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> at_regex = re.compile(r'.at')
 
 >>> at_regex.findall('The cat in the hat sat on the flat mat.')
@@ -3145,9 +2963,9 @@ The . (or dot) character in a regular expression is called a wildcard and will m
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching Everything with Dot-Star
+#### Matching Everything with Dot-Star
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> name_regex = re.compile(r'First Name: (.*) Last Name: (.*)')
 
 >>> mo = name_regex.search('First Name: Al Last Name: Sweigart')
@@ -3156,21 +2974,21 @@ The . (or dot) character in a regular expression is called a wildcard and will m
 'Al'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> mo.group(2)
 'Sweigart'
 ```
 
 The dot-star uses greedy mode: It will always try to match as much text as possible. To match any and all text in a nongreedy fashion, use the dot, star, and question mark (.\*?). The question mark tells Python to match in a nongreedy way:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> nongreedy_regex = re.compile(r'<.*?>')
 >>> mo = nongreedy_regex.search('<To serve man> for dinner.>')
 >>> mo.group()
 '<To serve man>'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> greedy_regex = re.compile(r'<.*>')
 >>> mo = greedy_regex.search('<To serve man> for dinner.>')
 >>> mo.group()
@@ -3179,17 +2997,17 @@ The dot-star uses greedy mode: It will always try to match as much text as possi
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Matching Newlines with the Dot Character
+#### Matching Newlines with the Dot Character
 
 The dot-star will match everything except a newline. By passing re.DOTALL as the second argument to re.compile(), you can make the dot character match all characters, including the newline character:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> no_newline_regex = re.compile('.*')
 >>> no_newline_regex.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group()
 'Serve the public trust.'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> newline_regex = re.compile('.*', re.DOTALL)
 >>> newline_regex.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group()
 'Serve the public trust.\nProtect the innocent.\nUphold the law.'
@@ -3197,7 +3015,7 @@ The dot-star will match everything except a newline. By passing re.DOTALL as the
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Review of Regex Symbols
+#### Review of Regex Symbols
 
 | Symbol                   | Matches                                                |
 | ------------------------ | ------------------------------------------------------ |
@@ -3219,30 +3037,30 @@ The dot-star will match everything except a newline. By passing re.DOTALL as the
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Case-Insensitive Matching
+#### Case-Insensitive Matching
 
 To make your regex case-insensitive, you can pass re.IGNORECASE or re.I as a second argument to re.compile():
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> robocop = re.compile(r'robocop', re.I)
 
 >>> robocop.search('Robocop is part man, part machine, all cop.').group()
 'Robocop'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> robocop.search('ROBOCOP protects the innocent.').group()
 'ROBOCOP'
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> robocop.search('Al, why does your programming book talk about robocop so much?').group()
 'robocop'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Substituting Strings with the sub() Method
+#### Substituting Strings with the sub() Method
 
 The sub() method for Regex objects is passed two arguments:
 
@@ -3251,7 +3069,7 @@ The sub() method for Regex objects is passed two arguments:
 
 The sub() method returns a string with the substitutions applied:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> names_regex = re.compile(r'Agent \w+')
 
 >>> names_regex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.')
@@ -3260,7 +3078,7 @@ The sub() method returns a string with the substitutions applied:
 
 Another example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> agent_names_regex = re.compile(r'Agent (\w)\w*')
 
 >>> agent_names_regex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.')
@@ -3269,7 +3087,7 @@ A**** told C**** that E**** knew B**** was a double agent.'
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Managing Complex Regexes
+#### Managing Complex Regexes
 
 To tell the re.compile() function to ignore whitespace and comments inside the regular expression string, “verbose mode” can be enabled by passing the variable re.VERBOSE as the second argument to re.compile().
 
@@ -3294,7 +3112,7 @@ phone_regex = re.compile(r'''(
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Handling File and Directory Paths
+### Handling File and Directory Paths
 
 There are two main modules in Python that deals with path manipulation.
 One is the `os.path` module and the other is the `pathlib` module.
@@ -3303,7 +3121,7 @@ to handle file system paths.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Backslash on Windows and Forward Slash on OS X and Linux
+#### Backslash on Windows and Forward Slash on OS X and Linux
 
 On Windows, paths are written using backslashes (`\`) as the separator between
 folder names. On Unix based operating system such as macOS, Linux, and BSDs,
@@ -3315,7 +3133,7 @@ how to deal with this with both `os.path.join` and `pathlib.Path.joinpath`
 
 Using `os.path.join` on Windows:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 
 >>> os.path.join('usr', 'bin', 'spam')
@@ -3324,7 +3142,7 @@ Using `os.path.join` on Windows:
 
 And using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 
 >>> print(Path('usr').joinpath('bin').joinpath('spam'))
@@ -3333,7 +3151,7 @@ usr/bin/spam
 
 `pathlib` also provides a shortcut to joinpath using the `/` operator:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 
 >>> print(Path('usr') / 'bin' / 'spam')
@@ -3349,7 +3167,7 @@ the same directory.
 
 Using `os.path.join` on Windows:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> my_files = ['accounts.txt', 'details.csv', 'invite.docx']
 
 >>> for filename in my_files:
@@ -3361,7 +3179,7 @@ C:\Users\asweigart\invite.docx
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> my_files = ['accounts.txt', 'details.csv', 'invite.docx']
 >>> home = Path.home()
 >>> for filename in my_files:
@@ -3373,11 +3191,11 @@ Using `pathlib` on \*nix:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### The Current Working Directory
+#### The Current Working Directory
 
 Using `os` on Windows:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 
 >>> os.getcwd()
@@ -3390,7 +3208,7 @@ Using `os` on Windows:
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> from os import chdir
 
@@ -3404,7 +3222,7 @@ Using `pathlib` on \*nix:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Creating New Folders
+#### Creating New Folders
 
 Using `os` on Windows:
 
@@ -3415,7 +3233,7 @@ Using `os` on Windows:
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> cwd = Path.cwd()
 >>> (cwd / 'delicious' / 'walnut' / 'waffles').mkdir()
@@ -3442,7 +3260,7 @@ And all is good :)
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Absolute vs. Relative Paths
+#### Absolute vs. Relative Paths
 
 There are two ways to specify a file path.
 
@@ -3453,13 +3271,13 @@ There are also the dot (.) and dot-dot (..) folders. These are not real folders 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Handling Absolute and Relative Paths
+#### Handling Absolute and Relative Paths
 
 To see if a path is an absolute path:
 
 Using `os.path` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.path.isabs('/')
 True
@@ -3469,7 +3287,7 @@ False
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> Path('/').is_absolute()
 True
@@ -3481,7 +3299,7 @@ You can extract an absolute path with both `os.path` and `pathlib`
 
 Using `os.path` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.getcwd()
 '/home/asweigart'
@@ -3491,7 +3309,7 @@ Using `os.path` on \*nix:
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 from pathlib import Path
 print(Path.cwd())
 /home/asweigart
@@ -3503,7 +3321,7 @@ You can get a relative path from a starting path to another path.
 
 Using `os.path` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.path.relpath('/etc/passwd', '/')
 'etc/passwd'
@@ -3511,7 +3329,7 @@ Using `os.path` on \*nix:
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> print(Path('/etc/passwd').relative_to('/'))
 etc/passwd
@@ -3519,13 +3337,13 @@ etc/passwd
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Checking Path Validity
+#### Checking Path Validity
 
 Checking if a file/directory exists:
 
 Using `os.path` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 import os
 >>> os.path.exists('.')
 True
@@ -3539,7 +3357,7 @@ False
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 from pathlib import Path
 >>> Path('.').exists()
 True
@@ -3555,7 +3373,7 @@ Checking if a path is a file:
 
 Using `os.path` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.path.isfile('setup.py')
 True
@@ -3567,7 +3385,7 @@ False
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> Path('setup.py').is_file()
 True
@@ -3581,7 +3399,7 @@ Checking if a path is a directory:
 
 Using `os.path` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.path.isdir('/')
 True
@@ -3593,7 +3411,7 @@ False
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> Path('/').is_dir()
 True
@@ -3605,13 +3423,13 @@ False
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Finding File Sizes and Folder Contents
+#### Finding File Sizes and Folder Contents
 
 Getting a file's size in bytes:
 
 Using `os.path` on Windows:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.path.getsize('C:\\Windows\\System32\\calc.exe')
 776192
@@ -3619,7 +3437,7 @@ Using `os.path` on Windows:
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> stat = Path('/bin/python3.6').stat()
 >>> print(stat) # stat contains some other information about the file as well
@@ -3632,7 +3450,7 @@ st_gid=0, st_size=10024, st_atime=1517725562, st_mtime=1515119809, st_ctime=1517
 
 Listing directory contents using `os.listdir` on Windows:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> os.listdir('C:\\Windows\\System32')
 ['0409', '12520437.cpx', '12520850.cpx', '5U877.ax', 'aaclient.dll',
@@ -3642,7 +3460,7 @@ Listing directory contents using `os.listdir` on Windows:
 
 Listing directory contents using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> for f in Path('/usr/bin').iterdir():
 >>>     print(f)
@@ -3666,7 +3484,7 @@ check for whether a path is a file or directory using the methods in the methods
 
 Using `os.path.getsize()` and `os.listdir()` together on Windows:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>> total_size = 0
 
@@ -3679,7 +3497,7 @@ Using `os.path.getsize()` and `os.listdir()` together on Windows:
 
 Using `pathlib` on \*nix:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> from pathlib import Path
 >>> total_size = 0
 
@@ -3692,11 +3510,11 @@ Using `pathlib` on \*nix:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Copying Files and Folders
+#### Copying Files and Folders
 
 The shutil module provides functions for copying files, as well as entire folders.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import shutil, os
 
 >>> os.chdir('C:\\')
@@ -3710,7 +3528,7 @@ The shutil module provides functions for copying files, as well as entire folder
 
 While shutil.copy() will copy a single file, shutil.copytree() will copy an entire folder and every folder and file contained in it:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import shutil, os
 
 >>> os.chdir('C:\\')
@@ -3721,9 +3539,9 @@ While shutil.copy() will copy a single file, shutil.copytree() will copy an enti
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Moving and Renaming Files and Folders
+#### Moving and Renaming Files and Folders
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import shutil
 >>> shutil.move('C:\\bacon.txt', 'C:\\eggs')
 'C:\\eggs\\bacon.txt'
@@ -3731,21 +3549,21 @@ While shutil.copy() will copy a single file, shutil.copytree() will copy an enti
 
 The destination path can also specify a filename. In the following example, the source file is moved and renamed:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> shutil.move('C:\\bacon.txt', 'C:\\eggs\\new_bacon.txt')
 'C:\\eggs\\new_bacon.txt'
 ```
 
 If there is no eggs folder, then move() will rename bacon.txt to a file named eggs.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> shutil.move('C:\\bacon.txt', 'C:\\eggs')
 'C:\\eggs'
 ```
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Permanently Deleting Files and Folders
+#### Permanently Deleting Files and Folders
 
 - Calling os.unlink(path) or Path.unlink() will delete the file at path.
 
@@ -3755,11 +3573,11 @@ If there is no eggs folder, then move() will rename bacon.txt to a file named eg
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Safe Deletes with the send2trash Module
+#### Safe Deletes with the send2trash Module
 
 You can install this module by running pip install send2trash from a Terminal window.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import send2trash
 
 >>> with open('bacon.txt', 'a') as bacon_file: # creates the file
@@ -3771,9 +3589,9 @@ You can install this module by running pip install send2trash from a Terminal wi
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Walking a Directory Tree
+#### Walking a Directory Tree
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import os
 >>>
 >>> for folder_name, subfolders, filenames in os.walk('C:\\delicious'):
@@ -3809,18 +3627,18 @@ manually opening it, etc. Check out the
 [official documentation](https://docs.python.org/3/library/pathlib.html)
 if you want to know more!
 
-## Reading and Writing Files
+### Reading and Writing Files
 
-### The File Reading/Writing Process
+#### The File Reading/Writing Process
 
 To read/write to a file in Python, you will want to use the `with`
 statement, which will close the file for you after you are done.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Opening and reading files with the open() function
+#### Opening and reading files with the open() function
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> with open('C:\\Users\\your_home_folder\\hello.txt') as hello_file:
 ...     hello_content = hello_file.read()
 >>> hello_content
@@ -3847,9 +3665,9 @@ And look upon myself and curse my fate,
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Writing to Files
+#### Writing to Files
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> with open('bacon.txt', 'w') as bacon_file:
 ...     bacon_file.write('Hello world!\n')
 13
@@ -3868,7 +3686,7 @@ Bacon is not a vegetable.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Saving Variables with the shelve Module
+#### Saving Variables with the shelve Module
 
 To save variables:
 
@@ -3882,7 +3700,7 @@ To save variables:
 
 To open and read variables:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> with shelve.open('mydata') as shelf_file:
 ...     print(type(shelf_file))
 ...     print(shelf_file['cats'])
@@ -3892,7 +3710,7 @@ To open and read variables:
 
 Just like dictionaries, shelf values have keys() and values() methods that will return list-like values of the keys and values in the shelf. Since these methods return list-like values instead of true lists, you should pass them to the list() function to get them in list form.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> with shelve.open('mydata') as shelf_file:
 ...     print(list(shelf_file.keys()))
 ...     print(list(shelf_file.values()))
@@ -3902,9 +3720,9 @@ Just like dictionaries, shelf values have keys() and values() methods that will 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Saving Variables with the pprint.pformat() Function
+#### Saving Variables with the pprint.pformat() Function
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import pprint
 
 >>> cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}]
@@ -3919,9 +3737,9 @@ Just like dictionaries, shelf values have keys() and values() methods that will 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Reading ZIP Files
+#### Reading ZIP Files
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import zipfile, os
 
 >>> os.chdir('C:\\')    # move to the folder with example.zip
@@ -3940,7 +3758,7 @@ Just like dictionaries, shelf values have keys() and values() methods that will 
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Extracting from ZIP Files
+#### Extracting from ZIP Files
 
 The extractall() method for ZipFile objects extracts all the files and folders from a ZIP file into the current working directory.
 
@@ -3955,7 +3773,7 @@ The extractall() method for ZipFile objects extracts all the files and folders f
 
 The extract() method for ZipFile objects will extract a single file from the ZIP file. Continue the interactive shell example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> with zipfile.ZipFile('example.zip') as example_zip:
 ...     print(example_zip.extract('spam.txt'))
 ...     print(example_zip.extract('spam.txt', 'C:\\some\\new\\folders'))
@@ -3965,7 +3783,7 @@ The extract() method for ZipFile objects will extract a single file from the ZIP
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Creating and Adding to ZIP Files
+#### Creating and Adding to ZIP Files
 
 ```python
 >>> import zipfile
@@ -3978,9 +3796,9 @@ This code will create a new ZIP file named new.zip that has the compressed conte
 
 [_Return to the Top_](#python-cheatsheet)
 
-## JSON, YAML and configuration files
+### JSON, YAML and configuration files
 
-### JSON
+#### JSON
 
 Open a JSON file with:
 
@@ -4002,7 +3820,7 @@ with open("filename.json", "w") as f:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### YAML
+#### YAML
 
 Compared to JSON, YAML allows for much better human maintainability and gives you the option to add comments.
 It is a convenient choice for configuration files where humans will have to edit it.
@@ -4029,7 +3847,7 @@ with open("filename.yaml") as f:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Anyconfig
+#### Anyconfig
 
 [Anyconfig](https://pypi.python.org/pypi/anyconfig) is a very handy package allowing to abstract completely the underlying configuration file format. It allows to load a Python dictionary from JSON, YAML, TOML, and so on.
 
@@ -4049,9 +3867,9 @@ conf1 = anyconfig.load("/path/to/foo/conf.d/a.yml")
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Debugging
+### Debugging
 
-### Raising Exceptions
+#### Raising Exceptions
 
 Exceptions are raised with a raise statement. In code, a raise statement consists of the following:
 
@@ -4059,7 +3877,7 @@ Exceptions are raised with a raise statement. In code, a raise statement consist
 - A call to the Exception() function
 - A string with a helpful error message passed to the Exception() function
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> raise Exception('This is the error message.')
 Traceback (most recent call last):
   File "<pyshell#191>", line 1, in <module>
@@ -4090,11 +3908,11 @@ for sym, w, h in (('*', 4, 4), ('O', 20, 5), ('x', 1, 3), ('ZZ', 3, 3)):
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Getting the Traceback as a String
+#### Getting the Traceback as a String
 
 The traceback is displayed by Python whenever a raised exception goes unhandled. But can also obtain it as a string by calling traceback.format_exc(). This function is useful if you want the information from an exception’s traceback but also want an except statement to gracefully handle the exception. You will need to import Python’s traceback module before calling this function.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import traceback
 
 >>> try:
@@ -4115,7 +3933,7 @@ The 116 is the return value from the write() method, since 116 characters were w
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Assertions
+#### Assertions
 
 An assertion is a sanity check to make sure your code isn’t doing something obviously wrong. These sanity checks are performed by assert statements. If the sanity check fails, then an AssertionError exception is raised. In code, an assert statement consists of the following:
 
@@ -4124,7 +3942,7 @@ An assertion is a sanity check to make sure your code isn’t doing something ob
 - A comma
 - A string to display when the condition is False
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> pod_bay_door_status = 'open'
 
 >>> assert pod_bay_door_status == 'open', 'The pod bay doors need to be "open".'
@@ -4147,7 +3965,7 @@ Assertions can be disabled by passing the -O option when running Python.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Logging
+#### Logging
 
 To enable the logging module to display log messages on your screen as your program runs, copy the following to the top of your program (but under the #! python shebang line):
 
@@ -4159,7 +3977,7 @@ logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s- %
 
 Say you wrote a function to calculate the factorial of a number. In mathematics, factorial 4 is 1 × 2 × 3 × 4, or 24. Factorial 7 is 1 × 2 × 3 × 4 × 5 × 6 × 7, or 5,040. Open a new file editor window and enter the following code. It has a bug in it, but you will also enter several log messages to help yourself figure out what is going wrong. Save the program as factorialLog.py.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import logging
 >>>
 >>> logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s- %(message)s')
@@ -4196,7 +4014,7 @@ Say you wrote a function to calculate the factorial of a number. In mathematics,
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Logging Levels
+#### Logging Levels
 
 Logging levels provide a way to categorize your log messages by importance. There are five logging levels, described in Table 10-1 from least to most important. Messages can be logged at each level using a different logging function.
 
@@ -4210,11 +4028,11 @@ Logging levels provide a way to categorize your log messages by importance. Ther
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Disabling Logging
+#### Disabling Logging
 
 After you’ve debugged your program, you probably don’t want all these log messages cluttering the screen. The logging.disable() function disables these so that you don’t have to go into your program and remove all the logging calls by hand.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import logging
 
 >>> logging.basicConfig(level=logging.INFO, format=' %(asctime)s -%(levelname)s - %(message)s')
@@ -4231,7 +4049,7 @@ After you’ve debugged your program, you probably don’t want all these log me
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Logging to a File
+#### Logging to a File
 
 Instead of displaying the log messages to the screen, you can write them to a text file. The logging.basicConfig() function takes a filename keyword argument, like so:
 
@@ -4243,11 +4061,11 @@ logging.basicConfig(filename='myProgramLog.txt', level=logging.DEBUG, format='%(
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Lambda Functions
+### Lambda Functions
 
 This function:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def add(x, y):
         return x + y
 
@@ -4257,7 +4075,7 @@ This function:
 
 Is equivalent to the _lambda_ function:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> add = lambda x, y: x + y
 >>> add(5, 3)
 8
@@ -4265,14 +4083,14 @@ Is equivalent to the _lambda_ function:
 
 It's not even need to bind it to a name like add before:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> (lambda x, y: x + y)(5, 3)
 8
 ```
 
 Like regular nested functions, lambdas also work as lexical closures:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def make_adder(n):
         return lambda x: x + n
 
@@ -4289,7 +4107,7 @@ Note: lambda can only evaluate an expression, like a single line of code.
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Ternary Conditional Operator
+### Ternary Conditional Operator
 
 Many programming languages have a ternary operator, which define a conditional expression. The most common usage is to make a terse simple conditional assignment statement. In other words, it offers one-line code to evaluate the first expression if the condition is true, otherwise it evaluates the second expression.
 
@@ -4297,7 +4115,7 @@ Many programming languages have a ternary operator, which define a conditional e
 
 Example:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> age = 15
 
 >>> print('kid' if age < 18 else 'adult')
@@ -4306,7 +4124,7 @@ kid
 
 Ternary operators can be chained:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> age = 15
 
 >>> print('kid' if age < 13 else 'teenager' if age < 18 else 'adult')
@@ -4327,7 +4145,7 @@ else:
 
 [_Return to the Top_](#python-cheatsheet)
 
-## args and kwargs
+### args and kwargs
 
 The names `args and kwargs` are arbitrary - the important thing are the `*` and `**` operators. They can mean:
 
@@ -4346,7 +4164,7 @@ Inside forward, args is a tuple (of all positional arguments except the first on
 
 You use `*args` when you have an indefinite amount of positional arguments.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def fruits(*args):
 >>>    for fruit in args:
 >>>       print(fruit)
@@ -4360,7 +4178,7 @@ You use `*args` when you have an indefinite amount of positional arguments.
 
 Similarly, you use `**kwargs` when you have an indefinite number of keyword arguments.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def fruit(**kwargs):
 >>>    for key, value in kwargs.items():
 >>>        print("{0}: {1}".format(key, value))
@@ -4371,7 +4189,7 @@ name: apple
 color: red
 ```
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> def show(arg1, arg2, *args, kwarg1=None, kwarg2=None, **kwargs):
 >>>   print(arg1)
 >>>   print(arg2)
@@ -4410,14 +4228,14 @@ None
 {}
 ```
 
-### Things to Remember(args)
+#### Things to Remember(args)
 
 1. Functions can accept a variable number of positional arguments by using `*args` in the def statement.
 2. You can use the items from a sequence as the positional arguments for a function with the `*` operator.
 3. Using the `*` operator with a generator may cause your program to run out of memory and crash.
 4. Adding new positional parameters to functions that accept `*args` can introduce hard-to-find bugs.
 
-### Things to Remember(kwargs)
+#### Things to Remember(kwargs)
 
 1. Function arguments can be specified by position or by keyword.
 2. Keywords make it clear what the purpose of each argument is when it would be confusing with only positional arguments.
@@ -4426,11 +4244,11 @@ None
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Context Manager
+### Context Manager
 
 While Python's context managers are widely used, few understand the purpose behind their use. These statements, commonly used with reading and writing files, assist the application in conserving system memory and improve resource management by ensuring specific resources are only in use for certain processes.
 
-### with statement
+#### with statement
 
 A context manager is an object that is notified when a context (a block of code) starts and ends. You commonly use one with the with statement. It takes care of the notifying.
 
@@ -4445,11 +4263,11 @@ For example, file objects are context managers. When a context ends, the file ob
 
 Anything that ends execution of the block causes the context manager's exit method to be called. This includes exceptions, and can be useful when an error causes you to prematurely exit from an open file or connection. Exiting a script without properly closing files/connections is a bad idea, that may cause data loss or other problems. By using a context manager you can ensure that precautions are always taken to prevent damage or loss in this way.
 
-### Writing your own contextmanager using generator syntax
+#### Writing your own contextmanager using generator syntax
 
 It is also possible to write a context manager using generator syntax thanks to the `contextlib.contextmanager` decorator:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> import contextlib
 >>> @contextlib.contextmanager
 ... def context_manager(num):
@@ -4470,7 +4288,7 @@ Exit
 
 [_Return to the Top_](#python-cheatsheet)
 
-## `__main__` Top-level script environment
+### `__main__` Top-level script environment
 
 `__main__` is the name of the scope in which top-level code executes.
 A module’s **name** is set equal to `__main__` when read from standard input, a script, or from an interactive prompt.
@@ -4487,7 +4305,7 @@ For a package, the same effect can be achieved by including a **main**.py module
 
 For example we are developing script which is designed to be used as module, we should do:
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> # Python program to execute function directly
 >>> def add(a, b):
 ...     return a+b
@@ -4504,7 +4322,7 @@ For example we are developing script which is designed to be used as module, we 
 8
 ```
 
-### Advantages
+#### Advantages
 
 1. Every Python module has it’s `__name__` defined and if this is `__main__`, it implies that the module is being run standalone by the user and we can do corresponding appropriate actions.
 2. If you import this script as a module in another script, the **name** is set to the name of the script/module.
@@ -4513,7 +4331,7 @@ For example we are developing script which is designed to be used as module, we 
 
 [_Return to the Top_](#python-cheatsheet)
 
-## setup.py
+### setup.py
 
 The setup script is the centre of all activity in building, distributing, and installing modules using the Distutils. The main purpose of the setup script is to describe your module distribution to the Distutils, so that the various commands that operate on your modules do the right thing.
 
@@ -4544,12 +4362,12 @@ Find more information visit [http://docs.python.org/install/index.html](http://d
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Dataclasses
+### Dataclasses
 
 `Dataclasses` are python classes but are suited for storing data objects.
 This module provides a decorator and functions for automatically adding generated special methods such as `__init__()` and `__repr__()` to user-defined classes.
 
-### Features
+#### Features
 
 1. They store data and represent a certain data type. Ex: A number. For people familiar with ORMs, a model instance is a data object. It represents a specific kind of entity. It holds attributes that define or represent the entity.
 
@@ -4559,7 +4377,7 @@ Python 3.7 provides a decorator dataclass that is used to convert a class into a
 
 python 2.7
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> class Number:
 ...     def __init__(self, val):
 ...         self.val = val
@@ -4571,7 +4389,7 @@ python 2.7
 
 with dataclass
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> @dataclass
 ... class Number:
 ...     val: int
@@ -4583,11 +4401,11 @@ with dataclass
 
 [_Return to the Top_](#python-cheatsheet)
 
-### Default values
+#### Default values
 
 It is easy to add default values to the fields of your data class.
 
-```python
+```console?lang=python&prompt=>>>&output&comments
 >>> @dataclass
 ... class Product:
 ...     name: str
@@ -4603,7 +4421,7 @@ Python
 0.0
 ```
 
-### Type hints
+#### Type hints
 
 It is mandatory to define the data type in dataclass. However, If you don't want specify the datatype then, use `typing.Any`.
 
@@ -4620,13 +4438,13 @@ It is mandatory to define the data type in dataclass. However, If you don't want
 
 [_Return to the Top_](#python-cheatsheet)
 
-## Virtual Environment
+### Virtual Environment
 
 The use of a Virtual Environment is to test python code in encapsulated environments and to also avoid filling the base Python installation with libraries we might use for only one project.
 
 [_Return to the Top_](#python-cheatsheet)
 
-### virtualenv
+#### virtualenv
 
 1.  Install virtualenv
 
@@ -4666,7 +4484,7 @@ Usage:
 
 [_Return to the Top_](#python-cheatsheet)
 
-### poetry
+#### poetry
 
 > [Poetry](https://poetry.eustace.io/) is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
@@ -4726,7 +4544,7 @@ For more information, check the [documentation](https://poetry.eustace.io/docs/)
 
 [_Return to the Top_](#python-cheatsheet)
 
-### pipenv
+#### pipenv
 
 > [Pipenv](https://pipenv.readthedocs.io/en/latest/) is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. Windows is a first-class citizen, in our world.
 
@@ -4757,7 +4575,7 @@ Find more information and a video in [docs.pipenv.org](https://docs.pipenv.org/)
 
 [_Return to the Top_](#python-cheatsheet)
 
-### anaconda
+#### anaconda
 
 [Anaconda](https://anaconda.org/) is another popular tool to manage python packages.
 

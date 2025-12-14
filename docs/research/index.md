@@ -1,7 +1,7 @@
 ---
-title: "Research"
+title: Research Skills
 permalink: /research
 nav_order: 6
 has_children: true
 ---
-<!-- This is the parent page for Research-->
+<!-- This is the top-level page of the Research subsection.-->

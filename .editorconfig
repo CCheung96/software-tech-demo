@@ -7,10 +7,10 @@ indent_style = space
 indent_size = 2
 end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
+trim_trailing_whitespace = true 
 insert_final_newline = true
 
 # Markdown-specific overrides
 [*.md]
 indent_size = 2
-trim_trailing_whitespace = false  # allows trailing spaces for line breaks
+trim_trailing_whitespace = false  # allows trailing spaces for line breaks. Currently doesn't work when set to true for all files.

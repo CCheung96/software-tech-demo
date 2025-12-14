@@ -1,8 +1,8 @@
 ---
-title: "Java/Mini-Console"
-parent: Research
+title: For Java/Mini-Console
+parent: Research Skills
 permalink: /research/java-minicon
 nav_order: 1
 has_children: true
 ---
-<!-- This is the parent page for Java/Mini-Console Research-->
+<!-- This is the top-level page of the Java/Mini-Console subsection. -->

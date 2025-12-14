@@ -4,6 +4,10 @@ permalink: /comp6010/python-unittest
 parent: COMP6010
 nav_order: 5
 ---
+
+- TOC
+{:toc}
+
 <!-- Assumed Knowledge -->
 {% capture topic_prereq %}
   * [Variables and Operators in Python]({{ site.baseurl }}/comp6010/python-introduction)
@@ -20,7 +24,7 @@ nav_order: 5
 
 
 
-# Introduction
+## Introduction
 
 It is common to write a function and make a *simple* mistake that does not reveal itself until it's too late.
 
@@ -34,7 +38,7 @@ def is_positive(val):
 		return False
 ```
 
-This function would return true for for any `val` that is greater than **or equal to** zero. However, zero is NOT a positive number. Neither is it a negative number. 
+This function would return true for for any `val` that is greater than **or equal to** zero. However, zero is NOT a positive number. Neither is it a negative number.
 
 Wouldn't it be greate, if we could catch this issue nice and early?
 
@@ -61,15 +65,16 @@ In this case, the following would be a start but not an adequate set.
 
 In test-driven development, tests are written before the code and cover the different scenarios possible.
 
-## Example 2
+### Example 2
 
-### Problem definition: Write a function that takes in three numbers, and returns the *median* value, that is the value that sits in the middle when the numbers are arranged in ascending (or descending) order.
+{: .highlight}
+Problem definition: Write a function that takes in three numbers, and returns the *median* value, that is the value that sits in the middle when the numbers are arranged in ascending (or descending) order.
 
 For number 1.5, 0.7 and 8.3, it's the number 1.5 that is the median value.
 
 Let us write some tests and compare our notes.
 
-### First family of values will be three distinct values. 
+#### First family of values will be three distinct values.
 
 The median should lie in all three places across the set.
 
@@ -84,23 +89,23 @@ The median should lie in all three places across the set.
 	- 1.2, 8.4, 3.5: First less than second
 
 
-### Second family of values should be two of the same values and a third unique value. 
+#### Second family of values should be two of the same values and a third unique value.
 
 The order should be shuffled to explore all combinations. On the same line of thought as the first family, we get the following combinations
 
 - First and second are the same
 	- 25, 25, 75: Unique value is higher
 	- 75, 75, 25: Unique value is lower
-- First and third are the same	
+- First and third are the same
 	- 25, 75, 25: Unique value is higher
 	- 75, 25, 75: Unique value is lower
 - Second and third are the same
 	- 75, 25, 25: Unique value is higher
 	- 25, 75, 75: Unique value is lower
 
-Note that we should try and not re-use the same few numerical value for all the cases, hence we replaced 1.2, 3.5 and 8.4 with 25 and 75 for the second family. 
+Note that we should try and not re-use the same few numerical value for all the cases, hence we replaced 1.2, 3.5 and 8.4 with 25 and 75 for the second family.
 
-### Third family of values is where all three values are the same.
+#### Third family of values is where all three values are the same.
 
 - -10000, -10000, -10000
 
@@ -122,11 +127,11 @@ The complete set, and required answer, are:
 |25, 75, 75|75|
 |-10000, -10000, -10000|-10000|
 
-# Assertions
+## Assertions
 
 Python checks if the input matches the value returned using assertions.
 
-## assertEqual
+### assertEqual
 The simplest assertion is `assertEqual`. The following assertion passes if and only if `a` is exactly the same as `b`.
 
 ```python
@@ -135,11 +140,11 @@ assertEqual(a, b)
 
 Example:
 
-```python 
+```python
 assertEqual(square(6), 36)
 ```
 
-## assertAlmostEqual
+### assertAlmostEqual
 `assertAlmostEqual` takes into account rounding-off errors that may occur while comparing floating-point values. The following assertion passes if and only if `a` is almost the same as `b`, upto 6 to 7 decimal places by default, or up to `n` decimal places if the third parameter is supplied. If `n` is supplied, it rounds off the numbers to `n` decimal places. `2.236` rounded-off to 2 decimal places will be `2.24`, while `1.4641` rounded-off to 2 decimal places will be `1.46`.
 
 ```python
@@ -150,12 +155,12 @@ assertAlmostEqual(a, b, n)
 
 Example:
 
-```python 
+```python
 assertAlmostEqual(square(1.25), 1.5625)
 assertAlmostEqual(square(1.2), 1.464, 3) #just check first 3 decimal places
 ```
 
-## assertTrue, assertFalse
+### assertTrue, assertFalse
 
 `assertTrue` passes if and only if the value passed to the assertion is `True`.
 
@@ -169,7 +174,7 @@ assertTrue(is_positive(3))
 assertFalse(isPositive(0))
 ```
 
-# Summary of assertions
+## Summary of assertions
 
 A list of all assertions is given below:
 
@@ -206,7 +211,7 @@ A list of all assertions is given below:
 | [assertSetEqual](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertSetEqual)                     | sets or frozensets                      | 3.x     |
 | [assertDictEqual](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertDictEqual)                   | dicts                                   | 3.x     |
 
-# How are assertions used
+## How are assertions used
 
 First thing is to import the `unittest` library as:
 
@@ -249,20 +254,20 @@ In there, you can have whatever assertions you want. You just need to prefix eac
 
 ```python
 self.assertTrue(is_positive(20))
-self.assertEqual(square(6), 36))
+self.assertEqual(square(6), 36)
 self.assertAlmostEqual(average(3, 4), 3.5)
 ```
 
-## One final step
+### One final step
 
 The final step is to include the *driver*, so as to specify that it's a `unittest` we want to run.
 
 ```python
-if __name__ == "__main__":    
-    unittest.main() 
+if __name__ == "__main__":
+    unittest.main()
 ```
 
-## Outcomes
+### Outcomes
 
 If all the tests pass, python tells you everything went well, using **OK**.
 
@@ -319,7 +324,7 @@ FAILED (failures=1)
 
 Here, it's saying that `self.assertTrue(is_positive(5635.5))` failed because the function call resulted in `False`, which is not `True` (as per the assertions demands).
 
-# First complete example (assertTrue, assertFalse)
+## First complete example (assertTrue, assertFalse)
 
 ```python
 import unittest
@@ -334,18 +339,18 @@ class Tester(unittest.TestCase):
         self.assertFalse(is_positive(-0.1))
         self.assertFalse(is_positive(-0.01))
         self.assertFalse(is_positive(-11454.4))
-    
+
 def is_positive(val):
     if val > 0:
         return True
     else:
         return False
 
-if __name__ == "__main__":    
-    unittest.main() 
+if __name__ == "__main__":
+    unittest.main()
 ```
 
-# Second complete example (assertEqual)
+## Second complete example (assertEqual)
 
 ```python
 import unittest
@@ -362,7 +367,7 @@ class Tester(unittest.TestCase):
         self.assertEqual(30, highest(10, 20, 30))
         self.assertEqual(100, highest(50, 100, 60))
         self.assertEqual(-100, highest(-500, -120, -100))
-    
+
 def highest(a, b, c):
     if a>=b:
         if a>=c:
@@ -375,11 +380,11 @@ def highest(a, b, c):
         else:
             return c
 
-if __name__ == "__main__":    
-    unittest.main() 
+if __name__ == "__main__":
+    unittest.main()
 ```
 
-# Third complete example (assertAlmostEqual)
+## Third complete example (assertAlmostEqual)
 
 ```python
 import unittest
@@ -390,22 +395,22 @@ class Tester(unittest.TestCase):
         self.assertAlmostEqual(-2.5, average(-2, -3))
         self.assertAlmostEqual(0, average(2, -2))
         self.assertAlmostEqual(-51.3, average(-51.1, -51.5))
-        
+
         #up to 2 decimal places
-        self.assertAlmostEqual(average(1.2555, 1.3), 1.28, 2) 
-        
+        self.assertAlmostEqual(average(1.2555, 1.3), 1.28, 2)
+
         #up to 1 decimal place only
         self.assertAlmostEqual(average(1.2345, 4.5678), 2.9, 1)
 
 def average(a, b):
     return (a+b)/2
 
-if __name__ == "__main__":    
-    unittest.main() 
+if __name__ == "__main__":
+    unittest.main()
 ```
 
 
-# An example where you complete the function
+## An example where you complete the function
 
 ```python
 import unittest
@@ -421,15 +426,15 @@ class Tester(unittest.TestCase):
         self.assertFalse(is_odd(-8))
         self.assertFalse(is_odd(8096))
         self.assertFalse(is_odd(-8096))
-    
+
 def is_odd(val):
     return True # replace this with actual code
 
-if __name__ == "__main__":    
-    unittest.main() 
+if __name__ == "__main__":
+    unittest.main()
 ```
-    
-# An example where you write the tests and then the function
+
+## An example where you write the tests and then the function
 
 ```python
 import unittest
@@ -437,15 +442,15 @@ import unittest
 class Tester(unittest.TestCase):
     def test_is_divisible_by(self):
         # TODO
-    
+
 def is_odd(a, b):
     return True #update so it returns True if and only if a is divisible by b
 
-if __name__ == "__main__":    
-    unittest.main() 
+if __name__ == "__main__":
+    unittest.main()
 ```
 
-# PRACTICE PACKAGE!!!
+## PRACTICE PACKAGE!!!
 
 Find the entire practice package at [COMP6010PracticePackage.zip](https://softwaretechnologymq.github.io/assets/codes/COMP6010PracticePackage.zip)
 

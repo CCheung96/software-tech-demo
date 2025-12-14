@@ -65,7 +65,7 @@ In Java, you must perform _two_ steps yourself to get your program to run:
 All Java programs have the following structure,
 
 ```java
-public class HelloWorld { 
+public class HelloWorld {
   public static void main(String[] args){
     // CODE GOES HERE
   }
@@ -74,7 +74,7 @@ public class HelloWorld {
 
 The name of the file containing this code MUST be `HelloWorld.java` (not `helloWorld.java` or `Hello.java` or `MarcoPolo.java`).
 
-The golden rule is: The name of the file must be exactly the same as the name of the `public class` it contains (we'll see soon that a file can contain several classes, but only one `public class`). 
+The golden rule is: The name of the file must be exactly the same as the name of the `public class` it contains (we'll see soon that a file can contain several classes, but only one `public class`).
 
 This is an important rule relevant to all assignment submissions. Unless the file is named correctly, it will NOT be marked by automarker, given it will not compile!
 
@@ -131,7 +131,7 @@ public class HelloWorld {
 
 When you compile the program, you'll get the following message,
 
-```console
+```console?output
 I-2:intro gauravgupta$ javac HelloWorld.java
 HelloWorld.java:3: error: illegal start of expression
 System.out.println(5+);
@@ -414,10 +414,10 @@ What is a prime number? _A number more than 1 that is divisible only by 1 and it
 **Is 37 a prime number?**
 
 ```text
-Is 37 divisible by 2? No. So we carry on 
-Is 37 divisible by 3? No. So we carry on  
-...  
-Is 37 divisible by 36? No. This means 37 is not divisible by any integer besides 1 and 37.  
+Is 37 divisible by 2? No. So we carry on
+Is 37 divisible by 3? No. So we carry on
+...
+Is 37 divisible by 36? No. This means 37 is not divisible by any integer besides 1 and 37.
 Thus, 37 is a prime number.
 ```
 {: .nolineno}
@@ -425,9 +425,9 @@ Thus, 37 is a prime number.
 **Is 77 a prime number?**
 ```text
 Is 77 divisible by 2? No. So we carry on
-Is 77 divisible by 3? No. So we carry on   
-...  
-Is 77 divisible by 7? Yes. This means 77 is divisible by another integer besides 1 and 77.  
+Is 77 divisible by 3? No. So we carry on
+...
+Is 77 divisible by 7? Yes. This means 77 is divisible by another integer besides 1 and 77.
 Therefore, it's not a prime number.
 ```
 {: .nolineno}
