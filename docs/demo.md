@@ -1,6 +1,7 @@
 ---
 title: Demonstration Page
 description: A minimal page for demonstrating project features
+permalink: /demo
 author: Crystal Cheung
 nav_exclude: true
 ---

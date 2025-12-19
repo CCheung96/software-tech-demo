@@ -11,27 +11,50 @@ If adding content is your only focus, all you need to do is write the content us
 ## Just the Docs
 JTD provides a number of layouts, but aside from the Home Page, all the pages in this project are a customised version of the JTD page layout which was configured in _layouts/custom-page.html.
 
+Its layout is reponsive to screen width; at smaller cscreen widths the navigation bar.
+
+The pages are written mainly in Markdown, with occasional insertions of html tags.
+All the pages that are part of the navigation have been placed together in the `docs` folder. The exceptions are the landing page and the hidden pages, `/test` and `/demo`.
+
 ### Front Matter
-The YAML configuration content at the beginning of each page, separated from the actual content by `---`. This configures page variable to determine how it will display in the website. The variables set in this front matter include:
-* `title`: The page name that will appear on the sidebar. This will also be the appear as the title in page, unless specified by `custom-title`. **This is mandatory.**
+https://jekyllrb.com/docs/front-matter/
+
+YAML front matter (--- blocks at the top) are parsed for metadata and configuration.
+The YAML configuration content at the beginning of each page, separated from the actual content by `---`, contains the metadata and configuration of the page. This configures page variable to determine how it will display in the website.
+
+The most important variables to configure in most cases are:
+* `title`: The page name that will appear on the navigation bar. This will also be the appear as the title in page, unless specified by `custom-title`. In undefined, it will not appear on the navigation bar
+* `permalink`: By default, the link is based on the file's path in the project, but since we don't want '/docs/' to appear as part of the link, each link has to be hard-coded (sorry).
+* `nav_order`: This determines the order of a page as it will apear on the navigation bar in relation to its "siblings", ie. pages at the same level. Number the pages from 1 onwards, where 1 is the page that is listed first. See [Navigation Bar Structure](#directory-structure-and-thegeneration-of-urls-and-the-navigation-bar).
+
+
+In certain cases, the following variable may also need to be defined:
 * `custom-title`: A title that you want to use for the page itself. Unless specified, it defaults to the value set by `title`.
-* `permalink`: By default, the link is based on the file's path, but since we don't want '/docs/' to appear as part of the link, each link has to be hard-coded (sorry).
-* `parent`: If the page is a child of another page, specify the `title` of that parent page. See [Sidebar Hierarchy](#sidebar-hierarchy).
-* `nav_order`: This determines the order of a page as it will apear on the sidebar in relation to its "siblings", ie. pages with the same parent. Number from 1 onwards. See [Sidebar Hierarchy](#sidebar-hierarchy).
-* `grandparent`: If the page is a grandchild of another page, specify the `title` of that grandparent page. This is a precaution that becomes  relevant **if pages have parents with the same name, but different grandparent pages**. See [Sidebar Hierarchy](#sidebar-hierarchy).
-* `has_children`: If the page is expected to have one or more child pages, this is how it is declared. Note: Do not also list the children in the parent page. See [Sidebar Hierarchy](#sidebar-hierarchy).
-* `has_toc`: Defines whether the page has a Table of Contents (TOC). By default this is set to true. For some pages, however, the placement of the TOC still needs to be hard-coded within the page contents.
-* `layout`: The default layout has been set to `custom-page`, which is defined in and inherits from Just the Doc's `page` layout. `_config.yml`. Currently, `custom-page` includes a title and author at the top of a page, before the rest of the page content. The Table of Contents (TOC) cannot be included here, since its ability to generate is dependent on the page contents.
-* `nav_exclude`: Set this to `true` to hide the page from the sidebar, as with the example of [test.md](https://ccheung96.github.io/software-tech-demo/test)
+
+
+* `parent`: If the page is a child of another page, specify the `title` of that parent page. See [Navigation Bar Structure](#directory-structure-and-thegeneration-of-urls-and-the-navigation-bar).
+* `grandparent`: If the page is a grandchild of another page, specify the `title` of that grandparent page. This is a precaution that becomes important **if pages have parents pages with the same name, but different grandparent pages**. See [Navigation Bar Structure](#directory-structure-and-thegeneration-of-urls-and-the-navigation-bar).
+* `has_children`: If the page is expected to have one or more child pages, this is how it is declared. Note: Do not also list the children in the parent page. See [Navigation Bar Structure](#directory-structure-and-thegeneration-of-urls-and-the-navigation-bar).
+
+
+There are some variables that have a default setting and may never need to be explicitly defined. Nonetheless, they are important to take note of:
+* `layout`: The default layout *for this project* has been set to `custom-page`, which inherits from Just the Doc's `page` layout, which is in turn based on its [`default` layout](https://just-the-docs.com/docs/layout/layout/#the-default-layout). Currently, `custom-page` adds a title and author at the top of the main container before the rest of the page content, which is defined in the rest of the file. The Table of Contents (TOC) is not included in the layout because its ability to generate is dependent on the page contents.
+* `has_toc`: Set to `true` by default. Defines whether a parent page has a Table of Contents (TOC) that displays all its child pages. This does no affect any in-page TOCs, which are for in-page navigation.
+* `nav_exclude`: Set this to `true` to exclude the page from the navigation navigation bar. This has been done with the [test page](https://ccheung96.github.io/software-tech-demo/test) and [demo page](https://ccheung96.github.io/software-tech-demo/demo).
+
+You can also define new configuration variables to use in other files, eg. `custom-title` and `author` which were variables made for the page layout.
 
 ### Page Contents
-Below the [front matter](#front-matter) is where the actual content for the page is written. For the sake of ease-of-implementation, the content **can be written almost entirely in [Markdown](https://www.markdownguide.org/)**. Occasionally, this may need to be supplemented with HTML, Includes, Mermaid Diagrams and/or D3js.
+Anything below the [front matter](#front-matter) is generated into the main content of the page. For the sake of ease-of-implementation, the content can be written almost entirely in [Markdown](https://www.markdownguide.org/) with the intent to make pages easy to write and edit. Occasionally, this may need to be supplemented with HTML, Includes, Mermaid Diagrams and/or D3js.
 
 
-### Page Hierarchy
-Links are generated
+### Directory Structure and the Generation of URLs and the Navigation Bar
 
-### Sidebar Hierarchy
+By default, Jekyll preserves the folder structure when building the URLs for the site
+
+https://just-the-docs.com/docs/navigation/main/order/
+https://just-the-docs.com/docs/navigation/main/levels/
+https://just-the-docs.com/docs/navigation/main/ancestry/
 
 
 ### Includes
@@ -116,10 +139,17 @@ pandoc sorting.md --slide-level=4 -o sorting.pptx
 
 An example GitHub Actions workflow for `sorting.md` lives in `.github/workflows/sorting-slides.yml`. Duplicate this file and replace `sorting.md` with another lesson file to generate slides for other topics.
 
-## TO DO
-* Reintroduce all pages in COMP1260, COMP6010, Common, Research Skills, and Regular Expressions
-* Mermaid Diagrams, SVGs and D3js
-  * Replace all diagrams with mermaid diagrams/svgs/D3js
+## TO DO (Known Issues)
+* Implement Katex (seems only relevant to number_systems.md)
+* Find a way to not be reliant on hard-coded permalinks
+* Estasblish consistent linting practices
+* Checks:
+  * Check the proper functioning of all links
+  * Check for consistency in style
+* Reorganise all the coomp1000 and comp1010 assets, and reconfigure their links
+* Replace diagrams and images with mermaid diagrams/svgs/D3js where appropriate
+* Incorporate divs classed as "task"
+  * The exercise blocks are generated after the in-page TOCs, and so their titles are not included in the TOC
 
 ## Appendix: Snippets
 

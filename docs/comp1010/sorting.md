@@ -26,7 +26,7 @@ author: Gaurav Gupta and Greg Baker
 
 
 
-<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/margeSort.jpeg" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/sorting_algorithms/margeSort.jpeg" alt="image"/>
 
 ## Why Perform Sorting?
 
@@ -72,7 +72,7 @@ Bottom line, **sorting is good**; it makes things MUCH easier!
 
 ### Bogosort
 
-Bogosort repeatedly shuffles the data until it happens to be in order.  It is a fantastic way to waste time and highlights why we care about algorithmic complexity.  A short implementation is given in [BogoSort.java]({{ site.baseurl }}/assets/codes/comp1010/sorting/BogoSort.java){:target="_blank"}. 
+Bogosort repeatedly shuffles the data until it happens to be in order.  It is a fantastic way to waste time and highlights why we care about algorithmic complexity.  A short implementation is given in [BogoSort.java]({{ site.baseurl }}/assets/codes/comp1010/sorting/BogoSort.java){:target="_blank"}.
 
 ### Tree Sort
 
@@ -116,7 +116,7 @@ If I ask you to sort the collection, what would be your approach? Think about th
 
 > {40, 70, 20, 90, 30, 80, 20}
 
-One approach can be to find the smallest item and make sure it's at the right place. That's 20, and belongs at the first position (where 40 sits). 
+One approach can be to find the smallest item and make sure it's at the right place. That's 20, and belongs at the first position (where 40 sits).
 
 ### Sub-option 1
 
@@ -139,21 +139,21 @@ Just like the first sub-option, we can totally forget about the first item once 
 Sorted part and unsorted part put in their own *compartments*.
 
 > | 40, 70, 20, 90, 30, 80, 20
-> 
+>
 > 40 | 70, 20, 90, 30, 80, 20
-> 
+>
 > 40, 70 | 20, 90, 30, 80, 20
-> 
+>
 > 20, 40, 70, | 90, 30, 80, 20
-> 
+>
 > 20, 40, 70, 90, | 30, 80, 20
-> 
+>
 > 20, 30, 40, 70, 90, | 80, 20
-> 
+>
 > 20, 30, 40, 70, 80, 90, | 20
-> 
+>
 > 20, 20, 30, 40, 70, 80, 90 |
-> 
+>
 
 
 ### Full trace using "swapping" approach
@@ -172,10 +172,10 @@ Sorted part and unsorted part put in their own *compartments*.
 >
 > 20, 20, 30, 40, 70, | 80, 90
 >
-> 20, 20, 30, 40, 70, 80, | 90 
+> 20, 20, 30, 40, 70, 80, | 90
 >
-> 20, 20, 30, 40, 70, 80, 90 | 
-> 
+> 20, 20, 30, 40, 70, 80, 90 |
+>
 
 ## Bring It In!
 
@@ -282,7 +282,7 @@ A simplified run of Timsort on the same numbers identifies runs and merges them:
 ## What's the best we can do?
 
 Comparison-based sorting algorithms can't beat $O(n \log n)$ in the general
-case because each comparison yields limited information.  
+case because each comparison yields limited information.
 
 A comparison-based sorting algorithm only relies on comparing pairs of elements. Any such algorithm can be represented as a decision tree, where:
 

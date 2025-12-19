@@ -83,7 +83,7 @@ Instances (and types):
 
 <p>&nbsp;</p>
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_composition/composition-figure0.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_composition/composition-figure0.png" alt="image"/>
 
 <p>&nbsp;</p>
 
@@ -95,7 +95,7 @@ Line line = new Line(new Point(10, 40), new Point(70, 60));
 
 <p>&nbsp;</p>
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_composition/composition-figure1.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_composition/composition-figure1.png" alt="image"/>
 
 <p>&nbsp;</p>
 

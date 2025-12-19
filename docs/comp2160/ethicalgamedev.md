@@ -22,9 +22,6 @@ nav_order:
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
 
-Where the hell did this come from??????? - Crystal
-
-
 Okay. Welcome to the Week One. Lectures for 21. 60.  this week we'll be talking about just the basics
 
 

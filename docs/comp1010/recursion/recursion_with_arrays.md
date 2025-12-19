@@ -14,7 +14,7 @@ nav_order: 4
   * [Functions]({{ site.baseurl }}/comp1000/functions)
   * [Classes as Types]({{ site.baseurl }}/comp1010/classes/types)
   * [Recursion]({{ site.baseurl }}/comp1010/recursion)
-  
+
 {% endcapture %}
 <!-- Learning Outcomes -->
 {% capture topic_outcomes %}
@@ -51,7 +51,7 @@ For example, to check if zero or more items of the array `{10, 70, 20, 90}` (not
 15. 90
 16. none (special case: adds up to 0)
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion-arrays/backtracking.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursion/recursion-arrays/backtracking.png" alt="image"/>
 
 For 4 items, there are 16 combinations, because each item has 2 states:
 

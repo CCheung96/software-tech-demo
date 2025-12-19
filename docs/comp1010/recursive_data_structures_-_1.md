@@ -9,7 +9,7 @@ nav_order: 1
 {:toc}
 
 <!-- Assumed Knowledge -->
-{% capture topic_prereq %}  
+{% capture topic_prereq %}
   * [**Classes- Composition**]({{ site.baseurl }}/comp1010/classes/composition)
   * [Lists]({{ site.baseurl }}/comp1010/lists)
 {% endcapture %}
@@ -42,20 +42,20 @@ Every Node object holds a reference to another Node object.
 > Node a = new Node(10, null);
 > ```
 >
-><img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure0.png" alt=""/>
+><img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure0.png" alt="image"/>
 
 
 > ```java
 > Node b = new Node(20, a);
 > ```
 >
-> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure1.png" alt=""/>
+> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure1.png" alt="image"/>
 
 > ```java
 > Node head = new Node(20, new Node(10, null));
 > ```
 >
-> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure2.png" alt=""/>
+> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure2.png" alt="image"/>
 
 Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passed it as a parameter to the constructor of `head`.
 
@@ -64,7 +64,7 @@ Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passe
 > head.next.next = new Node(-50, null);
 > ```
 >
-> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure3.png" alt=""/>
+> <img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/node-figure3.png" alt="image"/>
 
 
 ### Linking nodes
@@ -85,11 +85,11 @@ Node n2 = new Node(90, n3);
 Node n1 = new Node(30, n2);
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure4.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure4.png" alt="image"/>
 
 Simplified representation:
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure5.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure5.png" alt="image"/>
 
 We can get all the values using the "first" node, in this case, `n1` :)
 
@@ -124,7 +124,7 @@ while(temp != null) {
   temp = temp.next;
 }
 ```
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure12.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure12.png" alt="image"/>
 
 **Careful to not lose the reference to the starting node**
 
@@ -207,7 +207,7 @@ if(head != null) { //there is at least one node in the list
    }
    else { //there are at least two nodes in the list
       Node temp = head;
-      while(temp!=null && temp.next!=null) { 
+      while(temp!=null && temp.next!=null) {
          temp = temp.next;
       }
       //temp is guaranteed to be hold a reference to the SECOND-LAST node in the list
@@ -243,7 +243,7 @@ while(head!=null && head.data%2 == 0) {
    head = head.next;
 }
 //now remove all even nodes AFTER head, if any
-Node cur = head; 
+Node cur = head;
 while(cur != null) { //cur, if not null, definitely contains an odd number
    if(cur.next.data%2 == 0) {
       cur.next = cur.next.next;
@@ -275,7 +275,7 @@ I can call it as `sum(n1)`, thereby `start ` being a reference copy of `n1` and 
 
 ### Recursion is a beautiful thing
 
-To calculate the sum of all nodes starting at a node `start`, 
+To calculate the sum of all nodes starting at a node `start`,
 
 - if `start` is `null`, you can return 0,
 - otherwise, you can add `start.data` to the sum of all nodes starting at `start.next`.
@@ -365,7 +365,7 @@ If, for any reason, you need to hold on to the original reference of `start`, yo
 public static boolean allUnique(Node start) {
   for(Node nodeA = start; nodeA != null; nodeA = nodeA.next) { //for all nodes
     //check against all other nodes AFTER it
-    for(Node nodeB = nodeA.next; nodeB != null; nodeB = nodeB.next) { 
+    for(Node nodeB = nodeA.next; nodeB != null; nodeB = nodeB.next) {
       if(nodeA.data == nodeB.data) {
         return false;
       }
@@ -391,7 +391,7 @@ public static boolean contains(Node start, int target) {
   }
   return start.data == target || contains(start.next, target);
 }
-```  
+```
 
 **You should be careful about your loop expression**
 
@@ -401,7 +401,7 @@ Consider an example where you want to check if a list contains the same item twi
 //BUGGY!!!
 public static boolean twoInARow(Node start) {
 	while(start != null) { //BUG!
-		if(start.data == start.next.data) { 
+		if(start.data == start.next.data) {
 			return true;
 		}
 		start = start.next;
@@ -418,7 +418,7 @@ If we simply check `while(start.next != null)`, that would cause a problem if `s
 //CORRECT
 public static boolean twoInARow(Node start) {
 	while(start != null && start.next != null) {
-		if(start.data == start.next.data) { 
+		if(start.data == start.next.data) {
 			return true;
 		}
 		start = start.next;
@@ -434,7 +434,7 @@ public static boolean twoInARow(Node start) {
 	if (start == null || start.next == null) {
 		return false;
 	}
-	if(start.data == start.next.data) { 
+	if(start.data == start.next.data) {
 		return true;
 	}
 	return twoInARow(start.next);
@@ -459,7 +459,7 @@ RNode q = new RNode(r2, null);
 RNode p = new RNode(r1, q);
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure2.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure2.png" alt="image"/>
 
 We can create anonymous objects to reduce variable count.
 
@@ -468,7 +468,7 @@ RNode q = new RNode(new Rectangle(4.2, 3.6), null);
 RNode p = new RNode(new Rectangle(2.5, 1.5), q);
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure3.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/recursive_data_structures_1/linkedlists-figure3.png" alt="image"/>
 
 **Be careful while comparing objects!!!**
 
@@ -476,7 +476,7 @@ Consider the following function that attempts to check if a specific rectangle e
 
 ```java
 public static boolean contains(RNode start, Rectangle target) {
-  for(Node current = start; current != null; current = current.next) { 
+  for(Node current = start; current != null; current = current.next) {
     if(current.data == target) {
       return true;
     }
@@ -491,7 +491,7 @@ The right version is:
 
 ```java
 public static boolean contains(RNode start, Rectangle target) {
-  for(Node current = start; current != null; current = current.next) { 
+  for(Node current = start; current != null; current = current.next) {
     if(current.data.equals(target)) {
       return true;
     }
@@ -532,7 +532,7 @@ public static Node reversed(Node n) {
 }
 ```
 
-The above version is called *out-of-place* algorithm and will create a second list of the same size as the original list, which can be pretty costly. A recursive *out-of-place* version is provided below. 
+The above version is called *out-of-place* algorithm and will create a second list of the same size as the original list, which can be pretty costly. A recursive *out-of-place* version is provided below.
 
 
 Thanks to Xingyu (Ara) Cai for providing the following three elegant solutions! Well done, Ara :)
@@ -597,7 +597,7 @@ public static Node reverse(Node node) {
 
   Node secondNode = node.next;
   node.next = null; //it was an amicable break-up
-  
+
   Node reverseRest = reverse(secondNode);
   secondNode.next = node; //insert originally first node at the end of the reversed list
   return reverseRest; //return the first node of the reversed list

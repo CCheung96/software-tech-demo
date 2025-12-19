@@ -78,7 +78,7 @@ null
 
 The memory diagram for the current state of the array is
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_array_of_objects/array-of-objects-figure0.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_array_of_objects/array-of-objects-figure0.png" alt="image"/>
 
 Each item of the array is a `Rectangle` reference, and initialised to the default value (which, for objects, is `null`).
 
@@ -112,7 +112,7 @@ for(int i=0; i < blocks.length; i++) {
 }
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_array_of_objects/array-of-objects-figure1.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_array_of_objects/array-of-objects-figure1.png" alt="image"/>
 
 This time, you will get the following output:
 

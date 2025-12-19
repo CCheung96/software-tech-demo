@@ -4,8 +4,11 @@ custom-title: Setting up the Macquarie Mini Console on a PC
 parent: For Java/Mini-Console
 grandparent: Research Skills
 permalink: /research/java-minicon/mini-console-pc
-nav_order: 3
+nav_order: 2
 ---
+
+- TOC
+{:toc}
 
 The "macquarie mini console" is an application that showcases games made by Macquarie University Students in CS1/computing 101. The Java application can be run on any computer for easy experimentation. This tutorial will show you how to access and run the macquarie mini console and its code on your personal computer at home.
 
@@ -15,7 +18,7 @@ The "macquarie mini console" is an application that showcases games made by Macq
 
 JDK8 (Java Development Kit 8) can be downloaded at <a href="https://adoptopenjdk.net/">this</a> link. Select the options shown below and press the big blue download button. This may take some time to download onto your computer.
 <div style="width:75%; margin:auto">
-	<img src="figs/openJDK_download.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/openJDK_download.png"/>
 </div>
 <br>
 
@@ -51,31 +54,31 @@ Now we are ready to download the Macquarie Mini Console application to our local
 
 Navigate to <a href="https://bitbucket.org/mqcomputingdept/mq_mini_console/src/master/">this</a> link and click on the clone button.
 <div style="width:75%; margin:auto">
-	<img src="figs/mini_console_clone_step1.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/mini_console_clone_step1.png"/>
 </div>
 <br>
 
 Copy the highlighted link.
 <div style="width:75%; margin:auto">
-	<img src="figs/mini_console_clone_step2.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/mini_console_clone_step2.png"/>
 </div>
 <br>
 
 Navigate to where you opened a new window for VSCode. Click on 'clone repository' under the Start title and copy the link into the textbox that pops up.
 <div style="width:75%; margin:auto">
-	<img src="figs/mini_console_clone_step3.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/mini_console_clone_step3.png"/>
 </div>
 <br>
 
 Select a location for the repository. This can be anywhere on your computer that you choose. It is suggested to create a new folder in Documents or Desktop for easy access. Once you have chosen a location, click on "Select Local Repository"
 <div style="width:75%; margin:auto">
-	<img src="figs/mini_console_clone_step4.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/mini_console_clone_step4.png"/>
 </div>
 <br>
 
 A pop up box will appear telling you it is cloning the repository. When it is finished, click on "Open"
 <div style="width:75%; margin:auto">
-	<img src="figs/mini_console_clone_step5.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/mini_console_clone_step5.png"/>
 </div>
 <br>
 
@@ -98,7 +101,7 @@ Make sure to save both of these files and continue to the next section.
 To run the application, we will need to compile and run our code. Go to the menu bar and click on "Terminal", then "New Terminal". First, our code needs to be compiled. Click in the terminal, type `./run` and press enter. A new screen will appear running the mini console. Navigate between the games using the up and down arrow keys. To play a game, click the enter button. To leave a game and return to the home screen, click the esc button. To exit the application, click the esc button again.
 
 <div style="margin:auto">
-	<img src="figs/run_min_console.png"/>
+	<img src="{{ site.baseurl }}/assets/imgs/research-mini-console/pc/run_min_console.png"/>
 </div>
 <br>
 

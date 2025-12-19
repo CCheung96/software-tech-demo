@@ -82,7 +82,7 @@ public class Client {
 
 In the above example, the contents of `r1`, which is the address that `r1` holds is copied into the contents of `r2`. Thus, `r2` holds the same address that `r1` holds.
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy.png" alt="image"/>
 
 We say,
 
@@ -124,7 +124,7 @@ public class Client {
 }
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy2.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/referenceCopy2.png" alt="image"/>
 
 
 ## Instance copy
@@ -135,7 +135,7 @@ Instead of creating reference copies, which creates dependencies, we can create 
 public class Client {
 	public static void main(String[] args) {
 		Rectangle r1 = new Rectangle(10, 20);
-		Rectangle r2 = new Rectangle(r1.width, r1.height);		
+		Rectangle r2 = new Rectangle(r1.width, r1.height);
 		r1.width = 50;
 
 		System.out.println(r2.width); //still 10
@@ -143,7 +143,7 @@ public class Client {
 }
 ```
 
-<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/instanceCopy.png" alt=""/>
+<img src="{{ site.baseurl }}/assets/comp1010/classes/classes_copies/instanceCopy.png" alt="image"/>
 
 
 In the above example, we passed `r1.width` and `r1.height` (which are variables of primitive data type) as parameters to the constructor to create `r2`.
@@ -176,7 +176,7 @@ With the copy constructor, we can make instance copies easily by simply passing 
 public class Client {
 	public static void main(String[] args) {
 		Rectangle r1 = new Rectangle(10, 20);
-		Rectangle r2 = new Rectangle(r1); //invoke copy constructor		
+		Rectangle r2 = new Rectangle(r1); //invoke copy constructor
 		r1.width = 50;
 
 		System.out.println(r2.width); //still 10

@@ -13,6 +13,7 @@
 
   .main-content h3 {
       font-size: $font-size-7 !important;
+      font-weight: 400 !important;
   }
 
   .main-content h4 {
@@ -37,6 +38,7 @@
 
   .main-content h3 {
       font-size: $font-size-8 !important;
+      font-weight: 400 !important;
   }
 
   .main-content h4 {
@@ -119,6 +121,7 @@
 .centred-img {
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 /* For disabling line numbers for code blocks with .nolineno */
