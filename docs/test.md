@@ -6,9 +6,9 @@ author: Crystal Cheung
 nav_exclude: true
 ---
 
-This is a hidden test page.
+This is a hidden page for testing bugs and new features.
 
-See the test.md file for implementation.
+See the docs/test.md file for implementation.
 
 {% include youtube.html id="Yw6u6YkTgQ4" %}
 

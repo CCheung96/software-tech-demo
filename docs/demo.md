@@ -4,11 +4,23 @@ description: A minimal page for demonstrating project features
 permalink: /demo
 author: Crystal Cheung
 nav_exclude: true
+use_katex: true
 ---
 
-This is a hidden for demonstrating features of the project.
+This is a hidden for demonstrating some features of the project.
 
-See the test.md file for implementation.
+See the docs/demo.md file for implementation.
+
+All the content is intended to fit inside the main-content-wrap div at whatever width it is. Check how it will look on mobile devices with Inspect mode.
+
+## Titles, Headings and Subheadings
+
+# Title, made with `#`
+## Heading 1, made with `##`
+### Heading 2, made with `###`
+#### Heading 3, made with `####`
+##### Heading 4, made with `#####`
+###### Heading 5, made with `######`
 
 ## Callouts
 
@@ -48,12 +60,60 @@ solution
     solution=my_solution
 %}
 
-## Titles, Headings and Subheadings
+## Prerequisites and Outcomes as Dropdowns
 
-# Title, made with `#`
-## Heading 1, made with `##`
-### Heading 2, made with `###`
-#### Heading 3, made with `####`
-##### Heading 4, made with `#####`
-###### Heading 5, made with `######`
+<!-- Assumed Knowledge -->
+{% capture topic_prereq %}
+  * Point 1
+  * Point 2
+{% endcapture %}
+<!-- Learning Outcomes -->
+{% capture topic_outcomes %}
+  * Point 1
+  * Point 2
+{% endcapture %}
+
+## Youtube Videos
+
+{% include youtube.html id="Yw6u6YkTgQ4" %}
+
+## KaTeX
+
+Examples taken from Numbered Systems:
+
+* inline(`$`):
+
+$1101_2$ is a base-2 or binary value.
+
+* block(`$$`):
+
+$$
+0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 + 1 \times n^{-1} + 0 \times n^{-2} + 1 \times n^{-3}
+$$
+
+* block(`\\(`, `\\)`):
+
+\\(
+0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 + 1 \times n^{-1} + 0 \times n^{-2} + 1 \times n^{-3}
+\\)
+
+* block(`\\[`, `\\]`):
+
+\\[
+0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 + 1 \times n^{-1} + 0 \times n^{-2} + 1 \times n^{-3}
+\\]
+
+{: .note}
+Note that the KaTeX blocks are currently exceeding the width of main-content-wrap. This will be fixed in a later update.
+
+## D3JS
+
+<script src="assets/js/variables-in-memory.js"></script>
+
+<div id="variables-in-memory-animation"></div>
+
+
+
+
+
 
