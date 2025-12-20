@@ -20,3 +20,10 @@ Unless specified, this defaults to "by Gaurav Gupta".
 
 <!-- Back to Top Button -->
 {% include back_to_top_button.html %}
+
+{% if page.use_katex %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body);"></script>
+{% endif %}
