@@ -29,7 +29,7 @@ nav_order: 22
 
 {% include prereq_outcomes.html prereq=topic_prereq outcomes=topic_outcomes %}
 
-# Code style guideline 
+# Code style guideline
 
 ## 1. Indentation and variable-naming
 
@@ -37,8 +37,8 @@ nav_order: 22
 
 Choose between one of the following and stick to it throughout your program.
 
-- Java-style indentation + variable naming convention, OR, 
-- C-style indentation + variable naming convention, 
+- Java-style indentation + variable naming convention, OR,
+- C-style indentation + variable naming convention,
 
 
 ### FUNDAMENTAL RULE
@@ -70,7 +70,7 @@ else {
 }
 ```
 
-## Example of good indentation:
+##### Example of good indentation:
 
 ```java
 int a = 10, b = 20;
@@ -89,7 +89,7 @@ else {
 }
 ```
 
-## Example of bad indentation (1):
+##### Example of bad indentation (1):
 
 ```java
 int a = 10, b = 20;
@@ -108,7 +108,7 @@ a--;
 }
 ```
 
-## Example of bad indentation (2):
+##### Example of bad indentation (2):
 
 ```java
 int a = 10, b = 20;
@@ -142,7 +142,7 @@ for(init; exp; update) {
 }
 ```
 
-## Example of good indentation:
+##### Example of good indentation:
 
 ```java
 for(int i=0; i < 10; i++) {
@@ -162,7 +162,7 @@ for(int i=0; i < 10; i++) {
 }
 ```
 
-## Example of bad indentation:
+##### Example of bad indentation:
 
 ```java
 for(int i=0; i < 10; i++) {
@@ -189,12 +189,12 @@ returnType funtionName(<parameters>) {
 }
 ```
 
-## Example of good indentation:
+##### Example of good indentation:
 
 ```java
 int mystery(int[] a) {
 	int count = 0;
-	
+
 	//one blank line to separate logical sections, if needed
 	for(int i=0; i < a.length; i++) {
 		for(int k=i+1; k < a.length; k++) {
@@ -203,18 +203,18 @@ int mystery(int[] a) {
 			}
 		}
 	}
-	
+
 	//again, at most one blank line
 	return false;
 }
 ```
 
-## Example of decently-indented code with minor mistakes:
+##### Example of decently-indented code with minor mistakes:
 
 ```java
 int mystery(int[] a) {
 	int count = 0;
-	
+
 	//one blank line to separate logical sections, if needed
 	for(int i=0; i < a.length; i++) {
 		for(int k=i+1; k < a.length; k++) {
@@ -223,7 +223,7 @@ int mystery(int[] a) {
 			}
 		}
 	}
-	
+
 	//again, at most one blank line
 	return false;
 }
@@ -266,18 +266,18 @@ final int COUNT_SQUARES = 5;
 #### Conditions
 
 ```java
-if(exp) 
+if(exp)
 {
 	//if body
 }
 ```
 
 ```java
-if(exp) 
+if(exp)
 {
 	//if body
 }
-else 
+else
 {
 	//else body
 }
@@ -286,14 +286,14 @@ else
 #### Loops
 
 ```java
-while(exp) 
+while(exp)
 {
 	//loop body
 }
 ```
 
 ```java
-for(init; exp; update) 
+for(init; exp; update)
 {
 	//loop body
 }
@@ -301,7 +301,7 @@ for(init; exp; update)
 
 #### Function
 ```java
-return type funtion(parameters) 
+return type funtion(parameters)
 {
 	//function body
 }
@@ -338,14 +338,14 @@ Examples of poor variable names (even if commented to indicate purpose):
 int totoro = 15; //a represents number of students
 
 //you will be reported to the faculty if any code/comment is offensive
-boolean f_u = true; 
+boolean f_u = true;
 
 double ngl = Math.PI/2;
 ```
 
 ## 3. Commenting
 
-- Comments should be clear and within the screen. 
+- Comments should be clear and within the screen.
 - Multi-line comments should be immediately before the code to which they relate.
 
 Example:
@@ -357,7 +357,7 @@ Example:
  * by adding 0.5, any value which is of the form x.y,
  * where y < 0.5, will stay as x.z, thereby in the same
  * integer range. however, any value of the form x.y,
- * where y >= 0.5, will translate to (x+1).z, 
+ * where y >= 0.5, will translate to (x+1).z,
  * where z < 0.5, jumping to the next integer range.
  * Then we cast it to intger, to get x or x+1
  */
@@ -380,7 +380,7 @@ This is the version where the reader isn't concerned with the underlying math.
 Examples (over-commenting):
 
 ```java
-int a = 10; 
+int a = 10;
 a++; //increment a by 1
 if(a < 10) { //if a is less than 10
 	a/=2; //half it
@@ -410,7 +410,7 @@ Following comments would be useful:
  * item to the left of "middle line" with item to the right of the "middle line"
  */
 for(int i=0, k=data.length-1; i < data.length/2; i++, k--) {
-	int temp = data[i]; 
+	int temp = data[i];
 	data[i] = data[k];
 	data[k] = temp;
 }
@@ -425,8 +425,8 @@ The code to swap two variables is trivial at our level and need not be commented
 ```java
 /*
 	to determine if point (x, y) is inside the rectangle
-	defined by top left corner at (minX, minY) and 
-	bottom right corner at (maxX, maxY), 
+	defined by top left corner at (minX, minY) and
+	bottom right corner at (maxX, maxY),
 	I will perform bound checking.
 */
 
@@ -440,7 +440,7 @@ if(x >= minX && x <= maxX) {
 ```
 
 Note, we didn't comment the condition headers because the variable names make it self-explanatory.
-		
+
 ### Code (1) that is NOT good in terms of indentation and commenting
 
 ```java
@@ -452,7 +452,7 @@ if(x >= minX && x <= maxX) { //x is between minX and maxX
 }
 ```
 
-The comments on lines with conditional header are redundant.		
+The comments on lines with conditional header are redundant.
 
 ### Code (2) that is good in terms of indentation and commenting
 
@@ -462,14 +462,14 @@ boolean allUnique(int[] data) {
 		the logic of my design and implementation is to
 		compare each item in the array with every OTHER
 		item (not itself), and returning false as soon
-		as two items at different indices are the same 
+		as two items at different indices are the same
 		in their value
 	*/
 
 	if(data == null) { //to avoid NullPointerException
 		return false;
 	}
-	
+
 	for(int i=0; i < data.length; i++) { //pivot item
 		/*
 			compare pivot item against all items AFTER
@@ -484,13 +484,13 @@ boolean allUnique(int[] data) {
 			}
 		}
 	}
-		
+
 	/*
 		the only way we can reach this control flow point
 		is if no two items were the same
 	*/
 	return true;
-}	
+}
 ```
 
 ### Code (2) that is not good in terms of indentation, or commenting
@@ -502,18 +502,18 @@ boolean allUnique(int[] data) {
 	if(data == null) { //if data is null
 		return false;
 	}
-	
+
 	for(int i=0; i < data.length; i++) { //for each item
-	  	for(int k=i+1; k < data.length; k++) 
-	  	{ 
+	  	for(int k=i+1; k < data.length; k++)
+	  	{
 		if(data[i] == data[k]) { //if they are equal
 				return false;
 		}
 		}
 	}
-	
+
 	return true;
-}	
+}
 ```
 
 ### Code (1) that is good in terms of delegation
@@ -625,8 +625,8 @@ void setup() {
 boolean isAlphabetic(String str) {
 	if(str == null) {
 		return false;
-	}	
-	
+	}
+
 	for(int i=0; i < str.length(); i++) {
 		if(!isAlphabet(str.charAt(i)) {
 			return false;
@@ -671,8 +671,8 @@ It does too many things in the same function
 boolean isAlphabetic(String str) {
 	if(str == null) {
 		return false;
-	}	
-	
+	}
+
 	for(int i=0; i < str.length(); i++) {
 		if((str.charAt(i) < 'a' || str.charAt(i) > 'z') &&
 			(str.charAt(i) < 'A' || str.charAt(i) > 'Z')) {

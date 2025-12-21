@@ -12,8 +12,8 @@
   }
 
   .main-content h3 {
-      font-size: $font-size-7 !important;
-      font-weight: 400 !important;
+      font-size: 1.9rem !important;
+      // font-weight: 400 !important;
   }
 
   .main-content h4 {
@@ -143,5 +143,19 @@ div.highlighter-rouge.nolineno .rouge-code {
   max-width: 100%;  /* shrink to container */
   height: auto;     /* maintain aspect ratio */
   margin: 1rem;
+}
+
+/* Block equations (display math) */
+.katex-display {
+  display: block;
+  overflow-x: auto;     /* Enable horizontal scroll if equation is too wide */
+  overflow-y: hidden;
+  max-width: 100%;      /* Prevent overflow beyond container */
+  padding: 0.5rem 0;    /* Add some breathing space */
+}
+
+/* Inline equations */
+.katex {
+  white-space: normal;  /* Allow wrapping for long inline math */
 }
 

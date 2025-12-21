@@ -7,7 +7,7 @@ nav_exclude: true
 use_katex: true
 ---
 
-This is a hidden for demonstrating some features of the project.
+This is a hidden page for demonstrating some features of the project.
 
 See the docs/demo.md file for implementation.
 
@@ -93,16 +93,40 @@ $$
 0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 + 1 \times n^{-1} + 0 \times n^{-2} + 1 \times n^{-3}
 $$
 
-* block(`\\(`, `\\)`):
+$$
+\begin{aligned}
+a^2 + b^2 &= c^2 \\
+E &= mc^2 \\
+\int_0^\infty e^{-x^2} \, dx &= \frac{\sqrt{\pi}}{2}
+\end{aligned}
+$$
+
+* inline(`\\(`, `\\)`):
 
 \\(
 0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 + 1 \times n^{-1} + 0 \times n^{-2} + 1 \times n^{-3}
+\\)is a base
+
+\\(
+\begin{aligned}
+a^2 + b^2 &= c^2 \\
+E &= mc^2 \\
+\int_0^\infty e^{-x^2} \, dx &= \frac{\sqrt{\pi}}{2}
+\end{aligned}
 \\)
 
 * block(`\\[`, `\\]`):
 
 \\[
 0 \times n^3 + 1 \times n^2 + 1 \times n^1 + 0 \times n^0 + 1 \times n^{-1} + 0 \times n^{-2} + 1 \times n^{-3}
+\\]
+
+\\[
+\begin{aligned}
+a^2 + b^2 &= c^2 \\
+E &= mc^2 \\
+\int_0^\infty e^{-x^2} \, dx &= \frac{\sqrt{\pi}}{2}
+\end{aligned}
 \\]
 
 {: .note}
