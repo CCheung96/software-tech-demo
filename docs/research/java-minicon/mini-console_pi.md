@@ -2,7 +2,7 @@
 title: Mini-Console (Pi)
 custom-title: Setting up the Macquarie Mini Console on a Raspberry Pi
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/mini-console-pi
 nav_order: 1
 ---

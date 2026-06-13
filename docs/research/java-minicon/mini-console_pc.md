@@ -2,7 +2,7 @@
 title: Mini-Console (PC)
 custom-title: Setting up the Macquarie Mini Console on a PC
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/mini-console-pc
 nav_order: 2
 ---

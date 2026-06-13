@@ -2,7 +2,7 @@
 title: Getting Your Changes Incorporated
 custom-title: Gettign Your Changes Incorporated Into Code
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/incorporating-code
 nav_order: 6
 ---

@@ -1,7 +1,7 @@
 ---
 title: Teachable Machine
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/teachable
 nav_order: 5
 ---

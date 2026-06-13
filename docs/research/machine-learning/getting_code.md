@@ -1,7 +1,7 @@
 ---
 title: Getting Code
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/getting-code
 nav_order: 2
 ---

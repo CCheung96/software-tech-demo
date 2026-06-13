@@ -2,7 +2,7 @@
 title: Pi Setup
 custom-title: Setup
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/setup
 nav_order: 1
 ---

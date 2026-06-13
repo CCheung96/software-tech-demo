@@ -1,7 +1,7 @@
 ---
 title: Getting Your Work Incorporated
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/incorporating-code
 nav_order: 6
 ---

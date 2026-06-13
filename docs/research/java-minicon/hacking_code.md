@@ -2,7 +2,7 @@
 title: Hacking on Complex Code
 custom-title: Hacking on Complex Systems
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/hacking-code
 nav_order: 7
 ---

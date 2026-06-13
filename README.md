@@ -124,18 +124,50 @@ To keep the project clean and maintainable, the physical folder path of every Ma
 *   **Why this matters:** This 1-to-1 mapping ensures that the browser URL navigation doubles as a file explorer map for developers. It also makes it possible to remove manual `permalink` Front Matter tags in the future, as Jekyll can auto-generate routes directly from directory locations.
 
 ### 2. Front Matter Settings
-Every page must start with a YAML block at the very top. For example:
+Every page must start with a YAML block at the very top. To make this easy for developers, the keys are grouped logically:
+
 ```yaml
 ---
-title: Primitive Operations                    # Title shown in the sidebar navigation
-custom-title: Primitive Operations of Processing # (Optional) Title shown at the top of the page, defauls to title
+# Core Page Metadata
+layout: custom-page                           # (Optional) Layout template (defaults to custom-page)
+title: "Primitive Operations"                 # Page display title in the sidebar navigation
+custom-title: "Primitive Operations of Processing" # (Optional) Header title at top of page (defaults to title)
 permalink: /comp1000/primitive-operations     # The URL path of the page
-parent: COMP1000                              # Links this page to a parent navigation category
-nav_order: 2                                  # The order in which it appears in the sidebar
-use_katex: true                               # Set to true if the page uses math formulas ($ or $$)
-author: "Gaurav Gupta"                       # (Optional) Named page author(s), defaults to Gaurav Gupta
+author: "Gaurav Gupta"                       # (Optional) Page author(s) (defaults to Gaurav Gupta)
+
+# Navigation & Sidebar Hierarchy
+parent: COMP1000                              # (Optional) Parent page title (for Level 2 child pages)
+grand_parent: "Optional Grandparent Title"    # (Optional) Grandparent page title (for Level 3 grandchild pages)
+has_children: true                            # (Optional) Set to true if this page has subpages (like indices)
+nav_order: 2                                  # (Optional) Numeric sorting position in the sidebar menu
+nav_exclude: true                             # (Optional) Set to true to hide this page from the sidebar navigation
+
+# Optional Feature Toggles
+use_katex: true                               # (Optional) Set to true if the page uses LaTeX math formulas ($ or $$)
+has_toc: false                                # (Optional) Set to false to disable Jekyll's default in-page TOC
 ---
 ```
+
+#### Key Explanations:
+
+##### 📁 Core Page Metadata
+*   **`layout`**: *(Optional)* The layout template to use from the `_layouts/` directory. All pages default to `custom-page` globally, but index or landing layouts can override this (e.g., `home` or `default`).
+*   **`title`**: The display name of the page in the sidebar navigation menu.
+*   **`custom-title`**: *(Optional)* The main header title displayed at the top of the page. If omitted, it defaults to `title`. This is useful if you want a short name in the sidebar but a longer, descriptive header on the page itself.
+*   **`permalink`**: The absolute URL path of the page (e.g., `/comp1000/primitive-operations`).
+*   **`author`**: *(Optional)* Specifies the page author. Defaults to "Gaurav Gupta" if omitted.
+
+##### 🗺️ Navigation & Sidebar Hierarchy
+*   **`parent`**: *(Optional)* The `title` of the parent page (e.g., `COMP1000` or `Recursion`) under which this page will be grouped as a child in the sidebar. Set this on second-level and third-level pages.
+*   **`grand_parent`**: *(Optional)* The `title` of the top-level grandparent page (e.g., `COMP1010` or `Research Skills`). Set this on third-level pages (grandchild pages) to complete the three-level navigation.
+*   **`has_children`**: *(Optional)* Set to `true` on index pages (like `/comp1000`) to mark it as a parent category that other pages can target in their `parent` field.
+*   **`nav_order`**: *(Optional)* A number defining the sorting order of the page relative to other pages in the same sidebar level.
+*   **`nav_exclude`**: *(Optional)* Set to `true` to hide the page entirely from the sidebar navigation (used for hidden utility pages like `/demo` and `/test`).
+
+##### ⚙️ Optional Feature Toggles
+*   **`use_katex`**: *(Optional)* Set to `true` to dynamically load KaTeX CSS and JS assets to render LaTeX math formulas.
+*   **`has_toc`**: *(Optional)* Set to `false` on pages where you want to disable Jekyll's default in-page table of contents generator.
+
 
 ### 3. Auto-Generating Table of Contents
 To generate an in-page table of contents automatically, place the following code right below your Front Matter:
@@ -227,8 +259,8 @@ If you are a developer looking to contribute to the codebase or improve the plat
 *   **Replace static diagrams:** 
     *   Convert static images into dynamic, maintainable **Mermaid.js** diagrams, SVGs, or interactive **D3.js** charts.
 *   **Implement Automated Testing & Validation Suites:**
-    *   **Link & Asset Checking:** Set up automated link checking (e.g., via `html-proofer` or custom workflows) to continuously audit internal paths, external links, and verify that local image files and embedded YouTube video players load successfully.
-    *   **Mobile Layout Overflow Audits:** Write automated checks (e.g., using headless browsers like Playwright) to scan page renderings and verify that code blocks, tables, and custom exercise widgets fit correctly on mobile viewports without causing horizontal scroll overflows.
+    *   **Link & Asset Checking:** Set up automated link checking to continuously audit internal paths, external links, and verify that local image files and embedded YouTube video players load successfully.
+    *   **Mobile Layout Overflow Audits:** Write automated checks to scan page renderings and verify that code blocks, tables, and custom exercise widgets fit correctly on mobile viewports without causing horizontal scroll overflows.
 *   **Establish Consistent Linting & Project Formatting:**
     *   **Markdown & Stylesheet Linter:** Set up linters/formatters (e.g., `Prettier` or `markdownlint`) to enforce consistent spacing, formatting, and file structures across all Markdown and SCSS source files.
     *   **Student Code Snippet Validator:** Create a utility script to extract, validate, and lint the Java/Processing code blocks featured in the documentation. The script should verify that all standard examples are syntactically correct, while ignoring or expecting failures for intentionally "bad" code examples (e.g., by checking for a special tag like `{: .bad-code}`).

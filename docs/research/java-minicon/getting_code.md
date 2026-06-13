@@ -2,7 +2,7 @@
 title: Getting Code With Git
 custom-title: Getting Access to Software Systems
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/getting-code
 nav_order: 4
 ---

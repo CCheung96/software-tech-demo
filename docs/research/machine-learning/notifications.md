@@ -1,7 +1,7 @@
 ---
 title: Notifications
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/notifications
 nav_order: 7
 ---

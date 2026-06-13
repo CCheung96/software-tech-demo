@@ -1,7 +1,7 @@
 ---
 title: Terminal Basics
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/terminal
 nav_order: 3
 ---

@@ -1,7 +1,7 @@
 ---
 title: Changing Code
 parent: For Java/Mini-Console
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/java-minicon/changing-code
 nav_order: 5
 ---

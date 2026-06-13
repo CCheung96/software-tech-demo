@@ -1,7 +1,7 @@
 ---
 title: TensorFlow on Pi
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/tf
 nav_order: 3
 ---

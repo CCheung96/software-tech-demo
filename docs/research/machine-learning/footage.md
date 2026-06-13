@@ -2,7 +2,7 @@
 title: Capturing New Footage
 custom-title: Getting New Footage
 parent: Machine Learning
-grandparent: Research Skills
+grand_parent: Research Skills
 permalink: /research/machine-learning/footage
 nav_order: 4
 ---
