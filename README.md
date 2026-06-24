@@ -16,6 +16,7 @@ The site is built with:
 *   **Interactive exercise blocks** with expandable code solutions.
 *   **Typeset mathematical equations** for computer science theory.
 *   **Rich diagrams and visualizations** (such as SVG and D3.js scripts) to help students grasp programming concepts visually.
+*   **Site-wide Search**: An auto-complete search bar at the top of the page indexing all learning modules, topic headings, and code references.
 
 ---
 
